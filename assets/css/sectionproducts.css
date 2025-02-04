@@ -1,0 +1,184 @@
+:root {
+    --color-primary: #F6F7D3;
+    --color-secondary: #697565;
+    --color-tertiary: #3C3D37;
+    --color-cuarto: #1E201E;
+}
+
+.productos {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.6rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 90%;
+}
+
+.title {
+    align-items: baseline;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+.tv__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.tv__link {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 1s all;
+}
+
+.tv__link:hover, .bi:hover {
+    color: var(--color-tertiary);
+    text-decoration: underline;
+    transform: scale(1.15);
+}
+
+.bi {
+    background-color: transparent;
+    color: var(--color-secondary);
+    transition: 1s all;
+}
+
+.all_products_items {
+	display: grid;
+	gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	justify-items: center;
+	overflow-y: hidden;
+	padding: 0.5%;
+}
+
+.product_item {
+    align-items: center;
+    background-color: #e6e7cc;
+	box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
+    display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+	margin-bottom: 15px;
+	padding-bottom: 0.5rem;
+	transition: 1s all;
+}
+
+.product_item:hover {
+	transform: scale(1.05);
+}
+
+.item_img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    display: flex;
+	object-fit: cover;
+    padding: 0.5rem 0;
+    position: inherit;
+    width: 100%;
+}
+
+.item_title {
+	font-size: 1.1rem;
+    font-weight: 700;
+	padding: 0 0.5rem;
+}
+
+.item_price {
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0 0.5rem;
+}
+
+.currency {
+    font-weight: 700;
+}
+
+.item_footer {
+    display: none;
+}
+
+.item_link {
+    color: var(--color-secondary);
+    font-weight: 700;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    transition: 1s all;
+}
+
+.item_link:hover {
+    color: var(--color-tertiary);
+    text-decoration: underline;
+}
+
+
+
+@media (min-width:451px) and (max-width:768px) {
+
+    .productos {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem 0rem;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1920px;
+        width: 90%;
+    }
+
+    .bi {
+        font-size: 1rem;
+    }
+
+    .all_products_items {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .last {
+        display: none;
+    }
+
+}
+
+@media (max-width: 450px) {
+    
+    .productos {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1.5rem 0rem;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1920px;
+        width: 90%;
+    }
+
+    .bi {
+        font-size: 1rem;
+    }
+
+    .star_wars__title {
+        margin-top: 2.5rem;
+    }
+
+    .all_products_items {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .last {
+        display: none;
+    }
+    
+}
