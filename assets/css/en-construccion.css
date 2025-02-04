@@ -2,7 +2,7 @@
     --color-primary: #F6F7D3;
     --color-secondary: #697565;
     --color-tertiary: #3C3D37;
-    --color-cuarto: #1E201E;
+    --color-fourth: #1E201E;
 }
 
 .banner {
@@ -30,7 +30,6 @@
 }
 
 .titles {
-    align-items: center;
     display: flex;
     flex-direction: column;
     flex-grow: 1; /* Permite que los títulos ocupen el espacio disponible */
@@ -41,7 +40,7 @@
 }
 
 .prom, .description {
-    color: var(--color-cuarto);
+    color: var(--color-fourth);
     font-size: 3.35rem;
     font-weight: 1000;
     margin-bottom: 3rem;
@@ -66,62 +65,8 @@
 .see_button:hover {
     background-color: var(--color-primary);
     box-shadow: 0 0 10px var(--color-secondary);
-    color: var(--color-cuarto);
+    color: var(--color-fourth);
 }
-
-/*.titles {
-    align-items: center;
-    color:var(--color-primary);
-    display: flex;
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.prom {
-    align-items: center;
-    color: var(--color-cuarto);
-    display: flex;
-    font-size: 3.35rem;
-    font-weight: 1000;
-    justify-content: center;
-    left: 45%;
-    position: absolute;
-    top: 30%;
-    text-shadow: 0.2rem 0.3rem 0.4rem var(--color-tertiary);
-    -webkit-text-stroke: 1px var(--color-secondary);
-}
-
-.description {
-    align-items: center;
-    color: var(--color-cuarto);
-    display: flex;
-    font-size: 3.35rem;
-    font-weight: 1000;
-    justify-content: center;
-    left: 45%;
-    position: absolute;
-    top: 50%;
-    text-shadow: 0.2rem 0.3rem 0.4rem var(--color-tertiary);
-    -webkit-text-stroke: 1px var(--color-secondary);
-}
-
-.see_button {
-    align-self: flex-end;
-    background-color: var(--color-secondary);
-    border: solid var(--color-tertiary) 1px;
-    border-radius: 50%;
-    color: var(--color-primary);
-    cursor: pointer;
-    padding: 1rem 2.5rem;
-    text-align: center;
-    transition: all 1s;
-}
-
-.see_button:hover {
-    background-color: var(--color-primary);
-    box-shadow: 0 0 10px var(--color-secondary);
-    color: var(--color-cuarto)
-}*/
 
 .see_link {
     text-decoration: none;

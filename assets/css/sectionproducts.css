@@ -2,7 +2,7 @@
     --color-primary: #F6F7D3;
     --color-secondary: #697565;
     --color-tertiary: #3C3D37;
-    --color-cuarto: #1E201E;
+    --color-fourth: #1E201E;
 }
 
 .productos {
@@ -82,6 +82,14 @@
     justify-content: center;
 }
 
+.img_aa {
+    display: flex;
+	object-fit: cover;
+    padding: 0.5rem 0;
+    position: inherit;
+    width: 75%;
+}
+
 .img {
     display: flex;
 	object-fit: cover;
@@ -96,13 +104,13 @@
 	padding: 0 0.5rem;
 }
 
-.item_price {
+.item_code {
 	font-size: 1rem;
 	font-weight: 500;
 	padding: 0 0.5rem;
 }
 
-.currency {
+.code_code {
     font-weight: 700;
 }
 

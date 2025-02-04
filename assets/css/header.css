@@ -2,7 +2,7 @@
     --color-primary: #F6F7D3;
     --color-secondary: #697565;
     --color-tertiary: #3C3D37;
-    --color-cuarto: #1E201E;
+    --color-fourth: #1E201E;
 }
 
 .navbar {
@@ -64,7 +64,7 @@
 .menu_list a:hover {
     background-color: var(--color-primary); /* Añade sombra */
     border-radius: 50%;
-    color: var(--color-cuarto);
+    color: var(--color-fourth);
     text-shadow: 0 10px 15px var(--color-tertiary); /* Cambia el fondo cuando pasas el cursor */
     transform: scale(1.15); /* Aumenta el tamaño del texto */
     transition: all 1.2s;
@@ -126,7 +126,7 @@
     background-color: var(--color-primary);
     border: 1px solid var(--color-tertiary);
     border-radius: 1rem;
-    box-shadow: 0 1rem 1.5rem var(--color-cuarto); /* Añadir sombra */
+    box-shadow: 0 1rem 1.5rem var(--color-fourth); /* Añadir sombra */
     margin: 7% auto;
     max-width: 500px;
     transition: transform 0.5s ease-in-out;
@@ -172,8 +172,8 @@
 }
 
 .input_icon_modal:hover {
-    color: var(--color-primary);
     background-color: var(--color-secondary);
+    color: var(--color-primary);
     transition: all 1.2s;
 }
 

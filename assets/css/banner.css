@@ -2,7 +2,7 @@
     --color-primary: #F6F7D3;
     --color-secondary: #697565;
     --color-tertiary: #3C3D37;
-    --color-cuarto: #1E201E;
+    --color-fourth: #1E201E;
 }
 
 .banner {
@@ -50,10 +50,10 @@
 }
 
 .whatsapp-logo {
-    width: 3.2rem;
+    filter: drop-shadow(0.2rem 0.3rem 0.4rem var(--color-primary));
     height: auto;
     margin-right: 1.1rem;
-    filter: drop-shadow(0.2rem 0.3rem 0.4rem var(--color-primary));
+    width: 3.2rem;
 }
 
 
