@@ -7,7 +7,7 @@
 
 .navbar {
     align-items: center;
-    background-image: url(../images/fondos/fondo-de-logo.jpg);
+    background-image: url(../../images/fondos/fondo-de-logo.jpg);
     background-position: center;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@
 }
 
 .logo_image {
-    content: url(../images/logo-solo/logo-nombre.png);
+    content: url(../../images/logo-solo/logo-nombre.png);
     display: flex;
     width: 17%;
 }
