@@ -144,7 +144,11 @@ headerTemplate.innerHTML = `
 }
 
 .submenu_list li a:hover {
-    background-color: var(--color-primary);
+    background-color: inherit;
+    border-radius: 0%;
+    color: var(--color-primary);
+    transform: scale(1.1); /* Aumenta el tamaño del texto */
+    transition: all 1.1s;
 }
 
 /* Mostrar el submenú al pasar el mouse */
@@ -414,18 +418,18 @@ headerTemplate.innerHTML = `
                         <nav>
                             <ul class="menu_list">
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                                <li class="submenu"><a href="#" title="Ingresa para ver todos nuestros productos">Productos</a>
+                                <li class="submenu"><a href="${urlSearchHtml}" title="Productos">Productos</a>
                                     <ul class="submenu_list">
-                                        <li><a href="${urlSearchHtml}">Todos</a></li>
-                                        <li><a href="${urlIndexHtml}#tv__title">Televisor</a></li>
-                                        <li><a href="${urlIndexHtml}#aa__title">Aire Acondicionado</a></li>
+                                        <li><a href="${urlSearchHtml}" title="Ingresa para ver todos nuestros productos">Todos</a></li>
+                                        <li><a href="${urlIndexHtml}#tv__title" title="Controles remotos para televisores">Televisor</a></li>
+                                        <li><a href="${urlIndexHtml}#aa__title" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="${urlSearchHtml}" title="ingresa para conocer más de nuestra empresa" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Quienes Somos</a></li>
-                                <li><a href="${urlSearchHtml}">Contacto</a></li>
+                                <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
+                                <li><a href="${urlSearchHtml}" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Contacto</a></li>
                                 <li>
                                     <div class="buscador_menu">
-                                        <a class="input_icon_menu" href="${urlSearchHtml}" rel="noopener noreferrer" aria-label="Buscar productos" title="Tipea la marca de tu electrodoméstico para el cual estás necesitando el control remoto">
+                                        <a class="input_icon_menu" href="${urlSearchHtml}" rel="noopener noreferrer" aria-label="Buscar productos" title="Busca el control remoto con la marca de tu electrodoméstico">
                                             <i class="bi_menu bi-search_menu">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi_menu bi-search_menu" viewBox="0 0 16 16">
                                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>

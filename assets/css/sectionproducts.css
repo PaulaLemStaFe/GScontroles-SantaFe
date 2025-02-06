@@ -26,7 +26,8 @@
 .tv__title {
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
+    text-shadow: 1px 1px 2px var(--color-tertiary);
 }
 
 .tv__link {

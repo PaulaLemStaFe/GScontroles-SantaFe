@@ -4,7 +4,7 @@
     --color-primary: #F6F7D3;
     --color-secondary: #697565;
     --color-tertiary: #3C3D37;
-    --color-cuarto: #1E201E;
+    --color-fourth: #1E201E;
     font-family: "Capriola", serif;
     line-height: 1rem;
     scroll-behavior: smooth;
@@ -12,6 +12,7 @@
 
 body {
     background-color: var(--color-primary);
+    color: var(--color-fourth);
 }
 
 @media (max-width: 450px) {
