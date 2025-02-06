@@ -11,18 +11,18 @@ if (document.title == "GS Controles - Inicio") {
     urlIndexHtml = "./index.html";
     urlImageLogoHtml = "assets/images/logo-solo/logo-nombre.png";
     urlImageFondoHtml = "assets/images/fondos/fondo-de-logo.jpg";
-    urlSearchHtml = "./assets/pages/enconstruccion/enconstruccion.html";
-    urlLoginHtml = "./assets/pages/enconstruccion/enconstruccion.html";
+    urlSearchHtml = "./assets/pages/underconstruction/underconstruction.html";
+    urlLoginHtml = "./assets/pages/underconstruction/underconstruction.html";
 } else if (document.title == "GS Controles - Productos Todos" | document.title == "GS Controles - Login" | document.title == "GS Controles - En Construcción" | document.title == "GS Controles - Editar Producto" | document.title == "GS Controles - Agregar Producto") {
     urlIndexHtml = "../../../index.html";
     urlImageLogoHtml = "../../images/logo-solo/logo-nombre.png";
     urlImageFondoHtml = "../../images/fondos/fondo-de-logo.jpg";
-    urlSearchHtml = "../enconstruccion/enconstruccion.html";
-    urlLoginHtml = "../enconstruccion/enconstruccion.html";
+    urlSearchHtml = "../underconstruction/underconstruction.html";
+    urlLoginHtml = "../underconstruction/underconstruction.html";
 } else if (document.title == "GS Controles - Producto Detalles") {
     urlIndexHtml = "../../../../index.html";
-    urlSearchHtml = "../../enconstruccion/enconstruccion.html";
-    urlLoginHtml = "../../enconstruccion/enconstruccion.html";
+    urlSearchHtml = "../../underconstruction/underconstruction.html";
+    urlLoginHtml = "../../underconstruction/underconstruction.html";
 }
 
 headerTemplate.innerHTML = `
@@ -97,6 +97,59 @@ headerTemplate.innerHTML = `
     text-shadow: 0 10px 15px var(--color-tertiary); /* Cambia el fondo cuando pasas el cursor */
     transform: scale(1.15); /* Aumenta el tamaño del texto */
     transition: all 1.2s;
+}
+
+/* Estilo para el submenú */
+.submenu {
+    position: relative;
+}
+
+.submenu_list {
+    background-color: var(--color-secondary);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    display: none;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    transition: opacity 0.5s;
+}
+
+/* Keyframes para retrasar la aparición del submenú */
+@keyframes delayShow {
+    0% { display: block; opacity: 0; }
+    100% { display: block; opacity: 1; }
+}
+
+/* Aplicar la animación al pasar el mouse */
+.submenu:hover .submenu_list {
+    animation: delayShow 0s 0.5s forwards; /* 0s de duración, 0.5s de retraso */
+    display: block;
+}
+
+.submenu_list li {
+    border-bottom: 1px solid #ddd;
+}
+
+.submenu_list li a {
+    color: var(--color-primary);
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.submenu_list li a:hover {
+    background-color: var(--color-primary);
+}
+
+/* Mostrar el submenú al pasar el mouse */
+.submenu:hover .submenu_list {
+    display: block;
 }
 
 /* search */
@@ -361,7 +414,13 @@ headerTemplate.innerHTML = `
                         <nav>
                             <ul class="menu_list">
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                                <li><a href="${urlIndexHtml}#tv__title" title="Ingresa para ver todos nuestros productos">Productos</a></li>
+                                <li class="submenu"><a href="#" title="Ingresa para ver todos nuestros productos">Productos</a>
+                                    <ul class="submenu_list">
+                                        <li><a href="${urlSearchHtml}">Todos</a></li>
+                                        <li><a href="${urlIndexHtml}#tv__title">Televisor</a></li>
+                                        <li><a href="${urlIndexHtml}#aa__title">Aire Acondicionado</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="${urlSearchHtml}" title="ingresa para conocer más de nuestra empresa" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Quienes Somos</a></li>
                                 <li><a href="${urlSearchHtml}">Contacto</a></li>
                                 <li>

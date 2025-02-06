@@ -1,8 +1,17 @@
+// Función para mezclar una lista de elementos
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 fetch('../../../db.json')
   .then(response => response.json())
   .then(data => {
     // Procesar productos de TV
-    const productosTV = data.producttv.slice(0, 6);
+    const productosTV = shuffle(data.producttv).slice(0, 6); // Mezclar y tomar los primeros 6 productos
     const containerTV = document.getElementById('productos-tv');
 
     productosTV.forEach(producto => {
@@ -32,7 +41,7 @@ fetch('../../../db.json')
     });
 
     // Procesar productos de AA
-    const productosAA = data.productsaa.slice(0, 6);
+    const productosAA = shuffle(data.productsaa).slice(0, 6); // Mezclar y tomar los primeros 6 productos
     const containerAA = document.getElementById('productos-aa');
 
     productosAA.forEach(producto => {

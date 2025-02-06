@@ -67,6 +67,7 @@
     display: flex;
 	flex-direction: column;
 	gap: 0.7rem;
+    height: 97%;
 	margin-bottom: 15px;
 	padding-bottom: 0.5rem;
 	transition: 1s all;
@@ -107,7 +108,7 @@
 .item_code {
 	font-size: 1rem;
 	font-weight: 500;
-	padding: 0 0.5rem;
+    margin-top: auto;
 }
 
 .code_code {
@@ -175,10 +176,6 @@
 
     .bi {
         font-size: 1rem;
-    }
-
-    .star_wars__title {
-        margin-top: 2.5rem;
     }
 
     .all_products_items {
