@@ -15,6 +15,48 @@ body {
     color: var(--color-fourth);
 }
 
+#scroll-top {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0,0,0,.4);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 100;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+#scroll-top>span {
+    line-height: inherit;
+    vertical-align: top
+}
+
+#scroll-top:hover {
+    background-color: rgba(0,0,0,.8)
+}
+
+#scroll-top.scroll-top-left {
+    left: 20px;
+    right: auto
+}
+
+.fa-angle-up:before {
+    content: "\f106"
+}
+
 @media (max-width: 450px) {
 
     html {

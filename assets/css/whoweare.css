@@ -8,7 +8,10 @@
 .woweare {
     align-items: center;
     background-color: #e6e7cc;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     border-top: 0.3rem solid var(--color-tertiary);
+    box-shadow: 0.3rem 0.3rem 0.8rem var(--color-tertiary);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
