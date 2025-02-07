@@ -2,24 +2,25 @@ const footerTemplate = document.createElement('template');
 
 var urlIndexHtml = '';
 var urlImageLogoHtml = '';
-var urlSaberHtml = '';
+var urlLoginHtml = '';
 var urlContactHtml = '';
 var urlSearchHtml = '';
+var urlUnderConstructionHtml = '';
 
 if (document.title == "GS Controles - Inicio") {
     urlIndexHtml = "./index.html";
     urlImageLogoHtml = "assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg";
-    urlSearchHtml = "./assets/pages/underconstruction/underconstruction.html";
-    urlLoginHtml = "./assets/pages/underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - En Construcción" || document.title == "GS Controles - Editar Producto" || document.title == "GS Controles - Agregar Producto") {
+    urlSearchHtml = "./assets/pages/search/search.html";
+    urlUnderConstructionHtml = "./assets/pages/underconstruction/underconstruction.html";
+} else if (document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - En Construcción" || document.title == "GS Controles - Editar Producto" || document.title == "GS Controles - Agregar Producto" || document.title == "GS Controles - Buscando Productos") {
     urlIndexHtml = "../../../index.html";
     urlImageLogoHtml = "../../images/logo-con-fondo/foto-perfil-gs_controles.jpg";
-    urlSearchHtml = "../underconstruction/underconstruction.html";
-    urlLoginHtml = "../underconstruction/underconstruction.html";
+    urlSearchHtml = "../search/search.html";
+    urlUnderConstructionHtml = "../underconstruction/underconstruction.html";
 } else if (document.title == "GS Controles - Producto Detalles") {
     urlIndexHtml = "../../../../index.html";
-    urlSearchHtml = "../../underconstruction/underconstruction.html";
-    urlLoginHtml = "../../underconstruction/underconstruction.html";
+    urlSearchHtml = "../../search/search.html";
+    urlUnderConstructionHtml = "../../underconstruction/underconstruction.html";
 }
 
 footerTemplate.innerHTML = `
@@ -32,7 +33,7 @@ footerTemplate.innerHTML = `
                     <nav>
                         <ul class="menu_list">
                             <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                            <li class="submenu"><a href="${urlSearchHtml}" title="Productos">Productos</a></li>
+                            <li class="submenu"><a href="${urlUnderConstructionHtml}" title="Productos">Productos</a></li>
                             <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
                             <li><a href="${urlIndexHtml}#contact" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Contacto</a></li>
                             <li>
@@ -53,12 +54,12 @@ footerTemplate.innerHTML = `
             <div class="footer_contact_menu">
                 <ul class="menu">
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
+                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
                             <i class="bi bi-whatsapp"></i> +54 9 3426138796
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
+                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
                             <i class="bi bi-telephone"></i> +54 9 3426138796
                         </a>
                     </li>
@@ -66,17 +67,17 @@ footerTemplate.innerHTML = `
                         <i class="bi bi-geo-alt"></i> Matheu 2420 - Santa Fe Capital - Argentina
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
+                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
                             <i class="bi bi-envelope"></i> gscontroles@gmail.com
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
+                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
                             <i class="bi bi-facebook"></i> @gscontroles
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
+                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
                             <i class="bi bi-instagram"></i> @gs.controles
                         </a>
                     </li>
@@ -129,6 +130,17 @@ class Footer extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
+            :root {
+                --color-primary: #F6F7D3;
+                --color-secondary: #e6e7cc;
+                --color-tertiary: #697565;
+                --color-fourth: #3C3D37;
+                --color-fifth: #1E201E;
+                font-family: "Capriola", serif;
+                line-height: 1rem;
+                scroll-behavior: smooth;
+            }
+            
             .montserrat-alternates-regular {
                 font-family: "Montserrat Alternates", serif;
                 font-weight: 400;

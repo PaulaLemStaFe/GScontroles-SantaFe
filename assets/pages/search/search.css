@@ -1,0 +1,338 @@
+:root {
+    --color-primary: #F6F7D3;
+    --color-secondary: #e6e7cc;
+    --color-tertiary: #697565;
+    --color-fourth: #3C3D37;
+    --color-fifth: #1E201E;
+    font-family: "Capriola", serif;
+    line-height: 1rem;
+    scroll-behavior: smooth;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh;
+}
+
+.search-section {
+    margin: 0 auto;
+    padding-top: 5rem;
+    width: 90%;
+}
+
+.search-section_content {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.tv__title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px var(--color-fourth);
+}
+
+.bi {
+    background-color: transparent;
+    color: var(--color-tertiary);
+    transition: 1s all;
+}
+
+/* search */
+.buscador {
+    align-items: center;
+    background-color: var(--color-secondary);
+    border: solid 1px var(--color-tertiary);
+    border-radius: 1rem;
+    display: flex;
+    padding-right: 1rem;
+}
+
+/* Estilo base del input */
+.input__buscador {
+    background-color: var(--color-secondary) !important;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    height: 2.2rem;
+    outline: none;
+    padding-left: 1rem;
+    width: 24rem;
+    color: var(--color-fifth) !important;
+}
+
+/* Cambiar el color de fondo del input cuando tiene foco */
+.input__buscador:focus {
+    background-color: var(--color-secondary) !important;
+    outline: none !important;
+    color: var(--color-fifth) !important;
+}
+
+/* Cambiar el color de fondo del input cuando tiene texto */
+.input__buscador:valid {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-fifth) !important;
+}
+
+/* Cambiar el color de fondo del input cuando tiene texto incluso si no está en foco */
+.input__buscador:not(:placeholder-shown) {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-fifth) !important;
+}
+
+
+.bi {
+    background-color: var(--color-secondary);
+    color: var(--color-fifth);
+    cursor: pointer;
+}
+
+.all_products_items {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    justify-items: center;
+    margin-top: 1.5rem;
+    overflow-y: hidden;
+    padding: 0.5%;
+}
+
+.all_products_items.centrado {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+}
+
+.product_item {
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 2.5rem;;
+	box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
+    display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+    height: 97%;
+	margin-bottom: 15px;
+	padding-bottom: 0.5rem;
+	transition: 1s all;
+}
+
+.product_item:hover {
+	transform: scale(1.05);
+}
+
+.item_img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img_aa {
+    display: flex;
+	object-fit: cover;
+    padding: 0.5rem 0;
+    position: inherit;
+    width: 75%;
+}
+
+.img {
+    display: flex;
+	object-fit: cover;
+    padding: 0.5rem 0;
+    position: inherit;
+    width: 75%;
+}
+
+.item_title {
+	font-size: 1.1rem;
+    font-weight: 700;
+	padding: 0 0.5rem;
+}
+
+.item_code {
+	font-size: 1rem;
+	font-weight: 500;
+    margin-top: auto;
+}
+
+.code_code {
+    font-weight: 700;
+}
+
+.item_footer {
+    display: none;
+}
+
+.item_link {
+    color: var(--color-tertiary);
+    font-weight: 700;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    transition: 1s all;
+}
+
+.item_link:hover {
+    color: var(--color-fourth);
+    text-decoration: underline;
+}
+
+.no-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    padding: 1rem; /* Añade un poco de espacio alrededor del contenedor */
+}
+
+.no-results-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: crimson;
+    text-align: center;
+    margin: 0.5rem 0; /* Ajusta el margen */
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.additional-message {
+    font-size: 1.2rem;
+    color: var(--color-fifth);
+    text-align: center;
+    margin: 0.5rem 0; /* Ajusta el margen */
+}
+
+footer-component {
+    margin-top: auto;
+}
+
+
+
+/*@media (min-width:451px) and (max-width:768px) {
+
+    .productos {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem 0rem;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1920px;
+        width: 90%;
+    }
+
+    .bi {
+        font-size: 1rem;
+    }
+
+    .all_products_items {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .last {
+        display: none;
+    }
+
+}
+
+@media (max-width: 450px) {
+    
+    .productos {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1.5rem 0rem;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1920px;
+        width: 90%;
+    }
+
+    .bi {
+        font-size: 1rem;
+    }
+
+    .all_products_items {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .last {
+        display: none;
+    }
+    
+}
+
+@media (min-width:451px) and (max-width:768px) {
+
+    .buscador {
+        align-items: center;
+        border-radius: 1rem;
+        display: flex;
+        order: 3;
+        padding: 0;
+    }
+
+    .bi, .bi-search {
+        cursor: pointer;
+    }
+
+    .bi-search::before {
+        color: var(--color-tertiary);
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .input__buscador {
+        border: none;
+        border-radius: 1rem;
+        display: none;
+        font-size: 1rem;
+        outline: none;
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .buscador {
+        align-items: center;
+        border-radius: 1rem;
+        display: flex;
+        order: 3;
+        padding: 0;
+    }
+
+    .bi, .bi-search {
+        cursor: pointer;
+    }
+
+    .bi-search::before {
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .input__buscador {
+        border: none;
+        border-radius: 1rem;
+        display: none;
+        font-size: 1rem;
+        height: 2.5rem;
+        outline: none;
+        padding-left: 1rem;
+        width: 24rem;
+    }
+    
+}*/

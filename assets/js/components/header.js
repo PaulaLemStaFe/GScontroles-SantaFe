@@ -11,17 +11,17 @@ if (document.title == "GS Controles - Inicio") {
     urlIndexHtml = "./index.html";
     urlImageLogoHtml = "assets/images/logo-solo/logo-nombre.png";
     urlImageFondoHtml = "assets/images/fondos/fondo-de-logo.jpg";
-    urlSearchHtml = "./assets/pages/underconstruction/underconstruction.html";
+    urlSearchHtml = "./assets/pages/search/search.html";
     urlLoginHtml = "./assets/pages/underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - En Construcción" || document.title == "GS Controles - Editar Producto" || document.title == "GS Controles - Agregar Producto") {
+} else if (document.title == "GS Controles - Buscando Productos" || document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - En Construcción" || document.title == "GS Controles - Editar Producto" || document.title == "GS Controles - Agregar Producto") {
     urlIndexHtml = "../../../index.html";
     urlImageLogoHtml = "../../images/logo-solo/logo-nombre.png";
     urlImageFondoHtml = "../../images/fondos/fondo-de-logo.jpg";
-    urlSearchHtml = "../underconstruction/underconstruction.html";
+    urlSearchHtml = "../search/search.html";
     urlLoginHtml = "../underconstruction/underconstruction.html";
 } else if (document.title == "GS Controles - Producto Detalles") {
     urlIndexHtml = "../../../../index.html";
-    urlSearchHtml = "../../underconstruction/underconstruction.html";
+    urlSearchHtml = "../../search/search.html";
     urlLoginHtml = "../../underconstruction/underconstruction.html";
 }
 
@@ -34,9 +34,9 @@ headerTemplate.innerHTML = `
                         <nav>
                             <ul class="menu_list">
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                                <li class="submenu"><a href="${urlSearchHtml}" title="Productos">Productos</a>
+                                <li class="submenu"><a href="${urlLoginHtml}" title="Productos">Productos</a>
                                     <ul class="submenu_list">
-                                        <li><a href="${urlSearchHtml}" title="Ingresa para ver todos nuestros productos">Todos</a></li>
+                                        <li><a href="${urlLoginHtml}" title="Ingresa para ver todos nuestros productos">Todos</a></li>
                                         <li><a href="${urlIndexHtml}#tv__title" title="Controles remotos para televisores">Televisor</a></li>
                                         <li><a href="${urlIndexHtml}#aa__title" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
                                     </ul>
@@ -59,7 +59,7 @@ headerTemplate.innerHTML = `
                     </div>
                 </div>
                 <div class="button">
-                    <a class="login_button login_link" href="${urlSearchHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
+                    <a class="login_button login_link" href="${urlLoginHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
                 </div>
             </div>
         </header>
@@ -94,6 +94,17 @@ class Header extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
+        :root {
+            --color-primary: #F6F7D3;
+            --color-secondary: #e6e7cc;
+            --color-tertiary: #697565;
+            --color-fourth: #3C3D37;
+            --color-fifth: #1E201E;
+            font-family: "Capriola", serif;
+            line-height: 1rem;
+            scroll-behavior: smooth;
+        }
+            
         .navbar {
             align-items: center;
             background-image: url(${urlImageFondoHtml});
@@ -247,86 +258,6 @@ class Header extends HTMLElement {
 
         .bi-search_modal path {
             stroke: rgba(110, 110, 110, 0.3);
-        }
-
-        .modal {
-            background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
-            display: none; /* Oculto por defecto */
-            height: 100%;
-            left: 0;
-            opacity: 0;
-            overflow: auto;
-            position: fixed;
-            top: 0;
-            transition: opacity 0.5s ease-in-out;
-            width: 100%;
-            z-index: 9999;
-        }
-
-        .modal.show {
-            display: block; /* Visible */
-            opacity: 1; /* Completamente visible */
-        }
-
-        .modal-content {
-            background-color: var(--color-primary);
-            border: 1px solid var(--color-tertiary);
-            border-radius: 1rem;
-            box-shadow: 0 1rem 1.5rem var(--color-fourth); /* Añadir sombra */
-            margin: 7% auto;
-            max-width: 500px;
-            transition: transform 0.5s ease-in-out;
-            width: 80%;
-        }
-
-        .modal.show .modal-content {
-            transform: translateY(0); /* Desplazamiento normal al mostrar */
-        }
-
-        .modal_search_container {
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            width: 100%;
-        }
-
-        .input__buscador_modal {
-            align-items: center;
-            background-color: var(--color-primary);
-            border: solid var(--color-tertiary) 0.15rem;
-            border-radius: 1rem;
-            font-family: "Capriola", serif;
-            font-size: 1.15rem;
-            height: 2.9rem;
-            justify-content: center;
-            outline: none;
-            padding: 0.5rem 2.5rem 0.5rem 0.5rem;
-            width: 100%;
-        }
-
-        .input_icon_modal {
-            border-radius: 40%;
-            color: var(--color-tertiary); /* Color del ícono */
-            cursor: pointer;
-            font-size: 1.5rem; /* Tamaño del ícono */
-            padding: 0.3rem;
-            position: absolute;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all 1.2s;
-        }
-
-        .input_icon_modal:hover {
-            background-color: var(--color-secondary);
-            color: var(--color-primary);
-            transition: all 1.2s;
-        }
-
-        .input__buscador_modal.active {
-            display: inline-block;
-            opacity: 1;
-            width: 22rem; /* Ajusta el tamaño del input al expandirse */
         }
 
         .login_button {

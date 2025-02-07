@@ -1,9 +1,4 @@
-:root {
-    --color-primary: #F6F7D3;
-    --color-secondary: #697565;
-    --color-tertiary: #3C3D37;
-    --color-fourth: #1E201E;
-}
+@import url('style.css');
 
 .banner {
 	align-items: center;
@@ -26,7 +21,7 @@
     grid-column: 2; /* Ubica la sección en la segunda columna */
     height: 100%; /* Asegura que ocupe toda la altura de la sección */
     justify-content: center;
-    text-shadow: 2px 2px 2px var(--color-secondary);
+    text-shadow: 2px 2px 2px var(--color-tertiary);
 }
 
 .titles {
@@ -40,18 +35,18 @@
 }
 
 .prom, .description {
-    color: var(--color-fourth);
+    color: var(--color-fifth);
     font-size: 3.35rem;
     font-weight: 1000;
     margin-bottom: 3rem;
-    text-shadow: 0.2rem 0.3rem 0.4rem var(--color-tertiary);
-    -webkit-text-stroke: 1px var(--color-secondary);
+    text-shadow: 0.2rem 0.3rem 0.4rem var(--color-fourth);
+    -webkit-text-stroke: 1px var(--color-tertiary);
 }
 
 .see_button {
     align-self: flex-end;
-    background-color: var(--color-secondary);
-    border: solid var(--color-tertiary) 1px;
+    background-color: var(--color-tertiary);
+    border: solid var(--color-fourth) 1px;
     border-radius: 50%;
     color: var(--color-primary);
     cursor: pointer;
@@ -64,8 +59,8 @@
 
 .see_button:hover {
     background-color: var(--color-primary);
-    box-shadow: 0 0 10px var(--color-secondary);
-    color: var(--color-fourth);
+    box-shadow: 0 0 10px var(--color-tertiary);
+    color: var(--color-fifth);
 }
 
 .see_link {

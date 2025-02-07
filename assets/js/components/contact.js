@@ -29,7 +29,7 @@ contactTemplate.innerHTML = `
 
                 <form class="contact_form_form" id="contact_form_form">
                     <div class="contact_form_area input-container">
-                        <input name="name" type="text" class="contact_form__input input-padron" id="name" required minlength="4" maxlength="40" data-tipo="name" placeholder="Nombre Y Apellido">
+                        <input name="name" type="text" class="contact_form__input input-padron" id="name" required minlength="10" maxlength="40" data-tipo="name" placeholder="Nombre Y Apellido">
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
                     <div class="contact_form_area input-container">
@@ -37,7 +37,7 @@ contactTemplate.innerHTML = `
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
                     <div class="contact_form_area input-container">
-                        <input name="asunt" type="text" class="contact_form__input input-padron" id="asunt" required minlength="4" maxlength="40" data-tipo="name" placeholder="Asunto">
+                        <input name="asunt" type="text" class="contact_form__input input-padron" id="asunt" required minlength="10" maxlength="40" data-tipo="name" placeholder="Asunto">
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
     
@@ -138,6 +138,17 @@ class Contact extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
+            :root {
+                --color-primary: #F6F7D3;
+                --color-secondary: #e6e7cc;
+                --color-tertiary: #697565;
+                --color-fourth: #3C3D37;
+                --color-fifth: #1E201E;
+                font-family: "Capriola", serif;
+                line-height: 1rem;
+                scroll-behavior: smooth;
+            }
+                
             .contact {
                 background-image: url(${urlImageFondoHtml});
                 color: var(--color-primary);
