@@ -8,7 +8,7 @@ if (document.title == "GS Controles - Inicio") {
     urlImageLogoHtml = "assets/images/logo-solo/logo-nombre.png";
     urlImageFondoHtml = "assets/images/fondos/fondo-de-logo.jpg";
     urlMenuHtml = "./assets/pages/underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Productos Todos" | document.title == "GS Controles - Login" | document.title == "GS Controles - Producto Detalles") {
+} else if (document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - Producto Detalles") {
     urlMenuHtml = "../underconstruction/underconstruction.html";
     urlImageLogoHtml = "../../images/logo-solo/logo-nombre.png";
     urlImageFondoHtml = "../../images/fondos/fondo-de-logo.jpg";
@@ -46,47 +46,15 @@ contactTemplate.innerHTML = `
             }
             
             .contact_content {
+                align-items: center;
                 display: flex;
                 gap: 7rem;
+                justify-content: center;
                 margin: 0 auto;
                 width: 80%;
             }
             
-            .contact_logo_img {
-                display: flex;
-                content: url(${urlImageLogoHtml});
-                height: 45%;
-                margin-bottom: 1rem;
-                object-fit: cover;
-                width: 45%;
-            }
-            
-            .menu {
-                display: flex;
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .menu_item {
-                transition: all 1s;
-            }
-            
-            .menu_item:hover {
-                color: var(--color-primary);
-                transform: scale(1.1);
-            }
-            
-            .menu_link {
-                color: var(--color-primary);
-                text-decoration: none;
-                transition: all 1s;
-            }
-            
-            .menu_link:hover {
-                color: var(--color-primary);
-            }
-            
-            .contact_form {
+            .contact_form_form, .contact_form {
                 display: flex;
                 flex-direction: column;
                 gap: 1.5rem;
@@ -119,7 +87,6 @@ contactTemplate.innerHTML = `
                 background-color: #e6e7cc;
                 border: none;
                 border-bottom: 1px solid var(--color-tertiary);
-                font-family: Raleway, sans-serif;
                 font-size: 1rem;
                 outline: none;
                 padding: 0.5rem;
@@ -186,8 +153,49 @@ contactTemplate.innerHTML = `
             }
             
             .send_message__button {
-                color:#FFFFFF;
+                color: var(--color-primary);
                 text-decoration: none;
+            }
+            
+            .contact_logo_img {
+                display: flex;
+                content: url(${urlImageLogoHtml});
+                height: 45%;
+                margin-bottom: 1rem;
+                object-fit: cover;
+                width: 45%;
+            }
+            
+            .menu {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .menu_item {
+                font-size: 1.1rem;
+                transition: all 1s;
+            }
+            
+            .menu_item:hover {
+                color: var(--color-primary);
+                transform: scale(1.1);
+            }
+            
+            .menu_link {
+                color: var(--color-primary);
+                text-decoration: none;
+                transition: all 1s;
+            }
+            
+            .menu_link:hover {
+                color: var(--color-primary);
+            }
+            
+            .bi {
+                font-size: 1.3rem;
+                font-weight: bold;
+                padding: 0.5rem;
             }
             
             
@@ -335,9 +343,9 @@ contactTemplate.innerHTML = `
 
 
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <section class="contact">
-        <h2>Contacto</h2>
+        <h2 id="contact">Contacto</h2>
         <div class="contact_content">
             <!-- form -->
             <div class="contact_form">
@@ -345,7 +353,7 @@ contactTemplate.innerHTML = `
                     <h6 class="title">Escribinos mediante este formulario</h6>
                 </div>
 
-                <form class="contact_form">
+                <form class="contact_form_form" id="contact_form_form">
                     <div class="contact_form_area input-container">
                         <input name="name" type="text" class="contact_form__input input-padron" id="name" required minlength="4" maxlength="40" data-tipo="name" placeholder="Nombre Y Apellido">
                         <span class="mensaje-error">Este campo no es válido</span>
@@ -370,21 +378,47 @@ contactTemplate.innerHTML = `
 
             <!-- menu -->
             <div class="contact_menu">
-            <!-- logo -->
-            <div class="contact_logo">
-                <img class="contact_logo_img" alt="GS Controles" title="GS Controles">
-            </div>
+                <!-- logo -->
+                <div class="contact_logo">
+                    <img class="contact_logo_img" alt="GS Controles" title="GS Controles">
+                </div>
                 <ul class="menu">
-                    <li class="menu_item"><a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">+54 9 3426138796</a></li>
-                    <li class="menu_item"><a class="menu_link" href="tel:3426138796" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">+54 9 3426138796</a></li>
-                    <li class="menu_item">Matheu 2420 - Santa Fe - Argentina</li>
-                    <li class="menu_item"><a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">gscontroles@gmail.com</a></li>
-                    <li class="menu_item"><a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">@gscontroles</a></li>
-                    <li class="menu_item"><a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">@gs.controles</a></li>
+                    <li class="menu_item">
+                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
+                            <i class="bi bi-whatsapp"></i> +54 9 3426138796
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
+                            <i class="bi bi-telephone"></i> +54 9 3426138796
+                        </a>
+                    </li>
+                    <li class="menu_item" alt="Nuestra Dirección" title="Nuestra Dirección">
+                        <i class="bi bi-geo-alt"></i> Matheu 2420 - Santa Fe Capital - Argentina
+                    </li>
+                    <li class="menu_item">
+                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
+                            <i class="bi bi-envelope"></i> gscontroles@gmail.com
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
+                            <i class="bi bi-facebook"></i> @gscontroles
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
+                            <i class="bi bi-instagram"></i> @gs.controles
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.4584765073637!2d-60.69161122467499!3d-31.593894704854414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5074688e26a7b%3A0x7cf67ae3be21f06!2sMatheu%202420%2C%20S3004%20Santa%20Fe%20de%20la%20Vera%20Cruz%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1738917695951!5m2!1ses-419!2sar" 
+        //class="map_iframe" id="map_iframe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 `;
 
 class Contact extends HTMLElement {
@@ -430,11 +464,18 @@ class Contact extends HTMLElement {
         }
 
 
-        shadowRoot.appendChild(contactTemplate.content);
-        // console.log(this.shadowRoot.querySelector('.input'));
-        // console.log(this);
+        shadowRoot.appendChild(contactTemplate.content.cloneNode(true));
+
+        const form = shadowRoot.querySelector('#contact_form_form');
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evitar que el formulario se envíe
+                window.location.href = urlMenuHtml; // Redirigir a la página "En Construcción"
+            });
+        }
 
     }
 }
+
 
 customElements.define('contact-component', Contact);

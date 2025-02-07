@@ -13,7 +13,7 @@ if (document.title == "GS Controles - Inicio") {
     urlImageFondoHtml = "assets/images/fondos/fondo-de-logo.jpg";
     urlSearchHtml = "./assets/pages/underconstruction/underconstruction.html";
     urlLoginHtml = "./assets/pages/underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Productos Todos" | document.title == "GS Controles - Login" | document.title == "GS Controles - En Construcción" | document.title == "GS Controles - Editar Producto" | document.title == "GS Controles - Agregar Producto") {
+} else if (document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - En Construcción" || document.title == "GS Controles - Editar Producto" || document.title == "GS Controles - Agregar Producto") {
     urlIndexHtml = "../../../index.html";
     urlImageLogoHtml = "../../images/logo-solo/logo-nombre.png";
     urlImageFondoHtml = "../../images/fondos/fondo-de-logo.jpg";
@@ -426,7 +426,7 @@ headerTemplate.innerHTML = `
                                     </ul>
                                 </li>
                                 <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
-                                <li><a href="${urlSearchHtml}" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Contacto</a></li>
+                                <li><a href="${urlIndexHtml}#contact" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Contacto</a></li>
                                 <li>
                                     <div class="buscador_menu">
                                         <a class="input_icon_menu" href="${urlSearchHtml}" rel="noopener noreferrer" aria-label="Buscar productos" title="Busca el control remoto con la marca de tu electrodoméstico">
