@@ -1,17 +1,12 @@
-:root {
-    --color-primary: #F6F7D3;
-    --color-secondary: #697565;
-    --color-tertiary: #3C3D37;
-    --color-fourth: #1E201E;
-}
+@import url('style.css');
 
 .woweare {
     align-items: center;
-    background-color: #e6e7cc;
+    background-color: var(--color-secondary);
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
-    border-top: 0.3rem solid var(--color-tertiary);
-    box-shadow: 0.3rem 0.3rem 0.8rem var(--color-tertiary);
+    border-top: 0.3rem solid var(--color-fourth);
+    box-shadow: 0.3rem 0.3rem 0.8rem var(--color-fourth);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -21,7 +16,7 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
     text-align: center;
-    text-shadow: 1px 1px 2px var(--color-tertiary);
+    text-shadow: 1px 1px 2px var(--color-fourth);
     width: 90%;
 }
 

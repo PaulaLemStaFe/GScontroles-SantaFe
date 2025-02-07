@@ -1,9 +1,4 @@
-:root {
-    --color-primary: #F6F7D3;
-    --color-secondary: #697565;
-    --color-tertiary: #3C3D37;
-    --color-fourth: #1E201E;
-}
+@import url('style.css');
 
 .banner {
 	align-items: center;
@@ -25,7 +20,7 @@
     display: flex;
     margin: 0 auto;
     max-width: 1920px;
-    text-shadow: 2px 2px 2px var(--color-secondary);
+    text-shadow: 2px 2px 2px var(--color-tertiary);
 }
 
 .titles {
@@ -46,12 +41,12 @@
     left: 32%;
     position: absolute;
     top: 45%;
-    text-shadow: 0.2rem 0.3rem 0.4rem var(--color-fourth);
+    text-shadow: 0.2rem 0.3rem 0.4rem var(--color-fifth);
     -webkit-text-stroke: 1px var(--color-primary);
 }
 
 .whatsapp-logo {
-    filter: drop-shadow(0.2rem 0.3rem 0.4rem var(--color-fourth));
+    filter: drop-shadow(0.2rem 0.3rem 0.4rem var(--color-fifth));
     height: auto;
     margin-right: 1.1rem;
     width: 3.5rem;
