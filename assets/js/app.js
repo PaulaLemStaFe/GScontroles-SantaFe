@@ -1,21 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const inputs = document.querySelectorAll(".input-padron");
-    
     const contact = document.querySelector('contact-component');
     const shadowRoot = contact.shadowRoot;
-
     const inputsContact = shadowRoot.querySelectorAll(".input-padron");
 
     inputs.forEach(input => {
-        input.addEventListener('blur', (event) => {
-            valida(event.target);
-        });
+        input.addEventListener('blur', event => valida(event.target));
     });
 
     inputsContact.forEach(input => {
-        input.addEventListener('blur', (event) => {
-            valida(event.target);
-        });
+        input.addEventListener('blur', event => valida(event.target));
     });
 });
 
@@ -43,14 +37,12 @@ const mensajesDeError = {
     message: {
         valueMissing: "Debes completar el campo Mensaje para poder continuar"
     },
-
     // login form validation
     password: {
         valueMissing: "El campo Contraseña no puede estar vacío",
         patternMismatch: "Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.",
     },
-
-    // add products validatiion
+    // add products validation
     img: {
         valueMissing: "Debes seleccionar al menos una imagen",
     },
@@ -81,7 +73,7 @@ function valida(input) {
 function mostrarMensajeDeError(tipoDeInput, input) {
     let mensaje = "";
 
-    tipoDeErrores.forEach((error) => {
+    tipoDeErrores.forEach(error => {
         if (input.validity[error]) {
             mensaje = mensajesDeError[tipoDeInput][error];
         }

@@ -1,27 +1,9 @@
 const footerTemplate = document.createElement('template');
 
-var urlIndexHtml = '';
-var urlImageLogoHtml = '';
-var urlLoginHtml = '';
-var urlContactHtml = '';
-var urlSearchHtml = '';
-var urlUnderConstructionHtml = '';
-
-if (document.title == "GS Controles - Inicio") {
-    urlIndexHtml = "./index.html";
-    urlImageLogoHtml = "assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg";
-    urlSearchHtml = "./assets/pages/search/search.html";
-    urlUnderConstructionHtml = "./assets/pages/underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - En Construcción" || document.title == "GS Controles - Editar Producto" || document.title == "GS Controles - Agregar Producto" || document.title == "GS Controles - Buscando Productos") {
-    urlIndexHtml = "../../../index.html";
-    urlImageLogoHtml = "../../images/logo-con-fondo/foto-perfil-gs_controles.jpg";
-    urlSearchHtml = "../search/search.html";
-    urlUnderConstructionHtml = "../underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Producto Detalles") {
-    urlIndexHtml = "../../../../index.html";
-    urlSearchHtml = "../../search/search.html";
-    urlUnderConstructionHtml = "../../underconstruction/underconstruction.html";
-}
+var urlIndexHtml = '/index.html';
+var urlImageLogoHtml = '/assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg';
+var urlSearchHtml = '/assets/pages/search/search.html';
+var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
 
 footerTemplate.innerHTML = `
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -33,7 +15,7 @@ footerTemplate.innerHTML = `
                     <nav>
                         <ul class="menu_list">
                             <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                            <li class="submenu"><a href="${urlUnderConstructionHtml}" title="Productos">Productos</a></li>
+                            <li class="submenu"><a href="${urlConstructionHtml}" title="Productos">Productos</a></li>
                             <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
                             <li><a href="${urlIndexHtml}#contact" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Contacto</a></li>
                             <li>
@@ -54,12 +36,12 @@ footerTemplate.innerHTML = `
             <div class="footer_contact_menu">
                 <ul class="menu">
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
                             <i class="bi bi-whatsapp"></i> +54 9 3426138796
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
                             <i class="bi bi-telephone"></i> +54 9 3426138796
                         </a>
                     </li>
@@ -67,17 +49,17 @@ footerTemplate.innerHTML = `
                         <i class="bi bi-geo-alt"></i> Matheu 2420 - Santa Fe Capital - Argentina
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
                             <i class="bi bi-envelope"></i> gscontroles@gmail.com
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
                             <i class="bi bi-facebook"></i> @gscontroles
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlUnderConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
                             <i class="bi bi-instagram"></i> @gs.controles
                         </a>
                     </li>
@@ -104,42 +86,15 @@ class Footer extends HTMLElement {
         const responsive = document.querySelector('link[href*="responsive"]');
         const shadowRoot = this.attachShadow({ mode: 'open' });
 
-        if (fontAwesome) {
-            shadowRoot.appendChild(fontAwesome.cloneNode());
-        }
-
-        if (reset) {
-            shadowRoot.appendChild(reset.cloneNode());
-        }
-
-        if (logo) {
-            shadowRoot.appendChild(logo.cloneNode());
-        }
-
-        if (inputs) {
-            shadowRoot.appendChild(inputs.cloneNode());
-        }
-
-        if (buttons) {
-            shadowRoot.appendChild(buttons.cloneNode());
-        }
-
-        if (responsive) {
-            shadowRoot.appendChild(responsive.cloneNode());
-        }
+        [fontAwesome, reset, logo, inputs, buttons, responsive].forEach(link => {
+            if (link) {
+                shadowRoot.appendChild(link.cloneNode());
+            }
+        });
 
         const style = document.createElement('style');
         style.textContent = `
-            :root {
-                --color-primary: #F6F7D3;
-                --color-secondary: #e6e7cc;
-                --color-tertiary: #697565;
-                --color-fourth: #3C3D37;
-                --color-fifth: #1E201E;
-                font-family: "Capriola", serif;
-                line-height: 1rem;
-                scroll-behavior: smooth;
-            }
+            @import url('/assets/css/style.css');
             
             .montserrat-alternates-regular {
                 font-family: "Montserrat Alternates", serif;
@@ -150,19 +105,19 @@ class Footer extends HTMLElement {
             .footer {
                 background-color: rgba(105, 117, 101, 0.9);
                 border-top: 0.15rem solid var(--color-fifth);
-                font-family: "Montserrat Alternates", snas-serif;
+                font-family: "Montserrat Alternates", sans-serif;
             }
-
+        
             .footer_menu {
                 align-items: center;
                 border-top: 5rem var(--color-fifth);
                 display: flex;
                 gap: 5rem;
                 justify-content: space-around;
-                margin: 0 0 0 0;
+                margin: 0;
                 padding: 0.8rem 0;
             }
-
+        
             .navegacion {
                 align-items: center;
                 display: flex;
@@ -170,19 +125,19 @@ class Footer extends HTMLElement {
                 margin: 0 1rem;
                 padding: 0.1rem 0;
             }
-
+        
             .logo_image {
                 border-radius: 1rem;
                 content: url(${urlImageLogoHtml});
                 display: flex;
                 width: 15%;
             }
-
+        
             .menu_buscador {
                 display: flex;
                 gap: 0.4rem;
             }
-
+        
             .menu_list {
                 display: flex;
                 flex-direction: column;
@@ -190,11 +145,11 @@ class Footer extends HTMLElement {
                 justify-content: center;
                 list-style: none;
             }
-
+        
             .menu_list li {
                 margin: 0 0.5rem;
             }
-
+        
             .menu_list a {
                 color: var(--color-primary);
                 cursor: pointer;
@@ -204,13 +159,13 @@ class Footer extends HTMLElement {
                 text-decoration: none;
                 transition: all 1s;
             }
-
+        
             .menu_list a:hover {
                 color: var(--color-fifth);
                 transform: scale(1.1); /* Aumenta el tamaño del texto */
                 transition: all 1.2s;
             }
-
+        
             /* search */
             .buscador_menu {
                 align-items: center;
@@ -219,17 +174,17 @@ class Footer extends HTMLElement {
                 padding-right: 1rem;
                 position: relative;
             }
-
+        
             .bi_menu, .bi_modal {
                 cursor: pointer;
             }
-
+        
             .bi-search_menu {
                 cursor: pointer;
-                font-size: 1.2rem;; /* Aumenta el tamaño del ícono */
+                font-size: 1.2rem; /* Aumenta el tamaño del ícono */
                 font-weight: 900; /* Añade peso al ícono */
             }
-
+        
             .bi-search_menu svg {
                 height: 1.2rem; /* Ajusta la altura del SVG */
                 stroke-width: 4; /* Aumenta el grosor del trazo */
@@ -273,35 +228,33 @@ class Footer extends HTMLElement {
                 background-color: var(--color-secondary);
                 border-top: 0.15rem solid var(--color-fourth);
                 bottom: 0;
-                font-family: "Montserrat Alternates", snas-serif;
+                font-family: "Montserrat Alternates", sans-serif;
                 font-size: 0.9em;
                 font-weight: 500;
                 padding: 10px;
                 text-align: center;
             }
-
+        
             p {
-                font-family: "Montserrat Alternates", snas-serif;
+                font-family: "Montserrat Alternates", sans-serif;
             }
             
-            
             @media screen and (max-width: 960px) {
-                .footer{
+                .footer {
                     width: 100%;
                 }
             
                 .derechos {
                     font-size: 0.85em;
-                    padding: 5px 0px;
+                    padding: 5px 0;
                 }
             }
-
-            @media (min-width:451px) and (max-width:768px) {
-
+        
+            @media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
                 .logo_image {
                     width: 90%;
                 }
-
+        
                 .navegacion {
                     align-items: center;
                     display: flex;
@@ -311,22 +264,22 @@ class Footer extends HTMLElement {
                     padding: 1rem 0;
                     width: 90%;
                 }
-
+        
                 .buscador {
                     align-items: center;
                     display: flex;
                     order: 3;
                     padding: 0;
                 }
-
+        
                 .input_icon {
                     font-size: 2rem;
                 }
-
+        
                 .bi, .bi-search {
                     cursor: pointer;
                 }
-
+        
                 .bi-search::before {
                     color: #464646;
                     font-size: 2rem;
@@ -344,13 +297,12 @@ class Footer extends HTMLElement {
                     padding-left: 1rem;
                 }
             }
-
+        
             @media (max-width: 450px) {
-
                 .logo_image {
                     width: 75%;
                 }
-
+        
                 .navegacion {
                     align-items: center;
                     display: flex;
@@ -360,7 +312,7 @@ class Footer extends HTMLElement {
                     padding: 1rem 0;
                     width: 90%;
                 }
-
+        
                 .buscador {
                     align-items: center;
                     border-radius: 1rem;
@@ -368,15 +320,15 @@ class Footer extends HTMLElement {
                     order: 3;
                     padding: 0;
                 }
-
+        
                 .input_icon {
                     font-size: 2rem;
                 }
-
+        
                 .bi, .bi-search {
                     cursor: pointer;
                 }
-
+        
                 .bi-search::before {
                     font-size: 2rem;
                     font-weight: 900;
@@ -394,14 +346,11 @@ class Footer extends HTMLElement {
                     padding-left: 1rem;
                     width: 24rem;
                 }
-                
             }
         `;
         shadowRoot.appendChild(style);
-
+        
         shadowRoot.appendChild(footerTemplate.content);
-
     }
 }
-
 customElements.define('footer-component', Footer);

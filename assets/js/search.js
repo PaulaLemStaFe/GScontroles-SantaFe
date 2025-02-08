@@ -2,39 +2,80 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchButton = document.getElementById("search-button");
     const searchInput = document.getElementById("search-input");
     const searchResults = document.getElementById("search-results");
+    const autocompleteResults = document.getElementById("autocomplete-results");
+    const noResultsContainer = document.getElementById("no-results-container");
 
     // Cargar productos desde JSON
     let productos = [];
     fetch('../../../db.json')
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
         })
         .then(data => {
             productos = [...(data.producttv || []), ...(data.productsaa || [])];
             console.log("Productos cargados:", productos);
         })
-        .catch(error => {
-            console.error('Error fetching products:', error);
-        });
+        .catch(error => console.error('Error fetching products:', error));
+
+    // Agregar event listener al input para detectar cambios y clics
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query) {
+            const marcas = obtenerMarcasDisponibles(query);
+            mostrarResultadosAutocompletado(marcas);
+        } else {
+            autocompleteResults.innerHTML = '';
+            autocompleteResults.style.display = 'none';
+        }
+    });
+
+    searchInput.addEventListener("click", () => {
+        const marcas = obtenerMarcasDisponibles('');
+        mostrarResultadosAutocompletado(marcas);
+    });
+
+    function obtenerMarcasDisponibles(query) {
+        return productos.flatMap(producto => [
+            producto.modelosoportado01, producto.modelosoportado02, 
+            producto.modelosoportado03, producto.modelosoportado04])
+            .filter((marca, index, self) => marca && marca.toLowerCase().includes(query) && self.indexOf(marca) === index)
+            .sort((a, b) => a.localeCompare(b)); // Ordenar alfabéticamente
+    }
+
+    // Mostrar resultados de autocompletado
+    function mostrarResultadosAutocompletado(marcas) {
+        autocompleteResults.innerHTML = '';
+        if (marcas.length > 0) {
+            marcas.forEach(marca => {
+                const item = document.createElement("div");
+                item.classList.add("autocomplete-item");
+                item.textContent = marca;
+                item.addEventListener("click", () => {
+                    searchInput.value = marca;
+                    autocompleteResults.innerHTML = '';
+                    autocompleteResults.style.display = 'none';
+                    realizarBusqueda(marca);
+                });
+                autocompleteResults.appendChild(item);
+            });
+            autocompleteResults.style.display = 'block';
+        } else {
+            autocompleteResults.style.display = 'none';
+        }
+    }
 
     // Agregar event listener al ícono de búsqueda
     searchButton.addEventListener("click", () => {
         const query = searchInput.value.trim();
-        if (query) {
-            realizarBusqueda(query);
-        }
+        if (query) realizarBusqueda(query);
     });
 
     // Agregar event listener al input para detectar "Enter"
-    searchInput.addEventListener("keypress", (event) => {
+    searchInput.addEventListener("keypress", event => {
         if (event.key === "Enter") {
             const query = searchInput.value.trim();
-            if (query) {
-                realizarBusqueda(query);
-            }
+            if (query) realizarBusqueda(query);
         }
     });
 
@@ -43,50 +84,41 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Productos is not an array:", productos);
             return;
         }
-    
+
         const resultadosFiltrados = productos.filter(producto =>
-            (producto.title && producto.title.toLowerCase().includes(query.toLowerCase())) ||
-            (producto.modelosoportado01 && producto.modelosoportado01.toLowerCase().includes(query.toLowerCase())) ||
-            (producto.modelosoportado02 && producto.modelosoportado02.toLowerCase().includes(query.toLowerCase())) ||
-            (producto.modelosoportado03 && producto.modelosoportado03.toLowerCase().includes(query.toLowerCase())) ||
-            (producto.modelosoportado04 && producto.modelosoportado04.toLowerCase().includes(query.toLowerCase()))
+            [producto.title, producto.modelosoportado01, 
+            producto.modelosoportado02, producto.modelosoportado03, 
+            producto.modelosoportado04].some(marca => 
+                marca && marca.toLowerCase().includes(query.toLowerCase())
+            )
         );
-    
+
         mostrarResultados(resultadosFiltrados);
-    
+
         // Limpiar el contenido del input
         searchInput.value = '';
+        autocompleteResults.innerHTML = '';
+        autocompleteResults.style.display = 'none';
     }
 
     function mostrarResultados(resultados) {
-        // Limpiar el contenedor de resultados y mensajes anteriores
         searchResults.innerHTML = "";
-    
-        // Remover cualquier mensaje anterior fuera del contenedor de productos
-        const noResultsContainer = document.querySelector('.no-results-container');
-        if (noResultsContainer) {
-            noResultsContainer.remove();
-        }
-    
+        noResultsContainer.innerHTML = "";
         if (resultados.length === 0) {
-            // Crear el contenedor para los mensajes
-            const noResultsDiv = document.createElement('div');
-            noResultsDiv.classList.add('no-results-container');
-            noResultsDiv.innerHTML = `
-                <p class="no-results-message">No se encontraron productos.</p>
-                <p class="additional-message">Por favor, contáctenos para consultar.</p>
+            noResultsContainer.innerHTML = `
+                <div class="no-results-container">
+                    <p class="no-results-message">No se encontraron productos.</p>
+                    <p class="additional-message">Por favor, contáctenos para consultar.</p>
+                </div>
             `;
-    
-            // Insertar el contenedor de mensajes antes de searchResults
-            searchResults.parentNode.insertBefore(noResultsDiv, searchResults);
         } else {
-            if (resultados.length < 6) {
+            if (resultados.length < 6 || (resultados.length >= 7 && resultados.length <= 11)) {
                 searchResults.classList.add('centrado');
             } else {
                 searchResults.classList.remove('centrado');
                 searchResults.style.gridTemplateColumns = 'repeat(6, 1fr)'; // Asegura que haya 6 columnas
             }
-    
+
             resultados.forEach(producto => {
                 const productoElemento = document.createElement("div");
                 productoElemento.classList.add("product_item");

@@ -1,29 +1,10 @@
 const headerTemplate = document.createElement('template');
 
-var urlIndexHtml = '';
-var urlImageLogoHtml = '';
-var urlImageFondoHtml = '';
-var urlSaberHtml = '';
-var urlContactHtml = '';
-var urlSearchHtml = '';
-
-if (document.title == "GS Controles - Inicio") {
-    urlIndexHtml = "./index.html";
-    urlImageLogoHtml = "assets/images/logo-solo/logo-nombre.png";
-    urlImageFondoHtml = "assets/images/fondos/fondo-de-logo.jpg";
-    urlSearchHtml = "./assets/pages/search/search.html";
-    urlLoginHtml = "./assets/pages/underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Buscando Productos" || document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - En Construcción" || document.title == "GS Controles - Editar Producto" || document.title == "GS Controles - Agregar Producto") {
-    urlIndexHtml = "../../../index.html";
-    urlImageLogoHtml = "../../images/logo-solo/logo-nombre.png";
-    urlImageFondoHtml = "../../images/fondos/fondo-de-logo.jpg";
-    urlSearchHtml = "../search/search.html";
-    urlLoginHtml = "../underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Producto Detalles") {
-    urlIndexHtml = "../../../../index.html";
-    urlSearchHtml = "../../search/search.html";
-    urlLoginHtml = "../../underconstruction/underconstruction.html";
-}
+var urlIndexHtml = '/index.html';
+var urlImageLogoHtml = '/assets/images/logo-solo/logo-nombre.png';
+var urlImageFondoHtml = '/assets/images/fondos/fondo-de-logo.jpg';
+var urlSearchHtml = '/assets/pages/search/search.html';
+var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
 
 headerTemplate.innerHTML = `
         <header class="navbar">
@@ -34,9 +15,9 @@ headerTemplate.innerHTML = `
                         <nav>
                             <ul class="menu_list">
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                                <li class="submenu"><a href="${urlLoginHtml}" title="Productos">Productos</a>
+                                <li class="submenu"><a href="${urlConstructionHtml}" title="Productos">Productos</a>
                                     <ul class="submenu_list">
-                                        <li><a href="${urlLoginHtml}" title="Ingresa para ver todos nuestros productos">Todos</a></li>
+                                        <li><a href="${urlConstructionHtml}" title="Ingresa para ver todos nuestros productos">Todos</a></li>
                                         <li><a href="${urlIndexHtml}#tv__title" title="Controles remotos para televisores">Televisor</a></li>
                                         <li><a href="${urlIndexHtml}#aa__title" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
                                     </ul>
@@ -59,7 +40,7 @@ headerTemplate.innerHTML = `
                     </div>
                 </div>
                 <div class="button">
-                    <a class="login_button login_link" href="${urlLoginHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
+                    <a class="login_button login_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
                 </div>
             </div>
         </header>
@@ -75,335 +56,314 @@ class Header extends HTMLElement {
     connectedCallback() {
         const fontAwesome = document.querySelector('link[href*="font-awesome"]');
         const logo = document.querySelector('link[href*="logo"]');
-
         const responsive = document.querySelector('link[href*="responsive"]');
-
         const shadowRoot = this.attachShadow({ mode: 'closed' });
 
-        if (fontAwesome) {
-            shadowRoot.appendChild(fontAwesome.cloneNode());
-        }
+        [fontAwesome, logo, responsive].forEach(link => {
+            if (link) {
+                shadowRoot.appendChild(link.cloneNode());
+            }
+        });
 
-        if (logo) {
-            shadowRoot.appendChild(logo.cloneNode());
-        }
-
-        if (responsive) {
-            shadowRoot.appendChild(responsive.cloneNode());
-        }
+        shadowRoot.appendChild(headerTemplate.content.cloneNode(true));
 
         const style = document.createElement('style');
         style.textContent = `
-        :root {
-            --color-primary: #F6F7D3;
-            --color-secondary: #e6e7cc;
-            --color-tertiary: #697565;
-            --color-fourth: #3C3D37;
-            --color-fifth: #1E201E;
-            font-family: "Capriola", serif;
-            line-height: 1rem;
-            scroll-behavior: smooth;
-        }
-            
-        .navbar {
-            align-items: center;
-            background-image: url(${urlImageFondoHtml});
-            background-position: center;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 0 0 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .navegacion {
-            align-items: center;
-            display: flex;
-            justify-content: space-around;
-            margin: 0 1rem;
-            padding: 0.1rem 0;
-            width: 100%;
-        }
-
-        .logo_image {
-            content: url(${urlImageLogoHtml});
-            display: flex;
-            width: 15%;
-        }
-
-        .menu_buscador {
-            display: flex;
-            gap: 0.4rem;
-        }
-
-        .menu_list {
-            align-items: center;
-            background-color: var(--color-tertiary);
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        .menu_list li {
-            margin: 0 0.5rem;
-        }
-
-        .menu_list a {
-            color: var(--color-primary);
-            cursor: pointer;
-            display: block;
-            font-size: 1.1rem;
-            padding: 0.4rem 1rem;
-            text-decoration: none;
-            transition: all 1s;
-        }
-
-        .menu_list a:hover {
-            background-color: var(--color-primary); /* Añade sombra */
-            border-radius: 50%;
-            color: var(--color-fifth);
-            text-shadow: 0 10px 15px var(--color-fourth); /* Cambia el fondo cuando pasas el cursor */
-            transform: scale(1.15); /* Aumenta el tamaño del texto */
-            transition: all 1.2s;
-        }
-
-        /* Estilo para el submenú */
-        .submenu {
-            position: relative;
-        }
-
-        .submenu_list {
-            background-color: var(--color-tertiary);
-            border-bottom-left-radius: 1rem;
-            border-bottom-right-radius: 1rem;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            display: none;
-            left: 0;
-            list-style: none;
-            margin: 0;
-            opacity: 0;
-            padding: 0;
-            position: absolute;
-            top: 100%;
-            transition: opacity 0.5s;
-        }
-
-        /* Keyframes para retrasar la aparición del submenú */
-        @keyframes delayShow {
-            0% { display: block; opacity: 0; }
-            100% { display: block; opacity: 1; }
-        }
-
-        /* Aplicar la animación al pasar el mouse */
-        .submenu:hover .submenu_list {
-            animation: delayShow 0s 0.5s forwards; /* 0s de duración, 0.5s de retraso */
-            display: block;
-        }
-
-        .submenu_list li {
-            border-bottom: 1px solid var(--color-secondary);
-        }
-
-        .submenu_list li a {
-            color: var(--color-primary);
-            display: block;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
-
-        .submenu_list li a:hover {
-            background-color: inherit;
-            border-radius: 0%;
-            color: var(--color-primary);
-            transform: scale(1.1); /* Aumenta el tamaño del texto */
-            transition: all 1.1s;
-        }
-
-        /* Mostrar el submenú al pasar el mouse */
-        .submenu:hover .submenu_list {
-            display: block;
-        }
-
-        /* search */
-        .buscador_menu {
-            align-items: center;
-            border-radius: 1rem;
-            display: flex;
-            padding-right: 1rem;
-            position: relative;
-        }
-
-        .bi_menu, .bi_modal {
-            cursor: pointer;
-        }
-
-        .bi-search_menu, .bi-search_modal {
-            cursor: pointer;
-            font-size: 1.2rem;; /* Aumenta el tamaño del ícono */
-            font-weight: 900; /* Añade peso al ícono */
-        }
-
-        .bi-search_menu svg, .bi-search_modal svg {
-            height: 1.2rem; /* Ajusta la altura del SVG */
-            stroke-width: 4; /* Aumenta el grosor del trazo */
-            width: 1.2rem; /* Ajusta el ancho del SVG */
-        }
-
-        .bi-search_menu path {
-            stroke: rgba(255, 255, 255, 0.3);
-        }
-
-        .bi-search_modal path {
-            stroke: rgba(110, 110, 110, 0.3);
-        }
-
-        .login_button {
-            background-color: var(--color-tertiary);
-            border: solid var(--color-fourth) 1px;
-            border-radius: 50%;
-            color: var(--color-primary);
-            cursor: pointer;
-            padding: 1rem 2.5rem;
-            text-align: center;
-            transition: all 1s;
-        }
-
-        .login_button:hover {
-            background-color: var(--color-primary);
-            box-shadow: 0 0 10px var(--color-tertiary);
-            color: var(--color-cuarto)
-        }
-
-        .login_link {
-            text-decoration: none;
-        }
-
-
-
-        @media (min-width:451px) and (max-width:768px) {
-
-            .logo_image {
-                width: 90%;
+            @import url('/assets/css/style.css');
+                
+            .navbar {
+                align-items: center;
+                background-image: url(${urlImageFondoHtml});
+                background-position: center;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1;
             }
 
             .navegacion {
                 align-items: center;
                 display: flex;
-                justify-content: space-between;
-                margin: 0 auto;
-                max-width: 1920px;
-                padding: 1rem 0;
-                width: 90%;
+                justify-content: space-around;
+                margin: 0 1rem;
+                padding: 0.1rem 0;
+                width: 100%;
             }
-
-            .buscador {
-                align-items: center;
-                display: flex;
-                order: 3;
-                padding: 0;
-            }
-
-            .input_icon {
-                font-size: 2rem;
-            }
-
-            .bi, .bi-search {
-                cursor: pointer;
-            }
-
-            .bi-search::before {
-                color: #464646;
-                font-size: 2rem;
-                font-weight: 900;
-                margin: 0;
-                padding: 0;
-            }
-            
-            .input__buscador {
-                border: none;
-                border-radius: 1rem;
-                display: none;
-                font-size: 1rem;
-                outline: none;
-                padding-left: 1rem;
-            }
-
-            .login_button{
-                cursor: pointer;
-                margin: 0;
-                padding: 1rem 2rem;
-                text-align: center;
-                width: 10%;
-            }
-        }
-
-        @media (max-width: 450px) {
 
             .logo_image {
-                width: 75%;
-            }
-
-            .navegacion {
-                align-items: center;
+                content: url(${urlImageLogoHtml});
                 display: flex;
-                justify-content: space-between;
-                margin: 0 auto;
-                max-width: 1920px;
-                padding: 1rem 0;
-                width: 90%;
+                width: 15%;
             }
 
-            .buscador {
-                align-items: center;
-                border-radius: 1rem;
+            .menu_buscador {
                 display: flex;
-                order: 3;
-                padding: 0;
+                gap: 0.4rem;
             }
 
-            .input_icon {
-                font-size: 2rem;
+            .menu_list {
+                align-items: center;
+                background-color: var(--color-tertiary);
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                list-style: none;
             }
 
-            .bi, .bi-search {
+            .menu_list li {
+                margin: 0 0.5rem;
+            }
+
+            .menu_list a {
+                color: var(--color-primary);
                 cursor: pointer;
+                display: block;
+                font-size: 1.1rem;
+                padding: 0.4rem 1rem;
+                text-decoration: none;
+                transition: all 1s;
             }
 
-            .bi-search::before {
-                font-size: 2rem;
-                font-weight: 900;
-                margin: 0;
-                padding: 0;
+            .menu_list a:hover {
+                background-color: var(--color-primary); /* Añade sombra */
+                border-radius: 50%;
+                color: var(--color-fifth);
+                text-shadow: 0 10px 15px var(--color-fourth); /* Cambia el fondo cuando pasas el cursor */
+                transform: scale(1.15); /* Aumenta el tamaño del texto */
+                transition: all 1.2s;
             }
-            
-            .input__buscador {
-                border: none;
-                border-radius: 1rem;
+
+            /* Estilo para el submenú */
+            .submenu {
+                position: relative;
+            }
+
+            .submenu_list {
+                background-color: var(--color-tertiary);
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
                 display: none;
-                font-size: 1rem;
-                height: 2.5rem;
-                outline: none;
-                padding-left: 1rem;
-                width: 24rem;
+                left: 0;
+                list-style: none;
+                margin: 0;
+                opacity: 0;
+                padding: 0;
+                position: absolute;
+                top: 100%;
+                transition: opacity 0.5s;
             }
 
-            .login_button{
-                cursor: pointer;
-                margin: 0;
-                padding: 1rem 3rem;
-                text-align: center;
-                width: 10%;
+            /* Keyframes para retrasar la aparición del submenú */
+            @keyframes delayShow {
+                0% { display: block; opacity: 0; }
+                100% { display: block; opacity: 1; }
             }
-            
-        }
+
+            /* Aplicar la animación al pasar el mouse */
+            .submenu:hover .submenu_list {
+                animation: delayShow 0s 0.5s forwards; /* 0s de duración, 0.5s de retraso */
+                display: block;
+            }
+
+            .submenu_list li {
+                border-bottom: 1px solid var(--color-secondary);
+            }
+
+            .submenu_list li a {
+                color: var(--color-primary);
+                display: block;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            .submenu_list li a:hover {
+                background-color: inherit;
+                border-radius: 0;
+                color: var(--color-primary);
+                transform: scale(1.1); /* Aumenta el tamaño del texto */
+                transition: all 1.1s;
+            }
+
+            /* Mostrar el submenú al pasar el mouse */
+            .submenu:hover .submenu_list {
+                display: block;
+            }
+
+            /* search */
+            .buscador_menu {
+                align-items: center;
+                border-radius: 1rem;
+                display: flex;
+                padding-right: 1rem;
+                position: relative;
+            }
+
+            .bi_menu, .bi_modal {
+                cursor: pointer;
+            }
+
+            .bi-search_menu, .bi-search_modal {
+                cursor: pointer;
+                font-size: 1.2rem; /* Aumenta el tamaño del ícono */
+                font-weight: 900; /* Añade peso al ícono */
+            }
+
+            .bi-search_menu svg, .bi-search_modal svg {
+                height: 1.2rem; /* Ajusta la altura del SVG */
+                stroke-width: 4; /* Aumenta el grosor del trazo */
+                width: 1.2rem; /* Ajusta el ancho del SVG */
+            }
+
+            .bi-search_menu path {
+                stroke: rgba(255, 255, 255, 0.3);
+            }
+
+            .bi-search_modal path {
+                stroke: rgba(110, 110, 110, 0.3);
+            }
+
+            .login_button {
+                background-color: var(--color-tertiary);
+                border: solid var(--color-fourth) 1px;
+                border-radius: 50%;
+                color: var(--color-primary);
+                cursor: pointer;
+                padding: 1rem 2.5rem;
+                text-align: center;
+                transition: all 1s;
+            }
+
+            .login_button:hover {
+                background-color: var(--color-primary);
+                box-shadow: 0 0 10px var(--color-tertiary);
+                color: var(--color-cuarto);
+            }
+
+            .login_link {
+                text-decoration: none;
+            }
+
+            @media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
+                .logo_image {
+                    width: 90%;
+                }
+
+                .navegacion {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 auto;
+                    max-width: 1920px;
+                    padding: 1rem 0;
+                    width: 90%;
+                }
+
+                .buscador {
+                    align-items: center;
+                    display: flex;
+                    order: 3;
+                    padding: 0;
+                }
+
+                .input_icon {
+                    font-size: 2rem;
+                }
+
+                .bi, .bi-search {
+                    cursor: pointer;
+                }
+
+                .bi-search::before {
+                    color: #464646;
+                    font-size: 2rem;
+                    font-weight: 900;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .input__buscador {
+                    border: none;
+                    border-radius: 1rem;
+                    display: none;
+                    font-size: 1rem;
+                    outline: none;
+                    padding-left: 1rem;
+                }
+
+                .login_button {
+                    cursor: pointer;
+                    margin: 0;
+                    padding: 1rem 2rem;
+                    text-align: center;
+                    width: 10%;
+                }
+            }
+
+            @media (max-width: 450px) {
+                .logo_image {
+                    width: 75%;
+                }
+
+                .navegacion {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 auto;
+                    max-width: 1920px;
+                    padding: 1rem 0;
+                    width: 90%;
+                }
+
+                .buscador {
+                    align-items: center;
+                    border-radius: 1rem;
+                    display: flex;
+                    order: 3;
+                    padding: 0;
+                }
+
+                .input_icon {
+                    font-size: 2rem;
+                }
+
+                .bi, .bi-search {
+                    cursor: pointer;
+                }
+
+                .bi-search::before {
+                    font-size: 2rem;
+                    font-weight: 900;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .input__buscador {
+                    border: none;
+                    border-radius: 1rem;
+                    display: none;
+                    font-size: 1rem;
+                    height: 2.5rem;
+                    outline: none;
+                    padding-left: 1rem;
+                    width: 24rem;
+                }
+
+                .login_button {
+                    cursor: pointer;
+                    margin: 0;
+                    padding: 1rem 3rem;
+                    text-align: center;
+                    width: 10%;
+                }
+            }
         `;
         shadowRoot.appendChild(style);
 
         shadowRoot.appendChild(headerTemplate.content);
-    }
-}
-
+            }
+        }
 customElements.define('header-component', Header);

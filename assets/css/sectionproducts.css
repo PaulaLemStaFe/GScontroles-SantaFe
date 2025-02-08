@@ -1,3 +1,4 @@
+/* Importar variables desde style.css */
 @import url('style.css');
 
 .productos {
@@ -46,32 +47,32 @@
 }
 
 .all_products_items {
-	display: grid;
-	gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto auto;
-	justify-content: center;
-	justify-items: center;
-	overflow-y: hidden;
-	padding: 0.5%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    justify-items: center;
+    overflow-y: hidden;
+    padding: 0.5%;
 }
 
 .product_item {
     align-items: center;
     background-color: var(--color-secondary);
-    border-radius: 2.5rem;;
-	box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
+    border-radius: 2.5rem;
+    box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
     display: flex;
-	flex-direction: column;
-	gap: 0.7rem;
+    flex-direction: column;
+    gap: 0.7rem;
     height: 97%;
-	margin-bottom: 15px;
-	padding-bottom: 0.5rem;
-	transition: 1s all;
+    margin-bottom: 15px;
+    padding-bottom: 0.5rem;
+    transition: 1s all;
 }
 
 .product_item:hover {
-	transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .item_img {
@@ -80,31 +81,30 @@
     justify-content: center;
 }
 
-.img_aa {
+.img_aa, .img {
     display: flex;
-	object-fit: cover;
+    object-fit: cover;
     padding: 0.5rem 0;
     position: inherit;
-    width: 75%;
+}
+
+.img_aa {
+    width: 65%;
 }
 
 .img {
-    display: flex;
-	object-fit: cover;
-    padding: 0.5rem 0;
-    position: inherit;
-    width: 100%;
+    width: 80%;
 }
 
 .item_title {
-	font-size: 1.1rem;
+    font-size: 1.1rem;
     font-weight: 700;
-	padding: 0 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .item_code {
-	font-size: 1rem;
-	font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
     margin-top: auto;
 }
 
@@ -129,19 +129,9 @@
     text-decoration: underline;
 }
 
-
-
-@media (min-width:451px) and (max-width:768px) {
-
+@media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
     .productos {
-        align-items: center;
-        display: flex;
-        flex-flow: row wrap;
-        gap: 2rem 0rem;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: 1920px;
-        width: 90%;
+        gap: 1.5rem 0;
     }
 
     .bi {
@@ -149,38 +139,16 @@
     }
 
     .all_products_items {
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .last {
         display: none;
     }
-
 }
 
 @media (max-width: 450px) {
-    
-    .productos {
-        align-items: center;
-        display: flex;
-        flex-flow: row wrap;
-        gap: 1.5rem 0rem;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: 1920px;
-        width: 90%;
-    }
-
-    .bi {
-        font-size: 1rem;
-    }
-
     .all_products_items {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
     }
-
-    .last {
-        display: none;
-    }
-    
 }

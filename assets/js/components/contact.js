@@ -1,20 +1,8 @@
 const contactTemplate = document.createElement('template');
 
-var urlImageLogoHtml = '';
-var urlImageFondoHtml = '';
-var urlMenuHtml = '';
-
-if (document.title == "GS Controles - Inicio") {
-    urlImageLogoHtml = "assets/images/logo-solo/logo-nombre.png";
-    urlImageFondoHtml = "assets/images/fondos/fondo-de-logo.jpg";
-    urlMenuHtml = "./assets/pages/underconstruction/underconstruction.html";
-} else if (document.title == "GS Controles - Productos Todos" || document.title == "GS Controles - Login" || document.title == "GS Controles - Producto Detalles") {
-    urlMenuHtml = "../underconstruction/underconstruction.html";
-    urlImageLogoHtml = "../../images/logo-solo/logo-nombre.png";
-    urlImageFondoHtml = "../../images/fondos/fondo-de-logo.jpg";
-} else if (document.title == "GS Controles - Producto Detalles") {
-    urlMenuHtml = "../../underconstruction/underconstruction.html";
-}
+var urlImageLogoHtml = '/assets/images/logo-solo/logo-nombre.png';
+var urlImageFondoHtml = '/assets/images/fondos/fondo-de-logo.jpg';
+var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
 
 contactTemplate.innerHTML = `
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -58,12 +46,12 @@ contactTemplate.innerHTML = `
                 </div>
                 <ul class="menu">
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
                             <i class="bi bi-whatsapp"></i> +54 9 3426138796
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
                             <i class="bi bi-telephone"></i> +54 9 3426138796
                         </a>
                     </li>
@@ -71,17 +59,17 @@ contactTemplate.innerHTML = `
                         <i class="bi bi-geo-alt"></i> Matheu 2420 - Santa Fe Capital - Argentina
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
                             <i class="bi bi-envelope"></i> gscontroles@gmail.com
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
                             <i class="bi bi-facebook"></i> @gscontroles
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlMenuHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
+                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
                             <i class="bi bi-instagram"></i> @gs.controles
                         </a>
                     </li>
@@ -109,45 +97,17 @@ class Contact extends HTMLElement {
         const responsive = document.querySelector('link[href*="responsive"]');
         const shadowRoot = this.attachShadow({ mode: 'open' });
 
-        if (fontAwesome) {
-            shadowRoot.appendChild(fontAwesome.cloneNode());
-        }
-
-        if (reset) {
-            shadowRoot.appendChild(reset.cloneNode());
-        }
-
-        if (logo) {
-            shadowRoot.appendChild(logo.cloneNode());
-        }
-
-        if (inputs) {
-            shadowRoot.appendChild(inputs.cloneNode());
-        }
-
-        if (buttons) {
-            shadowRoot.appendChild(buttons.cloneNode());
-        }
-
-        if (responsive) {
-            shadowRoot.appendChild(responsive.cloneNode());
-        }
-
+        [fontAwesome, reset, logo, inputs, buttons, responsive].forEach(link => {
+            if (link) {
+                shadowRoot.appendChild(link.cloneNode());
+            }
+        });
 
         shadowRoot.appendChild(contactTemplate.content.cloneNode(true));
 
         const style = document.createElement('style');
         style.textContent = `
-            :root {
-                --color-primary: #F6F7D3;
-                --color-secondary: #e6e7cc;
-                --color-tertiary: #697565;
-                --color-fourth: #3C3D37;
-                --color-fifth: #1E201E;
-                font-family: "Capriola", serif;
-                line-height: 1rem;
-                scroll-behavior: smooth;
-            }
+            @import url('/assets/css/style.css');
                 
             .contact {
                 background-image: url(${urlImageFondoHtml});
@@ -206,34 +166,26 @@ class Contact extends HTMLElement {
                 padding: 0.5rem 0.5rem 0 0.5rem;
             }
             
-            .contact_form__input {
-                background-color: var(--color-secondary);
+            .contact_form__input, .menssage {
+                background-color: var(--color-secondary) !important;
                 border: none;
                 border-bottom: 1px solid var(--color-fourth);
                 font-family: "Capriola", serif;
                 font-size: 0.9rem;
+                font-weight: normal;
                 outline: none;
                 padding: 0.5rem;
                 width: 35rem;
             }
-            
-            .contact_form__input:focus, .menssage:focus {
-                border-color: var(--color-fourth);
-            }
-            
             .menssage {
-                background-color: var(--color-secondary);
-                border: none;
-                border-bottom: 1px solid var(--color-fourth);
-                border-top-left-radius: 0.5rem;
-                border-top-right-radius: 0.5rem;
-                font-family: "Capriola", serif;
-                font-size: 0.9rem;
                 height: 4rem;
-                outline: none;
-                padding: 0.5rem;
                 resize: none;
-                width: 35rem;
+            }
+            
+            .contact_form__input:focus, .menssage:focus, .contact_form__input:valid, .menssage:valid, 
+            .contact_form__input:not, .menssage:not {
+                background-color: var(--color-secondary) !important;
+                border-color: var(--color-fourth) !important;
             }
             
             .mensaje-error {
@@ -324,13 +276,11 @@ class Contact extends HTMLElement {
             
             
             
-            @media (min-width:451px) and (max-width:768px) {
-            
+            @media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
                 .contact {
                     margin-top: 2.5rem;
                     padding: 2rem 0;
                 }
-            
                 .contact_content {
                     align-items: center;
                     display: flex;
@@ -341,127 +291,30 @@ class Contact extends HTMLElement {
                     max-width: 1920px;
                     width: 90%;
                 }
-            
                 .contact_logo_img, .contact_menu {
                     display: flex;
                     flex-direction: column;
                 }
-            
                 .menu {
                     text-align: center;
                 }
-            
-                .contact_form {
+                .contact_form, .contact_form_area {
                     width: 100%;
                 }
-            
-                .contact_form_area {
-                    width: 100%;
-                }
-            
-                .contact_form__input {
+                .contact_form__input, .menssage {
                     border: none;
-                    font-size: 1rem;
-                    outline: none;
-                    padding: 0.5rem;
-                    width: 97%;
-                }
-                
-                .menssage {
-                    border: none;
-                    border-top-left-radius: 0.5rem;
-                    border-top-right-radius: 0.5rem;
                     font-size: 1rem;
                     outline: none;
                     padding: 0.5rem;
                     resize: none;
                     width: 97%;
                 }
-            
                 .contact_form__button {
                     cursor: pointer;
                     margin-bottom: 1rem;
                     margin-right: auto;
                     padding: 1rem 3rem;
                 }
-            
-            }
-            
-            
-            
-            
-            @media (max-width: 450px) {
-            
-                .contact {
-                    margin-top: 2.5rem;
-                    padding: 2rem 0;
-                }
-            
-                .contact_content {
-                    align-items: center;
-                    display: flex;
-                    flex-flow: column wrap;
-                    gap: 2rem;
-                    justify-content: center;
-                    margin: 0 auto;
-                    max-width: 1920px;
-                    width: 90%;
-                }
-            
-                .contact_logo {
-                    align-items: center;
-                    justify-content: center;
-                    width: 35%;
-                }
-            
-                .contact_logo_img {
-                    margin-right: 0;
-                }
-            
-                .contact_logo_img, .contact_menu {
-                    display: flex;
-                    flex-direction: column;
-                }
-            
-                .menu {
-                    text-align: center;
-                }
-            
-                .contact_form {
-                    width: 100%;
-                }
-            
-                .contact_form_area {
-                    width: 100%;
-                }
-            
-                .contact_form__input {
-                    border: none;
-                    font-family: Raleway, sans-serif;
-                    font-size: 1rem;
-                    outline: none;
-                    padding: 0.5rem;
-                    width: 97%;
-                }
-                
-                .menssage {
-                    border: none;
-                    border-top-left-radius: 0.5rem;
-                    border-top-right-radius: 0.5rem;
-                    font-size: 1rem;
-                    outline: none;
-                    padding: 0.5rem;
-                    resize:none;
-                    width: 97%;
-                }
-            
-                .contact_form__button {
-                    cursor:pointer;
-                    padding: 1rem 3rem;
-                    margin-bottom: 1rem;
-                    margin-right: auto;
-                }
-            
             }
         `;
         shadowRoot.appendChild(style);
@@ -473,9 +326,7 @@ class Contact extends HTMLElement {
                 window.location.href = urlMenuHtml; // Redirigir a la página "En Construcción"
             });
         }
-
     }
 }
-
 
 customElements.define('contact-component', Contact);

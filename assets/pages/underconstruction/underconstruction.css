@@ -1,25 +1,25 @@
-@import url('style.css');
+@import url('../../css/style.css');
 
 .banner {
-	align-items: center;
+    align-items: center;
     background-image: url(./images/control-remoto_en-construccion.png);
     background-position: left;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: 39%;
-	color: var(--color-primary);
-	display: grid;
-	font-weight: 700;
-    grid-template-columns: 40% 60%; /* Dos columnas iguales */
-	justify-content: center;
-    padding-top: 24rem;
+    color: var(--color-primary);
+    display: grid;
+    font-weight: 700;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    padding-top: 20.5rem;
 }
 
 .banner_section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    grid-column: 2; /* Ubica la sección en la segunda columna */
-    height: 100%; /* Asegura que ocupe toda la altura de la sección */
+    grid-column: 2;
+    height: 100%;
     justify-content: center;
     text-shadow: 2px 2px 2px var(--color-tertiary);
 }
@@ -27,7 +27,7 @@
 .titles {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Permite que los títulos ocupen el espacio disponible */
+    flex-grow: 1;
     justify-content: space-around;
     margin-right: 2rem;
     text-align: left;
@@ -67,14 +67,13 @@
     text-decoration: none;
 }
 
-
-@media (min-width:451px) and (max-width:768px) {
-
+/* Media Queries */
+@media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
     .banner {
         height: 30%;
         width: 100%;
     }
-    
+
     .banner_section {
         align-items: flex-start;
         display: flex;
@@ -83,25 +82,10 @@
         max-width: 1920px;
         width: 90%;
     }
-
 }
 
-
-
 @media (max-width: 450px) {
-
     .banner {
         height: 25%;
-        width: 100%;
     }
-    
-    .banner_section {
-        align-items: flex-start;
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 0;
-        max-width: 1920px;
-        width: 90%;
-    }
-
 }
