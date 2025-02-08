@@ -1,0 +1,28 @@
+@import url('../../css/style.css');
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh;
+}
+
+.all_products_header {
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.all_products_title{
+    font-size: 2.2rem;
+}
+
+footer-component {
+    margin-top: auto;
+}

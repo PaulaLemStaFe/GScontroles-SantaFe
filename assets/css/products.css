@@ -1,0 +1,85 @@
+/* Importar variables desde style.css */
+@import url('style.css');
+
+.all_products_items {
+    display: grid;
+    gap: 1.1rem;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    overflow-y: hidden;
+    padding: 1.5rem 0.5rem;
+}
+
+.product_item {
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 2.5rem;
+    box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: 1s all;
+}
+
+.product_item:hover {
+    transform: scale(1.05);
+}
+
+.item_img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img_aa {
+    display: flex;
+    object-fit: cover;
+    padding: 0.5rem 0;
+    position: inherit;
+    width: 65%;
+}
+
+.img {
+    display: flex;
+    object-fit: cover;
+    padding: 0.5rem 0;
+    position: inherit;
+    width: 80%;
+}
+
+.item_title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+.item_code {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+.code_code {
+    font-weight: 700;
+}
+
+.item_footer {
+    display: none;
+}
+
+.item_link {
+    color: var(--color-tertiary);
+    font-weight: 700;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    transition: 1s all;
+}
+
+.item_link:hover {
+    color: var(--color-fourth);
+    text-decoration: underline;
+}

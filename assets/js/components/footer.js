@@ -4,6 +4,7 @@ var urlIndexHtml = '/index.html';
 var urlImageLogoHtml = '/assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg';
 var urlSearchHtml = '/assets/pages/search/search.html';
 var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
+var urlProductsHtml = '/assets/pages/products/allproducts.html';
 
 footerTemplate.innerHTML = `
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -15,7 +16,7 @@ footerTemplate.innerHTML = `
                     <nav>
                         <ul class="menu_list">
                             <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                            <li class="submenu"><a href="${urlConstructionHtml}" title="Productos">Productos</a></li>
+                            <li class="submenu"><a href="${urlProductsHtml}" title="Productos">Productos</a></li>
                             <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
                             <li><a href="${urlIndexHtml}#contact" title="Para saber más o para consultas, puedes ponerte en contacto con nosotros">Contacto</a></li>
                             <li>

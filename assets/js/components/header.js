@@ -5,6 +5,7 @@ var urlImageLogoHtml = '/assets/images/logo-solo/logo-nombre.png';
 var urlImageFondoHtml = '/assets/images/fondos/fondo-de-logo.jpg';
 var urlSearchHtml = '/assets/pages/search/search.html';
 var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
+var urlProductsHtml = '/assets/pages/products/allproducts.html';
 
 headerTemplate.innerHTML = `
         <header class="navbar">
@@ -15,11 +16,11 @@ headerTemplate.innerHTML = `
                         <nav>
                             <ul class="menu_list">
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                                <li class="submenu"><a href="${urlConstructionHtml}" title="Productos">Productos</a>
+                                <li class="submenu"><a href="${urlProductsHtml}" title="Productos">Productos</a>
                                     <ul class="submenu_list">
-                                        <li><a href="${urlConstructionHtml}" title="Ingresa para ver todos nuestros productos">Todos</a></li>
-                                        <li><a href="${urlIndexHtml}#tv__title" title="Controles remotos para televisores">Televisor</a></li>
-                                        <li><a href="${urlIndexHtml}#aa__title" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
+                                        <li><a href="/assets/pages/products/allproducts.html?category=all" title="Ingresa para ver todos nuestros productos">Todos</a></li>
+                                        <li><a href="/assets/pages/products/allproducts.html?category=producttv&title=Controles Remotos de Televisores" title="Controles remotos para televisores">Televisor</a></li>
+                                        <li><a href="/assets/pages/products/allproducts.html?category=productac&title=Controles Remotos de Aire Acondicionados" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
@@ -111,6 +112,7 @@ class Header extends HTMLElement {
                 display: flex;
                 justify-content: center;
                 list-style: none;
+                padding-left: 0;
             }
 
             .menu_list li {
@@ -198,7 +200,6 @@ class Header extends HTMLElement {
                 align-items: center;
                 border-radius: 1rem;
                 display: flex;
-                padding-right: 1rem;
                 position: relative;
             }
 

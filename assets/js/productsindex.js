@@ -7,22 +7,35 @@ function shuffle(array) {
   return array;
 }
 
-fetch('../../../db.json')
-  .then(response => response.json())
-  .then(data => {
-    // Procesar productos de TV y AA
-    const productosTV = shuffle(data.producttv).slice(0, 6); // Mezclar y tomar los primeros 6 productos de TV
-    const containerTV = document.getElementById('productos-tv');
-    const productosAA = shuffle(data.productsaa).slice(0, 6); // Mezclar y tomar los primeros 6 productos de AA
-    const containerAA = document.getElementById('productos-aa');
+// Asegurar que el script se ejecuta después de que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('../../../db.json')
+    .then(response => response.json())
+    .then(data => {
+      // Procesar productos de TV y AA
+      const productosTV = shuffle(data.producttv).slice(0, 6); // Mezclar y tomar los primeros 6 productos de TV
+      const containerTV = document.getElementById('productos-tv');
+      const productosAA = shuffle(data.productsaa).slice(0, 6); // Mezclar y tomar los primeros 6 productos de AA
+      const containerAA = document.getElementById('productos-aa');
 
-    productosTV.forEach(producto => crearProducto(containerTV, producto, 'img'));
-    productosAA.forEach(producto => crearProducto(containerAA, producto, 'img_aa'));
-  })
-  .catch(error => console.error('Error al leer el archivo db.json:', error));
+      if (containerTV) {
+        productosTV.forEach(producto => crearProducto(containerTV, producto, 'img'));
+      } else {
+        console.error('El contenedor para productos de TV no se encontró.');
+      }
+
+      if (containerAA) {
+        productosAA.forEach(producto => crearProducto(containerAA, producto, 'img_aa'));
+      } else {
+        console.error('El contenedor para productos de AA no se encontró.');
+      }
+    })
+    .catch(error => console.error('Error al leer el archivo db.json:', error));
+});
 
 // Función para crear un elemento de producto
 function crearProducto(container, producto, imgClass) {
+  if (!container) return; // Verificación adicional para evitar errores
   const div = document.createElement('div');
   div.className = 'product_item';
   div.innerHTML = `
