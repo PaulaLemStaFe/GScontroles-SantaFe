@@ -23,6 +23,138 @@ body, html {
     font-size: 2.2rem;
 }
 
+.details {
+    margin: 5.5rem auto 2rem auto;
+}
+
+.product_details {
+	background-color: var(--color-secondary);
+	display: flex;
+	gap: 2rem;
+	margin: 0 auto;
+	padding: 3%;
+    text-align: justify;
+    width: 90%;
+}
+
+.details_image {
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 2.5rem;
+    box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 20%;
+}
+
+.product_details_img {
+	background-position: center;
+    transition: 1s all;
+}
+
+.product_details_img:hover {
+    transform: scale(1.15);
+}
+
+.product_details_text {
+    color: var(--color-fifth);
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    padding: 0 0.5rem;
+}
+
+.details_title {
+	font-size: 2rem;
+	font-weight: 600;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 2px var(--color-fourth);
+}
+
+.details_code, .details_soportados span {
+	font-size: 1.3rem;
+	font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 1px var(--color-fourth);
+}
+
+.code {
+    margin-bottom: 0.5rem;
+}
+
+.details_marca, .details_text {
+	font-size: 1.1rem;
+	font-weight: 600;
+    padding: 0.3rem;
+    text-align: justify;
+}
+
+.details_marca {
+    margin-left: 5rem;
+}
+
+.details_details {
+    margin-top: 0.5rem;
+}
+
 footer-component {
     margin-top: auto;
+}
+
+
+
+
+@media (min-width:451px) and (max-width:768px) {
+
+    .product_details {
+        display: flex;
+        flex-direction: column;
+		gap: 0px 0px;
+    }
+
+    .product_details_img {
+        width: 100%;
+    }
+
+    .last {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+
+    .product_details {
+        display: flex;
+		flex-direction: column;
+		gap: 0px 0px;
+        padding: 0;
+    }
+
+    .product_details_img {
+        background-position: center;
+        width: 100%;
+    }
+
+    .product_details_text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        padding: 0 3%;
+        width: 94%;
+    }
+
+    .details_title {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 26px;
+        margin: 1rem 0;
+    }
+
+    .last {
+        display: none;
+    }
 }

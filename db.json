@@ -6,9 +6,9 @@
         "password": "GSControles01Admin"
     }
     ],
-    "producttv": [
+    "productstv": [
     {
-        "idproduct": 1,
+        "idProduct": 1,
         "img": "/assets/images/tv-control-remoto/EB-CAND-Candy.png",
         "title": "Control Remoto Para Televisor Marca CANDY",
         "code": "GS-CAND",
@@ -418,7 +418,7 @@
         "title": "Control Remoto Para Televisor Marcas RCA o ADMIRAL",
         "code": "GS 498",
         "color": "Negro",
-        "modelosoportado01": "ARCA",
+        "modelosoportado01": "RCA",
         "modelosoportado02": "Admiral",
         "modelosoportado03": "",
         "modelosoportado04": "",
@@ -1270,7 +1270,7 @@
     {
         "idProduct": 86,
         "img": "/assets/images/tv-control-remoto/EB613-RCA_TCL.png",
-        "title": "Control Remoto Para Televisor Marcas RCA o TCL (con botones de NETFLIX y de YOUTUBE)",
+        "title": "Control Remoto Para Televisor Marcas RCA o TCL",
         "code": "GS 613",
         "color": "Negro",
         "modelosoportado01": "RCA",
@@ -1285,7 +1285,7 @@
     {
         "idProduct": 87,
         "img": "/assets/images/tv-control-remoto/EB614-RCA_TCL_Admiral.png",
-        "title": "Control Remoto Para Televisor Marcas RCA, TCL o ADMIRAL (con botones de NETFLIX, de YOUTUBE y de DISNEY)",
+        "title": "Control Remoto Para Televisor Marcas RCA, TCL o ADMIRAL",
         "code": "GS 614",
         "color": "Negro",
         "modelosoportado01": "RCA",

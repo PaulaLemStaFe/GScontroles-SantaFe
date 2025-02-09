@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return response.json();
         })
         .then(data => {
-            productos = [...(data.producttv || []), ...(data.productsaa || [])];
+            productos = [...(data.productstv || []), ...(data.productsaa || [])];
             console.log("Productos cargados:", productos);
         })
         .catch(error => console.error('Error fetching products:', error));
@@ -85,11 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        // Buscar todos los productos que coincidan con la marca
         const resultadosFiltrados = productos.filter(producto =>
-            [producto.title, producto.modelosoportado01, 
-            producto.modelosoportado02, producto.modelosoportado03, 
+            [producto.modelosoportado01, 
+            producto.modelosoportado02, 
+            producto.modelosoportado03, 
             producto.modelosoportado04].some(marca => 
-                marca && marca.toLowerCase().includes(query.toLowerCase())
+                marca && marca.toLowerCase() === query.toLowerCase()
             )
         );
 
@@ -112,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
         } else {
-            if (resultados.length < 6 || (resultados.length >= 7 && resultados.length <= 11)) {
+            if (resultados.length < 6) {
                 searchResults.classList.add('centrado');
             } else {
                 searchResults.classList.remove('centrado');
@@ -124,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 productoElemento.classList.add("product_item");
                 productoElemento.innerHTML = `
                     <div class="item_img">
-                        <img class="img" src="${producto.img}" alt="${producto.title}" title="${producto.title}">
+                        <img class="img" src="${producto.img}" src="" alt="">
                     </div>
                     <h5 class="item_title">${producto.title}</h5>
                     <div class="item_code">
@@ -143,6 +145,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a class="item_link" href="${producto.link}" rel="noopener noreferrer" alt="Ver Producto" title="Ver Producto">Ver Producto</a>
                 `;
                 searchResults.appendChild(productoElemento);
+
+                // Actualizar los atributos de la imagen
+                const imgElement = productoElemento.querySelector('.img');
+                updateImageAttributes(imgElement, producto);
             });
         }
     }
