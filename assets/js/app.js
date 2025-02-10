@@ -1,14 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const inputs = document.querySelectorAll(".input-padron");
     const contact = document.querySelector('contact-component');
-    const shadowRoot = contact.shadowRoot;
-    const inputsContact = shadowRoot.querySelectorAll(".input-padron");
+    
+    if (contact) {
+        const shadowRoot = contact.shadowRoot;
+        
+        if (shadowRoot) {
+            const inputsContact = shadowRoot.querySelectorAll(".input-padron");
+            
+            inputsContact.forEach(input => {
+                input.addEventListener('blur', event => valida(event.target));
+            });
+        }
+    }
 
     inputs.forEach(input => {
-        input.addEventListener('blur', event => valida(event.target));
-    });
-
-    inputsContact.forEach(input => {
         input.addEventListener('blur', event => valida(event.target));
     });
 });
