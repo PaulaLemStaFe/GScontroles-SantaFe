@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>GS Controles - Productos</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/assets/css/reset.css">
-        <link rel="stylesheet" href="/assets//css/style.css">
-        <link rel="stylesheet" href="/assets/css/sectionproducts.css">
-        <link rel="stylesheet" href="/assets/css/products.css">
-        <link rel="stylesheet" href="/assets/pages/products/allproducts.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>GS Controles - Productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div class="page-container">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/sectionproducts.css">
+    <link rel="stylesheet" href="/assets/css/products.css">
+    <link rel="stylesheet" href="/assets/pages/products/allproducts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
 
-            <header-component></header-component>
+    <div class="page-container">
 
-            <main>
-                <section class="all_products productos">
-                    <div class="all_products_header title">
-                        <h2 class="all_products_title tv__title" id="tituloCategoria">Todos Los Productos</h2>
-                    </div>
-                    <div class="all_products_items" id="productos"></div>
-                </section>
-            </main>
+        <!-- Componente de encabezado -->
+        <header-component></header-component>
+
+        <main>
+            <!-- Sección de todos los productos -->
+            <section class="all_products productos">
+                <div class="all_products_header title">
+                    <h2 class="all_products_title tv__title" id="tituloCategoria">Todos Los Productos</h2>
+                </div>
+                <!-- Contenedor de productos -->
+                <div class="all_products_items" id="productos"></div>
+            </section>
+        </main>
+
+        <!-- Componente de pie de página -->
+        <footer-component></footer-component>
     
-            <footer-component></footer-component>
-        
-        </div>
+    </div>
 
-        <a aria-label="Hacer scroll a la parte superior de la página" href="#" id="scroll-top" class="scroll-top-left" style="opacity: 1; display: block;">
-            <i class=" fa fa-angle-up" aria-hidden="true" role="img"></i>
-        </a>
+    <!-- Botón para scroll a la parte superior -->
+    <a aria-label="Hacer scroll a la parte superior de la página" href="#" id="scroll-top" class="scroll-top-left" style="opacity: 1; display: block;">
+        <i class="fa fa-angle-up" aria-hidden="true" role="img"></i>
+    </a>
 
-        <script src="/assets/js/components/header.js" type="text/javascript"></script>
-        <script src="/assets/js/components/footer.js" type="text/javascript"></script>
-        <script src="/assets/js/productsutils.js" type="text/javascript"></script>
-        <script src="/assets/js/allproducts.js" type="text/javascript"></script>
-        <script src="/assets/js/productsindex.js" type="text/javascript"></script>
-        <script src="/assets/js/productdetails.js" type="text/javascript"></script>
-    </body>
+    <!-- Scripts JavaScript -->
+    <script src="/assets/js/components/header.js" type="text/javascript"></script>
+    <script src="/assets/js/components/footer.js" type="text/javascript"></script>
+    <script src="/assets/js/productsutils.js" type="text/javascript"></script>
+    <script src="/assets/js/allproducts.js" type="text/javascript"></script>
+</body>
 </html>

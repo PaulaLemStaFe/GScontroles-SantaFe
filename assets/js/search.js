@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error('Error fetching products:', error));
 
-    // Agregar event listener al input para detectar cambios y clics
+    /**
+     * Event listener para el input de búsqueda
+     * Detecta cambios y actualiza los resultados de autocompletado
+     */
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         if (query) {
@@ -30,11 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    /**
+     * Event listener para el input de búsqueda
+     * Muestra los resultados de autocompletado al hacer clic
+     */
     searchInput.addEventListener("click", () => {
         const marcas = obtenerMarcasDisponibles('');
         mostrarResultadosAutocompletado(marcas);
     });
 
+    /**
+     * Obtiene una lista de marcas disponibles que coinciden con la consulta
+     * @param {string} query - La consulta de búsqueda
+     * @returns {Array} - Lista de marcas disponibles
+     */
     function obtenerMarcasDisponibles(query) {
         return productos.flatMap(producto => [
             producto.modelosoportado01, producto.modelosoportado02, 
@@ -43,7 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
             .sort((a, b) => a.localeCompare(b)); // Ordenar alfabéticamente
     }
 
-    // Mostrar resultados de autocompletado
+    /**
+     * Muestra los resultados de autocompletado
+     * @param {Array} marcas - Lista de marcas a mostrar
+     */
     function mostrarResultadosAutocompletado(marcas) {
         autocompleteResults.innerHTML = '';
         if (marcas.length > 0) {
@@ -65,13 +80,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Agregar event listener al ícono de búsqueda
+    /**
+     * Event listener para el ícono de búsqueda
+     * Realiza la búsqueda al hacer clic en el ícono
+     */
     searchButton.addEventListener("click", () => {
         const query = searchInput.value.trim();
         if (query) realizarBusqueda(query);
     });
 
-    // Agregar event listener al input para detectar "Enter"
+    /**
+     * Event listener para el input de búsqueda
+     * Realiza la búsqueda al presionar "Enter"
+     */
     searchInput.addEventListener("keypress", event => {
         if (event.key === "Enter") {
             const query = searchInput.value.trim();
@@ -79,6 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    /**
+     * Realiza la búsqueda de productos por marca
+     * @param {string} query - La consulta de búsqueda
+     */
     function realizarBusqueda(query) {
         if (!Array.isArray(productos)) {
             console.error("Productos is not an array:", productos);
@@ -103,6 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
         autocompleteResults.style.display = 'none';
     }
 
+    /**
+     * Muestra los resultados de la búsqueda en el DOM
+     * @param {Array} resultados - Lista de productos encontrados
+     */
     function mostrarResultados(resultados) {
         searchResults.innerHTML = "";
         noResultsContainer.innerHTML = "";
@@ -122,33 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             resultados.forEach(producto => {
-                const productoElemento = document.createElement("div");
-                productoElemento.classList.add("product_item");
-                productoElemento.innerHTML = `
-                    <div class="item_img">
-                        <img class="img" src="${producto.img}" src="" alt="">
-                    </div>
-                    <h5 class="item_title">${producto.title}</h5>
-                    <div class="item_code">
-                        <span class="code">
-                            <span class="code_text">Código:</span>
-                            <span class="code_code">${producto.code}</span>
-                        </span>
-                    </div>
-                    <div class="item_footer">
-                        <p class="item_id">${producto.code}</p>
-                        <div class="footer_icons">
-                            <i class="bi bi-trash-fill" alt="Eliminar" title="Eliminar"></i>
-                            <i class="bi bi-pencil-fill" alt="Editar" title="Editar"></i>
-                        </div>
-                    </div>
-                    <a class="item_link" href="${producto.link}" rel="noopener noreferrer" alt="Ver Producto" title="Ver Producto">Ver Producto</a>
-                `;
-                searchResults.appendChild(productoElemento);
-
-                // Actualizar los atributos de la imagen
-                const imgElement = productoElemento.querySelector('.img');
-                updateImageAttributes(imgElement, producto);
+                // Usar la función crearProducto del archivo productsutils.js
+                crearProducto(searchResults, producto, "img");
             });
         }
     }
