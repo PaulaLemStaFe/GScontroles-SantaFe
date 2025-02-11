@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cargar productos desde JSON
     let productos = [];
-    fetch('../../../db.json')
+    fetch('../../../../db.json')
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();

@@ -42,11 +42,10 @@ headerTemplate.innerHTML = `
                     </div>
                 </div>
                 <div class="button">
-                    <a class="login_button login_link" href="${urlLoginHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
+                    <a id="login-button" class="login_button login_link" href="${urlLoginHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
                 </div>
             </div>
         </header>
-
 `;
 
 
@@ -366,6 +365,14 @@ class Header extends HTMLElement {
         shadowRoot.appendChild(style);
 
         shadowRoot.appendChild(headerTemplate.content);
-            }
+
+        // Lógica para ocultar el botón de login si el administrador está autenticado
+        const isAdmin = localStorage.getItem('isAdmin') === 'true';
+        const loginButton = shadowRoot.getElementById("login-button");
+        if (isAdmin && loginButton) {
+            loginButton.style.display = "none";
         }
+    }
+}
+
 customElements.define('header-component', Header);

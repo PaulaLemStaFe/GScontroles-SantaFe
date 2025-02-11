@@ -47,6 +47,17 @@
 }
 
 .all_products_items {
+    display: grid;
+    gap: 1.1rem;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    overflow-y: hidden;
+    padding: 1.5rem 0.5rem;
+}
+
+.all_products_items {
     grid-template-rows: repeat(2, auto);
 }
 

@@ -323,7 +323,7 @@ class Contact extends HTMLElement {
         if (form) {
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); // Evitar que el formulario se envíe
-                window.location.href = urlMenuHtml; // Redirigir a la página "En Construcción"
+                window.location.href = urlConstructionHtml; // Redirigir a la página "En Construcción"
             });
         }
     }

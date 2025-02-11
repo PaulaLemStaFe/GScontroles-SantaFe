@@ -1,0 +1,268 @@
+@import url('/assets/css/style.css');
+
+.add_product {
+    padding-bottom: 2rem;
+    padding-top: 4rem;
+}
+
+.add_product__form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    width: 100%;
+}
+
+.add_product__title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+
+.add_product__form__area {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.add_file__pc, .add_file__mobile {
+    cursor: pointer;
+    text-align: center;
+    width: 80%;
+}
+
+.form__area__add_file {
+    align-items: center;
+    background-color: var(--color-secondary);
+    border: dashed var(--color-tertiary) 2px;
+    color: var(--color-tertiary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    height: 10rem;
+    justify-content: center;
+    padding: 2rem;
+    width: 50%;
+}
+
+.bi-card-image, .bi-plus-lg {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    font-size: 3rem;
+}
+
+.bi-plus-lg, .add_file__mobile {
+    display: none;
+}
+
+.add_product__form__area .label {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.add_product__form__area #select {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.form__area__button {
+    background-color: var(--color-tertiary);
+    border: solid var(--color-fourth) 1px;
+    border-radius: 1rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-family: "Capriola", serif;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+    transition: all 1s;
+    width: 30%;
+}
+
+.form__area__button:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-tertiary);
+    color: var(--color-cuarto);
+}
+
+.button__search_img {
+    cursor: pointer;
+}
+
+.add_product__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.2rem;
+    width: 60%;
+}
+
+.input__group {
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input__group .label {
+    color: #C8C8C8;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.input__group .input {
+    background-color: white;
+    border: none;
+    border-bottom: solid #c8c8c8 2px;
+    font-size: 1.2rem;
+    height: 1.1rem;
+    margin-top: 0.5rem;
+    padding: 1% 0 1% 1%;
+}
+
+#categoria {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 97%;
+}
+
+.input__group .input:focus, .price:focus {
+    background-color: white;
+    outline: none;
+}
+
+.input__group #description {
+    font-family: 'Raleway', sans-serif;
+    height: 8rem;
+}
+
+.error {
+    background-color: #F5F5F5;
+    color: #df2525;
+    font-size: 1.1rem;
+}
+
+.input-container-invalid {
+    margin-bottom: 0 !important;
+}
+
+.input__add_product_button {
+    background-color: #2A7AE4;
+    border: none;
+    border-radius: 15px;
+    color:#FFFFFF;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-right: auto;
+    padding: 1rem 2rem;
+    transition: all 1s;
+    width: 100%;
+}
+
+.input__add_product_button:hover {
+    background-color: darkblue;
+    box-shadow: 2px 2px 18px #2A7AE4;
+    transform: scale(1.05);
+}
+
+.contact {
+    margin-top: 0;
+}
+
+
+
+
+
+@media (min-width:451px) and (max-width:768px) {
+    .title {
+        font-size: 1.8rem;
+        line-height: 0.8rem;
+        padding-top: 1.5rem;
+    }
+    
+    .add_product__form__area {
+        width: 80%;
+    }
+}
+
+
+
+
+@media (max-width: 450px) {
+    .title {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .add_product__form__area {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form__area__add_file {
+        gap: 1.5rem;
+        width: 80%;
+    }
+
+    .bi-card-image {
+        display: none;
+    }
+
+    .bi-plus-lg {
+        background-color: #FFFFFF;
+        color: #C8C8C8;
+        display: contents;
+        font-size: 3rem;
+    }
+
+    .add_file__pc {
+        display: none;
+    }
+
+    .add_file__mobile {
+        display: contents;
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .add_product__form__area #select {
+        height: auto;
+    }
+
+    .text, .form__area__button {
+        display: none;
+    }
+
+    .add_product__input {
+        width: 90%;
+    }
+
+    #categoria {
+        width: 95%;
+    }
+
+    .input__add_product_button {
+        font-size: 1.3rem;
+    }
+}

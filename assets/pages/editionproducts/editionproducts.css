@@ -1,0 +1,115 @@
+header-component .login_button {
+    display: none;
+}
+
+.all_products {
+    padding-top: 5rem;
+}
+
+.all_products_header {
+	align-items: center;
+	display: flex;
+    justify-content: space-between;
+	margin: 0 3%;
+	width: 96%;
+}
+
+.all_products_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.all_products_button {
+    background-color: var(--color-tertiary);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.all_products_button:hover {
+    background-color: var(--color-fourth);
+    box-shadow: 2px 2px 18px var(--color-tertiary);
+}
+
+.item_footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mostrar-elemento {
+    display: block !important;
+}
+
+.item_link {
+    display: none;
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bi {
+    background-color: inherit;
+    color: var(--color-tertiary);
+    padding-left: 0.5rem;
+    position: inherit;
+    font-size: 1.1rem;
+}
+
+.bi:hover {
+    color: var(--color-fifth);
+    cursor: pointer;
+}
+            
+.derechos {
+    background-color: var(--color-secondary);
+    border-top: 0.15rem solid var(--color-fourth);
+    bottom: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0.4rem;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+p {
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+
+@media (min-width:451px) and (max-width:768px) {
+
+    .all_products_items {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .item_img {
+        height: calc(425px / 1.5);
+        width: calc(425px / 1.5);
+    }
+
+}
+
+
+
+@media (max-width: 450px) {
+
+    .all_products_items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item_img {
+        height: calc(425px / 2.5);
+        width: calc(425px / 2.5);
+    }
+    
+}

@@ -102,7 +102,26 @@ footer-component {
     margin-top: auto;
 }
 
+/* Mostrar item_footer cuando el administrador esté autenticado */
+.item_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
 
+/* Estilos para los iconos */
+.footer_icons i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-tertiary);
+    transition: color 0.3s;
+}
+
+.footer_icons i:hover {
+    color: var(--color-fourth);
+}
 
 
 @media (min-width:451px) and (max-width:768px) {
