@@ -67,25 +67,53 @@
     text-decoration: none;
 }
 
-/* Media Queries */
-@media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
+
+
+/* Media queries para dispositivos medianos y pequeños */
+@media (max-width: 768px) {
     .banner {
-        height: 30%;
-        width: 100%;
+        grid-template-columns: 1fr; /* Ajustar las columnas de la grid para dispositivos medianos */
+        padding-top: 10rem; /* Ajuste del padding-top para dispositivos medianos */
+        background-size: cover; /* Ajuste del tamaño de la imagen de fondo para dispositivos medianos */
     }
 
-    .banner_section {
-        align-items: flex-start;
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 0;
-        max-width: 1920px;
-        width: 90%;
+    .titles {
+        margin-right: 1rem;
+        text-align: center; /* Centrar el texto para dispositivos medianos */
+        translate: 0; /* Restablecer translate para dispositivos medianos */
+    }
+
+    .prom, .description {
+        font-size: 2.5rem; /* Ajuste del tamaño del texto para dispositivos medianos */
+    }
+
+    .see_button {
+        align-self: center;
+        margin: 1rem 0; /* Ajuste del margen para dispositivos medianos */
     }
 }
 
 @media (max-width: 450px) {
     .banner {
-        height: 25%;
+        padding-top: 5rem; /* Ajuste del padding-top para dispositivos pequeños */
+        background-size: cover; /* Ajuste del tamaño de la imagen de fondo para dispositivos pequeños */
+    }
+
+    .titles {
+        margin: 0;
+        text-align: center; /* Centrar el texto para dispositivos pequeños */
+        translate: 0; /* Restablecer translate para dispositivos pequeños */
+    }
+
+    .prom, .description {
+        font-size: 2rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
+        margin-bottom: 1rem; /* Ajuste del margen para dispositivos pequeños */
+    }
+
+    .see_button {
+        align-self: center;
+        margin: 0.5rem 0; /* Ajuste del margen para dispositivos pequeños */
+        padding: 0.5rem 1.5rem; /* Ajuste del padding para dispositivos pequeños */
     }
 }
+

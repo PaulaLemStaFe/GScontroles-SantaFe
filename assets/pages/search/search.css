@@ -135,67 +135,62 @@ footer-component {
     margin-top: auto;
 }
 
-/* Media Queries */
-@media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
-    .productos {
-        align-items: center;
-        display: flex;
-        flex-flow: row wrap;
-        gap: 1.5rem 0;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: 1920px;
-        width: 90%;
+
+
+/* Media queries para dispositivos medianos y pequeños */
+@media (max-width: 768px) {
+    .search-section_content {
+        flex-direction: column;
+        gap: 2rem; /* Ajuste del espacio entre elementos en dispositivos medianos */
     }
 
-    .bi {
-        font-size: 1rem;
-    }
-
-    .all_products_items {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    .last {
-        display: none;
+    .tv__title {
+        font-size: 2rem; /* Ajuste del tamaño del título para dispositivos medianos */
     }
 
     .buscador {
-        align-items: center;
-        border-radius: 1rem;
-        display: flex;
-        order: 3;
-        padding: 0;
-    }
-
-    .bi, .bi-search {
-        cursor: pointer;
-    }
-
-    .bi-search::before {
-        font-size: 2rem;
-        font-weight: 900;
-        margin: 0;
-        padding: 0;
+        width: 100%;
+        padding: 0.5rem;
     }
 
     .input__buscador {
-        border: none;
-        border-radius: 1rem;
-        display: none;
-        font-size: 1rem;
-        outline: none;
-        padding-left: 1rem;
+        width: 100%; /* Ajuste del ancho del input en dispositivos medianos */
     }
 }
 
 @media (max-width: 450px) {
-    .all_products_items {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    .search-section {
+        padding-top: 3rem;
+    }
+
+    .tv__title {
+        font-size: 1.5rem; /* Ajuste del tamaño del título para dispositivos pequeños */
+    }
+
+    .search-section_content {
+        gap: 1rem; /* Ajuste del espacio entre elementos en dispositivos pequeños */
+    }
+
+    .buscador {
+        padding: 0.3rem;
     }
 
     .input__buscador {
-        height: 2.5rem;
-        width: 24rem;
+        font-size: 1rem; /* Ajuste del tamaño del texto del input para dispositivos pequeños */
+        height: 2rem; /* Ajuste de la altura del input para dispositivos pequeños */
+        width: 100%; /* Ancho completo del input en dispositivos pequeños */
+    }
+
+    .autocomplete-results {
+        width: 90%; /* Ajuste del ancho de los resultados de autocompletar en dispositivos pequeños */
+        left: 5%; /* Centrando los resultados de autocompletar */
+    }
+
+    .no-results-message {
+        font-size: 1.2rem; /* Ajuste del tamaño del texto del mensaje de no resultados para dispositivos pequeños */
+    }
+
+    .additional-message {
+        font-size: 1rem; /* Ajuste del tamaño del texto adicional para dispositivos pequeños */
     }
 }

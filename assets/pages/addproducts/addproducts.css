@@ -191,78 +191,61 @@
     transform: scale(1.05);
 }
 
-
-
-@media (min-width:451px) and (max-width:768px) {
-    .title {
-        font-size: 1.8rem;
-        line-height: 0.8rem;
-        padding-top: 1.5rem;
-    }
-    
+/* Media queries para dispositivos medianos y pequeños */
+@media (max-width: 768px) {
     .add_product__form__area {
-        width: 80%;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .form__area__add_file, .button__search_img {
+        width: 80%; /* Ajustar el ancho en dispositivos medianos */
+    }
+
+    .add_file__pc, .add_file__mobile {
+        width: 100%;
+    }
+
+    .input__group {
+        width: 100%;
     }
 }
 
-
-
-
 @media (max-width: 450px) {
+    .add_product {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
     .title {
+        font-size: 1.5rem;
         margin: 1rem 0;
-        width: 100%;
     }
 
     .add_product__form__area {
-        flex-direction: column;
+        gap: 1rem;
         width: 100%;
     }
 
-    .form__area__add_file {
-        gap: 1.5rem;
-        width: 80%;
+    .form__area__add_file, .button__search_img {
+        width: 90%; /* Ajustar el ancho en dispositivos pequeños */
+        padding: 1rem;
     }
 
-    .bi-card-image {
-        display: none;
+    .input__group .label {
+        font-size: 0.9rem;
+        padding: 0.4rem;
     }
 
-    .bi-plus-lg {
-        background-color: #FFFFFF;
-        color: #C8C8C8;
-        display: contents;
-        font-size: 3rem;
-    }
-
-    .add_file__pc {
-        display: none;
-    }
-
-    .add_file__mobile {
-        display: contents;
-        font-size: 1.3rem;
-        padding: 0.5rem;
-        text-align: center;
-    }
-
-    .add_product__form__area #select {
-        height: auto;
-    }
-
-    .text, .form__area__button {
-        display: none;
-    }
-
-    .add_product__input {
-        width: 90%;
-    }
-
-    #categoria {
-        width: 95%;
+    .input__group .input {
+        font-size: 0.9rem;
+        padding: 0.4rem;
     }
 
     .input__add_product_button {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        width: 80%; /* Ajustar el ancho del botón en dispositivos pequeños */
     }
 }

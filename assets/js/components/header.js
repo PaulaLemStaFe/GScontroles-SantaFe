@@ -14,7 +14,10 @@ headerTemplate.innerHTML = `
                 <img class="logo_image" alt="GS Controles" title="GS Controles">
                 <div class="menu_buscador">
                     <div class="menu">
-                        <nav>
+                        <button class="menu_toggle" aria-label="Abrir menú">
+                            &#9776; <!-- Código Unicode para el ícono de tres líneas -->
+                        </button>
+                        <nav class="nav_menu">
                             <ul class="menu_list">
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
                                 <li class="submenu"><a href="${urlProductsHtml}" title="Productos">Productos</a>
@@ -55,19 +58,23 @@ class Header extends HTMLElement {
     }
 
     connectedCallback() {
+        const shadowRoot = this.attachShadow({ mode: 'closed' });
+
+        // Verificar si headerTemplate está definido
+        console.log("headerTemplate:", headerTemplate);
+
+        // Clonar y adjuntar el template
+        shadowRoot.appendChild(headerTemplate.content.cloneNode(true));
+
+        // Verificar si los elementos existen antes de usarlos
         const fontAwesome = document.querySelector('link[href*="font-awesome"]');
         const logo = document.querySelector('link[href*="logo"]');
         const responsive = document.querySelector('link[href*="responsive"]');
-        const shadowRoot = this.attachShadow({ mode: 'closed' });
 
-        [fontAwesome, logo, responsive].forEach(link => {
-            if (link) {
-                shadowRoot.appendChild(link.cloneNode());
-            }
-        });
+        const links = [fontAwesome, logo, responsive].filter(link => link !== null);
+        links.forEach(link => shadowRoot.appendChild(link.cloneNode()));
 
-        shadowRoot.appendChild(headerTemplate.content.cloneNode(true));
-
+        // Agregar estilos
         const style = document.createElement('style');
         style.textContent = `
             @import url('/assets/css/style.css');
@@ -103,6 +110,22 @@ class Header extends HTMLElement {
             .menu_buscador {
                 display: flex;
                 gap: 0.4rem;
+            }
+
+            /* Mostrar el menú cuando está activo */
+            .nav_menu.active {
+                display: flex;
+            }
+
+            /* Estilos para el botón del menú hamburguesa */
+            .menu_toggle {
+                color: var(--color-primary);
+                display: none;
+                font-size: 2rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem;
             }
 
             .menu_list {
@@ -250,38 +273,27 @@ class Header extends HTMLElement {
 
             /* Media queries para dispositivos medianos y pequeños */
             @media (max-width: 768px) {
-                .navegacion {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    padding: 0.5rem;
+                .menu_toggle {
+                    display: block;
                 }
-
-                .logo_image {
-                    width: 30%; /* Ajustar el tamaño del logo en dispositivos pequeños */
-                    margin-bottom: 1rem;
+                .nav_menu {
+                    display: none;
                 }
-
                 .menu_buscador {
-                    flex-direction: column;
                     gap: 1rem;
-                    width: 100%;
                 }
-
                 .menu_list {
                     flex-direction: column;
                     width: 100%;
                 }
-
                 .menu_list li {
                     margin: 0.5rem 0;
                 }
-
                 .menu_list a {
                     padding: 0.5rem 1rem;
                     text-align: center;
                     width: 100%;
                 }
-
                 .buscador_menu {
                     width: 100%;
                     justify-content: center;
@@ -289,42 +301,31 @@ class Header extends HTMLElement {
             }
 
             @media (max-width: 450px) {
-                .navegacion {
-                    padding: 0.5rem;
-                }
-
-                .logo_image {
-                    width: 50%; /* Ajustar el tamaño del logo en dispositivos muy pequeños */
-                    margin-bottom: 1rem;
-                }
-
                 .menu_list a {
                     font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
                 }
-
                 .login_button {
                     padding: 0.5rem 1.5rem; /* Ajustar el tamaño del botón de login */
                     font-size: 1rem; /* Ajustar el tamaño del texto en el botón de login */
                 }
             }
-
         `;
         shadowRoot.appendChild(style);
+        // Verificar elementos dentro del shadowRoot
+        const menuToggle = shadowRoot.querySelector('.menu_toggle');
+        const navMenu = shadowRoot.querySelector('.nav_menu');
 
-        shadowRoot.appendChild(headerTemplate.content);
-<<<<<<< HEAD
-    }
-}
-=======
+        console.log("menuToggle encontrado:", menuToggle !== null);
+        console.log("navMenu encontrado:", navMenu !== null);
 
-        // Lógica para ocultar el botón de login si el administrador está autenticado
-        const isAdmin = localStorage.getItem('isAdmin') === 'true';
-        const loginButton = shadowRoot.getElementById("login-button");
-        if (isAdmin && loginButton) {
-            loginButton.style.display = "none";
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        } else {
+            console.error("Error: No se encontraron los elementos del menú dentro del shadowRoot.");
         }
     }
 }
 
->>>>>>> master
 customElements.define('header-component', Header);

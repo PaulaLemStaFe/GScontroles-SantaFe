@@ -125,56 +125,58 @@ footer-component {
 }
 
 
-@media (min-width:451px) and (max-width:768px) {
+/* Media queries para dispositivos medianos y pequeños */
+@media (max-width: 768px) {
+    .all_products_header {
+        padding-top: 3rem; /* Ajuste del padding-top para dispositivos medianos */
+    }
+
+    .all_products_title {
+        font-size: 1.8rem; /* Ajuste del tamaño del título para dispositivos medianos */
+    }
 
     .product_details {
-        display: flex;
         flex-direction: column;
-		gap: 0px 0px;
+        padding: 2%;
     }
 
-    .product_details_img {
-        width: 100%;
-    }
-
-    .last {
-        display: none;
-    }
-}
-
-
-
-@media (max-width: 450px) {
-
-    .product_details {
-        display: flex;
-		flex-direction: column;
-		gap: 0px 0px;
-        padding: 0;
-    }
-
-    .product_details_img {
-        background-position: center;
-        width: 100%;
+    .details_image {
+        width: 100%; /* Ancho completo de la imagen en dispositivos medianos */
     }
 
     .product_details_text {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        justify-content: center;
-        padding: 0 3%;
-        width: 94%;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .all_products_header {
+        padding-top: 2rem; /* Ajuste del padding-top para dispositivos pequeños */
+    }
+
+    .all_products_title {
+        font-size: 1.5rem; /* Ajuste del tamaño del título para dispositivos pequeños */
+    }
+
+    .product_details {
+        gap: 1rem; /* Ajuste del espacio entre elementos para dispositivos pequeños */
+        padding: 1%;
+    }
+
+    .details_image {
+        width: 100%; /* Ancho completo de la imagen en dispositivos pequeños */
+        padding: 1rem;
     }
 
     .details_title {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 26px;
-        margin: 1rem 0;
+        font-size: 1.5rem; /* Ajuste del tamaño del texto del título para dispositivos pequeños */
     }
 
-    .last {
-        display: none;
+    .details_code, .details_soportados span {
+        font-size: 1rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
+    }
+
+    .details_marca, .details_text {
+        font-size: 0.9rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
     }
 }
