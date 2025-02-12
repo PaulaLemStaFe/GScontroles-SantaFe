@@ -1,20 +1,14 @@
-// allproducts.js
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("../../../../db.json")
+        .then(response => response.json())
+        .then(data => {
+            productos.producttv = data.productstv;
+            productos.productac = data.productsaa;
+            mostrarProductosSegunParametros(data);
+        })
+        .catch((error) => console.error("Error al leer el archivo db.json:", error));
+});
 
-// Objeto para almacenar los productos por categoría
-let productos = { producttv: [], productac: [] };
-
-// Cargar los datos desde el archivo db.json y mostrar los productos según los parámetros de la URL
-fetch("../../../../db.json")
-    .then(response => response.json())
-    .then(data => {
-        productos.producttv = data.productstv;
-        productos.productac = data.productsaa;
-        mostrarProductosSegunParametros(data);
-    })
-    .catch((error) => console.error("Error al leer el archivo db.json:", error));/**
-    * Función para mostrar productos según los parámetros de la URL.
-    * @param {Object} data - Los datos del archivo db.json.
-    */
 function mostrarProductosSegunParametros(data) {
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category');
@@ -32,10 +26,6 @@ function mostrarProductosSegunParametros(data) {
     }
 }
 
-/**
- * Función para mostrar todos los productos.
- * @param {Object} data - Los datos del archivo db.json.
- */
 function mostrarTodos(data) {
     const container = document.getElementById("productos");
     if (!container) {
@@ -46,18 +36,10 @@ function mostrarTodos(data) {
     container.innerHTML = "";
     [...data.productstv, ...data.productsaa].forEach((producto) => {
         crearProducto(container, producto, "img");
-        // Actualizar los atributos de la imagen
         updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto);
     });
 }
 
-/**
- * Función para mostrar productos de una categoría específica.
- * @param {string} categoria - La categoría de los productos (producttv o productac).
- * @param {string} titulo - El título de la categoría.
- * @param {number} productId - El ID del producto (opcional).
- * @param {Object} data - Los datos del archivo db.json.
- */
 function mostrarCategoria(categoria, titulo, productId, data) {
     const container = document.getElementById("productos");
     if (!container) {
@@ -65,7 +47,6 @@ function mostrarCategoria(categoria, titulo, productId, data) {
         return;
     }
 
-    // Verificar que la categoría exista en los datos
     if (!productos[categoria]) {
         console.error(`La categoría ${categoria} no se encontró en los datos.`);
         return;
@@ -87,7 +68,6 @@ function mostrarCategoria(categoria, titulo, productId, data) {
 
     productosCategoria.forEach((producto) => {
         crearProducto(container, producto, "img");
-        // Actualizar los atributos de la imagen
         updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto);
     });
 }

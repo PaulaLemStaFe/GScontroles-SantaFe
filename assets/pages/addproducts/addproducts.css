@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-shadow: 1px 1px 2px var(--color-fourth);
     row-gap: 1rem;
 }
 
@@ -100,7 +101,7 @@
 .form__area__button:hover {
     background-color: var(--color-primary);
     box-shadow: 0 0 10px var(--color-tertiary);
-    color: var(--color-cuarto);
+    color: var(--color-fourth);
 }
 
 .button__search_img {
@@ -108,15 +109,17 @@
 }
 
 .add_product__input {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2rem 0;
     row-gap: 1.2rem;
     width: 60%;
 }
 
 .input__group {
-    background-color: white;
+    background-color: var(--color-secondary);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -124,17 +127,17 @@
 }
 
 .input__group .label {
-    color: #C8C8C8;
-    font-size: 0.7rem;
+    font-size: 1.02rem;
     padding: 0.5rem;
     text-align: left;
 }
 
 .input__group .input {
-    background-color: white;
+    background-color: var(--color-secondary) !important;
     border: none;
-    border-bottom: solid #c8c8c8 2px;
-    font-size: 1.2rem;
+    border-bottom: solid var(--color-tertiary) 2px;
+    font-family: "Capriola", serif;
+    font-size: 1rem;
     height: 1.1rem;
     margin-top: 0.5rem;
     padding: 1% 0 1% 1%;
@@ -147,49 +150,46 @@
 }
 
 .input__group .input:focus, .price:focus {
-    background-color: white;
     outline: none;
 }
 
-.input__group #description {
-    font-family: 'Raleway', sans-serif;
-    height: 8rem;
+.input-container .mensaje-error {
+    display: none; /* Esconde el mensaje de error inicialmente */
+}
+
+.input-container-invalid .mensaje-error {
+    align-items: center;
+    display: flex;
+    margin: 0.8rem;
+    justify-content: center;
 }
 
 .error {
-    background-color: #F5F5F5;
     color: #df2525;
     font-size: 1.1rem;
-}
-
-.input-container-invalid {
-    margin-bottom: 0 !important;
+    text-shadow: 1px 1px 2px var(--color-tertiary);
 }
 
 .input__add_product_button {
-    background-color: #2A7AE4;
+    background-color: var(--color-tertiary);
     border: none;
-    border-radius: 15px;
-    color:#FFFFFF;
+    border-radius: 1.2rem;
+    color: var(--color-primary);
     cursor: pointer;
+    display: flex;
+    font-family: "Capriola", serif;
     font-size: 1.1rem;
-    margin-right: auto;
     padding: 1rem 2rem;
     transition: all 1s;
-    width: 100%;
+    width: 30%;
 }
 
 .input__add_product_button:hover {
-    background-color: darkblue;
-    box-shadow: 2px 2px 18px #2A7AE4;
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-tertiary);
+    color: var(--color-fourth);
     transform: scale(1.05);
 }
-
-.contact {
-    margin-top: 0;
-}
-
-
 
 
 

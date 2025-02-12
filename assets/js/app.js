@@ -72,7 +72,7 @@ const tipoDeErrores = [
     'patternMismatch',
     'valueMissing',
     'tooShort',
-    'typeMismatch' // Corregir el error tipográfico de 'typeMissmatch' a 'typeMismatch'
+    'typeMismatch'
 ];
 
 const mensajesDeError = {
@@ -101,15 +101,33 @@ const mensajesDeError = {
     img: {
         valueMissing: "Debes seleccionar al menos una imagen",
     },
-    product_name: {
-        valueMissing: "El campo Nombre del Producto no puede estar vacío",
+    product_category: {
+        valueMissing: "El campo Categoría del Producto no puede estar vacío",
+        tooShort: "Debe tener al menos 4 caracteres"
     },
-    code: {
-        valueMissing: "El campo Código no puede estar vacío",
-        patternMismatch: "El formato requerido es GS 999 (según corresponda) y no puede haber un cero (0) solo delante del número",
+    product_code: {
+        valueMissing: "El campo Código del Producto no puede estar vacío",
+        tooShort: "Debe tener al menos 6 caracteres"
     },
-    description: {
-        valueMissing: "El campo Descripción no puede estar vacío"
+    product_color: {
+        valueMissing: "El campo Color del Producto no puede estar vacío",
+        tooShort: "Debe tener al menos 4 caracteres"
+    },
+    product_soported_01: {
+        valueMissing: "El campo Marca Soportada no puede estar vacío",
+        tooShort: "Debe tener al menos 3 caracteres"
+    },
+    product_soported_02: {
+        valueMissing: "El campo Marca Soportada no puede estar vacío",
+        tooShort: "Debe tener al menos 3 caracteres"
+    },
+    product_soported_03: {
+        valueMissing: "El campo Marca Soportada no puede estar vacío",
+        tooShort: "Debe tener al menos 3 caracteres"
+    },
+    product_soported_04: {
+        valueMissing: "El campo Marca Soportada no puede estar vacío",
+        tooShort: "Debe tener al menos 3 caracteres"
     }
 };
 

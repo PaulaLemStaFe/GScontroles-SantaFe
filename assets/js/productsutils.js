@@ -6,8 +6,12 @@
  * @param {Object} producto - Los datos del producto.
  * @param {string} imgClass - La clase CSS para la imagen del producto.
  */
-function crearProducto(container, producto, imgClass, isAdmin) {
+function crearProducto(container, producto, imgClass) {
     if (!container) return;
+
+    // Detectar la URL actual
+    const currentUrl = window.location.pathname;
+    const showIcons = currentUrl.includes('editionproducts.html');
 
     const div = document.createElement('div');
     div.className = 'product_item';
@@ -22,12 +26,13 @@ function crearProducto(container, producto, imgClass, isAdmin) {
                 <span class="code_code">${producto.code}</span>
             </span>
         </div>
+        ${showIcons ? `
         <div class="item_footer">
             <div class="footer_icons">
-                <i class="bi bi-trash-fill" alt="Eliminar" title="Eliminar" onclick="eliminarProducto"></i>
-                <i class="bi bi-pencil-fill" alt="Editar" title="Editar" onclick="editarProducto"></i>
+                <i class="bi bi-trash-fill" alt="Eliminar" title="Eliminar" onclick="eliminarProducto()"></i>
+                <i class="bi bi-pencil-fill" alt="Editar" title="Editar" onclick="editarProducto()"></i>
             </div>
-        </div>
+        </div>` : ''}
         <a class="item_link" href="${producto.link}" rel="noopener noreferrer" alt="Ver Producto" title="Ver Producto">Ver Producto</a>
     `;
     container.appendChild(div);
