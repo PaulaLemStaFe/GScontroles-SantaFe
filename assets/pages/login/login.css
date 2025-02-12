@@ -1,0 +1,85 @@
+@import url('../../css/style.css');
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh;
+}
+
+.login {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1.7rem;
+	justify-content: center;
+    padding-top: 4rem;
+}
+
+.login_title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    text-shadow: 1px 1px 2px var(--color-fourth);
+}
+
+.login_form {
+	align-items: center;
+    background-color: rgba(105, 117, 101, 0.5);
+    border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.login_form_input {
+    background-color: var(--color-primary) !important;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--color-fifth) !important;
+    font-family: "Capriola", serif;
+    font-size: 1rem;
+    height: 2.3rem;
+    margin: 1.2rem 1.5rem;
+    outline: none;
+    width: 24rem;
+}
+
+.login_form_input::placeholder {
+    color: #A2A2A2;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.mensaje-error {
+    display: none;
+}
+
+.login_form_button {
+    background-color: var(--color-tertiary);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-family: "Capriola", serif;
+    font-size: 1.1rem;
+    margin: 1.2rem;
+    padding: 0.5rem 0.1rem;
+    text-decoration: none;
+    transition: all 1s;
+	width: 275px;
+}
+
+.login_form_button:hover {
+    background-color: var(--color-fourth);
+    box-shadow: 2px 2px 18px var(--color-tertiary);
+}
+
+footer-component {
+    margin-top: auto;
+}

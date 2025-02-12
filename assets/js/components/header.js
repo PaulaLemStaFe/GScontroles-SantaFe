@@ -1,11 +1,12 @@
 const headerTemplate = document.createElement('template');
 
-var urlIndexHtml = '/index.html';
-var urlImageLogoHtml = '/assets/images/logo-solo/logo-nombre.png';
-var urlImageFondoHtml = '/assets/images/fondos/fondo-de-logo.jpg';
-var urlSearchHtml = '/assets/pages/search/search.html';
 var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
+var urlImageFondoHtml = '/assets/images/fondos/fondo-de-logo.jpg';
+var urlImageLogoHtml = '/assets/images/logo-solo/logo-nombre.png';
+var urlIndexHtml = '/index.html';
+var urlLoginHtml = '/assets/pages/login/login.html';
 var urlProductsHtml = '/assets/pages/products/allproducts.html';
+var urlSearchHtml = '/assets/pages/search/search.html';
 
 headerTemplate.innerHTML = `
         <header class="navbar">
@@ -41,11 +42,10 @@ headerTemplate.innerHTML = `
                     </div>
                 </div>
                 <div class="button">
-                    <a class="login_button login_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
+                    <a id="login-button" class="login_button login_link" href="${urlLoginHtml}" rel="noopener noreferrer" alt="Login" title="Login">Login</a>
                 </div>
             </div>
         </header>
-
 `;
 
 
@@ -312,6 +312,19 @@ class Header extends HTMLElement {
         shadowRoot.appendChild(style);
 
         shadowRoot.appendChild(headerTemplate.content);
+<<<<<<< HEAD
     }
 }
+=======
+
+        // Lógica para ocultar el botón de login si el administrador está autenticado
+        const isAdmin = localStorage.getItem('isAdmin') === 'true';
+        const loginButton = shadowRoot.getElementById("login-button");
+        if (isAdmin && loginButton) {
+            loginButton.style.display = "none";
+        }
+    }
+}
+
+>>>>>>> master
 customElements.define('header-component', Header);
