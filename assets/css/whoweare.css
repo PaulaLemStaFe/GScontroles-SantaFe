@@ -38,3 +38,32 @@ strong {
     font-weight: bold;
     text-decoration: underline;
 }
+
+/* Media queries para dispositivos medianos y pequeños */
+@media (min-width: 451px) and (max-width: 768px) {
+    .woweare_title {
+        font-size: 2rem; /* Ajuste del tamaño del título para dispositivos medianos */
+    }
+    .woweare_text {
+        font-size: 1.2rem; /* Ajuste del tamaño del texto para dispositivos medianos */
+    }
+    strong {
+        font-size: 1.25rem; /* Ajuste del tamaño del texto fuerte para dispositivos medianos */
+    }
+}
+
+@media (max-width: 450px) {
+    .woweare {
+        flex-flow: column nowrap; /* Cambiar disposición de los elementos en dispositivos pequeños */
+        padding: 0.5rem; /* Ajuste del padding para dispositivos pequeños */
+    }
+    .woweare_title {
+        font-size: 1.8rem; /* Ajuste del tamaño del título para dispositivos pequeños */
+    }
+    .woweare_text {
+        font-size: 1rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
+    }
+    strong {
+        font-size: 1.1rem; /* Ajuste del tamaño del texto fuerte para dispositivos pequeños */
+    }
+}

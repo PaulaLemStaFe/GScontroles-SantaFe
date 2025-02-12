@@ -50,26 +50,31 @@
     grid-template-rows: repeat(2, auto);
 }
 
-@media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
-    .productos {
-        gap: 1.5rem 0;
+/* Media queries para dispositivos medianos y pequeños */
+@media (min-width: 451px) and (max-width: 768px) {
+    .tv__title {
+        font-size: 1.8rem; /* Ajuste del tamaño del texto para dispositivos medianos */
     }
-
-    .bi {
-        font-size: 1rem;
-    }
-
-    .all_products_items {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .last {
-        display: none;
+    .tv__link {
+        font-size: 0.9rem; /* Ajuste del tamaño del texto del enlace para dispositivos medianos */
     }
 }
 
 @media (max-width: 450px) {
-    .all_products_items {
-        grid-template-columns: repeat(4, 1fr);
+    .productos {
+        flex-flow: column wrap; /* Cambiar disposición de los productos en dispositivos pequeños */
+        width: 100%;
+    }
+    .tv__title {
+        font-size: 1.6rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
+        text-align: center; /* Centrar el texto para dispositivos pequeños */
+    }
+    .tv__link {
+        font-size: 0.8rem; /* Ajuste del tamaño del texto del enlace para dispositivos pequeños */
+        text-align: center; /* Centrar el enlace para dispositivos pequeños */
+    }
+    .title {
+        flex-direction: column; /* Cambiar disposición de los elementos del título en dispositivos pequeños */
+        align-items: center; /* Centrar los elementos del título en dispositivos pequeños */
     }
 }

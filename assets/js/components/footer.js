@@ -240,112 +240,55 @@ class Footer extends HTMLElement {
                 font-family: "Montserrat Alternates", sans-serif;
             }
             
-            @media screen and (max-width: 960px) {
-                .footer {
+            /* Media queries para dispositivos medianos y pequeños */
+            @media (max-width: 768px) {
+                .footer_menu {
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+
+                .logo_image {
+                    width: 30%; /* Ajustar el tamaño del logo en dispositivos medianos */
+                    margin-bottom: 1rem;
+                }
+
+                .menu_list {
+                    flex-direction: column;
+                    gap: 1rem;
+                    align-items: center;
+                }
+
+                .menu_list li {
+                    margin: 0.5rem 0;
+                }
+
+                .menu_list a {
+                    text-align: center;
                     width: 100%;
                 }
-            
-                .derechos {
-                    font-size: 0.85em;
-                    padding: 5px 0;
+
+                .buscador_menu {
+                    width: 100%;
+                    justify-content: center;
                 }
             }
-        
-            @media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
-                .logo_image {
-                    width: 90%;
-                }
-        
-                .navegacion {
-                    align-items: center;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 0 auto;
-                    max-width: 1920px;
-                    padding: 1rem 0;
-                    width: 90%;
-                }
-        
-                .buscador {
-                    align-items: center;
-                    display: flex;
-                    order: 3;
-                    padding: 0;
-                }
-        
-                .input_icon {
-                    font-size: 2rem;
-                }
-        
-                .bi, .bi-search {
-                    cursor: pointer;
-                }
-        
-                .bi-search::before {
-                    color: #464646;
-                    font-size: 2rem;
-                    font-weight: 900;
-                    margin: 0;
-                    padding: 0;
-                }
-                
-                .input__buscador {
-                    border: none;
-                    border-radius: 1rem;
-                    display: none;
-                    font-size: 1rem;
-                    outline: none;
-                    padding-left: 1rem;
-                }
-            }
-        
+
             @media (max-width: 450px) {
+                .footer_menu {
+                    gap: 1rem;
+                }
+
                 .logo_image {
-                    width: 75%;
+                    width: 50%; /* Ajustar el tamaño del logo en dispositivos muy pequeños */
+                    margin-bottom: 1rem;
                 }
-        
-                .navegacion {
-                    align-items: center;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 0 auto;
-                    max-width: 1920px;
-                    padding: 1rem 0;
-                    width: 90%;
+
+                .menu_list a {
+                    font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
                 }
-        
-                .buscador {
-                    align-items: center;
-                    border-radius: 1rem;
-                    display: flex;
-                    order: 3;
-                    padding: 0;
-                }
-        
-                .input_icon {
-                    font-size: 2rem;
-                }
-        
-                .bi, .bi-search {
-                    cursor: pointer;
-                }
-        
-                .bi-search::before {
-                    font-size: 2rem;
-                    font-weight: 900;
-                    margin: 0;
-                    padding: 0;
-                }
-                
-                .input__buscador {
-                    border: none;
-                    border-radius: 1rem;
-                    display: none;
-                    font-size: 1rem;
-                    height: 2.5rem;
-                    outline: none;
-                    padding-left: 1rem;
-                    width: 24rem;
+
+                .derechos {
+                    font-size: 0.8em; /* Ajustar el tamaño del texto en la sección de derechos */
                 }
             }
         `;

@@ -273,47 +273,59 @@ class Contact extends HTMLElement {
                 font-weight: bold;
                 padding: 0.5rem;
             }
-            
-            
-            
-            @media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
-                .contact {
-                    margin-top: 2.5rem;
-                    padding: 2rem 0;
-                }
+
+
+            /* Media queries para dispositivos medianos y pequeños */
+            @media (max-width: 768px) {
                 .contact_content {
-                    align-items: center;
-                    display: flex;
-                    flex-flow: column wrap;
-                    gap: 2rem;
-                    justify-content: center;
-                    margin: 0 auto;
-                    max-width: 1920px;
+                    flex-direction: column;
+                    gap: 3rem;
                     width: 90%;
                 }
-                .contact_logo_img, .contact_menu {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .menu {
-                    text-align: center;
-                }
-                .contact_form, .contact_form_area {
+
+                .contact_form__input, .menssage {
                     width: 100%;
                 }
-                .contact_form__input, .menssage {
-                    border: none;
-                    font-size: 1rem;
-                    outline: none;
-                    padding: 0.5rem;
-                    resize: none;
-                    width: 97%;
+                
+                .contact_logo_img {
+                    width: 50%;
+                    height: auto;
                 }
-                .contact_form__button {
-                    cursor: pointer;
-                    margin-bottom: 1rem;
-                    margin-right: auto;
-                    padding: 1rem 3rem;
+
+                .menu_item {
+                    text-align: center;
+                }
+            }
+
+            @media (max-width: 450px) {
+                .contact {
+                    padding: 1.5rem 0;
+                }
+
+                .contact_form_form, .contact_form {
+                    gap: 1rem;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                .contact_form__input, .menssage {
+                    width: 100%;
+                }
+
+                .contact_logo_img {
+                    width: 70%;
+                    height: auto;
+                }
+
+                .menu_item {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+                
+                .menu {
+                    gap: 1rem;
                 }
             }
         `;

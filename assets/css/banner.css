@@ -3,7 +3,7 @@
 
 .banner {
     align-items: center;
-    background-image: url(../images/banner/banner-gs_controles.png);
+    background-image: url(/assets/images/banner/banner-gs_controles.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -33,9 +33,10 @@
     font-weight: 1000;
     justify-content: center;
     left: 32%;
+    padding: 0.5rem 2rem;
     position: absolute;
     top: 45%;
-    text-shadow: 0.2rem 0.3rem 0.4rem var(--color-fifth);
+    text-shadow: 0 0 0.5rem var(--color-tertiary);
     -webkit-text-stroke: 1px var(--color-primary);
 }
 
@@ -46,22 +47,28 @@
     width: 3.5rem;
 }
 
-@media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
+@media (min-width: 451px) and (max-width: 768px) {
     .banner {
-        height: 30%;
-        width: 100%;
+        padding-top: 20rem; /* Ajustar padding-top para dispositivos medianos */
+        background-size: 100%; /* Mantener background-size como 100% */
     }
 
-    .banner_section {
-        align-items: flex-start;
-        flex-flow: column nowrap;
-        margin: 0;
-        width: 90%;
+    .prom {
+        font-size: 2.5rem; /* Ajustar tamaño de la fuente para dispositivos medianos */
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
 @media (max-width: 450px) {
     .banner {
-        height: 25%;
+        padding-top: 15rem; /* Ajustar padding-top para dispositivos pequeños */
+        background-size: 100%; /* Mantener background-size como 100% */
+    }
+
+    .prom {
+        font-size: 1.8rem; /* Ajustar tamaño de la fuente para dispositivos pequeños */
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

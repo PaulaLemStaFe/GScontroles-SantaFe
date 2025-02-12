@@ -130,11 +130,11 @@ class Header extends HTMLElement {
             }
 
             .menu_list a:hover {
-                background-color: var(--color-primary); /* Añade sombra */
+                background-color: var(--color-primary);
                 border-radius: 50%;
                 color: var(--color-fifth);
-                text-shadow: 0 10px 15px var(--color-fourth); /* Cambia el fondo cuando pasas el cursor */
-                transform: scale(1.15); /* Aumenta el tamaño del texto */
+                text-shadow: 0 10px 15px var(--color-fourth);
+                transform: scale(1.15);
                 transition: all 1.2s;
             }
 
@@ -167,7 +167,7 @@ class Header extends HTMLElement {
 
             /* Aplicar la animación al pasar el mouse */
             .submenu:hover .submenu_list {
-                animation: delayShow 0s 0.5s forwards; /* 0s de duración, 0.5s de retraso */
+                animation: delayShow 0s 0.5s forwards;
                 display: block;
             }
 
@@ -186,7 +186,7 @@ class Header extends HTMLElement {
                 background-color: inherit;
                 border-radius: 0;
                 color: var(--color-primary);
-                transform: scale(1.1); /* Aumenta el tamaño del texto */
+                transform: scale(1.1);
                 transition: all 1.1s;
             }
 
@@ -209,14 +209,14 @@ class Header extends HTMLElement {
 
             .bi-search_menu, .bi-search_modal {
                 cursor: pointer;
-                font-size: 1.2rem; /* Aumenta el tamaño del ícono */
-                font-weight: 900; /* Añade peso al ícono */
+                font-size: 1.2rem;
+                font-weight: 900;
             }
 
             .bi-search_menu svg, .bi-search_modal svg {
-                height: 1.2rem; /* Ajusta la altura del SVG */
-                stroke-width: 4; /* Aumenta el grosor del trazo */
-                width: 1.2rem; /* Ajusta el ancho del SVG */
+                height: 1.2rem;
+                stroke-width: 4;
+                width: 1.2rem;
             }
 
             .bi-search_menu path {
@@ -248,123 +248,70 @@ class Header extends HTMLElement {
                 text-decoration: none;
             }
 
-            @media (min-width: 451px) and (max-width: 768px), (max-width: 450px) {
-                .logo_image {
-                    width: 90%;
-                }
-
+            /* Media queries para dispositivos medianos y pequeños */
+            @media (max-width: 768px) {
                 .navegacion {
-                    align-items: center;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 0 auto;
-                    max-width: 1920px;
-                    padding: 1rem 0;
-                    width: 90%;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0.5rem;
                 }
 
-                .buscador {
-                    align-items: center;
-                    display: flex;
-                    order: 3;
-                    padding: 0;
+                .logo_image {
+                    width: 30%; /* Ajustar el tamaño del logo en dispositivos pequeños */
+                    margin-bottom: 1rem;
                 }
 
-                .input_icon {
-                    font-size: 2rem;
+                .menu_buscador {
+                    flex-direction: column;
+                    gap: 1rem;
+                    width: 100%;
                 }
 
-                .bi, .bi-search {
-                    cursor: pointer;
+                .menu_list {
+                    flex-direction: column;
+                    width: 100%;
                 }
 
-                .bi-search::before {
-                    color: #464646;
-                    font-size: 2rem;
-                    font-weight: 900;
-                    margin: 0;
-                    padding: 0;
-                }
-                
-                .input__buscador {
-                    border: none;
-                    border-radius: 1rem;
-                    display: none;
-                    font-size: 1rem;
-                    outline: none;
-                    padding-left: 1rem;
+                .menu_list li {
+                    margin: 0.5rem 0;
                 }
 
-                .login_button {
-                    cursor: pointer;
-                    margin: 0;
-                    padding: 1rem 2rem;
+                .menu_list a {
+                    padding: 0.5rem 1rem;
                     text-align: center;
-                    width: 10%;
+                    width: 100%;
+                }
+
+                .buscador_menu {
+                    width: 100%;
+                    justify-content: center;
                 }
             }
 
             @media (max-width: 450px) {
-                .logo_image {
-                    width: 75%;
-                }
-
                 .navegacion {
-                    align-items: center;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 0 auto;
-                    max-width: 1920px;
-                    padding: 1rem 0;
-                    width: 90%;
+                    padding: 0.5rem;
                 }
 
-                .buscador {
-                    align-items: center;
-                    border-radius: 1rem;
-                    display: flex;
-                    order: 3;
-                    padding: 0;
+                .logo_image {
+                    width: 50%; /* Ajustar el tamaño del logo en dispositivos muy pequeños */
+                    margin-bottom: 1rem;
                 }
 
-                .input_icon {
-                    font-size: 2rem;
-                }
-
-                .bi, .bi-search {
-                    cursor: pointer;
-                }
-
-                .bi-search::before {
-                    font-size: 2rem;
-                    font-weight: 900;
-                    margin: 0;
-                    padding: 0;
-                }
-                
-                .input__buscador {
-                    border: none;
-                    border-radius: 1rem;
-                    display: none;
-                    font-size: 1rem;
-                    height: 2.5rem;
-                    outline: none;
-                    padding-left: 1rem;
-                    width: 24rem;
+                .menu_list a {
+                    font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
                 }
 
                 .login_button {
-                    cursor: pointer;
-                    margin: 0;
-                    padding: 1rem 3rem;
-                    text-align: center;
-                    width: 10%;
+                    padding: 0.5rem 1.5rem; /* Ajustar el tamaño del botón de login */
+                    font-size: 1rem; /* Ajustar el tamaño del texto en el botón de login */
                 }
             }
+
         `;
         shadowRoot.appendChild(style);
 
         shadowRoot.appendChild(headerTemplate.content);
-            }
-        }
+    }
+}
 customElements.define('header-component', Header);
