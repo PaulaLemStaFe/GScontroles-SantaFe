@@ -76,16 +76,16 @@ class Header extends HTMLElement {
         style.textContent = `
             @import url('/assets/css/style.css');
             .navbar {
-                    align-items: center;
-                    background-image: url(${urlImageFondoHtml});
-                    background-position: center;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 0;
-                    position: fixed;
-                    top: 0;
-                    width: 100%;
-                    z-index: 1;
+                align-items: center;
+                background-image: url(${urlImageFondoHtml});
+                background-position: center;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1;
             }
             .navegacion {
                 align-items: center;
@@ -112,7 +112,6 @@ class Header extends HTMLElement {
             .menu_toggle {
                 display: block;
             }
-
             .menu_list {
                 align-items: center;
                 background-color: var(--color-tertiary);
@@ -122,11 +121,9 @@ class Header extends HTMLElement {
                 list-style: none;
                 padding-left: 0;
             }
-
             .menu_list li {
                 margin: 0 0.5rem;
             }
-
             .menu_list a {
                 color: var(--color-primary);
                 cursor: pointer;
@@ -136,7 +133,6 @@ class Header extends HTMLElement {
                 text-decoration: none;
                 transition: all 1s;
             }
-
             .menu_list a:hover {
                 background-color: var(--color-primary);
                 border-radius: 50%;
@@ -145,12 +141,10 @@ class Header extends HTMLElement {
                 transform: scale(1.15);
                 transition: all 1.2s;
             }
-
             /* Estilo para el submenú */
             .submenu {
                 position: relative;
             }
-
             .submenu_list {
                 background-color: var(--color-tertiary);
                 border-bottom-left-radius: 1rem;
@@ -167,30 +161,25 @@ class Header extends HTMLElement {
                 transition: opacity 0.5s;
                 z-index: 10000;
             }
-
             /* Keyframes para retrasar la aparición del submenú */
             @keyframes delayShow {
                 0% { display: block; opacity: 0; }
                 100% { display: block; opacity: 1; }
             }
-
             /* Aplicar la animación al pasar el mouse */
             .submenu:hover .submenu_list {
                 animation: delayShow 0s 0.5s forwards;
                 display: block;
             }
-
             .submenu_list li {
                 border-bottom: 1px solid var(--color-secondary);
             }
-
             .submenu_list li a {
                 color: var(--color-primary);
                 display: block;
                 padding: 8px 16px;
                 text-decoration: none;
             }
-
             .submenu_list li a:hover {
                 background-color: inherit;
                 border-radius: 0;
@@ -198,12 +187,10 @@ class Header extends HTMLElement {
                 transform: scale(1.1);
                 transition: all 1.1s;
             }
-
             /* Mostrar el submenú al pasar el mouse */
             .submenu:hover .submenu_list {
                 display: block;
             }
-
             /* search */
             .buscador_menu {
                 align-items: center;
@@ -211,31 +198,25 @@ class Header extends HTMLElement {
                 display: flex;
                 position: relative;
             }
-
             .bi_menu, .bi_modal {
                 cursor: pointer;
             }
-
             .bi-search_menu, .bi-search_modal {
                 cursor: pointer;
                 font-size: 1.2rem;
                 font-weight: 900;
             }
-
             .bi-search_menu svg, .bi-search_modal svg {
                 height: 1.2rem;
                 stroke-width: 4;
                 width: 1.2rem;
             }
-
             .bi-search_menu path {
                 stroke: rgba(255, 255, 255, 0.3);
             }
-
             .bi-search_modal path {
                 stroke: rgba(110, 110, 110, 0.3);
             }
-
             .login_button {
                 background-color: var(--color-tertiary);
                 border: solid var(--color-fourth) 1px;
@@ -246,13 +227,11 @@ class Header extends HTMLElement {
                 text-align: center;
                 transition: all 1s;
             }
-
             .login_button:hover {
                 background-color: var(--color-primary);
                 box-shadow: 0 0 10px var(--color-tertiary);
                 color: var(--color-cuarto);
             }
-
             .login_link {
                 text-decoration: none;
             }
@@ -269,15 +248,15 @@ class Header extends HTMLElement {
                 }
                 /* Estilos para el botón del menú hamburguesa */
                 .menu_toggle {
-                    color: var(--color-primary);
-                    display: block;
-                    font-size: 2rem;
                     background: none;
                     border: none;
+                    color: var(--color-primary);
                     cursor: pointer;
+                    display: block;
+                    font-size: 2rem;
                     padding: 0.5rem;
                 }
-                /* 🔹 Estilos para el menú hamburguesa flotante */
+                /* Estilos para el menú hamburguesa flotante */
                 .nav_menu {
                     display: none;
                     flex-direction: column;
@@ -294,11 +273,11 @@ class Header extends HTMLElement {
                 }
                 .menu_list a {
                     display: block;
-                    font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
+                    font-size: 1rem;
                     padding: 0.3rem;
                     text-align: center;
                 }
-                /* 🔹 Botón de cerrar menú */
+                /* Botón de cerrar menú */
                 .close_menu {
                     background: none;
                     border: none;
@@ -318,10 +297,11 @@ class Header extends HTMLElement {
                     border-right: 1px solid var(--color-secondary);
                 }
                 .login_button {
-                    font-size: 1rem; /* Ajustar el tamaño del texto en el botón de login */ 
-                    padding: 0.5rem 1.5rem; /* Ajustar el tamaño del botón de login */
+                    font-size: 1rem;
+                    padding: 0.5rem 1.5rem;
                 }
             }
+
 
             @media (min-width:480px) and (max-width:767px) {
                 .navegacion {
@@ -332,15 +312,15 @@ class Header extends HTMLElement {
                 }
                 /* Estilos para el botón del menú hamburguesa */
                 .menu_toggle {
-                    color: var(--color-primary);
-                    display: block;
-                    font-size: 2rem;
                     background: none;
                     border: none;
+                    color: var(--color-primary);
                     cursor: pointer;
+                    display: block;
+                    font-size: 2rem;
                     padding: 0.5rem;
                 }
-                /* 🔹 Estilos para el menú hamburguesa flotante */
+                /* Estilos para el menú hamburguesa flotante */
                 .nav_menu {
                     display: none;
                     flex-direction: column;
@@ -357,11 +337,11 @@ class Header extends HTMLElement {
                 }
                 .menu_list a {
                     display: block;
-                    font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
+                    font-size: 1rem;
                     padding: 0.3rem;
                     text-align: center;
                 }
-                /* 🔹 Botón de cerrar menú */
+                /* Botón de cerrar menú */
                 .close_menu {
                     background: none;
                     border: none;
@@ -381,10 +361,11 @@ class Header extends HTMLElement {
                     border-right: 1px solid var(--color-secondary);
                 }
                 .login_button {
-                    font-size: 1.1rem; /* Ajustar el tamaño del texto en el botón de login */ 
-                    padding: 0.8rem 1.5rem; /* Ajustar el tamaño del botón de login */
+                    font-size: 1.1rem;
+                    padding: 0.8rem 1.5rem;
                 }
             }
+
 
             @media (min-width:768px) and (max-width:1023px) {
                 .menu_toggle {
@@ -401,6 +382,7 @@ class Header extends HTMLElement {
                 }
             }
 
+
             @media (min-width:1024px) and (max-width:1279px) {
                 .menu_toggle {
                     display: none;
@@ -415,6 +397,7 @@ class Header extends HTMLElement {
                     font-size: 1.2rem;
                 }
             }
+
 
             @media (min-width:1280px) {
                 .menu_toggle {
