@@ -20,7 +20,7 @@ headerTemplate.innerHTML = `
                         <nav class="nav_menu">
                             <ul class="menu_list">
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
-                                <li class="submenu"><a href="${urlProductsHtml}" title="Productos">Productos</a>
+                                <li class="submenu"><a href="#" title="Productos">Productos</a>
                                     <ul class="submenu_list">
                                         <li><a href="/assets/pages/products/allproducts.html?category=all" title="Ingresa para ver todos nuestros productos">Todos</a></li>
                                         <li><a href="/assets/pages/products/allproducts.html?category=producttv&title=Controles Remotos de Televisores" title="Controles remotos para televisores">Televisor</a></li>
@@ -60,9 +60,6 @@ class Header extends HTMLElement {
     connectedCallback() {
         const shadowRoot = this.attachShadow({ mode: 'closed' });
 
-        // Verificar si headerTemplate está definido
-        console.log("headerTemplate:", headerTemplate);
-
         // Clonar y adjuntar el template
         shadowRoot.appendChild(headerTemplate.content.cloneNode(true));
 
@@ -78,20 +75,18 @@ class Header extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
             @import url('/assets/css/style.css');
-                
             .navbar {
-                align-items: center;
-                background-image: url(${urlImageFondoHtml});
-                background-position: center;
-                display: flex;
-                justify-content: space-between;
-                margin: 0;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 1;
+                    align-items: center;
+                    background-image: url(${urlImageFondoHtml});
+                    background-position: center;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    z-index: 1;
             }
-
             .navegacion {
                 align-items: center;
                 display: flex;
@@ -100,32 +95,22 @@ class Header extends HTMLElement {
                 padding: 0.1rem 0;
                 width: 100%;
             }
-
             .logo_image {
                 content: url(${urlImageLogoHtml});
                 display: flex;
                 width: 15%;
             }
-
             .menu_buscador {
                 display: flex;
                 gap: 0.4rem;
             }
-
             /* Mostrar el menú cuando está activo */
             .nav_menu.active {
                 display: flex;
             }
-
             /* Estilos para el botón del menú hamburguesa */
             .menu_toggle {
-                color: var(--color-primary);
-                display: none;
-                font-size: 2rem;
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 0.5rem;
+                display: block;
             }
 
             .menu_list {
@@ -180,6 +165,7 @@ class Header extends HTMLElement {
                 position: absolute;
                 top: 100%;
                 transition: opacity 0.5s;
+                z-index: 10000;
             }
 
             /* Keyframes para retrasar la aparición del submenú */
@@ -271,42 +257,168 @@ class Header extends HTMLElement {
                 text-decoration: none;
             }
 
+
             /* Media queries para dispositivos medianos y pequeños */
-            @media (max-width: 768px) {
-                .menu_toggle {
-                    display: block;
+            @media (max-width: 479px) {
+                .navegacion {
+                    margin: 0;
+                    padding: 0;
                 }
+                .logo_image {
+                    width: 33%;
+                }
+                /* Estilos para el botón del menú hamburguesa */
+                .menu_toggle {
+                    color: var(--color-primary);
+                    display: block;
+                    font-size: 2rem;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                }
+                /* 🔹 Estilos para el menú hamburguesa flotante */
                 .nav_menu {
                     display: none;
-                }
-                .menu_buscador {
-                    gap: 1rem;
+                    flex-direction: column;
+                    position: fixed; /* Lo hace flotante */
+                    transition: right 0.3s ease-in-out;
                 }
                 .menu_list {
                     flex-direction: column;
-                    width: 100%;
+                    margin: 0;
+                    text-align: center;
                 }
                 .menu_list li {
                     margin: 0.5rem 0;
                 }
                 .menu_list a {
-                    padding: 0.5rem 1rem;
+                    display: block;
+                    font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
+                    padding: 0.3rem;
                     text-align: center;
-                    width: 100%;
+                }
+                /* 🔹 Botón de cerrar menú */
+                .close_menu {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    position: absolute;
+                    right: 20px;
+                    top: 15px;
                 }
                 .buscador_menu {
-                    width: 100%;
                     justify-content: center;
+                    width: 100%;
+                }
+                .submenu_list {
+                    background-color: var(--color-fourth);
+                    border-left: 1px solid var(--color-secondary);
+                    border-right: 1px solid var(--color-secondary);
+                }
+                .login_button {
+                    font-size: 1rem; /* Ajustar el tamaño del texto en el botón de login */ 
+                    padding: 0.5rem 1.5rem; /* Ajustar el tamaño del botón de login */
                 }
             }
 
-            @media (max-width: 450px) {
+            @media (min-width:480px) and (max-width:767px) {
+                .navegacion {
+                    padding: 0.5rem 0;
+                }
+                .logo_image {
+                    width: 30%;
+                }
+                /* Estilos para el botón del menú hamburguesa */
+                .menu_toggle {
+                    color: var(--color-primary);
+                    display: block;
+                    font-size: 2rem;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                }
+                /* 🔹 Estilos para el menú hamburguesa flotante */
+                .nav_menu {
+                    display: none;
+                    flex-direction: column;
+                    position: fixed; /* Lo hace flotante */
+                    transition: right 0.3s ease-in-out;
+                }
+                .menu_list {
+                    flex-direction: column;
+                    margin: 0;
+                    text-align: center;
+                }
+                .menu_list li {
+                    margin: 0.5rem 0;
+                }
                 .menu_list a {
+                    display: block;
                     font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
+                    padding: 0.3rem;
+                    text-align: center;
+                }
+                /* 🔹 Botón de cerrar menú */
+                .close_menu {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    position: absolute;
+                    right: 20px;
+                    top: 15px;
+                }
+                .buscador_menu {
+                    justify-content: center;
+                    width: 100%;
+                }
+                .submenu_list {
+                    background-color: var(--color-fourth);
+                    border-left: 1px solid var(--color-secondary);
+                    border-right: 1px solid var(--color-secondary);
                 }
                 .login_button {
-                    padding: 0.5rem 1.5rem; /* Ajustar el tamaño del botón de login */
-                    font-size: 1rem; /* Ajustar el tamaño del texto en el botón de login */
+                    font-size: 1.1rem; /* Ajustar el tamaño del texto en el botón de login */ 
+                    padding: 0.8rem 1.5rem; /* Ajustar el tamaño del botón de login */
+                }
+            }
+
+            @media (min-width:768px) and (max-width:1023px) {
+                .menu_toggle {
+                    display: none;
+                }
+                .logo_image {
+                    width: 20%;
+                }
+                .menu_list li {
+                    margin: 0;
+                }
+                .login_button {
+                    padding: 0.8rem 2rem;
+                }
+            }
+
+            @media (min-width:1024px) and (max-width:1279px) {
+                .menu_toggle {
+                    display: none;
+                }
+                .logo_image {
+                    width: 20%;
+                }
+                .menu_list li {
+                    margin: 0.5rem;
+                }
+                .menu_list a, .button a {
+                    font-size: 1.2rem;
+                }
+            }
+
+            @media (min-width:1280px) {
+                .menu_toggle {
+                    display: none;
                 }
             }
         `;
@@ -314,9 +426,6 @@ class Header extends HTMLElement {
         // Verificar elementos dentro del shadowRoot
         const menuToggle = shadowRoot.querySelector('.menu_toggle');
         const navMenu = shadowRoot.querySelector('.nav_menu');
-
-        console.log("menuToggle encontrado:", menuToggle !== null);
-        console.log("navMenu encontrado:", navMenu !== null);
 
         if (menuToggle && navMenu) {
             menuToggle.addEventListener('click', () => {

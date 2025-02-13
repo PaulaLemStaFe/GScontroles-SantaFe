@@ -241,54 +241,20 @@ class Footer extends HTMLElement {
             }
             
             /* Media queries para dispositivos medianos y pequeños */
-            @media (max-width: 768px) {
+            @media (min-width:451px) and (max-width:768px) {
                 .footer_menu {
-                    flex-direction: column;
-                    gap: 2rem;
-                }
-
-                .logo_image {
-                    width: 30%; /* Ajustar el tamaño del logo en dispositivos medianos */
-                    margin-bottom: 1rem;
-                }
-
-                .menu_list {
-                    flex-direction: column;
-                    gap: 1rem;
-                    align-items: center;
-                }
-
-                .menu_list li {
-                    margin: 0.5rem 0;
-                }
-
-                .menu_list a {
-                    text-align: center;
-                    width: 100%;
-                }
-
-                .buscador_menu {
-                    width: 100%;
-                    justify-content: center;
+                    display: none;
                 }
             }
 
             @media (max-width: 450px) {
                 .footer_menu {
-                    gap: 1rem;
-                }
-
-                .logo_image {
-                    width: 50%; /* Ajustar el tamaño del logo en dispositivos muy pequeños */
-                    margin-bottom: 1rem;
-                }
-
-                .menu_list a {
-                    font-size: 1rem; /* Ajustar el tamaño del texto en el menú */
+                    display: none;
                 }
 
                 .derechos {
                     font-size: 0.8em; /* Ajustar el tamaño del texto en la sección de derechos */
+                    padding: 0.4rem;
                 }
             }
         `;

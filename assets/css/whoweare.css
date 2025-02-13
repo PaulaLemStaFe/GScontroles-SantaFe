@@ -55,10 +55,13 @@ strong {
 @media (max-width: 450px) {
     .woweare {
         flex-flow: column nowrap; /* Cambiar disposición de los elementos en dispositivos pequeños */
+        gap: 0.5rem;
+        margin: 1rem auto;
         padding: 0.5rem; /* Ajuste del padding para dispositivos pequeños */
+        text-shadow: 1px 1px 2px var(--color-tertiary);
     }
     .woweare_title {
-        font-size: 1.8rem; /* Ajuste del tamaño del título para dispositivos pequeños */
+        font-size: 1.3rem; /* Ajuste del tamaño del título para dispositivos pequeños */
     }
     .woweare_text {
         font-size: 1rem; /* Ajuste del tamaño del texto para dispositivos pequeños */

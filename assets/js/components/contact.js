@@ -111,8 +111,9 @@ class Contact extends HTMLElement {
                 
             .contact {
                 background-image: url(${urlImageFondoHtml});
+                background-position: center center;
                 color: var(--color-primary);
-                opacity: 90%;
+                opacity: 85%;
                 padding: 2.5rem 0;
             }
 
@@ -276,7 +277,7 @@ class Contact extends HTMLElement {
 
 
             /* Media queries para dispositivos medianos y pequeños */
-            @media (max-width: 768px) {
+            @media (min-width:451px) and (max-width:768px) {
                 .contact_content {
                     flex-direction: column;
                     gap: 3rem;
@@ -284,12 +285,7 @@ class Contact extends HTMLElement {
                 }
 
                 .contact_form__input, .menssage {
-                    width: 100%;
-                }
-                
-                .contact_logo_img {
-                    width: 50%;
-                    height: auto;
+                    width: 25rem;
                 }
 
                 .menu_item {
@@ -299,33 +295,63 @@ class Contact extends HTMLElement {
 
             @media (max-width: 450px) {
                 .contact {
-                    padding: 1.5rem 0;
+                    padding: 1.3rem 0;
+                    width: 100%;
+                }
+                .contact_content {
+                    gap: 2rem;
                 }
 
                 .contact_form_form, .contact_form {
+                    align-items: center;
                     gap: 1rem;
+                    justify-content: center;
                 }
 
                 h2 {
-                    font-size: 2rem;
+                    font-size: 1.3rem;
                 }
 
-                .contact_form__input, .menssage {
-                    width: 100%;
+                .contact_form__title h6 {
+                    font-size: 0.8rem;
+                    font-weight: normal;
+                }
+
+                .contact_form__button {
+                    align-content: center;
+                    font-size: 0.9rem;
+                    justify-self: center;
+                    padding: 0.5rem 1rem;
+                    margin: 0;
+                    width: 13rem;
+                }
+
+                .contact_logo {
+                    align-content: center;
+                    display: flex;
+                    justify-content: center;
+                    margin: auto;
+                    width: 50%;
                 }
 
                 .contact_logo_img {
-                    width: 70%;
-                    height: auto;
+                    width: 60%;
+                }
+                
+                .menu {
+                    align-items: center;
+                    gap: 1rem;
+                    justify-content: center;
                 }
 
                 .menu_item {
                     font-size: 1rem;
                     text-align: center;
+                    width: 50%;
                 }
-                
-                .menu {
-                    gap: 1rem;
+
+                .map_iframe {
+                    display: none;
                 }
             }
         `;
