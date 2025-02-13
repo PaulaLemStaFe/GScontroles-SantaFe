@@ -39,48 +39,65 @@ strong {
     text-decoration: underline;
 }
 
-/* Media queries para dispositivos medianos y pequeños */
-@media (min-width: 451px) and (max-width: 768px) {
-    .woweare_title {
-        font-size: 2rem; /* Ajuste del tamaño del título para dispositivos medianos */
-    }
-    .woweare_text {
-        font-size: 1.2rem; /* Ajuste del tamaño del texto para dispositivos medianos */
-    }
-    strong {
-        font-size: 1.25rem; /* Ajuste del tamaño del texto fuerte para dispositivos medianos */
-    }
-}
 
-@media (max-width: 450px) {
+
+/* Media queries para dispositivos medianos y pequeños */
+@media (max-width: 479px) {
     .woweare {
-        flex-flow: column nowrap; /* Cambiar disposición de los elementos en dispositivos pequeños */
         gap: 0.5rem;
         margin: 1rem auto;
-        padding: 0.5rem; /* Ajuste del padding para dispositivos pequeños */
-        text-shadow: 1px 1px 2px var(--color-tertiary);
     }
     .woweare_title {
-        font-size: 1.3rem; /* Ajuste del tamaño del título para dispositivos pequeños */
+        font-size: 1.2rem;
     }
     .woweare_text {
-        font-size: 1rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
-    }
-    strong {
-        font-size: 1.1rem; /* Ajuste del tamaño del texto fuerte para dispositivos pequeños */
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 479px) {}
+
+@media (min-width:480px) and (max-width:767px) {
+    .woweare {
+        gap: 0.8rem;
+        margin: 1.1rem auto;
+    }
+    .woweare_title {
+        font-size: 1.3rem;
+    }
+    .woweare_text {
+        font-size: 1.1rem;
+    }
+}
 
 
-@media (min-width:480px) and (max-width:767px) {}
+@media (min-width:768px) and (max-width:1023px) {
+    .woweare {
+        margin: 1.3rem auto;
+    }
+    .woweare_title {
+        font-size: 1.7rem;
+    }
+    .woweare_text {
+        font-size: 1.3rem;
+    }
+}
 
 
-@media (min-width:768px) and (max-width:1023px) {}
+@media (min-width:1024px) and (max-width:1279px) {
+    .woweare {
+        margin: 1.5rem auto;
+    }
+    .woweare_title {
+        font-size: 2rem;
+    }
+}
 
 
-@media (min-width:1024px) and (max-width:1279px) {}
-
-
-@media (min-width:1280px) {}
+@media (min-width:1280px) {
+    .woweare {
+        margin: 2.5rem auto;
+    }
+    .woweare_title {
+        font-size: 2.3rem;
+    }
+}
