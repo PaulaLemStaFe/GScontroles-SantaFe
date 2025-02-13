@@ -46,86 +46,48 @@
     transition: 1s all;
 }
 
-.all_products_items {
-    display: grid;
-    gap: 1.1rem;
-    grid-template-columns: repeat(6, 1fr);
-    justify-content: center;
-    justify-items: center;
-    margin: auto;
-    overflow-y: hidden;
-    padding: 1.5rem 0.5rem;
-}
 
-.all_products_items {
-    grid-template-rows: repeat(2, auto);
-}
-
-.item_title {
-    text-align: center;
-}
 
 /* Media queries para dispositivos medianos y pequeños */
-@media (min-width: 451px) and (max-width: 768px) {
-    .tv__title {
-        font-size: 1.8rem; /* Ajuste del tamaño del texto para dispositivos medianos */
+@media (max-width: 479px) {
+    .title {
+        gap: 0.2rem;
     }
-    .tv__link {
-        font-size: 0.9rem; /* Ajuste del tamaño del texto del enlace para dispositivos medianos */
-    }
-}
-
-@media (max-width: 450px) {
     .tv__title {
-        font-size: 1.2rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
+        font-size: 1.2rem;
         margin-top: 0;
-        text-shadow: 0.5px 0.5px 1px var(--color-fourth);
+        text-shadow: 1px 1px 2px var(--color-tertiary);
     }
     .tv__link {
-        font-size: 0.9rem; /* Ajuste del tamaño del texto del enlace para dispositivos pequeños */
+        font-size: 0.8rem;
         text-align: right;
     }
-    .productos {
-        gap: 0.3rem;
+}
+
+
+@media (min-width:480px) and (max-width:767px) {
+    .title {
+        gap: 0.4rem;
     }
-    .all_products_items {
-        gap: 0.2rem;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 1rem 0.5rem;
+    .tv__title {
+        font-size: 1.3rem;
+        margin-top: 0;
+        text-shadow: 1px 1px 2px var(--color-tertiary);
     }
-    .product_item {
-        width: 80%;
-    }
-    .img {
-        width: 50%;
-    }
-    .img_aa {
-        width: 40%;
-    }
-    .aa__title {
-        padding-top: 1rem;
-    }
-    .item_title {
-        font-size: 0.9rem;
-    }
-    .item_code {
-        font-size: 0.7rem;
-    }
-    .item_link {
-        font-size: 0.7rem;
+    .tv__link {
+        font-size: 1rem;
+        text-align: right;
     }
 }
 
-@media (max-width: 479px) {}
 
-
-@media (min-width:480px) and (max-width:767px) {}
-
-
-@media (min-width:768px) and (max-width:1023px) {}
-
-
-@media (min-width:1024px) and (max-width:1279px) {}
-
-
-@media (min-width:1280px) {}
+@media (min-width:768px) and (max-width:1023px) {
+    .title {
+        gap: 0.5rem;
+    }
+    .tv__title {
+        font-size: 1.7rem;
+        margin-top: 0;
+        text-shadow: 1px 1px 2px var(--color-tertiary);
+    }
+}
