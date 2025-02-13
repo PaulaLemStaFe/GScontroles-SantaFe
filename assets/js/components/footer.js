@@ -96,19 +96,16 @@ class Footer extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
             @import url('/assets/css/style.css');
-            
             .montserrat-alternates-regular {
                 font-family: "Montserrat Alternates", serif;
                 font-weight: 400;
                 font-style: normal;
             }
-            
             .footer {
                 background-color: rgba(105, 117, 101, 0.9);
                 border-top: 0.15rem solid var(--color-fifth);
                 font-family: "Montserrat Alternates", sans-serif;
             }
-        
             .footer_menu {
                 align-items: center;
                 border-top: 5rem var(--color-fifth);
@@ -118,7 +115,6 @@ class Footer extends HTMLElement {
                 margin: 0;
                 padding: 0.8rem 0;
             }
-        
             .navegacion {
                 align-items: center;
                 display: flex;
@@ -126,19 +122,16 @@ class Footer extends HTMLElement {
                 margin: 0 1rem;
                 padding: 0.1rem 0;
             }
-        
             .logo_image {
                 border-radius: 1rem;
                 content: url(${urlImageLogoHtml});
                 display: flex;
                 width: 15%;
             }
-        
             .menu_buscador {
                 display: flex;
                 gap: 0.4rem;
             }
-        
             .menu_list {
                 display: flex;
                 flex-direction: column;
@@ -146,11 +139,9 @@ class Footer extends HTMLElement {
                 justify-content: center;
                 list-style: none;
             }
-        
             .menu_list li {
                 margin: 0 0.5rem;
             }
-        
             .menu_list a {
                 color: var(--color-primary);
                 cursor: pointer;
@@ -160,13 +151,11 @@ class Footer extends HTMLElement {
                 text-decoration: none;
                 transition: all 1s;
             }
-        
             .menu_list a:hover {
                 color: var(--color-fifth);
-                transform: scale(1.1); /* Aumenta el tamaño del texto */
+                transform: scale(1.1);
                 transition: all 1.2s;
             }
-        
             /* search */
             .buscador_menu {
                 align-items: center;
@@ -175,56 +164,46 @@ class Footer extends HTMLElement {
                 padding-right: 1rem;
                 position: relative;
             }
-        
             .bi_menu, .bi_modal {
                 cursor: pointer;
             }
-        
             .bi-search_menu {
                 cursor: pointer;
-                font-size: 1.2rem; /* Aumenta el tamaño del ícono */
-                font-weight: 900; /* Añade peso al ícono */
+                font-size: 1.2rem;
+                font-weight: 900;
             }
-        
             .bi-search_menu svg {
-                height: 1.2rem; /* Ajusta la altura del SVG */
-                stroke-width: 4; /* Aumenta el grosor del trazo */
-                width: 1.2rem; /* Ajusta el ancho del SVG */
+                height: 1.2rem;
+                stroke-width: 4;
+                width: 1.2rem;
             }
-            
             .menu {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
             }
-            
             .menu_item {
                 font-size: 1.1rem;
                 transition: all 1s;
             }
-            
             .menu_item:hover {
                 transform: scale(1.1);
             }
-            
             .menu_link {
                 color: var(--color-primary);
                 text-decoration: none;
                 transition: all 1s;
             }
-            
             .menu_link:hover {
                 color: var(--color-fifth);
                 transform: scale(1.1); /* Aumenta el tamaño del texto */
                 transition: all 1.2s;
             }
-            
             .bi {
                 font-size: 1.3rem;
                 font-weight: bold;
                 padding: 0.5rem;
             }
-            
             .derechos {
                 background-color: var(--color-secondary);
                 border-top: 0.15rem solid var(--color-fourth);
@@ -235,43 +214,37 @@ class Footer extends HTMLElement {
                 padding: 10px;
                 text-align: center;
             }
-        
             p {
                 font-family: "Montserrat Alternates", sans-serif;
             }
-            
+
+
+
             /* Media queries para dispositivos medianos y pequeños */
-            @media (min-width:451px) and (max-width:768px) {
+            @media (max-width: 479px) {
                 .footer_menu {
                     display: none;
                 }
-            }
-
-            @media (max-width: 450px) {
-                .footer_menu {
-                    display: none;
-                }
-
                 .derechos {
-                    font-size: 0.8em; /* Ajustar el tamaño del texto en la sección de derechos */
+                    font-size: 0.75em;
                     padding: 0.4rem;
                 }
             }
-            
-
-            @media (max-width: 479px) {}
 
 
-            @media (min-width:480px) and (max-width:767px) {}
+            @media (min-width:480px) and (max-width:767px) {
+                .footer_menu {
+                    display: none;
+                }
+            }
 
 
-            @media (min-width:768px) and (max-width:1023px) {}
-
-
-            @media (min-width:1024px) and (max-width:1279px) {}
-
-
-            @media (min-width:1280px) {}
+            @media (min-width:768px) and (max-width:1023px) {
+                .footer_menu {
+                    gap: 3rem;
+                    padding: 0.8rem 1rem;
+                }
+            }
         `;
         shadowRoot.appendChild(style);
         
