@@ -354,6 +354,20 @@ class Contact extends HTMLElement {
                     display: none;
                 }
             }
+            
+            @media (max-width: 479px) {}
+
+
+            @media (min-width:480px) and (max-width:767px) {}
+
+
+            @media (min-width:768px) and (max-width:1023px) {}
+
+
+            @media (min-width:1024px) and (max-width:1279px) {}
+
+
+            @media (min-width:1280px) {}
         `;
         shadowRoot.appendChild(style);
 

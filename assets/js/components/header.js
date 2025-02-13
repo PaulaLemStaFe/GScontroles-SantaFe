@@ -239,6 +239,9 @@ class Header extends HTMLElement {
 
             /* Media queries para dispositivos medianos y pequeños */
             @media (max-width: 479px) {
+                .navbar {
+                    position: absolute;
+                }
                 .navegacion {
                     margin: 0;
                     padding: 0;
@@ -304,6 +307,9 @@ class Header extends HTMLElement {
 
 
             @media (min-width:480px) and (max-width:767px) {
+                .navbar {
+                    position: absolute;
+                }
                 .navegacion {
                     padding: 0.5rem 0;
                 }
