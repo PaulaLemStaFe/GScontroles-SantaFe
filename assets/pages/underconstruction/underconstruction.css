@@ -1,39 +1,40 @@
-@import url('../../css/style.css');
-
+@import url('/assets/css/style.css');
+/* Estilos base (Desktop First) */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .banner {
     align-items: center;
-    background-image: url(./images/control-remoto_en-construccion.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 39%;
     color: var(--color-primary);
-    display: grid;
+    display: flex;
+    flex: 1;
     font-weight: 700;
-    grid-template-columns: 40% 60%;
     justify-content: center;
-    padding-top: 20.5rem;
+    width: 99%;
 }
-
+.banner_image {
+    padding: 5rem 4rem 3.95rem 4rem;
+    width: 50%;
+}
+img {
+    border-radius: 2rem;
+    box-shadow: 3rem 3rem 3rem var(--color-fourth);
+    width: 100%;
+}
 .banner_section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    grid-column: 2;
-    height: 100%;
     justify-content: center;
+    margin-top: 2rem;
     text-shadow: 2px 2px 2px var(--color-tertiary);
 }
-
 .titles {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-around;
-    margin-right: 2rem;
-    text-align: left;
-    translate: 0 -10rem;
 }
-
 .prom, .description {
     color: var(--color-fifth);
     font-size: 3.35rem;
@@ -42,7 +43,6 @@
     text-shadow: 0.2rem 0.3rem 0.4rem var(--color-fourth);
     -webkit-text-stroke: 1px var(--color-tertiary);
 }
-
 .see_button {
     align-self: flex-end;
     background-color: var(--color-tertiary);
@@ -54,80 +54,143 @@
     padding: 1rem 2.5rem;
     text-align: center;
     transition: all 1s;
-    translate: 0 -10rem;
 }
-
 .see_button:hover {
     background-color: var(--color-primary);
     box-shadow: 0 0 10px var(--color-tertiary);
     color: var(--color-fifth);
 }
-
 .see_link {
     text-decoration: none;
 }
+.derechos {
+    background-color: var(--color-secondary);
+    border-top: 0.15rem solid var(--color-fourth);
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+}
+p {
+    font-family: "Montserrat Alternates", sans-serif;
+}
 
+/* ===================== MEDIA QUERIES ===================== */
 
-
-/* Media queries para dispositivos medianos y pequeños */
-@media (max-width: 768px) {
+/* Smartphones (hasta 479px) */
+@media (max-width: 479px) {
     .banner {
-        grid-template-columns: 1fr; /* Ajustar las columnas de la grid para dispositivos medianos */
-        padding-top: 10rem; /* Ajuste del padding-top para dispositivos medianos */
-        background-size: cover; /* Ajuste del tamaño de la imagen de fondo para dispositivos medianos */
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
     }
-
+    .banner_image {
+        margin: 3rem auto;
+        padding: 2rem 1rem;
+        width: 90%;
+    }
+    .banner_section {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
     .titles {
-        margin-right: 1rem;
-        text-align: center; /* Centrar el texto para dispositivos medianos */
-        translate: 0; /* Restablecer translate para dispositivos medianos */
+        margin: auto;
+        width: 100%;
     }
-
-    .prom, .description {
-        font-size: 2.5rem; /* Ajuste del tamaño del texto para dispositivos medianos */
+    .prom {
+        font-size: 2rem;
+        text-align: center;
     }
-
+    .description {
+        font-size: 2rem;
+        text-align: center;
+    }
     .see_button {
-        align-self: center;
-        margin: 1rem 0; /* Ajuste del margen para dispositivos medianos */
+        font-size: 0.9rem;
+        padding: 0.8rem 2rem;
+        margin: 0 auto;
+    }
+    .derechos {
+        font-size: 0.7em;
     }
 }
 
-@media (max-width: 450px) {
+/* Teléfonos medianos (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
     .banner {
-        padding-top: 5rem; /* Ajuste del padding-top para dispositivos pequeños */
-        background-size: cover; /* Ajuste del tamaño de la imagen de fondo para dispositivos pequeños */
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
     }
-
+    .banner_image {
+        width: 80%;
+    }
     .titles {
-        margin: 0;
-        text-align: center; /* Centrar el texto para dispositivos pequeños */
-        translate: 0; /* Restablecer translate para dispositivos pequeños */
+        margin: auto;
+        width: 100%;
     }
-
-    .prom, .description {
-        font-size: 2rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
-        margin-bottom: 1rem; /* Ajuste del margen para dispositivos pequeños */
+    .prom {
+        font-size: 2.5rem;
+        text-align: center;
     }
-
+    .description {
+        font-size: 2rem;
+        text-align: center;
+    }
     .see_button {
-        align-self: center;
-        margin: 0.5rem 0; /* Ajuste del margen para dispositivos pequeños */
-        padding: 0.5rem 1.5rem; /* Ajuste del padding para dispositivos pequeños */
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+        margin: 0 auto;
     }
 }
 
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .banner {
+        flex-direction: row;
+        text-align: left;
+    }
+    .banner_image {
+        width: 75%;
+    }
+    .banner_section {
+        margin-top: 3rem;
+    }
+    .titles {
+        margin: auto;
+    }
+    .prom {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .description {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
 
-@media (max-width: 479px) {}
+/* Laptops (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .banner_image {
+        width: 60%;
+    }
+    .banner_section {
+        margin-top: 3rem;
+    }
+}
 
-
-@media (min-width:480px) and (max-width:767px) {}
-
-
-@media (min-width:768px) and (max-width:1023px) {}
-
-
-@media (min-width:1024px) and (max-width:1279px) {}
-
-
-@media (min-width:1280px) {}
+/* Pantallas grandes (1280px en adelante) */
+@media (min-width: 1280px) {
+    .banner_image {
+        padding: 0 3rem;
+        width: 65%;
+    }
+    .banner_section {
+        margin-top: 3rem;
+    }
+}
