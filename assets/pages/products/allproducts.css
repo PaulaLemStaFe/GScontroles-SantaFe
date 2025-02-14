@@ -1,32 +1,25 @@
-@import url('../../css/style.css');
-
-
+@import url('/assets/css/style.css');
 body, html {
     height: 100%;
     margin: 0;
 }
-
 .page-container {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     min-height: 100vh;
 }
-
 .all_products_header {
     align-items: center;
     justify-content: center;
     padding-top: 5rem;
 }
-
-.all_products_title{
-    font-size: 2.2rem;
+.all_products_title, .details_title {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
 }
-
 .details {
     margin: 5.5rem auto 2rem auto;
 }
-
 .product_details {
 	background-color: var(--color-secondary);
 	display: flex;
@@ -36,7 +29,6 @@ body, html {
     text-align: justify;
     width: 90%;
 }
-
 .details_image {
     align-items: center;
     background-color: var(--color-primary);
@@ -47,16 +39,13 @@ body, html {
     padding: 1.5rem;
     width: 20%;
 }
-
 .product_details_img {
 	background-position: center;
     transition: 1s all;
 }
-
 .product_details_img:hover {
     transform: scale(1.15);
 }
-
 .product_details_text {
     color: var(--color-fifth);
 	display: flex;
@@ -65,44 +54,35 @@ body, html {
     line-height: 1.5;
     padding: 0 0.5rem;
 }
-
 .details_title {
-	font-size: 2rem;
 	font-weight: 600;
     margin: 1rem 0;
     text-shadow: 1px 1px 2px var(--color-fourth);
 }
-
 .details_code, .details_soportados span {
-	font-size: 1.3rem;
+	font-size: clamp(1rem, 3vw, 1.3rem);
 	font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 0 1px 1px var(--color-fourth);
 }
-
 .code {
     margin-bottom: 0.5rem;
 }
-
 .details_marca, .details_text {
 	font-size: 1.1rem;
 	font-weight: 600;
     padding: 0.3rem;
     text-align: justify;
 }
-
 .details_marca {
     margin-left: 5rem;
 }
-
 .details_details {
     margin-top: 0.5rem;
 }
-
 footer-component {
     margin-top: auto;
 }
-
 /* Mostrar item_footer cuando el administrador esté autenticado */
 .item_footer {
     display: flex;
@@ -111,7 +91,6 @@ footer-component {
     gap: 1rem;
     margin-top: 0.5rem;
 }
-
 /* Estilos para los iconos */
 .footer_icons i {
     cursor: pointer;
@@ -119,79 +98,128 @@ footer-component {
     color: var(--color-tertiary);
     transition: color 0.3s;
 }
-
 .footer_icons i:hover {
     color: var(--color-fourth);
 }
 
 
-/* Media queries para dispositivos medianos y pequeños */
-@media (max-width: 768px) {
+
+/* Para pantallas pequeñas, apilamos los elementos */
+@media (max-width: 479px) {
     .all_products_header {
-        padding-top: 3rem; /* Ajuste del padding-top para dispositivos medianos */
+        padding-top: 4rem;
     }
-
-    .all_products_title {
-        font-size: 1.8rem; /* Ajuste del tamaño del título para dispositivos medianos */
+    .details {
+        margin: 4rem auto 2rem auto;
     }
+    .product_details {
+        align-items: center;
+        flex-direction: column;
+    }
+    .details_image {
+        width: 25%;
+        max-width: 280px;
+    }
+    .details_marca {
+        margin-left: 4rem;
+    }
+    .details_title {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
 
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .all_products_header {
+        padding-top: 6rem;
+    }
+    .details {
+        margin: 5rem auto 2rem auto;
+    }
     .product_details {
         flex-direction: column;
-        padding: 2%;
     }
-
     .details_image {
-        width: 100%; /* Ancho completo de la imagen en dispositivos medianos */
+        max-width: 300px;
     }
+    .details_title {
+        font-size: 1.7rem;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product_details {
+        justify-content: center;
+    }
+    .details_image {
+        padding: 0;
+    }
     .product_details_text {
+        width: 85%;
         padding: 0 1rem;
     }
-}
-
-@media (max-width: 450px) {
-    .all_products_header {
-        padding-top: 2rem; /* Ajuste del padding-top para dispositivos pequeños */
-    }
-
-    .all_products_title {
-        font-size: 1.5rem; /* Ajuste del tamaño del título para dispositivos pequeños */
-    }
-
-    .product_details {
-        gap: 1rem; /* Ajuste del espacio entre elementos para dispositivos pequeños */
-        padding: 1%;
-    }
-
-    .details_image {
-        width: 100%; /* Ancho completo de la imagen en dispositivos pequeños */
-        padding: 1rem;
-    }
-
     .details_title {
-        font-size: 1.5rem; /* Ajuste del tamaño del texto del título para dispositivos pequeños */
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
     }
-
-    .details_code, .details_soportados span {
-        font-size: 1rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
+    .details_code, .details_soportados span, .code {
+        margin-bottom: 0;
     }
-
     .details_marca, .details_text {
-        font-size: 0.9rem; /* Ajuste del tamaño del texto para dispositivos pequeños */
+        padding: 0;
     }
 }
 
 
-@media (max-width: 479px) {}
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .all_products_header {
+        padding-top: 6rem;
+    }
+    .details_image {
+        padding: 0;
+    }
+    .product_details_text {
+        width: 90%;
+    }
+    .details_title {
+        margin: 0.5rem 0;
+    }
+    .details_code {
+        margin-bottom: 0.5rem;
+    }
+    .code {
+        margin-bottom: 0;
+    }
+    .details_soportados span {
+        margin-bottom: 0;
+    }
+    .details_marca, .details_text {
+        padding: 0.2rem;
+    }
+    .details_details {
+        margin-top: 0;
+    }
+}
 
 
-@media (min-width:480px) and (max-width:767px) {}
-
-
-@media (min-width:768px) and (max-width:1023px) {}
-
-
-@media (min-width:1024px) and (max-width:1279px) {}
-
-
-@media (min-width:1280px) {}
+@media (min-width: 1280px) {
+    .details {
+        margin: 4rem auto 2rem auto;
+    }
+    .product_details_text {
+        width: 70%;
+    }
+    .details_title {
+        margin: 0.5rem 0;
+    }
+    .details_code, .code, .details_soportados span {
+        margin-bottom: 0;
+    }
+    .details_marca, .details_text {
+        padding: 0.1rem;
+    }
+}

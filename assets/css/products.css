@@ -89,6 +89,7 @@
     .all_products_items {
         gap: 0.8rem;
         grid-template-columns: repeat(2, 1fr);
+        margin: 1rem auto;
         padding: 0.5rem 0.2rem;
     }
     .product_item {
