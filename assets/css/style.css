@@ -11,12 +11,10 @@
     line-height: 1rem;
     scroll-behavior: smooth;
 }
-
 body {
     background-color: var(--color-primary);
     color: var(--color-fifth);
 }
-
 #scroll-top {
     background-color: rgba(0,0,0,.4);
     border-radius: 2px;
@@ -35,24 +33,22 @@ body {
     width: 40px;
     z-index: 100;
 }
-
 #scroll-top>span {
     line-height: inherit;
     vertical-align: top;
 }
-
 #scroll-top:hover {
     background-color: rgba(0,0,0,.8);
 }
-
 #scroll-top.scroll-top-left {
     left: 20px;
     right: auto;
 }
-
 .fa-angle-up:before {
     content: "\f106";
 }
+
+
 
 @media (max-width: 450px) {
     html {
