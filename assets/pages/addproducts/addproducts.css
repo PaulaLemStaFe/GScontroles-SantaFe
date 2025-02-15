@@ -1,10 +1,8 @@
 @import url('/assets/css/style.css');
-
 .add_product {
     padding-bottom: 2rem;
     padding-top: 4rem;
 }
-
 .add_product__form {
     align-items: center;
     display: flex;
@@ -13,7 +11,6 @@
     row-gap: 1rem;
     width: 100%;
 }
-
 .add_product__title {
     align-items: center;
     display: flex;
@@ -22,13 +19,11 @@
     text-shadow: 1px 1px 2px var(--color-fourth);
     row-gap: 1rem;
 }
-
 .title {
     font-size: 2rem;
     font-weight: 700;
     margin: 2rem 0;
 }
-
 .add_product__form__area {
     align-items: center;
     display: flex;
@@ -37,13 +32,11 @@
     justify-content: space-around;
     width: 80%;
 }
-
 .add_file__pc, .add_file__mobile {
     cursor: pointer;
     text-align: center;
     width: 80%;
 }
-
 .form__area__add_file {
     align-items: center;
     background-color: var(--color-secondary);
@@ -57,23 +50,19 @@
     padding: 2rem;
     width: 50%;
 }
-
 .bi-card-image, .bi-plus-lg {
     background-color: var(--color-secondary);
     color: var(--color-tertiary);
     font-size: 3rem;
 }
-
 .bi-plus-lg, .add_file__mobile {
     display: none;
 }
-
 .add_product__form__area .label {
     cursor: pointer;
     position: relative;
     text-align: center;
 }
-
 .add_product__form__area #select {
     cursor: pointer;
     height: 100%;
@@ -83,7 +72,6 @@
     top: 0;
     width: 100%;
 }
-
 .form__area__button {
     background-color: var(--color-tertiary);
     border: solid var(--color-fourth) 1px;
@@ -97,17 +85,14 @@
     transition: all 1s;
     width: 30%;
 }
-
 .form__area__button:hover {
     background-color: var(--color-primary);
     box-shadow: 0 0 10px var(--color-tertiary);
     color: var(--color-fourth);
 }
-
 .button__search_img {
     cursor: pointer;
 }
-
 .add_product__input {
     align-items: center;
     display: flex;
@@ -117,7 +102,6 @@
     row-gap: 1.2rem;
     width: 60%;
 }
-
 .input__group {
     background-color: var(--color-secondary);
     border-radius: 0.5rem;
@@ -125,13 +109,11 @@
     flex-direction: column;
     width: 100%;
 }
-
 .input__group .label {
     font-size: 1.02rem;
     padding: 0.5rem;
     text-align: left;
 }
-
 .input__group .input {
     background-color: var(--color-secondary) !important;
     border: none;
@@ -142,34 +124,28 @@
     margin-top: 0.5rem;
     padding: 1% 0 1% 1%;
 }
-
 #categoria {
     font-size: 1.2rem;
     margin-top: 1rem;
     width: 97%;
 }
-
 .input__group .input:focus, .price:focus {
     outline: none;
 }
-
 .input-container .mensaje-error {
     display: none; /* Esconde el mensaje de error inicialmente */
 }
-
 .input-container-invalid .mensaje-error {
     align-items: center;
     display: flex;
     margin: 0.8rem;
     justify-content: center;
 }
-
 .error {
     color: #df2525;
     font-size: 1.1rem;
     text-shadow: 1px 1px 2px var(--color-tertiary);
 }
-
 .input__add_product_button {
     background-color: var(--color-tertiary);
     border: none;
@@ -183,7 +159,6 @@
     transition: all 1s;
     width: 30%;
 }
-
 .input__add_product_button:hover {
     background-color: var(--color-primary);
     box-shadow: 0 0 10px var(--color-tertiary);
@@ -191,76 +166,96 @@
     transform: scale(1.05);
 }
 
-/* Media queries para dispositivos medianos y pequeños */
-@media (max-width: 768px) {
-    .add_product__form__area {
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 100%;
-    }
 
-    .form__area__add_file, .button__search_img {
-        width: 80%; /* Ajustar el ancho en dispositivos medianos */
-    }
 
-    .add_file__pc, .add_file__mobile {
-        width: 100%;
-    }
-
-    .input__group {
-        width: 100%;
-    }
-}
-
-@media (max-width: 450px) {
+/* Para móviles muy pequeños */
+@media (max-width: 479px) {
     .add_product {
-        padding-top: 2rem;
-        padding-bottom: 1rem;
+        padding-top: 3rem;
     }
-
     .title {
         font-size: 1.5rem;
         margin: 1rem 0;
     }
-
     .add_product__form__area {
+        flex-direction: column;
+        width: 90%;
         gap: 1rem;
-        width: 100%;
     }
-
-    .form__area__add_file, .button__search_img {
-        width: 90%; /* Ajustar el ancho en dispositivos pequeños */
-        padding: 1rem;
+    .form__area__add_file {
+        width: 90%;
     }
-
-    .input__group .label {
-        font-size: 0.9rem;
-        padding: 0.4rem;
+    .form__area__button {
+        width: 60%;
     }
-
-    .input__group .input {
-        font-size: 0.9rem;
-        padding: 0.4rem;
+    .add_product__input {
+        width: 90%;
     }
-
     .input__add_product_button {
         font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-        width: 80%; /* Ajustar el ancho del botón en dispositivos pequeños */
+        padding: 1rem;
+        width: 60%;
     }
 }
 
 
-@media (max-width: 479px) {}
+
+/* Para teléfonos medianos */
+@media (min-width: 480px) and (max-width: 767px) {
+    .add_product {
+        padding-top: 5rem;
+    }
+    .title {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    .add_product__form__area {
+        flex-direction: column;
+        gap: 1rem;
+        width: 90%;
+    }
+    .form__area__add_file {
+        width: 80%;
+    }
+    .form__area__button {
+        width: 40%;
+    }
+    .add_product__input {
+        width: 80%;
+    }
+    .input__add_product_button {
+        width: 40%;
+    }
+}
 
 
-@media (min-width:480px) and (max-width:767px) {}
+
+/* Para tablets en vertical */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .add_product__form__area {
+        flex-direction: row;
+        width: 90%;
+        gap: 2rem;
+    }
+    .form__area__add_file {
+        width: 45%;
+    }
+    .form__area__button {
+        width: 40%;
+    }
+    .add_product__input {
+        width: 80%;
+    }
+    .input__add_product_button {
+        width: 40%;
+    }
+}
 
 
-@media (min-width:768px) and (max-width:1023px) {}
 
-
-@media (min-width:1024px) and (max-width:1279px) {}
-
-
-@media (min-width:1280px) {}
+/* Para tablets en horizontal y laptops pequeñas */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .add_product__input {
+        width: 70%;
+    }
+}
