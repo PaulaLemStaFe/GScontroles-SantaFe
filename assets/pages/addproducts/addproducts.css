@@ -1,4 +1,13 @@
-@import url('/assets/css/style.css');
+/* 🟢 Modo usuario logueado: Cambio de fondo y contrastes */
+body.logged-in {
+    --color-primary: #2E2F29; /* Fondo más oscuro */
+    --color-secondary: #44463E;
+    --color-tertiary: #A8B694;
+    --color-fourth: #D6D8B0;
+    --color-fifth: #E3E6B9;
+    background-color: var(--color-primary);
+    color: var(--color-fourth);
+}
 .add_product {
     padding-bottom: 2rem;
     padding-top: 4rem;

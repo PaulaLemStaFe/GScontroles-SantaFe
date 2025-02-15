@@ -412,6 +412,15 @@ class Header extends HTMLElement {
             }
         `;
         shadowRoot.appendChild(style);
+
+        // Ocultar botón de Login si estamos en editionproducts.html o addproducts.html
+        const currentPage = window.location.pathname;
+        const loginButton = shadowRoot.querySelector('#login-button');
+
+        if (loginButton && (currentPage.includes("editionproducts.html") || currentPage.includes("addproducts.html"))) {
+            loginButton.style.display = "none";
+        }
+
         // Verificar elementos dentro del shadowRoot
         const menuToggle = shadowRoot.querySelector('.menu_toggle');
         const navMenu = shadowRoot.querySelector('.nav_menu');

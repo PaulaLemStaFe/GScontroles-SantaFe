@@ -45,27 +45,22 @@ document.addEventListener("DOMContentLoaded", () => {
         input.addEventListener('blur', event => valida(event.target));
     });
 
-    // Comprobar si el administrador está autenticado
-    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+    // Código para mostrar/ocultar el botón de scroll-top
+    const scrollTopBtn = document.getElementById('scroll-top');
 
-    // Actualizar productos si es administrador
-    if (isAdmin) {
-        const container = document.getElementById("productos");
-        if (container) {
-            fetch('../../../../db.json')
-                .then(response => response.json())
-                .then(data => {
-                    const productos = {
-                        producttv: data.productstv,
-                        productac: data.productsaa
-                    };
-                    [...productos.producttv, ...productos.productac].forEach(producto => {
-                        crearProducto(container, producto, "img", isAdmin);
-                    });
-                })
-                .catch(error => console.error('Error al leer el archivo db.json:', error));
+    function toggleScrollTopButton() {
+        if (window.scrollY === 0) {
+            scrollTopBtn.style.display = 'none';  // Ocultar el botón si estamos al principio
+        } else {
+            scrollTopBtn.style.display = 'block'; // Mostrar el botón si no estamos al principio
         }
     }
+
+    // Llamamos a la función al cargar la página
+    window.addEventListener('load', toggleScrollTopButton);
+
+    // Llamamos a la función cada vez que se hace scroll
+    window.addEventListener('scroll', toggleScrollTopButton);
 });
 
 const tipoDeErrores = [
