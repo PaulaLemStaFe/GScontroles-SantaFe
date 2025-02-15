@@ -1,17 +1,14 @@
-@import url('../../css/style.css');
-
+@import url('/assets/css/style.css');
 body, html {
     height: 100%;
     margin: 0;
 }
-
 .page-container {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     min-height: 100vh;
 }
-
 .login {
 	align-items: center;
 	display: flex;
@@ -20,23 +17,20 @@ body, html {
 	justify-content: center;
     padding-top: 4rem;
 }
-
 .login_title {
     font-size: 2rem;
     font-weight: 700;
     margin-top: 1.5rem;
     text-shadow: 1px 1px 2px var(--color-fourth);
 }
-
 .login_form {
 	align-items: center;
     background-color: rgba(105, 117, 101, 0.5);
     border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
-	
+	justify-content: center;
 }
-
 .login_form_input {
     background-color: var(--color-primary) !important;
     border: none;
@@ -49,17 +43,14 @@ body, html {
     outline: none;
     width: 24rem;
 }
-
 .login_form_input::placeholder {
     color: #A2A2A2;
     font-style: normal;
     font-weight: 400;
 }
-
 .mensaje-error {
     display: none;
 }
-
 .login_form_button {
     background-color: var(--color-tertiary);
     border: none;
@@ -74,72 +65,127 @@ body, html {
     transition: all 1s;
 	width: 275px;
 }
-
 .login_form_button:hover {
     background-color: var(--color-fourth);
     box-shadow: 2px 2px 18px var(--color-tertiary);
 }
-
 footer-component {
     margin-top: auto;
 }
 
 
-/* Media queries para dispositivos medianos y pequeños */
-@media (max-width: 768px) {
+
+/* 🔹 Pantallas Pequeñas: Teléfonos (hasta 479px) */
+@media (max-width: 479px) {
+    .login_title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
     .login_form {
-        width: 90%; /* Ajustar el ancho del formulario en dispositivos medianos */
+        width: 75%;
+    }
+    .input-container {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+    .login_form_input {
+        font-size: 0.9rem;
+        height: 2rem;
+        margin: 1.2rem 1rem;
+        width: 90%;
+    }
+    .login_form_button {
+        font-size: 1rem;
+        padding: 0.5rem;
+        width: 50%;
+    }
+}
+
+/* 🔹 Pantallas Medianas: Teléfonos Grandes (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .login {
+        padding-top: 5rem;
+    }
+    .login_form {
+        width: 80%;
+    }
+    .input-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .login_form_input {
+        font-size: 0.9rem;
+        height: 2rem;
+        width: 90%;
+    }
+    .login_form_button {
+        font-size: 1rem;
+        padding: 0.7rem;
+        width: 30%;
+    }
+}
+
+/* 🔹 Tablets Pequeñas (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .login {
+        padding-top: 4rem;
+    }
+    .login_form {
+        width: 75%;
+    }
+    .input-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .login_form_input {
+        width: 90%;
+    }
+    .login_form_button {
+        font-size: 1rem;
+        padding: 0.7rem;
+        width: 25%;
+    }
+}
+
+/* 🔹 Laptops Medianas (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .login {
+        padding-top: 5rem;
+    }
+    .login_form {
+        width: 60%;
+    }
+    .input-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .login_form_input {
+        margin: 1.5rem 2rem;
+        width: 90%;
+    }
+    .login_form_button {
         padding: 1rem;
     }
-
-    .login_form_input {
-        width: 100%; /* Ajustar el ancho de los inputs en dispositivos medianos */
-        margin: 0.8rem 0; /* Ajustar los márgenes para dispositivos medianos */
-    }
-
-    .login_form_button {
-        width: 100%; /* Ancho completo del botón en dispositivos medianos */
-        padding: 0.8rem 0; /* Ajustar el padding del botón en dispositivos medianos */
-    }
 }
 
-@media (max-width: 450px) {
-    .login {
-        padding-top: 2rem;
-    }
-
-    .login_title {
-        font-size: 1.5rem; /* Ajustar el tamaño del título para dispositivos pequeños */
-        margin-top: 1rem;
-    }
-
+/* 🔹 Pantallas Grandes (1280px en adelante) */
+@media (min-width: 1280px) {
     .login_form {
-        padding: 0.5rem;
+        width: 50%;
     }
-
+    .input-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
     .login_form_input {
-        font-size: 0.9rem; /* Ajustar el tamaño del texto de los inputs para dispositivos pequeños */
-        height: 2rem; /* Ajustar la altura de los inputs para dispositivos pequeños */
-        margin: 0.6rem 0;
+        width: 90%;
     }
-
     .login_form_button {
-        font-size: 1rem; /* Ajustar el tamaño del texto del botón para dispositivos pequeños */
-        padding: 0.6rem 0; /* Ajustar el padding del botón para dispositivos pequeños */
+        padding: 1rem;
     }
 }
-
-
-@media (max-width: 479px) {}
-
-
-@media (min-width:480px) and (max-width:767px) {}
-
-
-@media (min-width:768px) and (max-width:1023px) {}
-
-
-@media (min-width:1024px) and (max-width:1279px) {}
-
-
-@media (min-width:1280px) {}
