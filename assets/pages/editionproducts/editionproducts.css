@@ -1,11 +1,10 @@
+@import url('/assets/css/style.css');
 header-component .login_button {
     display: none;
 }
-
 .all_products {
     padding-top: 5rem;
 }
-
 .all_products_header {
 	align-items: center;
 	display: flex;
@@ -13,13 +12,11 @@ header-component .login_button {
 	margin: 0 3%;
 	width: 96%;
 }
-
 .all_products_title {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 26px;
 }
-
 .all_products_button {
     background-color: var(--color-tertiary);
     border: none;
@@ -31,43 +28,41 @@ header-component .login_button {
     text-decoration: none;
     transition: all 1s;
 }
-
 .all_products_button:hover {
     background-color: var(--color-fourth);
     box-shadow: 2px 2px 18px var(--color-tertiary);
 }
-
 .item_footer {
     display: flex;
     justify-content: space-around;
 }
-
 .mostrar-elemento {
     display: block !important;
 }
-
 .item_link {
     display: none;
 }
-
 .footer_icons {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo sutil para mejorar visibilidad */
+    border-radius: 0.5rem;
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     justify-content: space-between;
+    padding: 0.3rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
 }
-
-.bi {
-    background-color: inherit;
+.footer_icons i {
     color: var(--color-tertiary);
-    padding-left: 0.5rem;
-    position: inherit;
-    font-size: 1.1rem;
-}
-
-.bi:hover {
-    color: var(--color-fifth);
     cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
 }
-            
+.footer_icons i:hover {
+    color: var(--color-fourth);
+}
 .derechos {
     background-color: var(--color-secondary);
     border-top: 0.15rem solid var(--color-fourth);
@@ -80,73 +75,47 @@ header-component .login_button {
     text-align: center;
     width: 100%;
 }
-
 p {
     font-family: "Montserrat Alternates", sans-serif;
 }
 
 
-/* Media queries para dispositivos medianos y pequeños */
-@media (max-width: 768px) {
-    .all_products_header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
 
-    .all_products_title {
-        font-size: 1.3rem; /* Ajuste del tamaño del título para dispositivos medianos */
-    }
-
-    .all_products_button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem; /* Ajuste del tamaño del botón para dispositivos medianos */
-    }
-
-    .item_footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 450px) {
+/* 🔹 Pantallas Pequeñas: Teléfonos (hasta 479px) */
+@media (max-width: 479px) {
     .all_products {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
-
-    .all_products_title {
-        font-size: 1.2rem; /* Ajuste del tamaño del título para dispositivos pequeños */
-    }
-
-    .all_products_button {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem; /* Ajuste del tamaño del botón para dispositivos pequeños */
-        width: 100%; /* Ancho completo del botón en dispositivos pequeños */
-    }
-
-    .derechos {
-        font-size: 0.8em; /* Ajuste del tamaño del texto en la sección de derechos */
-    }
-
-    .footer_icons {
-        flex-direction: column;
+    .all_products_header {
         align-items: center;
-        gap: 0.5rem;
+        text-align: center;
+    }
+    .all_products_title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .all_products_button {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+    .derechos {
+        font-size: 0.7rem;
+        padding: 0.3rem;
     }
 }
 
 
-@media (max-width: 479px) {}
+/* 🔹 Pantallas Medianas: Teléfonos Grandes (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .all_products_title {
+        font-size: 1.2rem;
+    }
+}
 
 
-@media (min-width:480px) and (max-width:767px) {}
-
-
-@media (min-width:768px) and (max-width:1023px) {}
-
-
-@media (min-width:1024px) and (max-width:1279px) {}
-
-
-@media (min-width:1280px) {}
+/* 🔹 Laptops Medianas (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .all_products {
+        padding-top: 6rem;
+    }
+}
