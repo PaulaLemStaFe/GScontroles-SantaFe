@@ -1,9 +1,9 @@
 /* Importar variables desde style.css */
-@import url('style.css');
+@import url('https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/css/style.css');
 
 .banner {
     align-items: center;
-    background-image: url(/assets/images/banner/banner-gs_controles.png);
+    background-image: url(https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/banner/banner-gs_controles.png?raw=true);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -51,7 +51,7 @@
         padding-top: 16rem;
     }
     .prom {
-        font-size: 0.9rem; /* Ajustar tamaño de la fuente para dispositivos medianos */
+        font-size: 0.9rem;
         left: 50%;
         transform: translateX(-50%);
         -webkit-text-stroke: transparent;
@@ -69,7 +69,7 @@
         padding-top: 20rem;
     }
     .prom {
-        font-size: 1.3rem; /* Ajustar tamaño de la fuente para dispositivos medianos */
+        font-size: 1.3rem;
         left: 50%;
         transform: translateX(-50%);
         -webkit-text-stroke: transparent;
@@ -86,7 +86,7 @@
         padding-top: 25rem;
     }
     .prom {
-        font-size: 1.7rem; /* Ajustar tamaño de la fuente para dispositivos medianos */
+        font-size: 1.7rem;
         left: 50%;
         transform: translateX(-50%);
         -webkit-text-stroke: transparent;
@@ -100,7 +100,7 @@
 
 @media (min-width:1024px) and (max-width:1279px) {
     .prom {
-        font-size: 2.5rem; /* Ajustar tamaño de la fuente para dispositivos medianos */
+        font-size: 2.5rem;
         left: 50%;
         transform: translateX(-50%);
         -webkit-text-stroke: transparent;
@@ -116,7 +116,7 @@
         padding-top: 30rem;
     }
     .prom {
-        font-size: 3rem; /* Ajustar tamaño de la fuente para dispositivos medianos */
+        font-size: 3rem;
         left: 50%;
         transform: translateX(-50%);
         -webkit-text-stroke: transparent;
