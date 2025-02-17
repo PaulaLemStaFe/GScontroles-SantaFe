@@ -1,12 +1,12 @@
 const headerTemplate = document.createElement('template');
 
-var urlConstructionHtml = './assets/pages/underconstruction/underconstruction.html';
+var urlConstructionHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/underconstruction/underconstruction.html';
 var urlImageFondoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/fondos/fondo-de-logo.jpg';
 var urlImageLogoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/logo-solo/logo-nombre.png';
-var urlIndexHtml = './index.html';
-var urlLoginHtml = './assets/pages/login/login.html';
-var urlProductsHtml = './assets/pages/products/allproducts.html';
-var urlSearchHtml = './assets/pages/search/search.html';
+var urlIndexHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/index.html';
+var urlLoginHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/login/login.html';
+var urlProductsHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html';
+var urlSearchHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/search/search.html';
 
 headerTemplate.innerHTML = `
         <header class="navbar">
@@ -22,9 +22,9 @@ headerTemplate.innerHTML = `
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
                                 <li class="submenu"><a href="#" title="Productos">Productos</a>
                                     <ul class="submenu_list">
-                                        <li><a href="./assets/pages/products/allproducts.html?category=all" title="Ingresa para ver todos nuestros productos">Todos</a></li>
-                                        <li><a href="./assets/pages/products/allproducts.html?category=producttv&title=Controles Remotos de Televisores" title="Controles remotos para televisores">Televisor</a></li>
-                                        <li><a href="./assets/pages/products/allproducts.html?category=productac&title=Controles Remotos de Aire Acondicionados" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
+                                        <li><a href="${urlProductsHtml}?category=all" title="Ingresa para ver todos nuestros productos">Todos</a></li>
+                                        <li><a href="${urlProductsHtml}?category=producttv&title=Controles Remotos de Televisores" title="Controles remotos para televisores">Televisor</a></li>
+                                        <li><a href="${urlProductsHtml}?category=productac&title=Controles Remotos de Aire Acondicionados" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
