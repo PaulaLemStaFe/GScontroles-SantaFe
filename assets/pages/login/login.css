@@ -1,4 +1,13 @@
-@import url('../../css/style.css');
+:root {
+    --color-primary: #F6F7D3;
+    --color-secondary: #e6e7cc;
+    --color-tertiary: #697565;
+    --color-fourth: #3C3D37;
+    --color-fifth: #1E201E;
+    font-family: "Capriola", serif;
+    line-height: 1rem;
+    scroll-behavior: smooth;
+}
 body, html {
     height: 100%;
     margin: 0;
