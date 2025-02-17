@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Verificar si al menos uno de los contenedores existe
     if (containerTV || containerAA) {
-        cargarProductos('../../../db.json', containerTV, containerAA);
+        cargarProductos('../../db.json', containerTV, containerAA);
     }
 });
 
