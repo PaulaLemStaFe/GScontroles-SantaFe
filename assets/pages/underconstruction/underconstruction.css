@@ -21,7 +21,8 @@ html, body {
 img {
     border-radius: 2rem;
     box-shadow: 3rem 3rem 3rem var(--color-fourth);
-    width: 100%;
+    margin-top: 3rem;
+    width: 85%;
 }
 .banner_section {
     align-items: center;
