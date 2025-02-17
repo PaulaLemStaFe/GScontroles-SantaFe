@@ -1,8 +1,8 @@
 const contactTemplate = document.createElement('template');
 
-var urlImageLogoHtml = '/assets/images/logo-solo/logo-nombre.png';
-var urlImageFondoHtml = '/assets/images/fondos/fondo-de-logo.jpg';
-var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
+var urlImageLogoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/logo-solo/logo-nombre.png?raw=true';
+var urlImageFondoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/fondos/fondo-de-logo.jpg?raw=true';
+var urlConstructionHtml = './assets/pages/underconstruction/underconstruction.html';
 
 contactTemplate.innerHTML = `
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -107,7 +107,7 @@ class Contact extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
-            @import url('/assets/css/style.css');
+            @import url('./assets/css/style.css');
             .contact {
                 background-image: url(${urlImageFondoHtml});
                 background-position: center center;

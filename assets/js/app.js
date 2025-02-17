@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const user = data.user.find(user => user.email === email && user.password === password);
                     if (user) {
                         localStorage.setItem('isAdmin', 'true');
-                        window.location.href = "/assets/pages/editionproducts/editionproducts.html";
+                        window.location.href = "./assets/pages/editionproducts/editionproducts.html";
                     } else {
                         alert('Credenciales incorrectas');
                     }

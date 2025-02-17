@@ -1,10 +1,10 @@
 const footerTemplate = document.createElement('template');
 
-var urlIndexHtml = '/index.html';
-var urlImageLogoHtml = '/assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg';
-var urlSearchHtml = '/assets/pages/search/search.html';
-var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
-var urlProductsHtml = '/assets/pages/products/allproducts.html';
+var urlIndexHtml = 'index.html';
+var urlImageLogoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg?raw=true';
+var urlSearchHtml = './assets/pages/search/search.html';
+var urlConstructionHtml = './assets/pages/underconstruction/underconstruction.html';
+var urlProductsHtml = './assets/pages/products/allproducts.html';
 
 footerTemplate.innerHTML = `
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -95,7 +95,7 @@ class Footer extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
-            @import url('/assets/css/style.css');
+            @import url('./assets/css/style.css');
             .montserrat-alternates-regular {
                 font-family: "Montserrat Alternates", serif;
                 font-weight: 400;

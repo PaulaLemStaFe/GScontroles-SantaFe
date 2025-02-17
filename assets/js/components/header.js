@@ -1,12 +1,12 @@
 const headerTemplate = document.createElement('template');
 
-var urlConstructionHtml = '/assets/pages/underconstruction/underconstruction.html';
-var urlImageFondoHtml = '/assets/images/fondos/fondo-de-logo.jpg';
-var urlImageLogoHtml = '/assets/images/logo-solo/logo-nombre.png';
-var urlIndexHtml = '/index.html';
-var urlLoginHtml = '/assets/pages/login/login.html';
-var urlProductsHtml = '/assets/pages/products/allproducts.html';
-var urlSearchHtml = '/assets/pages/search/search.html';
+var urlConstructionHtml = './assets/pages/underconstruction/underconstruction.html';
+var urlImageFondoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/fondos/fondo-de-logo.jpg?raw=true';
+var urlImageLogoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/logo-solo/logo-nombre.png?raw=true';
+var urlIndexHtml = 'index.html';
+var urlLoginHtml = './assets/pages/login/login.html';
+var urlProductsHtml = './assets/pages/products/allproducts.html';
+var urlSearchHtml = './assets/pages/search/search.html';
 
 headerTemplate.innerHTML = `
         <header class="navbar">
@@ -22,9 +22,9 @@ headerTemplate.innerHTML = `
                                 <li><a href="${urlIndexHtml}" title="Página Principal">Inicio</a></li>
                                 <li class="submenu"><a href="#" title="Productos">Productos</a>
                                     <ul class="submenu_list">
-                                        <li><a href="/assets/pages/products/allproducts.html?category=all" title="Ingresa para ver todos nuestros productos">Todos</a></li>
-                                        <li><a href="/assets/pages/products/allproducts.html?category=producttv&title=Controles Remotos de Televisores" title="Controles remotos para televisores">Televisor</a></li>
-                                        <li><a href="/assets/pages/products/allproducts.html?category=productac&title=Controles Remotos de Aire Acondicionados" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
+                                        <li><a href="./assets/pages/products/allproducts.html?category=all" title="Ingresa para ver todos nuestros productos">Todos</a></li>
+                                        <li><a href="./assets/pages/products/allproducts.html?category=producttv&title=Controles Remotos de Televisores" title="Controles remotos para televisores">Televisor</a></li>
+                                        <li><a href="./assets/pages/products/allproducts.html?category=productac&title=Controles Remotos de Aire Acondicionados" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="${urlIndexHtml}#woweare" title="Ingresa para conocer más de nuestra empresa">Quienes Somos</a></li>
@@ -74,7 +74,7 @@ class Header extends HTMLElement {
         // Agregar estilos
         const style = document.createElement('style');
         style.textContent = `
-            @import url('/assets/css/style.css');
+            @import url('./assets/css/style.css');
             .navbar {
                 align-items: center;
                 background-image: url(${urlImageFondoHtml});
@@ -412,14 +412,6 @@ class Header extends HTMLElement {
             }
         `;
         shadowRoot.appendChild(style);
-
-        // Ocultar botón de Login si estamos en editionproducts.html o addproducts.html
-        const currentPage = window.location.pathname;
-        const loginButton = shadowRoot.querySelector('#login-button');
-
-        if (loginButton && (currentPage.includes("editionproducts.html") || currentPage.includes("addproducts.html"))) {
-            loginButton.style.display = "none";
-        }
 
         // Verificar elementos dentro del shadowRoot
         const menuToggle = shadowRoot.querySelector('.menu_toggle');

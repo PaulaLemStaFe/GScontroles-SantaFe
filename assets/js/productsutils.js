@@ -42,7 +42,7 @@ function crearProducto(container, producto, imgClass) {
  * Redirige a la página underconstruction.html cuando se hace clic en los iconos.
  */
 function redirigirPagina() {
-    window.location.href = "/assets/pages/underconstruction/underconstruction.html";
+    window.location.href = "./assets/pages/underconstruction/underconstruction.html";
 }
 
 /**
