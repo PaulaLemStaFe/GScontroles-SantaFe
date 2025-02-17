@@ -176,7 +176,6 @@ body.logged-in {
 }
 
 
-
 /* Para móviles muy pequeños */
 @media (max-width: 479px) {
     .add_product {
@@ -208,7 +207,6 @@ body.logged-in {
 }
 
 
-
 /* Para teléfonos medianos */
 @media (min-width: 480px) and (max-width: 767px) {
     .add_product {
@@ -238,7 +236,6 @@ body.logged-in {
 }
 
 
-
 /* Para tablets en vertical */
 @media (min-width: 768px) and (max-width: 1023px) {
     .add_product__form__area {
@@ -259,7 +256,6 @@ body.logged-in {
         width: 40%;
     }
 }
-
 
 
 /* Para tablets en horizontal y laptops pequeñas */
