@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("../../../../db.json")
+    fetch("https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json")
         .then(response => response.json())
         .then(data => {
             productos.producttv = data.productstv;

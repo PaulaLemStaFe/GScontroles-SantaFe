@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    mostrarDetallesProducto("../../../../db.json", productId);
+    mostrarDetallesProducto("https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json", productId);
 });
 
 /**
@@ -82,7 +82,7 @@ function mostrarDetallesProducto(url, productId) {
                 const viewAllLink = document.getElementById("view-all-link");
                 if (similarProductsFiltered.length > 6) {
                     viewAllLink.style.display = "inline-block";
-                    viewAllLink.href = `/assets/pages/products/allproducts.html?category=${productCategory}&title=Controles Remotos de ${productCategory === 'producttv' ? 'Televisores' : 'Aires Acondicionados'}&idproduct=${productId}`;
+                    viewAllLink.href = `https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html?category=${productCategory}&title=Controles Remotos de ${productCategory === 'producttv' ? 'Televisores' : 'Aires Acondicionados'}&idproduct=${productId}`;
                 } else {
                     viewAllLink.style.display = "none";
                 }

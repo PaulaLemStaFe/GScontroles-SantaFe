@@ -16,8 +16,7 @@
         "modelosoportado01": "Candy",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=1"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 2,
@@ -28,8 +27,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "Crown Mustang",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=2"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 3,
@@ -40,8 +38,7 @@
         "modelosoportado01": "Sierra",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=3"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 4,
@@ -52,8 +49,7 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=4"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 5,
@@ -64,8 +60,7 @@
         "modelosoportado01": "Sony",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=5"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 6,
@@ -76,8 +71,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Sanyo",
         "modelosoportado03": "Philco",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=6"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 7,
@@ -88,8 +82,7 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=7"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 8,
@@ -100,8 +93,7 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=8"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 9,
@@ -112,8 +104,7 @@
         "modelosoportado01": "Sony",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=9"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 10,
@@ -124,8 +115,7 @@
         "modelosoportado01": "Hitachi",
         "modelosoportado02": "Philco",
         "modelosoportado03": "Noblex",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=10"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 11,
@@ -136,8 +126,7 @@
         "modelosoportado01": "Ken Brown",
         "modelosoportado02": "Tonomac",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=11"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 12,
@@ -148,8 +137,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=12"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 13,
@@ -160,8 +148,7 @@
         "modelosoportado01": "JVC",
         "modelosoportado02": "Philco",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=13"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 14,
@@ -172,8 +159,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "Sanyo",
         "modelosoportado03": "Noblex",
-        "modelosoportado04": "Hisense",
-        "link": "./assets/pages/products/productdetails.html?idproduct=14"
+        "modelosoportado04": "Hisense"
     },
     {
         "idProduct": 15,
@@ -184,8 +170,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "Sanyo",
         "modelosoportado03": "Noblex",
-        "modelosoportado04": "JVC",
-        "link": "./assets/pages/products/productdetails.html?idproduct=15"
+        "modelosoportado04": "JVC"
     },
     {
         "idProduct": 16,
@@ -196,8 +181,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=16"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 17,
@@ -208,8 +192,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Sanyo",
         "modelosoportado03": "Hisense",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=17"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 18,
@@ -220,8 +203,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=18"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 19,
@@ -232,8 +214,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=19"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 20,
@@ -244,8 +225,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "TCL",
         "modelosoportado03": "RCA",
-        "modelosoportado04": "Telefunken",
-        "link": "./assets/pages/products/productdetails.html?idproduct=20"
+        "modelosoportado04": "Telefunken"
     },
     {
         "idProduct": 21,
@@ -256,8 +236,7 @@
         "modelosoportado01": "Hitachi",
         "modelosoportado02": "RCA",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=21"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 22,
@@ -268,8 +247,7 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=22"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 23,
@@ -280,8 +258,7 @@
         "modelosoportado01": "Ken Brown",
         "modelosoportado02": "Tonomac",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=23"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 24,
@@ -292,8 +269,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=24"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 25,
@@ -304,8 +280,7 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=25"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 26,
@@ -316,8 +291,7 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=26"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 27,
@@ -328,8 +302,7 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=27"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 28,
@@ -340,8 +313,7 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "Admiral",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=28"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 29,
@@ -352,8 +324,7 @@
         "modelosoportado01": "Top House",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=29"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 30,
@@ -364,8 +335,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "BGH",
         "modelosoportado03": "Sanyo",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=30"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 31,
@@ -376,8 +346,7 @@
         "modelosoportado01": "TCL",
         "modelosoportado02": "Daewoo",
         "modelosoportado03": "RCA",
-        "modelosoportado04": "Philco",
-        "link": "./assets/pages/products/productdetails.html?idproduct=31"
+        "modelosoportado04": "Philco"
     },
     {
         "idProduct": 32,
@@ -388,8 +357,7 @@
         "modelosoportado01": "Tonomac",
         "modelosoportado02": "Daewoo",
         "modelosoportado03": "RCA",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=32"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 33,
@@ -400,8 +368,7 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=33"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 34,
@@ -412,8 +379,7 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=34"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 35,
@@ -424,8 +390,7 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=35"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 36,
@@ -436,8 +401,7 @@
         "modelosoportado01": "Hitachi",
         "modelosoportado02": "RCA",
         "modelosoportado03": "TCL",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=36"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 37,
@@ -448,8 +412,7 @@
         "modelosoportado01": "Tonomac",
         "modelosoportado02": "Hitachi",
         "modelosoportado03": "Sanyo",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=37"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 38,
@@ -460,8 +423,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=38"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 39,
@@ -472,8 +434,7 @@
         "modelosoportado01": "Sharp",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=39"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 40,
@@ -484,8 +445,7 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=40"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 41,
@@ -496,8 +456,7 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=41"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 42,
@@ -508,8 +467,7 @@
         "modelosoportado01": "ONN",
         "modelosoportado02": "Philco",
         "modelosoportado03": "Sanyo",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=42"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 43,
@@ -520,8 +478,7 @@
         "modelosoportado01": "ONN",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=43"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 44,
@@ -532,8 +489,7 @@
         "modelosoportado01": "Crown Mustang",
         "modelosoportado02": "Dalton View",
         "modelosoportado03": "Sonic",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=44"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 45,
@@ -544,8 +500,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "Hitachi",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=45"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 46,
@@ -556,8 +511,7 @@
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=46"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 47,
@@ -568,8 +522,7 @@
         "modelosoportado01": "TCL",
         "modelosoportado02": "RCA",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=47"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 48,
@@ -580,8 +533,7 @@
         "modelosoportado01": "ONN",
         "modelosoportado02": "Philco",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=48"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 49,
@@ -592,8 +544,7 @@
         "modelosoportado01": "THS",
         "modelosoportado02": "Top House",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=49"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 50,
@@ -604,8 +555,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "Oyility",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=50"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 51,
@@ -616,8 +566,7 @@
         "modelosoportado01": "THS",
         "modelosoportado02": "Top House",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=51"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 52,
@@ -628,8 +577,7 @@
         "modelosoportado01": "Telefunken",
         "modelosoportado02": "Kodak",
         "modelosoportado03": "BGH",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=52"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 53,
@@ -640,8 +588,7 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=53"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 54,
@@ -652,8 +599,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Philco",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=54"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 55,
@@ -664,8 +610,7 @@
         "modelosoportado01": "Steel Home",
         "modelosoportado02": "Panoramic",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=55"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 56,
@@ -676,8 +621,7 @@
         "modelosoportado01": "Skyworth",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=56"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 57,
@@ -688,8 +632,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Sanyo",
         "modelosoportado03": "Sansei",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=57"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 58,
@@ -700,8 +643,7 @@
         "modelosoportado01": "Sony",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=58"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 59,
@@ -712,8 +654,7 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "TCL",
         "modelosoportado03": "Hitachi",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=59"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 60,
@@ -724,8 +665,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "Oyility",
         "modelosoportado03": "Crown Mustang",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=60"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 61,
@@ -736,8 +676,7 @@
         "modelosoportado01": "THS",
         "modelosoportado02": "Top House",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=61"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 62,
@@ -748,8 +687,7 @@
         "modelosoportado01": "Aiwa",
         "modelosoportado02": "Hogarnet",
         "modelosoportado03": "Panoramic",
-        "modelosoportado04": "Net Runner",
-        "link": "./assets/pages/products/productdetails.html?idproduct=62"
+        "modelosoportado04": "Net Runner"
     },
     {
         "idProduct": 63,
@@ -760,8 +698,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "Crown Mustang",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=63"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 64,
@@ -772,8 +709,7 @@
         "modelosoportado01": "THS",
         "modelosoportado02": "BGH",
         "modelosoportado03": "Hisense",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=64"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 65,
@@ -784,8 +720,7 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=65"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 66,
@@ -796,8 +731,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Admiral",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=66"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 67,
@@ -808,8 +742,7 @@
         "modelosoportado01": "Top House",
         "modelosoportado02": "Telefunken",
         "modelosoportado03": "BGH",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=67"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 68,
@@ -820,8 +753,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "Oyility",
         "modelosoportado03": "Microsonic",
-        "modelosoportado04": "Hyundai",
-        "link": "./assets/pages/products/productdetails.html?idproduct=68"
+        "modelosoportado04": "Hyundai"
     },
     {
         "idProduct": 69,
@@ -832,8 +764,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "CMV",
         "modelosoportado03": "JVC",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=69"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 70,
@@ -844,8 +775,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "Oyility",
         "modelosoportado03": "Microsonic",
-        "modelosoportado04": "Crown Mustang",
-        "link": "./assets/pages/products/productdetails.html?idproduct=70"
+        "modelosoportado04": "Crown Mustang"
     },
     {
         "idProduct": 71,
@@ -856,8 +786,7 @@
         "modelosoportado01": "Enova",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=71"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 72,
@@ -868,8 +797,7 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=72"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 73,
@@ -880,8 +808,7 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=73"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 74,
@@ -892,8 +819,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Admiral",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=74"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 75,
@@ -904,8 +830,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=75"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 76,
@@ -916,8 +841,7 @@
         "modelosoportado01": "Top House",
         "modelosoportado02": "Hyundai",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=76"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 77,
@@ -928,8 +852,7 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=77"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 78,
@@ -940,8 +863,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=78"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 79,
@@ -952,8 +874,7 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=79"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 80,
@@ -964,8 +885,7 @@
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "Hisense",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=80"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 81,
@@ -976,8 +896,7 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=81"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 82,
@@ -988,8 +907,7 @@
         "modelosoportado01": "Hyundai",
         "modelosoportado02": "Sanyo",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=82"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 83,
@@ -1000,8 +918,7 @@
         "modelosoportado01": "Hisense",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=83"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 84,
@@ -1012,8 +929,7 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "RCA",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=84"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 85,
@@ -1024,8 +940,7 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "TCL",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=85"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 86,
@@ -1036,8 +951,7 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "TCL",
         "modelosoportado03": "Admiral",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=86"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 87,
@@ -1048,8 +962,7 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=87"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 88,
@@ -1060,8 +973,7 @@
         "modelosoportado01": "Enova",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=88"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 89,
@@ -1072,8 +984,7 @@
         "modelosoportado01": "Quantic",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=89"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 90,
@@ -1084,8 +995,7 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=90"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 91,
@@ -1096,8 +1006,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "Top House",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=91"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 92,
@@ -1108,8 +1017,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Hisense",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=92"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 93,
@@ -1120,8 +1028,7 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=93"
+        "modelosoportado04": ""
     }
     ],
     "productsaa": [
@@ -1134,8 +1041,7 @@
         "modelosoportado01": "Universal",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=94"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 95,
@@ -1146,8 +1052,7 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "Kelvinator",
         "modelosoportado03": "Conqueror",
-        "modelosoportado04": "York",
-        "link": "./assets/pages/products/productdetails.html?idproduct=95"
+        "modelosoportado04": "York"
     },
     {
         "idProduct": 96,
@@ -1158,8 +1063,7 @@
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Alaska",
         "modelosoportado03": "Noblex",
-        "modelosoportado04": "Coventry",
-        "link": "./assets/pages/products/productdetails.html?idproduct=96"
+        "modelosoportado04": "Coventry"
     },
     {
         "idProduct": 97,
@@ -1170,8 +1074,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=97"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 98,
@@ -1182,8 +1085,7 @@
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Sigma",
         "modelosoportado03": "Philco",
-        "modelosoportado04": "Noblex",
-        "link": "./assets/pages/products/productdetails.html?idproduct=98"
+        "modelosoportado04": "Noblex"
     },
     {
         "idProduct": 99,
@@ -1194,8 +1096,7 @@
         "modelosoportado01": "Hitachi",
         "modelosoportado02": "RCA",
         "modelosoportado03": "TCL",
-        "modelosoportado04": "Electra",
-        "link": "./assets/pages/products/productdetails.html?idproduct=99"
+        "modelosoportado04": "Electra"
     },
     {
         "idProduct": 100,
@@ -1206,8 +1107,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "Longvie",
         "modelosoportado03": "Whirlpool",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=100"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 101,
@@ -1218,8 +1118,7 @@
         "modelosoportado01": "Hitachi",
         "modelosoportado02": "TCL",
         "modelosoportado03": "RCA",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=101"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 102,
@@ -1230,8 +1129,7 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=102"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 103,
@@ -1242,8 +1140,7 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "Sigma",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=103"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 104,
@@ -1254,8 +1151,7 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "BGH",
         "modelosoportado03": "Marshall",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=104"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 105,
@@ -1266,8 +1162,7 @@
         "modelosoportado01": "Hisense",
         "modelosoportado02": "Sigma",
         "modelosoportado03": "Philco",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=105"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 106,
@@ -1278,8 +1173,7 @@
         "modelosoportado01": "Surrey",
         "modelosoportado02": "Springer",
         "modelosoportado03": "BGH",
-        "modelosoportado04": "Midea",
-        "link": "./assets/pages/products/productdetails.html?idproduct=106"
+        "modelosoportado04": "Midea"
     },
     {
         "idProduct": 107,
@@ -1290,8 +1184,7 @@
         "modelosoportado01": "Electra",
         "modelosoportado02": "Candy",
         "modelosoportado03": "Peabody",
-        "modelosoportado04": "Ariston",
-        "link": "./assets/pages/products/productdetails.html?idproduct=107"
+        "modelosoportado04": "Ariston"
     },
     {
         "idProduct": 108,
@@ -1302,8 +1195,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=108"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 109,
@@ -1314,8 +1206,7 @@
         "modelosoportado01": "TCL",
         "modelosoportado02": "RCA",
         "modelosoportado03": "Hitachi",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=109"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 110,
@@ -1326,8 +1217,7 @@
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Philco",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=110"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 111,
@@ -1338,8 +1228,7 @@
         "modelosoportado01": "Hitachi",
         "modelosoportado02": "RCA",
         "modelosoportado03": "TCL",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=111"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 112,
@@ -1350,8 +1239,7 @@
         "modelosoportado01": "Top House",
         "modelosoportado02": "Electrolux",
         "modelosoportado03": "Surrey",
-        "modelosoportado04": "Midea",
-        "link": "./assets/pages/products/productdetails.html?idproduct=112"
+        "modelosoportado04": "Midea"
     },
     {
         "idProduct": 113,
@@ -1362,8 +1250,7 @@
         "modelosoportado01": "Westinghouse",
         "modelosoportado02": "York",
         "modelosoportado03": "Firstline",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=113"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 114,
@@ -1374,8 +1261,7 @@
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "Coventry",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=114"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 115,
@@ -1386,8 +1272,7 @@
         "modelosoportado01": "BGH",
         "modelosoportado02": "Hisense",
         "modelosoportado03": "York",
-        "modelosoportado04": "Philco",
-        "link": "./assets/pages/products/productdetails.html?idproduct=115"
+        "modelosoportado04": "Philco"
     },
     {
         "idProduct": 116,
@@ -1398,8 +1283,7 @@
         "modelosoportado01": "Electrolux",
         "modelosoportado02": "Hisense",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=116"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 117,
@@ -1410,8 +1294,7 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=117"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 118,
@@ -1422,8 +1305,7 @@
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Philco",
         "modelosoportado03": "Noblex",
-        "modelosoportado04": "Siam",
-        "link": "./assets/pages/products/productdetails.html?idproduct=118"
+        "modelosoportado04": "Siam"
     },
     {
         "idProduct": 119,
@@ -1434,8 +1316,7 @@
         "modelosoportado01": "Midea",
         "modelosoportado02": "Surrey",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=119"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 120,
@@ -1446,8 +1327,7 @@
         "modelosoportado01": "Carrier",
         "modelosoportado02": "Surrey",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=120"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 121,
@@ -1458,8 +1338,7 @@
         "modelosoportado01": "Hyundai",
         "modelosoportado02": "Electra",
         "modelosoportado03": "TCL",
-        "modelosoportado04": "RCA",
-        "link": "./assets/pages/products/productdetails.html?idproduct=121"
+        "modelosoportado04": "RCA"
     },
     {
         "idProduct": 122,
@@ -1470,8 +1349,7 @@
         "modelosoportado01": "Top House",
         "modelosoportado02": "BGH",
         "modelosoportado03": "Alaska",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=122"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 123,
@@ -1482,8 +1360,7 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "Kelvinator",
         "modelosoportado03": "Hyundai",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=123"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 124,
@@ -1494,8 +1371,7 @@
         "modelosoportado01": "Electrolux",
         "modelosoportado02": "Hisense",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=124"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 125,
@@ -1506,8 +1382,7 @@
         "modelosoportado01": "Carrier",
         "modelosoportado02": "Surrey",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=125"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 126,
@@ -1518,8 +1393,7 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "BGH",
         "modelosoportado03": "",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=126"
+        "modelosoportado04": ""
     },
     {
         "idProduct": 127,
@@ -1530,8 +1404,7 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "BGH",
-        "modelosoportado04": "",
-        "link": "./assets/pages/products/productdetails.html?idproduct=127"
+        "modelosoportado04": ""
     }
     ],
     "profile": {

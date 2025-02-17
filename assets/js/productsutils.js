@@ -12,6 +12,9 @@ function crearProducto(container, producto, imgClass) {
     // Detectar la URL actual
     const currentUrl = window.location.pathname;
     const showIcons = currentUrl.includes('editionproducts.html');
+    const baseURL = "https://PaulaLemStaFe.github.io/GScontroles-SantaFe/";
+    const productLink = `${baseURL}assets/pages/products/productdetails.html?idproduct=${producto.idProduct}`;
+
 
     const div = document.createElement('div');
     div.className = 'product_item';
@@ -33,7 +36,7 @@ function crearProducto(container, producto, imgClass) {
                 <i class="bi bi-pencil-fill" alt="Editar" title="Editar" onclick="redirigirPagina()"></i>
             </div>
         </div>` : ''}
-        <a class="item_link" href="${producto.link}" rel="noopener noreferrer" alt="Ver Producto" title="Ver Producto">Ver Producto</a>
+        <a class="item_link" href="${productLink}" rel="noopener noreferrer" alt="Ver Producto" title="Ver Producto">Ver Producto</a>
     `;
     container.appendChild(div);
 }
@@ -42,7 +45,7 @@ function crearProducto(container, producto, imgClass) {
  * Redirige a la página underconstruction.html cuando se hace clic en los iconos.
  */
 function redirigirPagina() {
-    window.location.href = "./assets/pages/underconstruction/underconstruction.html";
+    window.location.href = "https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/underconstruction/underconstruction.html";
 }
 
 /**

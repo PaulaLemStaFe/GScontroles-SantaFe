@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
 
-            fetch('../../../../db.json')
+            fetch('https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json')
                 .then(response => response.json())
                 .then(data => {
                     const user = data.user.find(user => user.email === email && user.password === password);
                     if (user) {
                         localStorage.setItem('isAdmin', 'true');
-                        window.location.href = "./assets/pages/editionproducts/editionproducts.html";
+                        window.location.href = "https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/editionproducts/editionproducts.html";
                     } else {
                         alert('Credenciales incorrectas');
                     }
