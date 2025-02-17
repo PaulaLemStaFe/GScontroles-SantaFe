@@ -1,9 +1,9 @@
 const headerTemplate = document.createElement('template');
 
 var urlConstructionHtml = './assets/pages/underconstruction/underconstruction.html';
-var urlImageFondoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/fondos/fondo-de-logo.jpg?raw=true';
-var urlImageLogoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/logo-solo/logo-nombre.png?raw=true';
-var urlIndexHtml = 'index.html';
+var urlImageFondoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/fondos/fondo-de-logo.jpg';
+var urlImageLogoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/logo-solo/logo-nombre.png';
+var urlIndexHtml = './index.html';
 var urlLoginHtml = './assets/pages/login/login.html';
 var urlProductsHtml = './assets/pages/products/allproducts.html';
 var urlSearchHtml = './assets/pages/search/search.html';
@@ -74,7 +74,16 @@ class Header extends HTMLElement {
         // Agregar estilos
         const style = document.createElement('style');
         style.textContent = `
-            @import url('./assets/css/style.css');
+            :root {
+                --color-primary: #F6F7D3;
+                --color-secondary: #e6e7cc;
+                --color-tertiary: #697565;
+                --color-fourth: #3C3D37;
+                --color-fifth: #1E201E;
+                font-family: "Capriola", serif;
+                line-height: 1rem;
+                scroll-behavior: smooth;
+            }
             .navbar {
                 align-items: center;
                 background-image: url(${urlImageFondoHtml});

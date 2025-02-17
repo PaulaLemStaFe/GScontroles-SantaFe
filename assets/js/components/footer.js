@@ -1,7 +1,7 @@
 const footerTemplate = document.createElement('template');
 
 var urlIndexHtml = 'index.html';
-var urlImageLogoHtml = 'https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg?raw=true';
+var urlImageLogoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg';
 var urlSearchHtml = './assets/pages/search/search.html';
 var urlConstructionHtml = './assets/pages/underconstruction/underconstruction.html';
 var urlProductsHtml = './assets/pages/products/allproducts.html';
@@ -95,7 +95,16 @@ class Footer extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
-            @import url('./assets/css/style.css');
+            :root {
+                --color-primary: #F6F7D3;
+                --color-secondary: #e6e7cc;
+                --color-tertiary: #697565;
+                --color-fourth: #3C3D37;
+                --color-fifth: #1E201E;
+                font-family: "Capriola", serif;
+                line-height: 1rem;
+                scroll-behavior: smooth;
+            }
             .montserrat-alternates-regular {
                 font-family: "Montserrat Alternates", serif;
                 font-weight: 400;
