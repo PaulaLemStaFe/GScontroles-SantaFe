@@ -76,10 +76,10 @@
     {
         "idProduct": 7,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS430-Philips.png?raw=true",
-        "title": "Control Remoto Para Televisor Marca PHILCO",
+        "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 430",
         "color": "Negro",
-        "modelosoportado01": "Philco",
+        "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
         "modelosoportado04": ""
