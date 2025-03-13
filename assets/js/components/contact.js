@@ -47,12 +47,12 @@ contactTemplate.innerHTML = `
                 <ul class="menu">
                     <li class="menu_item">
                         <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un WhatsApp" title="Mándenos Un WhatsApp">
-                            <i class="bi bi-whatsapp"></i> +54 9 3426138796
+                            <i class="bi bi-whatsapp"></i> +54 9 3425455448
                         </a>
                     </li>
                     <li class="menu_item">
                         <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Llámenos" title="Llámenos">
-                            <i class="bi bi-telephone"></i> +54 9 3426138796
+                            <i class="bi bi-telephone"></i> +54 9 3425455448
                         </a>
                     </li>
                     <li class="menu_item" alt="Nuestra Dirección" title="Nuestra Dirección">
@@ -60,17 +60,17 @@ contactTemplate.innerHTML = `
                     </li>
                     <li class="menu_item">
                         <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Mándenos un E-Mail" title="Mándenos Un E-Mail">
-                            <i class="bi bi-envelope"></i> gscontroles@gmail.com
+                            <i class="bi bi-envelope"></i> gscontrolesarg@gmail.com
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
-                            <i class="bi bi-facebook"></i> @gscontroles
+                        <a class="menu_link" href="https://www.facebook.com/profile.php?id=61574031543208" rel="noopener noreferrer" alt="Nuestro Facebook" title="Nuestro Facebook">
+                            <i class="bi bi-facebook"></i> @GScontroles SantaFe
                         </a>
                     </li>
                     <li class="menu_item">
-                        <a class="menu_link" href="${urlConstructionHtml}" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
-                            <i class="bi bi-instagram"></i> @gs.controles
+                        <a class="menu_link" href="https://www.instagram.com/gscontrolessantafe/" rel="noopener noreferrer" alt="Nuestro Instagram" title="Nuestro Instagram">
+                            <i class="bi bi-instagram"></i> @gscontrolessantafe
                         </a>
                     </li>
                 </ul>
