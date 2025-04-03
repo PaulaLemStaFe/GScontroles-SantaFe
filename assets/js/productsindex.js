@@ -1,25 +1,38 @@
 // productsindex.js
 
 document.addEventListener('DOMContentLoaded', function() {
+    const containerCS = document.getElementById('productos-cs');
     const containerTV = document.getElementById('productos-tv');
     const containerAA = document.getElementById('productos-aa');
 
     // Verificar si al menos uno de los contenedores existe
-    if (containerTV || containerAA) {
-        cargarProductos('https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json', containerTV, containerAA);
+    if (containerCS || containerTV || containerAA) {
+        cargarProductos('https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json', containerCS, containerTV, containerAA);
     }
 });
 
 /**
  * Función para cargar y procesar productos desde la base de datos.
  * @param {string} url - La URL del archivo db.json.
+ * @param {HTMLElement} containerCS - El contenedor para productos de CS.
  * @param {HTMLElement} containerTV - El contenedor para productos de TV.
  * @param {HTMLElement} containerAA - El contenedor para productos de AA.
  */
-function cargarProductos(url, containerTV, containerAA) {
+function cargarProductos(url, containerCS, containerTV, containerAA) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            // Procesar productos de CS si el contenedor existe
+            if (containerTV) {
+                const productosCS = shuffle(data.productscs).slice(0, 6); // Mezclar y tomar los primeros 6 productos de TV
+                productosCS.forEach(producto => {
+                    crearProducto(containerCS, producto, 'img');
+                    updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto); // Actualizar los atributos de la imagen
+                });
+            } else {
+                console.warn('El contenedor para productos de CS no se encontró en esta página.');
+            }
+
             // Procesar productos de TV si el contenedor existe
             if (containerTV) {
                 const productosTV = shuffle(data.productstv).slice(0, 6); // Mezclar y tomar los primeros 6 productos de TV
