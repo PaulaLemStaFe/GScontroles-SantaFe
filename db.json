@@ -6,50 +6,56 @@
         "password": "GSControles01Admin"
     }
     ],
-    "productstv": [
+    "productscs": [
     {
         "idProduct": 1,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS-CAND-Candy.png?raw=true",
-        "title": "Control Remoto Para Televisor Marca CANDY",
-        "code": "GS-CAND",
+        "img": "",
+        "title": "Control Remoto Para Convertidor Smart",
+        "code": "GS 931",
         "color": "Negro",
-        "modelosoportado01": "Candy",
+        "modelosoportado01": "Smart Box",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 2,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS-KAN_(632).png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KANJI o CROWN MUSTANG",
-        "code": "GS-KAN (632)",
+        "img": "",
+        "title": "Control Remoto Para Convertidor Smart Marca ROKU",
+        "code": "GS RK",
         "color": "Negro",
-        "modelosoportado01": "Kanji",
-        "modelosoportado02": "Crown Mustang",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
-    },
-    {
-        "idProduct": 3,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS-SIE_(634).png?raw=true",
-        "title": "Control Remoto Para Televisor Marca SIERA",
-        "code": "GS-SIE (634)",
-        "color": "Negro",
-        "modelosoportado01": "Siera",
+        "modelosoportado01": "Roku",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    }
+    ],
+    "productstv": [
+    {
+        "idProduct": 3,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca LG Smart",
+        "code": "GS 1",
+        "color": "Negro",
+        "modelosoportado01": "LG",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 4,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS406-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 406",
-        "color": "negro",
+        "color": "Negro",
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 5,
@@ -60,21 +66,35 @@
         "modelosoportado01": "Sony",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 6,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS424-Noblex_Sanyo_Philco.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas NOBLEX, SANYO o PHILCO",
+        "title": "Control Remoto Para Televisor Marcas PHILCO o NOBLEX",
         "code": "GS 424",
         "color": "Negro",
-        "modelosoportado01": "Noblex",
-        "modelosoportado02": "Sanyo",
-        "modelosoportado03": "Philco",
-        "modelosoportado04": ""
+        "modelosoportado01": "Philco",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 7,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas BGH o HISENSE",
+        "code": "GS 425",
+        "color": "Gris con Plateado",
+        "modelosoportado01": "BGH",
+        "modelosoportado02": "Hisense",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 8,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS430-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 430",
@@ -82,10 +102,11 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 8,
+        "idProduct": 9,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS433-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 433",
@@ -93,10 +114,11 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 9,
+        "idProduct": 10,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS434-Sony.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SONY",
         "code": "GS 434",
@@ -104,32 +126,47 @@
         "modelosoportado01": "Sony",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
-    },
-    {
-        "idProduct": 10,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS440-Hitachi_Philco_Noblex.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas HITACHI, PHILCO o NOBLEX",
-        "code": "GS 440",
-        "color": "Negro",
-        "modelosoportado01": "Hitachi",
-        "modelosoportado02": "Philco",
-        "modelosoportado03": "Noblex",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 11,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS442-KenBrown_Tonomac.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KEN BROWN o TONOMAC",
-        "code": "GS 442",
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca ILO, RCA o TOP HOUSE",
+        "code": "GS 436",
         "color": "Negro",
-        "modelosoportado01": "Ken Brown",
-        "modelosoportado02": "Tonomac",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado01": "Ilo",
+        "modelosoportado02": "RCA",
+        "modelosoportado03": "Top House",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 12,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS440-Hitachi_Philco_Noblex.png?raw=true",
+        "title": "Control Remoto Para Televisor Marcas PHILCO, NOBLEX o HITACHI",
+        "code": "GS 440",
+        "color": "Negro",
+        "modelosoportado01": "Philco",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "Hitachi",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 13,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS442-KenBrown_Tonomac.png?raw=true",
+        "title": "Control Remoto Para Televisor Marcas TONOMAC o KEN BROWN",
+        "code": "GS 442",
+        "color": "Negro",
+        "modelosoportado01": "Tonomac",
+        "modelosoportado02": "Ken Brown",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 14,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS443-Samsung.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SAMSUNG",
         "code": "GS 443",
@@ -137,43 +174,71 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
-    },
-    {
-        "idProduct": 13,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS445-JVC_Philco.png?raw=true",
-        "title": "Control Remoto Para Televisor MarcaS JVC o PHILCO",
-        "code": "GS 445",
-        "color": "Negro",
-        "modelosoportado01": "JVC",
-        "modelosoportado02": "Philco",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
-    },
-    {
-        "idProduct": 14,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS446-BGH_Sanyo_Noblex_Hisense.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas BGH, SANYO, NOBLEX o HISENSE",
-        "code": "GS 446",
-        "color": "Negro",
-        "modelosoportado01": "BGH",
-        "modelosoportado02": "Sanyo",
-        "modelosoportado03": "Noblex",
-        "modelosoportado04": "Hisense"
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 15,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS447-BGH_Sanyo_Noblex_JVC.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas BGH, SANYO, NOBLEX o JVC",
-        "code": "GS 447",
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca PANASONIC",
+        "code": "GS 444",
         "color": "Negro",
-        "modelosoportado01": "BGH",
-        "modelosoportado02": "Sanyo",
-        "modelosoportado03": "Noblex",
-        "modelosoportado04": "JVC"
+        "modelosoportado01": "Panasonic",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
         "idProduct": 16,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS445-JVC_Philco.png?raw=true",
+        "title": "Control Remoto Para Televisor Marcas JVC, BGH o PHILCO",
+        "code": "GS 445",
+        "color": "Negro",
+        "modelosoportado01": "JVC",
+        "modelosoportado02": "BGH",
+        "modelosoportado03": "Philco",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 17,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS446-BGH_Sanyo_Noblex_Hisense.png?raw=true",
+        "title": "Control Remoto Para Televisor Marcas BGH o HISENSE",
+        "code": "GS 446",
+        "color": "Negro",
+        "modelosoportado01": "BGH",
+        "modelosoportado02": "Hisense",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 18,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS447-BGH_Sanyo_Noblex_JVC.png?raw=true",
+        "title": "Control Remoto Para Televisor Marcas JVC, BGH, SANYO o NOBLEX",
+        "code": "GS 447",
+        "color": "Negro",
+        "modelosoportado01": "JVC",
+        "modelosoportado02": "BGH",
+        "modelosoportado03": "Sanyo",
+        "modelosoportado04": "Noblex",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 19,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca TOP HOUSE",
+        "code": "GS 448TH",
+        "color": "Negro",
+        "modelosoportado01": "Top House",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 20,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS451-Samsung.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SAMSUNG",
         "code": "GS 451",
@@ -181,21 +246,23 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 17,
+        "idProduct": 21,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS452-BGH_Noblex_Sanyo_Hisense.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas NOBLEX, SANYO o HISENSE",
+        "title": "Control Remoto Para Televisor Marcas BGH, HISENSE, NOBLEX o SANYO",
         "code": "GS 452",
         "color": "Negro",
-        "modelosoportado01": "Noblex",
-        "modelosoportado02": "Sanyo",
-        "modelosoportado03": "Hisense",
-        "modelosoportado04": ""
+        "modelosoportado01": "BGH",
+        "modelosoportado02": "Hisense",
+        "modelosoportado03": "Noblex",
+        "modelosoportado04": "Sanyo",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 18,
+        "idProduct": 22,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS458-Samsung.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SAMSUNG",
         "code": "GS 458",
@@ -203,10 +270,11 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 19,
+        "idProduct": 23,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS461-Samsung.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SAMSUNG",
         "code": "GS 461",
@@ -214,32 +282,47 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 20,
+        "idProduct": 24,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS470-BGH_TCL_RCA_Telefunken.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas BGH, TCL, RCA o TELEFUNKEN",
+        "title": "Control Remoto Para Televisor Marcas RCA, TCL o BGH",
         "code": "GS 470",
         "color": "Negro",
-        "modelosoportado01": "BGH",
+        "modelosoportado01": "RCA",
         "modelosoportado02": "TCL",
-        "modelosoportado03": "RCA",
-        "modelosoportado04": "Telefunken"
+        "modelosoportado03": "BGH",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 21,
+        "idProduct": 25,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS474-Hitachi_RCA.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas HITACHI o RCA",
+        "title": "Control Remoto Para Televisor Marca HITACHI",
         "code": "GS 474",
         "color": "Negro",
         "modelosoportado01": "Hitachi",
-        "modelosoportado02": "RCA",
+        "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 22,
+        "idProduct": 26,
+        "img": "",
+        "title": "Control Remoto Para Televisor MarcaS TCL, HITACHI, SANYO, NOBLEX o DAEWOO",
+        "code": "GS 475",
+        "color": "Negro",
+        "modelosoportado01": "TCL",
+        "modelosoportado02": "Hitachi",
+        "modelosoportado03": "Sanyo",
+        "modelosoportado04": "Noblex",
+        "modelosoportado05": "Daewoo"
+    },
+    {
+        "idProduct": 27,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS477-LG.png?raw=true",
         "title": "Control Remoto Para Televisor Marca LG",
         "code": "GS 477",
@@ -247,21 +330,35 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 23,
+        "idProduct": 28,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca SONY",
+        "code": "GS 478",
+        "color": "Negro",
+        "modelosoportado01": "Sony",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 29,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS479-KenBrown_Tonomac.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KEN BROWN o TONOMAC",
+        "title": "Control Remoto Para Televisor Marcas TONOMAC o KEN BROWN",
         "code": "GS 479",
         "color": "Negro",
-        "modelosoportado01": "Ken Brown",
-        "modelosoportado02": "Tonomac",
+        "modelosoportado01": "Tonomac",
+        "modelosoportado02": "Ken Brown",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 24,
+        "idProduct": 30,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS480-Kanji.png?raw=true",
         "title": "Control Remoto Para Televisor Marca KANJI",
         "code": "GS 480",
@@ -269,10 +366,11 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 25,
+        "idProduct": 31,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS481-LG.png?raw=true",
         "title": "Control Remoto Para Televisor Marca LG",
         "code": "GS 481",
@@ -280,10 +378,23 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 26,
+        "idProduct": 32,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas SANYO, NOBLEX, JVC o HITACHI",
+        "code": "GS 486",
+        "color": "Negro",
+        "modelosoportado01": "Sanyo",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "JVC",
+        "modelosoportado04": "Hitachi",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 33,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS488-RCA.png?raw=true",
         "title": "Control Remoto Para Televisor Marca RCA",
         "code": "GS 488",
@@ -291,10 +402,11 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 27,
+        "idProduct": 34,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS491-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 491",
@@ -302,10 +414,23 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 28,
+        "idProduct": 35,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca ILO",
+        "code": "GS 494",
+        "color": "Negro",
+        "modelosoportado01": "Ilo",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 36,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS498-RCA_Admiral.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas RCA o ADMIRAL",
         "code": "GS 498",
@@ -313,32 +438,35 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "Admiral",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 29,
+        "idProduct": 37,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS498TH2-TopHouse.png?raw=true",
         "title": "Control Remoto Para Televisor Marca TOP HOUSE",
-        "code": "GS 498 TH2",
+        "code": "GS 498TH",
         "color": "Negro",
         "modelosoportado01": "Top House",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 30,
+        "idProduct": 38,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS500-Noblex_BGH_Sanyo.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas NOBLEX, BGH o SANYO",
+        "title": "Control Remoto Para Televisor Marcas BGH, HISENSE o SANYO",
         "code": "GS 500",
         "color": "Negro",
-        "modelosoportado01": "Noblex",
-        "modelosoportado02": "BGH",
+        "modelosoportado01": "BGH",
+        "modelosoportado02": "Hisense",
         "modelosoportado03": "Sanyo",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 31,
+        "idProduct": 39,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS504-TCL_Daewoo_RCA_Philco.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas TCL, DAEWOO, RCA o PHILCO",
         "code": "GS 504",
@@ -346,21 +474,23 @@
         "modelosoportado01": "TCL",
         "modelosoportado02": "Daewoo",
         "modelosoportado03": "RCA",
-        "modelosoportado04": "Philco"
+        "modelosoportado04": "Philco",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 32,
+        "idProduct": 40,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS506-Tonomac_Daewoo_RCA.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas TONOMAC, DAEWOO o RCA",
+        "title": "Control Remoto Para Televisor Marcas DAEWOO, HYUNDAI, HITACHI o RCA",
         "code": "GS 506",
         "color": "Negro",
-        "modelosoportado01": "Tonomac",
-        "modelosoportado02": "Daewoo",
-        "modelosoportado03": "RCA",
-        "modelosoportado04": ""
+        "modelosoportado01": "Daewoo",
+        "modelosoportado02": "Hyundai",
+        "modelosoportado03": "Hitachi",
+        "modelosoportado04": "RCA",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 33,
+        "idProduct": 41,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS508-AOC.png?raw=true",
         "title": "Control Remoto Para Televisor Marca AOC",
         "code": "GS 508",
@@ -368,10 +498,11 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 34,
+        "idProduct": 42,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS509-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 509",
@@ -379,10 +510,11 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 35,
+        "idProduct": 43,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS511-AOC.png?raw=true",
         "title": "Control Remoto Para Televisor Marca AOC",
         "code": "GS 511",
@@ -390,32 +522,35 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 36,
+        "idProduct": 44,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS517-Hitachi_RCA_TCL.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas HITACHI, RCA o TCL",
+        "title": "Control Remoto Para Televisor Marcas RCA, TCL o HITACHI",
         "code": "GS 517",
         "color": "Negro",
-        "modelosoportado01": "Hitachi",
-        "modelosoportado02": "RCA",
-        "modelosoportado03": "TCL",
-        "modelosoportado04": ""
+        "modelosoportado01": "RCA",
+        "modelosoportado02": "TCL",
+        "modelosoportado03": "Hitachi",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 37,
+        "idProduct": 45,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS518-Tonomac_Hitachi_Sanyo.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas TONOMAC, HITACHI o SANYO",
+        "title": "Control Remoto Para Televisor Marcas PHILCO o SANYO",
         "code": "GS 518",
         "color": "Negro",
-        "modelosoportado01": "Tonomac",
-        "modelosoportado02": "Hitachi",
-        "modelosoportado03": "Sanyo",
-        "modelosoportado04": ""
+        "modelosoportado01": "Philco",
+        "modelosoportado02": "Sanyo",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 38,
+        "idProduct": 46,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS520-Samsung.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SAMSUNG",
         "code": "GS 520",
@@ -423,10 +558,11 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 39,
+        "idProduct": 47,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS522-Sharp.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SHARP",
         "code": "GS 522",
@@ -434,10 +570,11 @@
         "modelosoportado01": "Sharp",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 40,
+        "idProduct": 48,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS523-AOC.png?raw=true",
         "title": "Control Remoto Para Televisor Marca AOC",
         "code": "GS 523",
@@ -445,10 +582,11 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 41,
+        "idProduct": 49,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS525-LG.png?raw=true",
         "title": "Control Remoto Para Televisor Marca LG",
         "code": "GS 525",
@@ -456,21 +594,35 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 42,
+        "idProduct": 50,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas NOBLEX o PHILCO",
+        "code": "GS 527",
+        "color": "Negro",
+        "modelosoportado01": "Noblex",
+        "modelosoportado02": "Philco",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 51,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS529-Onn_Philco_Sanyo.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas ONN, PHILCO o SANYO",
+        "title": "Control Remoto Para Televisor Marcas PHILCO o SANYO",
         "code": "GS 529",
         "color": "Negro",
-        "modelosoportado01": "ONN",
-        "modelosoportado02": "Philco",
-        "modelosoportado03": "Sanyo",
-        "modelosoportado04": ""
+        "modelosoportado01": "Philco",
+        "modelosoportado02": "Sanyo",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 43,
+        "idProduct": 52,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS530-Onn.png?raw=true",
         "title": "Control Remoto Para Televisor Marca ONN",
         "code": "GS 530",
@@ -478,43 +630,47 @@
         "modelosoportado01": "ONN",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 44,
+        "idProduct": 53,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS531-CrownMustang_DaltonView.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas CROWN MUSTANG, DALTON VIEW o SONIC",
+        "title": "Control Remoto Para Televisor Marcas CROWN MUSTANG o DALTON VIEW",
         "code": "GS 531",
         "color": "Negro",
         "modelosoportado01": "Crown Mustang",
         "modelosoportado02": "Dalton View",
-        "modelosoportado03": "Sonic",
-        "modelosoportado04": ""
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 45,
+        "idProduct": 54,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS532-BGH_Hitachi.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas BGH o HITACHI",
+        "title": "Control Remoto Para Televisor Marcas BGH o TCL",
         "code": "GS 532",
         "color": "Negro",
         "modelosoportado01": "BGH",
-        "modelosoportado02": "Hitachi",
+        "modelosoportado02": "TCL",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 46,
+        "idProduct": 55,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS533-Sanyo_Noblex.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas SANYO o NOBLEX",
+        "title": "Control Remoto Para Televisor Marcas RCA, ADMIRAL o PHILCO",
         "code": "GS 533",
         "color": "Negro",
-        "modelosoportado01": "Sanyo",
-        "modelosoportado02": "Noblex",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado01": "RCA",
+        "modelosoportado02": "Admiral",
+        "modelosoportado03": "Philco",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 47,
+        "idProduct": 56,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS534-TCL_RCA.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas TCL o RCA",
         "code": "GS 534",
@@ -522,21 +678,35 @@
         "modelosoportado01": "TCL",
         "modelosoportado02": "RCA",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 48,
+        "idProduct": 57,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca TOSHIBA",
+        "code": "GS 537",
+        "color": "Negro",
+        "modelosoportado01": "Toshiba",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 58,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS538-Onn_Philco.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas ONN o PHILCO",
+        "title": "Control Remoto Para Televisor Marcas ONN, PHILCO o SANYO",
         "code": "GS 538",
         "color": "Negro",
         "modelosoportado01": "ONN",
         "modelosoportado02": "Philco",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado03": "Sanyo",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 49,
+        "idProduct": 59,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS539-THS_TopHouse.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas THS o TOP HOUSE",
         "code": "GS 539",
@@ -544,21 +714,35 @@
         "modelosoportado01": "THS",
         "modelosoportado02": "Top House",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 50,
+        "idProduct": 60,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas OLIMPIC o DIPLOMATIC",
+        "code": "GS 542",
+        "color": "Negro",
+        "modelosoportado01": "Olimpic",
+        "modelosoportado02": "Diplomatic",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 61,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS543-Kanji_Oyility.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KANJI o OYILITY",
+        "title": "Control Remoto Para Televisor Marca KANJI",
         "code": "GS 543",
         "color": "Negro",
         "modelosoportado01": "Kanji",
-        "modelosoportado02": "Oyility",
+        "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 51,
+        "idProduct": 62,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS544-THS_TopHouse.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas THS o TOP HOUSE",
         "code": "GS 544",
@@ -566,21 +750,23 @@
         "modelosoportado01": "THS",
         "modelosoportado02": "Top House",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 52,
+        "idProduct": 63,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS545-Telefunken_Kodak_BGH.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas TELEFUNKEN, KODAK o BGH",
+        "title": "Control Remoto Para Televisor Marcas BGH, KODAK o TELEFUNKEN",
         "code": "GS 545",
         "color": "Negro",
-        "modelosoportado01": "Telefunken",
+        "modelosoportado01": "BGH",
         "modelosoportado02": "Kodak",
-        "modelosoportado03": "BGH",
-        "modelosoportado04": ""
+        "modelosoportado03": "Telefunken",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 53,
+        "idProduct": 64,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS546-AOC.png?raw=true",
         "title": "Control Remoto Para Televisor Marca AOC",
         "code": "GS 546",
@@ -588,10 +774,11 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 54,
+        "idProduct": 65,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS548-Noblex_Philco.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas NOBLEX o PHILCO",
         "code": "GS 548",
@@ -599,10 +786,23 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Philco",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 55,
+        "idProduct": 65,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas BIXLER o GOLDSTAR",
+        "code": "GS 549",
+        "color": "Negro",
+        "modelosoportado01": "Bixler",
+        "modelosoportado02": "Goldstar",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 66,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS550-SteelHome_Panoramic.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas STEEL HOME o PANORAMIC",
         "code": "GS 550",
@@ -610,10 +810,11 @@
         "modelosoportado01": "Steel Home",
         "modelosoportado02": "Panoramic",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 56,
+        "idProduct": 67,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS552-Skyworth.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SKYWORTH",
         "code": "GS 552",
@@ -621,21 +822,35 @@
         "modelosoportado01": "Skyworth",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 57,
+        "idProduct": 68,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS553P-Noblex_Sanyo_Sansei.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas NOBLEX, SANYO o SANSEI",
-        "code": "GS 553 P",
+        "title": "Control Remoto Para Televisor Marcas SANYO o NOBLEX",
+        "code": "GS 553P",
         "color": "Negro",
-        "modelosoportado01": "Noblex",
-        "modelosoportado02": "Sanyo",
-        "modelosoportado03": "Sansei",
-        "modelosoportado04": ""
+        "modelosoportado01": "Sanyo",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 58,
+        "idProduct": 69,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas SANYO, NOBLEX o SANSEI",
+        "code": "GS 553",
+        "color": "Negro",
+        "modelosoportado01": "Sanyo",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "Sansei",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 70,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS557-Sony.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SONY",
         "code": "GS 557",
@@ -643,54 +858,107 @@
         "modelosoportado01": "Sony",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 59,
+        "idProduct": 71,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS560-RCA_TCL_Hitachi.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas RCA, TCL o HITACHI",
+        "title": "Control Remoto Para Televisor Marcas TCL o BGH",
         "code": "GS 560",
         "color": "Negro",
-        "modelosoportado01": "RCA",
-        "modelosoportado02": "TCL",
-        "modelosoportado03": "Hitachi",
-        "modelosoportado04": ""
+        "modelosoportado01": "TCL",
+        "modelosoportado02": "BGH",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 60,
+        "idProduct": 72,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas VIEWSONIC, AUDINAC, DALTON o QUANTIC",
+        "code": "GS 561",
+        "color": "Negro",
+        "modelosoportado01": "Viewsonic",
+        "modelosoportado02": "Audinac",
+        "modelosoportado03": "Dalton",
+        "modelosoportado04": "Quantic",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 73,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS562-Kanji_Oyility_CrownMustang.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KANJI, OYILITY o CROWN MUSTANG",
+        "title": "Control Remoto Para Televisor Marcas CROWN MUSTANG o KANJI",
         "code": "GS 562",
         "color": "Negro",
-        "modelosoportado01": "Kanji",
-        "modelosoportado02": "Oyility",
-        "modelosoportado03": "Crown Mustang",
-        "modelosoportado04": ""
+        "modelosoportado01": "Crown Mustang",
+        "modelosoportado02": "Kanji",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 61,
+        "idProduct": 74,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas STEEL HOME o PANORAMIC",
+        "code": "GS 564",
+        "color": "Negro",
+        "modelosoportado01": "Steel Home",
+        "modelosoportado02": "Panoramic",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 75,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas JVC o KANJI",
+        "code": "GS 567",
+        "color": "Negro",
+        "modelosoportado01": "JVC",
+        "modelosoportado02": "Kanji",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 76,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas STEEL HOME o PANORAMIC",
+        "code": "GS 568",
+        "color": "Negro",
+        "modelosoportado01": "Steel Home",
+        "modelosoportado02": "Panoramic",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 77,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS569-THS_TopHouse.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas THS o TOP HOUSE",
+        "title": "Control Remoto Para Televisor Marcas TOP HOUSE o THS",
         "code": "GS 569",
         "color": "Negro",
-        "modelosoportado01": "THS",
-        "modelosoportado02": "Top House",
+        "modelosoportado01": "Top House",
+        "modelosoportado02": "THS",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 62,
+        "idProduct": 78,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS570-Aiwa_Hogarnet_Panoramic_NetRunner.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas AIWA, HOGARNET, PANORAMIC o NET RUNNER",
+        "title": "Control Remoto Para Televisor Marcas AIWA, PANORAMIC o SPICA",
         "code": "GS 570",
         "color": "Negro",
         "modelosoportado01": "Aiwa",
-        "modelosoportado02": "Hogarnet",
-        "modelosoportado03": "Panoramic",
-        "modelosoportado04": "Net Runner"
+        "modelosoportado02": "Panoramic",
+        "modelosoportado03": "Spica",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 63,
+        "idProduct": 79,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS572-Kanji_CrownMustang.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas KANJI o CROWN MUSTANG",
         "code": "GS 572",
@@ -698,21 +966,23 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "Crown Mustang",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 64,
+        "idProduct": 80,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS573-THS_BGH_Hisense.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas THS, BGH o HISENSE",
+        "title": "Control Remoto Para Televisor Marcas SANYO o NOBLEX",
         "code": "GS 573",
         "color": "Negro",
-        "modelosoportado01": "THS",
-        "modelosoportado02": "BGH",
-        "modelosoportado03": "Hisense",
-        "modelosoportado04": ""
+        "modelosoportado01": "Sanyo",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 65,
+        "idProduct": 81,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS574-AOC.png?raw=true",
         "title": "Control Remoto Para Televisor Marca AOC",
         "code": "GS 574",
@@ -720,10 +990,11 @@
         "modelosoportado01": "AOC",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 66,
+        "idProduct": 82,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS575-Noblex_Admiral.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas NOBLEX o ADMIRAL",
         "code": "GS 575",
@@ -731,54 +1002,71 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Admiral",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 67,
+        "idProduct": 83,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS576-TopHouse_Telefunken_BGH.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas TOP HOUSE, TELEFUNKEN o BGH",
+        "title": "Control Remoto Para Televisor Marcas KODAK o CANDY",
         "code": "GS 576",
         "color": "Negro",
-        "modelosoportado01": "Top House",
-        "modelosoportado02": "Telefunken",
-        "modelosoportado03": "BGH",
-        "modelosoportado04": ""
+        "modelosoportado01": "Kodak",
+        "modelosoportado02": "Candy",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 68,
+        "idProduct": 84,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas NOBLEX o ADMIRAL",
+        "code": "GS 577",
+        "color": "Negro",
+        "modelosoportado01": "Noblex",
+        "modelosoportado02": "Admiral",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 85,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS578-Kanji_Oyility_Microsonic_Hyundai.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KANJI, OYILITY, MICROSONIC o HYUNDAI",
+        "title": "Control Remoto Para Televisor Marca KANJI",
         "code": "GS 578",
         "color": "Negro",
         "modelosoportado01": "Kanji",
-        "modelosoportado02": "Oyility",
-        "modelosoportado03": "Microsonic",
-        "modelosoportado04": "Hyundai"
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 69,
+        "idProduct": 86,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS579-Kanji_CMV_JVC.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KANJI, CMV o JVC",
+        "title": "Control Remoto Para Televisor Marcas KANJI o JVC",
         "code": "GS 579",
         "color": "Negro",
         "modelosoportado01": "Kanji",
-        "modelosoportado02": "CMV",
-        "modelosoportado03": "JVC",
-        "modelosoportado04": ""
+        "modelosoportado02": "JVC",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 70,
+        "idProduct": 87,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS580-Kanji_Oyility_Microsonic_CrownMustang.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas KANJI, OYILITY, MICROSONIC o CROWN MUSTANG",
+        "title": "Control Remoto Para Televisor Marcas KANJI o CROWN MUSTANG",
         "code": "GS 580",
         "color": "Negro",
         "modelosoportado01": "Kanji",
-        "modelosoportado02": "Oyility",
-        "modelosoportado03": "Microsonic",
-        "modelosoportado04": "Crown Mustang"
+        "modelosoportado02": "Crown Mustang",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 71,
+        "idProduct": 88,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS581-Enova.png?raw=true",
         "title": "Control Remoto Para Televisor Marca ENOVA",
         "code": "GS 581",
@@ -786,10 +1074,11 @@
         "modelosoportado01": "Enova",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 72,
+        "idProduct": 89,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS582-RCA.png?raw=true",
         "title": "Control Remoto Para Televisor Marca RCA",
         "code": "GS 582",
@@ -797,10 +1086,11 @@
         "modelosoportado01": "RCA",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 73,
+        "idProduct": 90,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS584-Kanji.png?raw=true",
         "title": "Control Remoto Para Televisor Marca KANJI",
         "code": "GS 584",
@@ -808,21 +1098,23 @@
         "modelosoportado01": "Kanji",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 74,
+        "idProduct": 91,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS585-Noblex_Admiral.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas NOBLEX o ADMIRAL",
+        "title": "Control Remoto Para Televisor Marca NOBLEX",
         "code": "GS 585",
         "color": "Plateado con Negro",
         "modelosoportado01": "Noblex",
-        "modelosoportado02": "Admiral",
+        "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 75,
+        "idProduct": 92,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS586-Samsung.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SAMSUNG",
         "code": "GS 586",
@@ -830,10 +1122,11 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 76,
+        "idProduct": 93,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS587-TopHouse_Hyundai.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas TOP HOUSE o HYUNDAI",
         "code": "GS 587",
@@ -841,10 +1134,11 @@
         "modelosoportado01": "Top House",
         "modelosoportado02": "Hyundai",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 77,
+        "idProduct": 94,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS588-LG.png?raw=true",
         "title": "Control Remoto Para Televisor Marca LG",
         "code": "GS 588",
@@ -852,10 +1146,11 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 78,
+        "idProduct": 95,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS589-Samsung.png?raw=true",
         "title": "Control Remoto Para Televisor Marca SAMSUNG",
         "code": "GS 589",
@@ -863,10 +1158,11 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 79,
+        "idProduct": 96,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS591-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 591",
@@ -874,21 +1170,47 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 80,
+        "idProduct": 97,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS594-Sanyo_Noblex_Hisense.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas SANYO, NOBLEX o HISENSE",
+        "title": "Control Remoto Para Televisor Marcas SANYO, NOBLEX o PHILCO",
         "code": "GS 594",
         "color": "Negro",
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Noblex",
-        "modelosoportado03": "Hisense",
-        "modelosoportado04": ""
+        "modelosoportado03": "Philco",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 81,
+        "idProduct": 98,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas SANYO, NOBLEX o PHILCO",
+        "code": "GS 595",
+        "color": "Negro",
+        "modelosoportado01": "Sanyo",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "Philco",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 99,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas SANYO o NOBLEX",
+        "code": "GS 596",
+        "color": "Negro",
+        "modelosoportado01": "Sanyo",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 100,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS597-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 597",
@@ -896,76 +1218,107 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 82,
+        "idProduct": 101,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS598-Hyundai_Sanyo.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas HYUNDAI o SANYO",
+        "title": "Control Remoto Para Televisor Marcas HYUNDAI, PHILCO o JVC",
         "code": "GS 598",
         "color": "Negro",
         "modelosoportado01": "Hyundai",
-        "modelosoportado02": "Sanyo",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado02": "Philco",
+        "modelosoportado03": "JVC",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 83,
+        "idProduct": 102,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS599-Hisense_Noblex.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas HISENSE o NOBLEX",
+        "title": "Control Remoto Para Televisor Marcas SANYO o NOBLEX",
         "code": "GS 599",
         "color": "Negro",
-        "modelosoportado01": "Hisense",
+        "modelosoportado01": "Sanyo",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 84,
+        "idProduct": 103,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS600-Philco_RCA.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas PHILCO o RCA",
+        "title": "Control Remoto Para Televisor Marca PHILCO",
         "code": "GS 600",
         "color": "Negro",
         "modelosoportado01": "Philco",
-        "modelosoportado02": "RCA",
+        "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 85,
+        "idProduct": 104,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marca OYILITY",
+        "code": "GS 612",
+        "color": "Negro",
+        "modelosoportado01": "Oyility",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 105,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS613-RCA_TCL.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas RCA o TCL",
+        "title": "Control Remoto Para Televisor Marcas TCL o BGH",
         "code": "GS 613",
         "color": "Negro",
-        "modelosoportado01": "RCA",
-        "modelosoportado02": "TCL",
+        "modelosoportado01": "TCL",
+        "modelosoportado02": "BGH",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 86,
+        "idProduct": 106,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS614-RCA_TCL_Admiral.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas RCA, TCL o ADMIRAL",
+        "title": "Control Remoto Para Televisor Marcas TCL o BGH",
         "code": "GS 614",
         "color": "Negro",
-        "modelosoportado01": "RCA",
-        "modelosoportado02": "TCL",
-        "modelosoportado03": "Admiral",
-        "modelosoportado04": ""
+        "modelosoportado01": "TCL",
+        "modelosoportado02": "BGH",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 87,
+        "idProduct": 107,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas PHILCO, NOBLEX, RCA o ONN",
+        "code": "GS 615",
+        "color": "Negro",
+        "modelosoportado01": "Philco",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "RCA",
+        "modelosoportado04": "Onn",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 108,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS616_LG_sin_microfono.png?raw=true",
-        "title": "Control Remoto Para Televisor Marca LG (sin micrófono)",
+        "title": "Control Remoto Para Televisor Marca LG",
         "code": "GS 616",
         "color": "Negro",
         "modelosoportado01": "LG",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 88,
+        "idProduct": 109,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS617-Enova.png?raw=true",
         "title": "Control Remoto Para Televisor Marca ENOVA",
         "code": "GS 617",
@@ -973,21 +1326,23 @@
         "modelosoportado01": "Enova",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 89,
+        "idProduct": 110,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS618-Quantic.png?raw=true",
-        "title": "Control Remoto Para Televisor Marca QUANTIC",
+        "title": "Control Remoto Para Televisor Marcas QUINT, HYUNDAI o QUANTIC",
         "code": "GS 618",
         "color": "Negro",
-        "modelosoportado01": "Quantic",
-        "modelosoportado02": "",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado01": "Quint",
+        "modelosoportado02": "Hyundai",
+        "modelosoportado03": "Quantic",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 90,
+        "idProduct": 111,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS620-Philips.png?raw=true",
         "title": "Control Remoto Para Televisor Marca PHILIPS",
         "code": "GS 620",
@@ -995,21 +1350,35 @@
         "modelosoportado01": "Philips",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 91,
+        "idProduct": 112,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas PHILCO o NOBLEX",
+        "code": "GS 621",
+        "color": "Negro",
+        "modelosoportado01": "Philco",
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 113,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS623-BGH_TopHouse.png?raw=true",
-        "title": "Control Remoto Para Televisor Marcas BGH o TOP HOUSE",
+        "title": "Control Remoto Para Televisor Marcas BGH, TOP HOUSE o HISENSE",
         "code": "GS 623",
         "color": "Negro",
         "modelosoportado01": "BGH",
         "modelosoportado02": "Top House",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado03": "Hisense",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 92,
+        "idProduct": 114,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS627-Noblex_Hisense.png?raw=true",
         "title": "Control Remoto Para Televisor Marcas NOBLEX o HISENSE",
         "code": "GS 627",
@@ -1017,23 +1386,85 @@
         "modelosoportado01": "Noblex",
         "modelosoportado02": "Hisense",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 93,
+        "idProduct": 115,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas TOP HOUSE, TELEFUNKEN o BGH",
+        "code": "GS 629",
+        "color": "Negro",
+        "modelosoportado01": "Top House",
+        "modelosoportado02": "Telefunken",
+        "modelosoportado03": "BGH",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 116,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS631-Noblex.png?raw=true",
-        "title": "Control Remoto Para Televisor Marca NOBLEX",
+        "title": "Control Remoto Para Televisor Marcas NOBLEX o DAIHATSU",
         "code": "GS 631",
         "color": "Negro",
         "modelosoportado01": "Noblex",
+        "modelosoportado02": "Daihatsu",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 117,
+        "img": "",
+        "title": "Control Remoto Para Televisor Marcas CANDY o AURORA",
+        "code": "GS 636",
+        "color": "Negro",
+        "modelosoportado01": "Candy",
+        "modelosoportado02": "Aurora",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 118,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS-CAND-Candy.png?raw=true",
+        "title": "Control Remoto Para Televisor Marca CANDY",
+        "code": "GS-CAND",
+        "color": "Negro",
+        "modelosoportado01": "Candy",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 119,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS-KAN_(632).png?raw=true",
+        "title": "Control Remoto Para Televisor Marcas KANJI",
+        "code": "GS-KAN(632)",
+        "color": "Negro",
+        "modelosoportado01": "Kanji",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 120,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/tv-control-remoto/GS-SIE_(634).png?raw=true",
+        "title": "Control Remoto Para Televisor Marca SIERA",
+        "code": "GS-SIE(634)",
+        "color": "Negro",
+        "modelosoportado01": "Siera",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     }
     ],
     "productsaa": [
     {
-        "idProduct": 94,
+        "idProduct": 121,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/AR799-Universal_Para_Aire.png?raw=true",
         "title": "Control Remoto Universal Para Aire Acondicionado",
         "code": "AR 799",
@@ -1041,76 +1472,71 @@
         "modelosoportado01": "Universal",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 95,
+        "idProduct": 122,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/AR800-Philco_Kelvinator_Conqueror_York.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas PHILCO, KELVINATOR, CONQUEROR o YORK",
+        "title": "Control Remoto Para Aire Acondicionado Marcas PHILCO, TOP HOUSE, BGH o CARRIER",
         "code": "AR 800",
         "color": "Blanco con Gris",
         "modelosoportado01": "Philco",
-        "modelosoportado02": "Kelvinator",
-        "modelosoportado03": "Conqueror",
-        "modelosoportado04": "York"
+        "modelosoportado02": "Top House",
+        "modelosoportado03": "BGH",
+        "modelosoportado04": "Carrier",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 96,
+        "idProduct": 123,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/AR801-Sanyo_Alaska_Noblex_Coventry.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, ALASKA, NOBLEX o COVENTRY",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, NOBLEX o PHILCO",
         "code": "AR 801",
         "color": "Blanco",
         "modelosoportado01": "Sanyo",
-        "modelosoportado02": "Alaska",
-        "modelosoportado03": "Noblex",
-        "modelosoportado04": "Coventry"
+        "modelosoportado02": "Noblex",
+        "modelosoportado03": "Philco",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 97,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS525-Samsung.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marca SAMSUNG",
-        "code": "GS 525",
-        "color": "Blanco",
-        "modelosoportado01": "Samsung",
-        "modelosoportado02": "",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
-    },
-    {
-        "idProduct": 98,
+        "idProduct": 124,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS802-Sanyo_Sigma_Philco_Noblex.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, SIGMA, PHILCO o NOBLEX",
+        "title": "Control Remoto Para Aire Acondicionado Marcas HISENSE, COVENTRY, SIGMA o PHILCO",
         "code": "GS 802",
         "color": "Blanco",
-        "modelosoportado01": "Sanyo",
-        "modelosoportado02": "Sigma",
-        "modelosoportado03": "Philco",
-        "modelosoportado04": "Noblex"
+        "modelosoportado01": "Hisense",
+        "modelosoportado02": "Coventry",
+        "modelosoportado03": "Sigma",
+        "modelosoportado04": "Philco",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 99,
+        "idProduct": 125,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS803-Hitachi_RCA_TCL_Electra.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas HITACHI, RCA, TCL o ELECTRA",
+        "title": "Control Remoto Para Aire Acondicionado Marcas HITACHI, TCL, RCA o KELVINATOR",
         "code": "GS 803",
         "color": "Blanco",
         "modelosoportado01": "Hitachi",
-        "modelosoportado02": "RCA",
-        "modelosoportado03": "TCL",
-        "modelosoportado04": "Electra"
+        "modelosoportado02": "TCL",
+        "modelosoportado03": "RCA",
+        "modelosoportado04": "Kelvinator",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 100,
+        "idProduct": 126,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS805-BGH_Longvie_Whirlpool.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas BGH, LONGVIE o WHIRLPOOL",
+        "title": "Control Remoto Para Aire Acondicionado Marcas BGH, ALASKA o LONGVIE",
         "code": "GS 805",
         "color": "Blanco",
         "modelosoportado01": "BGH",
-        "modelosoportado02": "Longvie",
-        "modelosoportado03": "Whirlpool",
-        "modelosoportado04": ""
+        "modelosoportado02": "Alaska",
+        "modelosoportado03": "Longvie",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 101,
+        "idProduct": 127,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS806-Hitachi_TCL_RCA.png?raw=true",
         "title": "Control Remoto Para Aire Acondicionado Marcas HITACHI, TCL o RCA",
         "code": "GS 806",
@@ -1118,10 +1544,11 @@
         "modelosoportado01": "Hitachi",
         "modelosoportado02": "TCL",
         "modelosoportado03": "RCA",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 102,
+        "idProduct": 128,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS807-Samsung.png?raw=true",
         "title": "Control Remoto Para Aire Acondicionado Marca SAMSUNG",
         "code": "GS 807",
@@ -1129,21 +1556,23 @@
         "modelosoportado01": "Samsung",
         "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 103,
+        "idProduct": 129,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS808-Philco_Noblex_Sigma.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas PHILCO, NOBLEX o SIGMA",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, NOBLEX o SIGMA",
         "code": "GS 808",
         "color": "Blanco",
-        "modelosoportado01": "Philco",
+        "modelosoportado01": "Sanyo",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "Sigma",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 104,
+        "idProduct": 130,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS809-LG_BGH_Marshall.png?raw=true",
         "title": "Control Remoto Para Aire Acondicionado Marcas LG, BGH o MARSHALL",
         "code": "GS 809",
@@ -1151,54 +1580,59 @@
         "modelosoportado01": "LG",
         "modelosoportado02": "BGH",
         "modelosoportado03": "Marshall",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 105,
+        "idProduct": 131,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS810-Hisense_Sigma_Philco.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas HISENSE, SIGMA o PHILCO",
+        "title": "Control Remoto Para Aire Acondicionado Marcas HISENSE, SIGMA o ALASKA",
         "code": "GS 810",
         "color": "Blanco con Plateado",
         "modelosoportado01": "Hisense",
         "modelosoportado02": "Sigma",
-        "modelosoportado03": "Philco",
-        "modelosoportado04": ""
+        "modelosoportado03": "Alaska",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 106,
+        "idProduct": 132,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS811-Surrey_Springer_BGH_Midea.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas SURREY, SPRINGER, BGH o MIDEA",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SURREY, MIDEA o BGH",
         "code": "GS 811",
         "color": "Blanco",
         "modelosoportado01": "Surrey",
-        "modelosoportado02": "Springer",
+        "modelosoportado02": "Midea",
         "modelosoportado03": "BGH",
-        "modelosoportado04": "Midea"
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 107,
+        "idProduct": 133,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS812-Electra_Candy_Peabody_Ariston.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas ELECTRA, CANDY, PEABODY o ARISTON",
+        "title": "Control Remoto Para Aire Acondicionado Marcas CANDY, ARISTON o HISENSE",
         "code": "GS 812",
         "color": "Gris con Negro",
-        "modelosoportado01": "Electra",
-        "modelosoportado02": "Candy",
-        "modelosoportado03": "Peabody",
-        "modelosoportado04": "Ariston"
+        "modelosoportado01": "Candy",
+        "modelosoportado02": "Ariston",
+        "modelosoportado03": "Hisense",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 108,
+        "idProduct": 134,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS815-BGH.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marca BGH",
+        "title": "Control Remoto Para Aire Acondicionado Marcas BGH o MIDEA",
         "code": "GS 815",
         "color": "Blanco",
         "modelosoportado01": "BGH",
-        "modelosoportado02": "",
+        "modelosoportado02": "Midea",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 109,
+        "idProduct": 135,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS816-TCL_RCA_Hitachi.png?raw=true",
         "title": "Control Remoto Para Aire Acondicionado Marcas TCL, RCA o HITACHI",
         "code": "GS 816",
@@ -1206,87 +1640,107 @@
         "modelosoportado01": "TCL",
         "modelosoportado02": "RCA",
         "modelosoportado03": "Hitachi",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 110,
+        "idProduct": 136,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS817-Sanyo_Philco.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO o PHILCO",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, PHILCO o SIGMA",
         "code": "GS 817",
         "color": "Blanco",
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Philco",
-        "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado03": "Sigma",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 111,
+        "idProduct": 137,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS819-Hitachi_RCA_TCL.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas HITACHI, RCA o TCL",
+        "title": "Control Remoto Para Aire Acondicionado Marcas HITACHI, TCL o RCA",
         "code": "GS 819",
         "color": "Blanco",
         "modelosoportado01": "Hitachi",
-        "modelosoportado02": "RCA",
-        "modelosoportado03": "TCL",
-        "modelosoportado04": ""
+        "modelosoportado02": "TCL",
+        "modelosoportado03": "RCA",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 112,
+        "idProduct": 138,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS821-TopHouse_Electrolux_Surrey_Midea.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas TOP HOUSE, ELECTROLUX, SURREY o MIDEA",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SURREY, CARRIER o MIDEA",
         "code": "GS 821",
         "color": "Blanco",
-        "modelosoportado01": "Top House",
-        "modelosoportado02": "Electrolux",
-        "modelosoportado03": "Surrey",
-        "modelosoportado04": "Midea"
+        "modelosoportado01": "Surrey",
+        "modelosoportado02": "Carrier",
+        "modelosoportado03": "Midea",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 113,
+        "idProduct": 139,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS824-Westinghouse_York_Firstline.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas WESTINGHOUSE, YORK o FIRSTLINE",
+        "title": "Control Remoto Para Aire Acondicionado Marcas YORK o HISENSE",
         "code": "GS 824",
         "color": "Gris",
-        "modelosoportado01": "Westinghouse",
-        "modelosoportado02": "York",
-        "modelosoportado03": "Firstline",
-        "modelosoportado04": ""
+        "modelosoportado01": "York",
+        "modelosoportado02": "Hisense",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 114,
+        "idProduct": 140,
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS525-Samsung.png?raw=true",
+        "title": "Control Remoto Para Aire Acondicionado Marca SAMSUNG",
+        "code": "GS 825",
+        "color": "Blanco",
+        "modelosoportado01": "Samsung",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 141,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS827-Sanyo_Noblex_Coventry.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, NOBLEX o COVENTRY",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO o NOBLEX",
         "code": "GS 827",
         "color": "Blanco con Gris",
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Noblex",
-        "modelosoportado03": "Coventry",
-        "modelosoportado04": ""
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 115,
+        "idProduct": 142,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS833-BGH_Hisense_York_Philco.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas BGH, HISENSE, YORK o PHILCO",
+        "title": "Control Remoto Para Aire Acondicionado Marcas BGH o HISENSE",
         "code": "GS 833",
         "color": "Blanco",
         "modelosoportado01": "BGH",
         "modelosoportado02": "Hisense",
-        "modelosoportado03": "York",
-        "modelosoportado04": "Philco"
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 116,
+        "idProduct": 143,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS851-Electrolux_Hisense.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas ELECTROLUX o HISENSE",
+        "title": "Control Remoto Para Aire Acondicionado Marcas HISENSE o ELECTROLUX",
         "code": "GS 851",
         "color": "Blanco",
-        "modelosoportado01": "Electrolux",
-        "modelosoportado02": "Hisense",
+        "modelosoportado01": "Hisense",
+        "modelosoportado02": "Electrolux",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 117,
+        "idProduct": 144,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS853-Philco_Noblex.png?raw=true",
         "title": "Control Remoto Para Aire Acondicionado Marcas PHILCO o NOBLEX",
         "code": "GS 853",
@@ -1294,21 +1748,23 @@
         "modelosoportado01": "Philco",
         "modelosoportado02": "Noblex",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 118,
+        "idProduct": 145,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS856-Sanyo_Philco_Noblex_Siam.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, PHILCO, NOBLEX o SIAM",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SANYO, PHILCO o NOBLEX",
         "code": "GS 856",
         "color": "Gris",
         "modelosoportado01": "Sanyo",
         "modelosoportado02": "Philco",
         "modelosoportado03": "Noblex",
-        "modelosoportado04": "Siam"
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 119,
+        "idProduct": 146,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS863-Midea_Surrey.png?raw=true",
         "title": "Control Remoto Para Aire Acondicionado Marcas MIDEA o SURREY",
         "code": "GS 863",
@@ -1316,95 +1772,104 @@
         "modelosoportado01": "Midea",
         "modelosoportado02": "Surrey",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 120,
+        "idProduct": 147,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS864-Carrier_Surrey.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas CARRIER o SURREY",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SURREY o CARRIER",
         "code": "GS 864",
         "color": "Blanco con Plateado",
-        "modelosoportado01": "Carrier",
-        "modelosoportado02": "Surrey",
+        "modelosoportado01": "Surrey",
+        "modelosoportado02": "Carrier",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 121,
+        "idProduct": 148,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS867-Hyundai_Electra_TCL_RCA.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas HYUNDAI, ELECTRA, TCL o RCA",
+        "title": "Control Remoto Para Aire Acondicionado Marcas HITACHI o TCL",
         "code": "GS 867",
         "color": "Blanco",
         "modelosoportado01": "Hyundai",
-        "modelosoportado02": "Electra",
-        "modelosoportado03": "TCL",
-        "modelosoportado04": "RCA"
+        "modelosoportado02": "TCL",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 122,
+        "idProduct": 149,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS869-TopHouse_BGH_Alaska.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas TOP HOUSE, BGH o ALASKA",
+        "title": "Control Remoto Para Aire Acondicionado Marcas BGH, ALASKA o TOP HOUSE",
         "code": "GS 869",
         "color": "Blanco",
-        "modelosoportado01": "Top House",
-        "modelosoportado02": "BGH",
-        "modelosoportado03": "Alaska",
-        "modelosoportado04": ""
+        "modelosoportado01": "BGH",
+        "modelosoportado02": "Alaska",
+        "modelosoportado03": "Top House",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 123,
+        "idProduct": 150,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS871-RCA_Kelvinator_Hyundai.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas RCA, KELVINATOR o HYUNDAI",
+        "title": "Control Remoto Para Aire Acondicionado Marcas RCA o KELVINATOR",
         "code": "GS 871",
         "color": "Blanco",
         "modelosoportado01": "RCA",
         "modelosoportado02": "Kelvinator",
-        "modelosoportado03": "Hyundai",
-        "modelosoportado04": ""
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 124,
+        "idProduct": 151,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS872-Electrolux_Hisense.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas ELECTROLUX o HISENSE",
+        "title": "Control Remoto Para Aire Acondicionado Marcas HISENSE o ELECTROLUX",
         "code": "GS 872",
         "color": "Blanco con Gris",
-        "modelosoportado01": "Electrolux",
-        "modelosoportado02": "Hisense",
+        "modelosoportado01": "Hisense",
+        "modelosoportado02": "Electrolux",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 125,
+        "idProduct": 152,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS879-Carrier_Surrey.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas CARRIER o SURREY",
+        "title": "Control Remoto Para Aire Acondicionado Marcas SURREY o CARRIER",
         "code": "GS 879",
         "color": "Gris",
-        "modelosoportado01": "Carrier",
-        "modelosoportado02": "Surrey",
+        "modelosoportado01": "Surrey",
+        "modelosoportado02": "Carrier",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 126,
+        "idProduct": 153,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS885-Philco_BGH.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas PHILCO o BGH",
+        "title": "Control Remoto Para Aire Acondicionado Marca PHILCO",
         "code": "GS 885",
         "color": "Blanco",
         "modelosoportado01": "Philco",
-        "modelosoportado02": "BGH",
+        "modelosoportado02": "",
         "modelosoportado03": "",
-        "modelosoportado04": ""
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     },
     {
-        "idProduct": 127,
+        "idProduct": 154,
         "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS900-Philco_Noblex_BGH.png?raw=true",
-        "title": "Control Remoto Para Aire Acondicionado Marcas PHILCO, NOBLEX o BGH",
+        "title": "Control Remoto Para Aire Acondicionado Marcas NOBLEX, BGH, PHILCO o MIDEA",
         "code": "GS 900",
         "color": "Plateado",
-        "modelosoportado01": "Philco",
-        "modelosoportado02": "Noblex",
-        "modelosoportado03": "BGH",
-        "modelosoportado04": ""
+        "modelosoportado01": "Noblex",
+        "modelosoportado02": "BGH",
+        "modelosoportado03": "Philco",
+        "modelosoportado04": "Midea",
+        "modelosoportado05": ""
     }
     ],
     "profile": {
