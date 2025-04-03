@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return response.json();
         })
         .then(data => {
-            productos = [...(data.productstv || []), ...(data.productsaa || [])];
+            productos = [...(data.productscs || []), ...(data.productstv || []), ...(data.productsaa || [])];
             console.log("Productos cargados:", productos);
         })
         .catch(error => console.error('Error fetching products:', error));
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function obtenerMarcasDisponibles(query) {
         return productos.flatMap(producto => [
             producto.modelosoportado01, producto.modelosoportado02, 
-            producto.modelosoportado03, producto.modelosoportado04])
+            producto.modelosoportado03, producto.modelosoportado04, producto.modelosoportado05])
             .filter((marca, index, self) => marca && marca.toLowerCase().includes(query) && self.indexOf(marca) === index)
             .sort((a, b) => a.localeCompare(b)); // Ordenar alfabéticamente
     }
@@ -115,7 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
             [producto.modelosoportado01, 
             producto.modelosoportado02, 
             producto.modelosoportado03, 
-            producto.modelosoportado04].some(marca => 
+            producto.modelosoportado04, 
+            producto.modelosoportado05].some(marca => 
                 marca && marca.toLowerCase() === query.toLowerCase()
             )
         );
