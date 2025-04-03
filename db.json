@@ -9,7 +9,7 @@
     "productscs": [
     {
         "idProduct": 1,
-        "img": "",
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/cs-control-remoto/GS931/GS931-00.jpg?raw=true",
         "title": "Control Remoto Para Convertidor Smart",
         "code": "GS 931",
         "color": "Negro",
@@ -21,7 +21,7 @@
     },
     {
         "idProduct": 2,
-        "img": "",
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/cs-control-remoto/GSRK/GSRK-00.jpg?raw=true",
         "title": "Control Remoto Para Convertidor Smart Marca ROKU",
         "code": "GS RK",
         "color": "Negro",
@@ -1693,7 +1693,7 @@
     },
     {
         "idProduct": 140,
-        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS525/GS825-00.jpg?raw=true",
+        "img": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/aire-control-remoto/GS825/GS825-00.jpg?raw=true",
         "title": "Control Remoto Para Aire Acondicionado Marca SAMSUNG",
         "code": "GS 825",
         "color": "Blanco",
