@@ -2,6 +2,7 @@
 
 // Definir el mapeo de categorías
 const categoryMap = {
+    'productcs': 'convertidor smart',
     'producttv': 'televisor',
     'productac': 'aire acondicionado'
 };
@@ -37,7 +38,10 @@ function mostrarDetallesProducto(url, productId) {
         .then(response => response.json())
         .then(data => {
             let product, similarProducts, productCategory;
-            if (product = data.productstv.find((p) => p.idProduct == productId)) {
+            if (product = data.productscs.find((p) => p.idProduct == productId)) {
+                similarProducts = data.productscs;
+                productCategory = 'productcs';
+            } else if (product = data.productstv.find((p) => p.idProduct == productId)) {
                 similarProducts = data.productstv;
                 productCategory = 'producttv';
             } else if (product = data.productsaa.find((p) => p.idProduct == productId)) {
@@ -60,6 +64,7 @@ function mostrarDetallesProducto(url, productId) {
             document.getElementById("product-soportado2").textContent = product.modelosoportado02;
             document.getElementById("product-soportado3").textContent = product.modelosoportado03;
             document.getElementById("product-soportado4").textContent = product.modelosoportado04;
+            document.getElementById("product-soportado5").textContent = product.modelosoportado05;
 
             // Usar la función para actualizar los detalles con la categoría correcta
             updateProductDetails(product, productCategory);
@@ -67,7 +72,7 @@ function mostrarDetallesProducto(url, productId) {
             // Buscar productos similares por marca (modelosoportado01), de la misma categoría y excluir el producto actual
             let similarProductsFiltered = similarProducts.filter(
                 (p) => 
-                    [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03, product.modelosoportado04].includes(p.modelosoportado01) && 
+                    [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03, product.modelosoportado04, product.modelosoportado05].includes(p.modelosoportado01) && 
                     p.idProduct != productId
             );
 
@@ -81,8 +86,11 @@ function mostrarDetallesProducto(url, productId) {
 
                 const viewAllLink = document.getElementById("view-all-link");
                 if (similarProductsFiltered.length > 6) {
-                    viewAllLink.style.display = "inline-block";
-                    viewAllLink.href = `https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html?category=${productCategory}&title=Controles Remotos de ${productCategory === 'producttv' ? 'Televisores' : 'Aires Acondicionados'}&idproduct=${productId}`;
+                    viewAllLink.href = `https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html?category=${productCategory}&title=Controles Remotos de ${
+                        productCategory === 'producttv' ? 'Televisores' :
+                        productCategory === 'productcs' ? 'Convertidores Smart' :
+                        'Aires Acondicionados'
+                    }&idproduct=${productId}`;
                 } else {
                     viewAllLink.style.display = "none";
                 }

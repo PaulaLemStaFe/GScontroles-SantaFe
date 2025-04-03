@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json")
         .then(response => response.json())
         .then(data => {
+            productos.productcs = data.productscs;
             productos.producttv = data.productstv;
             productos.productac = data.productsaa;
             mostrarProductosSegunParametros(data);
@@ -34,7 +35,7 @@ function mostrarTodos(data) {
     }
     document.getElementById("tituloCategoria").textContent = "Todos Los Productos";
     container.innerHTML = "";
-    [...data.productstv, ...data.productsaa].forEach((producto) => {
+    [...data.productscs, ...data.productstv, ...data.productsaa].forEach((producto) => {
         crearProducto(container, producto, "img");
         updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto);
     });
@@ -58,10 +59,10 @@ function mostrarCategoria(categoria, titulo, productId, data) {
     let productosCategoria = productos[categoria];
 
     if (productId) {
-        const product = data.productstv.find(p => p.idProduct == productId) || data.productsaa.find(p => p.idProduct == productId);
+        const product = data.productscs.find(p => p.idProduct == productId) || data.productstv.find(p => p.idProduct == productId) || data.productsaa.find(p => p.idProduct == productId);
         if (product) {
             productosCategoria = productosCategoria.filter(
-                (p) => [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03, product.modelosoportado04].includes(p.modelosoportado01)
+                (p) => [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03, product.modelosoportado04, product.modelosoportado05].includes(p.modelosoportado01)
             );
         }
     }
