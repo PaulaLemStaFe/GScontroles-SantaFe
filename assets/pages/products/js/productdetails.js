@@ -72,8 +72,8 @@ function mostrarDetallesProducto(url, productId) {
             // Buscar productos similares por marca (modelosoportado01), de la misma categoría y excluir el producto actual
             let similarProductsFiltered = similarProducts.filter(
                 (p) => 
-                    [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03, product.modelosoportado04, product.modelosoportado05].includes(p.modelosoportado01) && 
-                    p.idProduct != productId
+                    [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03,
+                    product.modelosoportado04, product.modelosoportado05].includes(p.modelosoportado01) && p.idProduct != productId
             );
 
             const similarProductsToShow = shuffle(similarProductsFiltered).slice(0, 6); // Limitar a 6 productos

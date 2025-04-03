@@ -23,6 +23,7 @@ headerTemplate.innerHTML = `
                                 <li class="submenu"><a href="#" title="Productos">Productos</a>
                                     <ul class="submenu_list">
                                         <li><a href="${urlProductsHtml}?category=all" title="Ingresa para ver todos nuestros productos">Todos</a></li>
+                                        <li><a href="${urlProductsHtml}?category=productcs&title=Controles Remotos de Convertidores Smart" title="Controles remotos para convertidores smart">Convertidor Smart</a></li>
                                         <li><a href="${urlProductsHtml}?category=producttv&title=Controles Remotos de Televisores" title="Controles remotos para televisores">Televisor</a></li>
                                         <li><a href="${urlProductsHtml}?category=productac&title=Controles Remotos de Aire Acondicionados" title="Controles remotos para aires acondicionados">Aire Acondicionado</a></li>
                                     </ul>
