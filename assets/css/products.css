@@ -65,15 +65,16 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    max-height: 450px;
+    max-height: 62.5rem; /* 1000px en rem (1rem = 16px) */
     overflow-y: auto;
 }
 
+
 .thumbnails img {
-    width: 60px;
-    height: 60px;
+    width: 5rem; /* Aproximadamente 80px si el font-size base es 16px */
+    height: 5rem; /* Mantiene la proporción */
     object-fit: cover;
-    border: 2px solid transparent;
+    border: 0.125rem solid transparent; /* 2px en rem */
     border-radius: 0.5rem;
     cursor: pointer;
     transition: border-color 0.2s ease-in-out;
@@ -193,10 +194,10 @@
 
     .main-image img {
         max-width: 100%;
-        max-height: 350px;
+        max-height: 21.875rem; /* 350px en rem (350 ÷ 16) */
     }
+    
 }
-
 
 
 @media (min-width:768px) and (max-width:1023px) {

@@ -96,11 +96,11 @@ class Footer extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
             :root {
-                --color-primary: #F6F7D3;
-                --color-secondary: #e6e7cc;
-                --color-tertiary: #697565;
-                --color-fourth: #3C3D37;
-                --color-fifth: #1E201E;
+                --color-primary: #FFFFFF; /* Fondo principal blanco */
+                --color-secondary: #F4F4F4; /* Un gris muy claro para mantener armonía */
+                --color-tertiary: #606C38; /* Verde oscuro, inspirado en el logo */
+                --color-fourth: #283618; /* Verde más oscuro para contrastes */
+                --color-fifth: #DDA15E; /* Amarillo-anaranjado suave del logo */
                 font-family: "Capriola", serif;
                 line-height: 1rem;
                 scroll-behavior: smooth;

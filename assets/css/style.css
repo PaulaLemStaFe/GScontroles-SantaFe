@@ -2,15 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Capriola&family=Krona+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color-primary: #F6F7D3;
-    --color-secondary: #e6e7cc;
-    --color-tertiary: #697565;
-    --color-fourth: #3C3D37;
-    --color-fifth: #1E201E;
+    --color-primary: #FFFFFF; /* Fondo principal blanco */
+    --color-secondary: #F4F4F4; /* Un gris muy claro para mantener armonía */
+    --color-tertiary: #606C38; /* Verde oscuro, inspirado en el logo */
+    --color-fourth: #283618; /* Verde más oscuro para contrastes */
+    --color-fifth: #DDA15E; /* Amarillo-anaranjado suave del logo */
     font-family: "Capriola", serif;
     line-height: 1rem;
     scroll-behavior: smooth;
 }
+
 body {
     background-color: var(--color-primary);
     color: var(--color-fifth);
