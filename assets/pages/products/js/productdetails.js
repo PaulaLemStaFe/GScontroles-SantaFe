@@ -144,3 +144,43 @@ function mostrarDetallesProducto(url, productId) {
         })
         .catch((error) => console.error("Error al leer el archivo db.json:", error));
 }
+
+// Funcionalidad de zoom tipo lupa
+const zoomLens = document.querySelector('.zoom-lens');
+const zoomResult = document.querySelector('.zoom-result');
+
+// Nos aseguramos de que el contenedor tenga posición relativa
+const imageContainer = document.getElementById("product-image-container");
+imageContainer.style.position = "relative";
+
+productImage.addEventListener('mouseenter', () => {
+    zoomLens.style.display = 'block';
+    zoomResult.style.display = 'block';
+    zoomResult.style.backgroundImage = `url(${productImage.src})`;
+});
+
+productImage.addEventListener('mousemove', (e) => {
+    const rect = productImage.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const lensX = x - zoomLens.offsetWidth / 2;
+    const lensY = y - zoomLens.offsetHeight / 2;
+
+    // Limites para que la lupa no se salga de la imagen
+    const maxX = productImage.offsetWidth - zoomLens.offsetWidth;
+    const maxY = productImage.offsetHeight - zoomLens.offsetHeight;
+
+    zoomLens.style.left = Math.max(0, Math.min(lensX, maxX)) + "px";
+    zoomLens.style.top = Math.max(0, Math.min(lensY, maxY)) + "px";
+
+    const zoomX = (x / productImage.offsetWidth) * 100;
+    const zoomY = (y / productImage.offsetHeight) * 100;
+
+    zoomResult.style.backgroundPosition = `${zoomX}% ${zoomY}%`;
+});
+
+productImage.addEventListener('mouseleave', () => {
+    zoomLens.style.display = 'none';
+    zoomResult.style.display = 'none';
+});
