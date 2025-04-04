@@ -70,14 +70,22 @@ html {
     display: inline-block;
 }
 
+#product-image {
+    cursor: zoom-in;
+}
+
 .zoom-lens {
     position: absolute;
-    width: 4rem;
-    height: 4rem;
-    opacity: 0.4;
+    border: 1px solid #999;
+    background-color: rgba(200, 200, 200, 0.3);
+    /* gris claro con transparencia */
+    width: 100px;
+    height: 100px;
     display: none;
-    cursor: crosshair;
+    pointer-events: none;
+    z-index: 10;
 }
+
 
 .zoom-result {
     position: absolute;

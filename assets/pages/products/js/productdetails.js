@@ -27,6 +27,7 @@ function setupZoomFunctionality(productImage) {
     imageContainer.style.position = "relative";
 
     productImage.addEventListener('mouseenter', () => {
+        productImage.classList.add("disable-transform"); // desactiva efectos
         zoomLens.style.display = 'block';
         zoomResult.style.display = 'block';
         zoomResult.style.backgroundImage = `url(${productImage.src})`;
@@ -50,6 +51,7 @@ function setupZoomFunctionality(productImage) {
     });
 
     productImage.addEventListener('mouseleave', () => {
+        productImage.classList.remove("disable-transform"); // vuelve a la normalidad
         zoomLens.style.display = 'none';
         zoomResult.style.display = 'none';
     });
