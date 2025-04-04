@@ -62,11 +62,19 @@ function mostrarDetallesProducto(url, productId) {
                 const thumb = document.createElement("img");
                 thumb.src = imgSrc;
                 if (index === 0) thumb.classList.add('selected');
+            
+                // Clic para seleccionar
                 thumb.addEventListener('click', () => {
                     document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('selected'));
                     thumb.classList.add('selected');
                     productImage.src = imgSrc;
                 });
+            
+                // Hover para cambiar temporalmente la imagen principal
+                thumb.addEventListener('mouseenter', () => {
+                    productImage.src = imgSrc;
+                });
+            
                 thumbnailsContainer.appendChild(thumb);
             });
 
