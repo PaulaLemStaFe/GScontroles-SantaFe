@@ -108,11 +108,11 @@ class Contact extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
             :root {
-                --color-primary: #FFFFFF; /* Fondo principal blanco */
-                --color-secondary: #F4F4F4; /* Un gris muy claro para mantener armonía */
-                --color-tertiary: #606C38; /* Verde oscuro, inspirado en el logo */
-                --color-fourth: #283618; /* Verde más oscuro para contrastes */
-                --color-fifth: #DDA15E; /* Amarillo-anaranjado suave del logo */
+                --color-primary: #FFFFFF;
+                --color-secondary: #F4F4F4;
+                --color-tertiary: #697565;
+                --color-fourth: #3C3D37;
+                --color-fifth: #1E201E;
                 font-family: "Capriola", serif;
                 line-height: 1rem;
                 scroll-behavior: smooth;

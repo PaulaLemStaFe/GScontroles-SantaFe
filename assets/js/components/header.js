@@ -76,11 +76,11 @@ class Header extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
             :root {
-                --color-primary: #FFFFFF; /* Fondo principal blanco */
-                --color-secondary: #F4F4F4; /* Un gris muy claro para mantener armonía */
-                --color-tertiary: #606C38; /* Verde oscuro, inspirado en el logo */
-                --color-fourth: #283618; /* Verde más oscuro para contrastes */
-                --color-fifth: #DDA15E; /* Amarillo-anaranjado suave del logo */
+                --color-primary: #FFFFFF;
+                --color-secondary: #F4F4F4;
+                --color-tertiary: #697565;
+                --color-fourth: #3C3D37;
+                --color-fifth: #1E201E;
                 font-family: "Capriola", serif;
                 line-height: 1rem;
                 scroll-behavior: smooth;
@@ -100,7 +100,7 @@ class Header extends HTMLElement {
             .navegacion {
                 align-items: center;
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-evenly;
                 margin: 0 1rem;
                 padding: 0.1rem 0;
                 width: 100%;
@@ -144,9 +144,6 @@ class Header extends HTMLElement {
                 transition: all 1s;
             }
             .menu_list a:hover {
-                background-color: var(--color-primary);
-                border-radius: 50%;
-                color: var(--color-fifth);
                 text-shadow: 0 10px 15px var(--color-fourth);
                 transform: scale(1.15);
                 transition: all 1.2s;

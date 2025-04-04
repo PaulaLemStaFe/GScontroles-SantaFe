@@ -45,6 +45,7 @@
 }
 
 .img {
+    border-radius: 2rem;
     display: flex;
     object-fit: cover;
     padding: 0.5rem 0;
