@@ -22,34 +22,34 @@ function cargarProductos(url, containerCS, containerTV, containerAA) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            // Procesar productos de CS si el contenedor existe
-            if (containerTV) {
-                const productosCS = shuffle(data.productscs).slice(0, 6); // Mezclar y tomar los primeros 6 productos de TV
+            // Convertidores Smart
+            if (containerCS) {
+                const productosCS = shuffle(data.productscs).slice(0, 6);
                 productosCS.forEach(producto => {
                     crearProducto(containerCS, producto, 'img');
-                    updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto); // Actualizar los atributos de la imagen
+                    updateImageAttributes(document.querySelector(`img[src="${producto.img01}"]`), producto);
                 });
             } else {
                 console.warn('El contenedor para productos de CS no se encontró en esta página.');
             }
 
-            // Procesar productos de TV si el contenedor existe
+            // Televisores
             if (containerTV) {
-                const productosTV = shuffle(data.productstv).slice(0, 6); // Mezclar y tomar los primeros 6 productos de TV
+                const productosTV = shuffle(data.productstv).slice(0, 6);
                 productosTV.forEach(producto => {
                     crearProducto(containerTV, producto, 'img');
-                    updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto); // Actualizar los atributos de la imagen
+                    updateImageAttributes(document.querySelector(`img[src="${producto.img01}"]`), producto);
                 });
             } else {
                 console.warn('El contenedor para productos de TV no se encontró en esta página.');
             }
 
-            // Procesar productos de AA si el contenedor existe
+            // Aires Acondicionados
             if (containerAA) {
-                const productosAA = shuffle(data.productsaa).slice(0, 6); // Mezclar y tomar los primeros 6 productos de AA
+                const productosAA = shuffle(data.productsaa).slice(0, 6);
                 productosAA.forEach(producto => {
                     crearProducto(containerAA, producto, 'img_aa');
-                    updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto); // Actualizar los atributos de la imagen
+                    updateImageAttributes(document.querySelector(`img[src="${producto.img01}"]`), producto);
                 });
             } else {
                 console.warn('El contenedor para productos de AA no se encontró en esta página.');

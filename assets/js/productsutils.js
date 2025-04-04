@@ -20,7 +20,7 @@ function crearProducto(container, producto, imgClass) {
     div.className = 'product_item';
     div.innerHTML = `
         <div class="item_img">
-            <img class="${imgClass}" src="${producto.img}" alt="${producto.title}" title="${producto.title}">
+            <img class="${imgClass}" src="${producto.img01}" alt="${producto.title}" title="${producto.title}">
         </div>
         <h5 class="item_title">${producto.title}</h5>
         <div class="item_code">

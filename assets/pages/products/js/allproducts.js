@@ -33,11 +33,12 @@ function mostrarTodos(data) {
         console.error("El contenedor para productos no se encontró.");
         return;
     }
-    document.getElementById("tituloCategoria").textContent = "Todos Los Productos";
     container.innerHTML = "";
+    document.getElementById("tituloCategoria").textContent = "Todos Los Productos";
+
     [...data.productscs, ...data.productstv, ...data.productsaa].forEach((producto) => {
         crearProducto(container, producto, "img");
-        updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto);
+        updateImageAttributes(document.querySelector(`img[src="${producto.img01}"]`), producto);
     });
 }
 
@@ -53,22 +54,41 @@ function mostrarCategoria(categoria, titulo, productId, data) {
         return;
     }
 
-    document.getElementById("tituloCategoria").textContent = titulo;
     container.innerHTML = "";
+    document.getElementById("tituloCategoria").textContent = titulo;
 
     let productosCategoria = productos[categoria];
 
     if (productId) {
-        const product = data.productscs.find(p => p.idProduct == productId) || data.productstv.find(p => p.idProduct == productId) || data.productsaa.find(p => p.idProduct == productId);
+        const product = data.productscs.find(p => p.idProduct == productId) ||
+                        data.productstv.find(p => p.idProduct == productId) ||
+                        data.productsaa.find(p => p.idProduct == productId);
+
         if (product) {
-            productosCategoria = productosCategoria.filter(
-                (p) => [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03, product.modelosoportado04, product.modelosoportado05].includes(p.modelosoportado01)
-            );
+            const modelosProducto = [
+                product.modelosoportado01,
+                product.modelosoportado02,
+                product.modelosoportado03,
+                product.modelosoportado04,
+                product.modelosoportado05
+            ].filter(Boolean);
+
+            productosCategoria = productosCategoria.filter(p => {
+                const modelosComparar = [
+                    p.modelosoportado01,
+                    p.modelosoportado02,
+                    p.modelosoportado03,
+                    p.modelosoportado04,
+                    p.modelosoportado05
+                ].filter(Boolean);
+
+                return modelosProducto.some(modelo => modelosComparar.includes(modelo));
+            });
         }
     }
 
     productosCategoria.forEach((producto) => {
         crearProducto(container, producto, "img");
-        updateImageAttributes(document.querySelector(`img[src="${producto.img}"]`), producto);
+        updateImageAttributes(document.querySelector(`img[src="${producto.img01}"]`), producto);
     });
 }
