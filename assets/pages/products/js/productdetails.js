@@ -1,17 +1,13 @@
 // productdetails.js
 
-// Definir el mapeo de categorías
 const categoryMap = {
     'productcs': 'convertidor smart',
     'producttv': 'televisor',
     'productac': 'aire acondicionado'
 };
 
-// Función para actualizar los detalles del producto en el HTML
 function updateProductDetails(product, categoryKey) {
-    // Usa el mapeo para obtener la categoría correcta
     const category = categoryMap[categoryKey];
-    
     document.querySelectorAll('.product-category').forEach(span => {
         span.textContent = category;
     });
@@ -28,11 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     mostrarDetallesProducto("https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json", productId);
 });
 
-/**
- * Función para mostrar detalles del producto y productos similares.
- * @param {string} url - La URL del archivo db.json.
- * @param {number} productId - El ID del producto a mostrar.
- */
 function mostrarDetallesProducto(url, productId) {
     fetch(url)
         .then(response => response.json())
@@ -52,11 +43,59 @@ function mostrarDetallesProducto(url, productId) {
                 return;
             }
 
-            // Actualizar los detalles del producto
+            // Imagen principal
             const productImage = document.getElementById("product-image");
-            productImage.src = product.img;
+            const thumbnailsContainer = document.getElementById("product-thumbnails");
+
+            // Lista de imágenes: principal + secundarias + advertencia
+            const allImages = [product.img01, product.img02, product.img03, product.img04, product.img05]
+                .filter(Boolean)
+                .concat("https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true");
+
+            // Mostrar la imagen principal al comienzo
+            productImage.src = allImages[0];
             updateImageAttributes(productImage, product);
 
+            // Mostrar miniaturas
+            thumbnailsContainer.innerHTML = '';
+            allImages.forEach((imgSrc, index) => {
+                const thumb = document.createElement("img");
+                thumb.src = imgSrc;
+                if (index === 0) thumb.classList.add('selected');
+                thumb.addEventListener('click', () => {
+                    document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('selected'));
+                    thumb.classList.add('selected');
+                    productImage.src = imgSrc;
+                });
+                thumbnailsContainer.appendChild(thumb);
+            });
+
+            // Mostrar galería de imágenes adicionales
+            const galleryContainer = document.getElementById("product-gallery");
+            if (galleryContainer) {
+                galleryContainer.innerHTML = ""; // Limpiar galería
+
+                const imageKeys = ['img01', 'img02', 'img03', 'img04', 'img05'];
+                imageKeys.forEach(key => {
+                    if (product[key]) {
+                        const imgEl = document.createElement("img");
+                        imgEl.src = product[key];
+                        imgEl.alt = product.title;
+                        imgEl.title = product.title;
+                        galleryContainer.appendChild(imgEl);
+                    }
+                });
+
+                // Imagen de advertencia al final
+                const warningImg = document.createElement("img");
+                warningImg.src = "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true";
+                warningImg.alt = "Advertencia sobre la compatibilidad del control remoto";
+                warningImg.title = "Advertencia: Asegúrese de que su control coincida con la imagen";
+                warningImg.classList.add("warning-image");
+                galleryContainer.appendChild(warningImg);
+            }
+
+            // Resto de los datos
             document.getElementById("product-title").textContent = product.title;
             document.getElementById("product-code").textContent = `Código: ${product.code}`;
             document.getElementById("product-color").textContent = `Color: ${product.color}`;
@@ -66,19 +105,18 @@ function mostrarDetallesProducto(url, productId) {
             document.getElementById("product-soportado4").textContent = product.modelosoportado04;
             document.getElementById("product-soportado5").textContent = product.modelosoportado05;
 
-            // Usar la función para actualizar los detalles con la categoría correcta
             updateProductDetails(product, productCategory);
 
-            // Buscar productos similares por marca (modelosoportado01), de la misma categoría y excluir el producto actual
-            let similarProductsFiltered = similarProducts.filter(
-                (p) => 
+            // Productos similares
+            const similarProductsFiltered = similarProducts.filter(
+                (p) =>
                     [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03,
                     product.modelosoportado04, product.modelosoportado05].includes(p.modelosoportado01) && p.idProduct != productId
             );
 
-            const similarProductsToShow = shuffle(similarProductsFiltered).slice(0, 6); // Limitar a 6 productos
-
+            const similarProductsToShow = shuffle(similarProductsFiltered).slice(0, 6);
             const containerSimilar = document.getElementById("similar-products");
+
             if (containerSimilar) {
                 similarProductsToShow.forEach((producto) => {
                     crearProducto(containerSimilar, producto, "img");
@@ -94,8 +132,6 @@ function mostrarDetallesProducto(url, productId) {
                 } else {
                     viewAllLink.style.display = "none";
                 }
-            } else {
-                console.error("El contenedor para productos similares no se encontró.");
             }
         })
         .catch((error) => console.error("Error al leer el archivo db.json:", error));

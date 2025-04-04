@@ -9,11 +9,11 @@
     "productscs": [
     {
         "idProduct": 1,
-        "img01": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/cs-control-remoto/GS931/GS931-00.jpg?raw=true",
-        "img02": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/cs-control-remoto/GS931/GS931-01.jpg?raw=true",
-        "img03": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/cs-control-remoto/GS931/GS931-02.jpg?raw=true",
-        "img04": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/cs-control-remoto/GS931/GS931-03.jpg?raw=true",
-        "img05": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/cs-control-remoto/GS931/GS931-04.jpg?raw=true",
+        "img01": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-cs/GS931/GS931-00.jpg?raw=true",
+        "img02": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-cs/GS931/GS931-01.jpg?raw=true",
+        "img03": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-cs/GS931/GS931-02.jpg?raw=true",
+        "img04": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-cs/GS931/GS931-03.jpg?raw=true",
+        "img05": "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-cs/GS931/GS931-04.jpg?raw=true",
         "title": "Control Remoto Para Convertidor Smart",
         "code": "GS 931",
         "color": "Negro",
