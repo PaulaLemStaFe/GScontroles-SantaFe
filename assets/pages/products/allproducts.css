@@ -91,11 +91,11 @@ html {
     background-size: 300% 300%;
     border: 1px solid var(--color-tertiary);
     display: none;
-    height: 75rem;
+    height: 100rem;
     position: absolute;
-    right: -400px;
+    right: -300px;
     top: 0;
-    width: 75rem;
+    width: 100rem;
     z-index: 10;
 }
 
