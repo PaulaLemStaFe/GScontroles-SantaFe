@@ -52,8 +52,8 @@ html {
 /* Hacer que las miniaturas sean más grandes */
 .thumbnails img {
     box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
-    width: 70%;
-    height: 70%;
+    width: 5rem;
+    height: 5rem;
 }
 
 .product_details_img {
@@ -76,22 +76,23 @@ html {
 
 .zoom-lens {
     position: absolute;
-    border: 1px solid #999;
-    background-color: rgba(200, 200, 200, 0.3);
-    /* gris claro con transparencia */
-    width: 100px;
-    height: 100px;
+    border: 1px solid #888;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(60, 60, 60, 0.4); /* gris oscuro translúcido */
     display: none;
+    cursor: zoom-in;
+    z-index: 5;
     pointer-events: none;
-    z-index: 10;
 }
+
 
 
 .zoom-result {
     position: absolute;
     border: 1px solid #ccc;
-    width: 400px;
-    height: 400px;
+    width: 25rem;
+    height: 25rem;
     right: -420px;
     top: 0;
     background-repeat: no-repeat;
@@ -99,6 +100,7 @@ html {
     display: none;
     z-index: 10;
 }
+
 
 .product_details_text {
     color: var(--color-fifth);

@@ -33,22 +33,48 @@ function setupZoomFunctionality(productImage) {
         zoomResult.style.backgroundImage = `url(${productImage.src})`;
     });
 
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+
     productImage.addEventListener('mousemove', (e) => {
         const rect = productImage.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const lensX = x - zoomLens.offsetWidth / 2;
-        const lensY = y - zoomLens.offsetHeight / 2;
+        mouseX = e.clientX - rect.left;
+        mouseY = e.clientY - rect.top;
+    });
+
+    function animateZoom() {
+        // Suaviza el movimiento
+        currentX += (mouseX - currentX) * 0.2;
+        currentY += (mouseY - currentY) * 0.2;
+
+        const lensX = currentX - zoomLens.offsetWidth / 2;
+        const lensY = currentY - zoomLens.offsetHeight / 2;
         const maxX = productImage.offsetWidth - zoomLens.offsetWidth;
         const maxY = productImage.offsetHeight - zoomLens.offsetHeight;
 
         zoomLens.style.left = Math.max(0, Math.min(lensX, maxX)) + "px";
         zoomLens.style.top = Math.max(0, Math.min(lensY, maxY)) + "px";
 
-        const zoomX = (x / productImage.offsetWidth) * 100;
-        const zoomY = (y / productImage.offsetHeight) * 100;
+        const zoomX = (currentX / productImage.offsetWidth) * 100;
+        const zoomY = (currentY / productImage.offsetHeight) * 100;
         zoomResult.style.backgroundPosition = `${zoomX}% ${zoomY}%`;
+
+        requestAnimationFrame(animateZoom);
+    }
+
+    productImage.addEventListener('mouseenter', () => {
+        zoomLens.style.display = 'block';
+        zoomResult.style.display = 'block';
+        zoomResult.style.backgroundImage = `url(${productImage.src})`;
+        zoomResult.style.backgroundSize = "300% 300%";
+        requestAnimationFrame(animateZoom); // inicia la animación
     });
+
+    productImage.addEventListener('mouseleave', () => {
+        zoomLens.style.display = 'none';
+        zoomResult.style.display = 'none';
+    });
+
 
     productImage.addEventListener('mouseleave', () => {
         productImage.classList.remove("disable-transform"); // vuelve a la normalidad
