@@ -218,9 +218,6 @@ class Header extends HTMLElement {
                 stroke-width: 4;
                 width: 1.2rem;
             }
-            .bi-search_menu path {
-                stroke: rgba(255, 255, 255, 0.3);
-            }
             .bi-search_modal path {
                 stroke: rgba(110, 110, 110, 0.3);
             }
