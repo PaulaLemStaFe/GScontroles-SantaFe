@@ -227,6 +227,9 @@ class Header extends HTMLElement {
             .bi-search_modal path {
                 stroke: rgba(110, 110, 110, 0.3);
             }
+            .button {
+                display: none;
+            }
             .login_button {
                 background-color: var(--color-tertiary);
                 border: solid var(--color-fourth) 1px;
