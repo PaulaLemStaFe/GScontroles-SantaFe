@@ -75,7 +75,8 @@ html {
 }
 
 .zoom-lens {
-    background-color: rgba(60, 60, 60, 0.4); /* gris oscuro translúcido */
+    background-color: rgba(60, 60, 60, 0.4);
+    /* gris oscuro translúcido */
     border: 1px solid var(--color-tertiary);
     cursor: zoom-in;
     display: none;
@@ -88,16 +89,16 @@ html {
 
 .zoom-result {
     background-repeat: no-repeat;
-    background-size: 250% 250%;
+    background-size: 200% 200%;
     border: 1px solid var(--color-tertiary);
     border-radius: 0.5rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     display: none;
-    height: 38rem;
+    height: 30rem;
     left: 120%;
     position: absolute;
     top: -4rem;
-    width: 40rem;
+    width: 30rem;
     z-index: 10;
 }
 
@@ -182,9 +183,12 @@ body.lightbox-open {
 }
 
 .lightbox-close {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
     color: var(--color-primary);
     cursor: pointer;
     font-size: 2.5rem;
+    padding: 0.5rem;
     position: absolute;
     right: 2rem;
     top: 1rem;
@@ -192,6 +196,8 @@ body.lightbox-open {
 }
 
 .lightbox-controls {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
@@ -201,11 +207,23 @@ body.lightbox-open {
     z-index: 1001;
 }
 
+.lightbox-btn.prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-btn.next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .lightbox-prev,
 .lightbox-next {
-    font-size: 3rem;
     color: var(--color-primary);
     cursor: pointer;
+    font-size: 3rem;
     -webkit-user-select: none;
     user-select: none;
 }

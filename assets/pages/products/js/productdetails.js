@@ -195,6 +195,14 @@ function activarLightbox(imageUrls) {
     const productImage = document.getElementById("product-image");
     productImage.style.cursor = "zoom-in";
     productImage.addEventListener("click", () => abrir(0)); // arranca con la primera
+
+    // 👉 Cerrar lightbox si se hace scroll
+    const scrollHandler = () => {
+        cerrar();
+        window.removeEventListener("scroll", scrollHandler);
+    };
+    window.addEventListener("scroll", scrollHandler);
+
 }
 
 // 3. Función principal
