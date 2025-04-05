@@ -185,7 +185,7 @@ body.lightbox-open {
 .image-counter {
     background-color: rgba(0,0,0,0.6);
     color: var(--color-primary);
-    font-size: 2rem;
+    font-size: 1rem;
     left: 1.5rem;
     padding: 0.5rem;
     position: absolute;
@@ -213,7 +213,7 @@ body.lightbox-open {
     padding: 0 2rem;
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: 95%;
     z-index: 1001;
 }
 

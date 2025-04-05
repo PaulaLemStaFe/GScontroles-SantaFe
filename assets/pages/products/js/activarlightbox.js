@@ -1,48 +1,78 @@
-function activarLightbox(imageUrls) {
+export function activarLightbox(images) {
     const overlay = document.getElementById("lightbox-overlay");
     const lightboxImage = document.getElementById("lightbox-image");
     const closeBtn = document.querySelector(".lightbox-close");
     const prevBtn = document.getElementById("lightbox-prev");
     const nextBtn = document.getElementById("lightbox-next");
-    const counter = document.getElementById("image-counter");
+    const imageCounter = document.getElementById("image-counter");
 
     let currentIndex = 0;
 
-    function mostrarImagen(index) {
-        if (index < 0) index = imageUrls.length - 1;
-        if (index >= imageUrls.length) index = 0;
+    function updateLightboxImage(index) {
+        lightboxImage.src = images[index];
+        imageCounter.textContent = `${index + 1} / ${images.length}`;
+    }
+
+    function showLightbox(index) {
         currentIndex = index;
-        lightboxImage.src = imageUrls[currentIndex];
-        counter.textContent = `${currentIndex + 1} / ${imageUrls.length}`;
-    }
-
-    function abrir(index) {
-        mostrarImagen(index);
+        updateLightboxImage(currentIndex);
         overlay.classList.remove("hidden");
-        document.body.classList.add("lightbox-open");
+        document.body.style.overflow = "hidden";
     }
 
-    function cerrar() {
+    function closeLightbox() {
         overlay.classList.add("hidden");
-        document.body.classList.remove("lightbox-open");
+        document.body.style.overflow = "";
     }
 
-    closeBtn.addEventListener("click", cerrar);
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateLightboxImage(currentIndex);
+    }
 
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateLightboxImage(currentIndex);
+    }
+
+    // Clicks
+    nextBtn.addEventListener("click", showNextImage);
+    prevBtn.addEventListener("click", showPrevImage);
+    closeBtn.addEventListener("click", closeLightbox);
     overlay.addEventListener("click", (e) => {
-        if (e.target === overlay) cerrar();
+        if (e.target === overlay) closeLightbox();
     });
 
-    prevBtn.addEventListener("click", () => mostrarImagen(currentIndex - 1));
-    nextBtn.addEventListener("click", () => mostrarImagen(currentIndex + 1));
+    // Teclas
+    document.addEventListener("keydown", (e) => {
+        if (overlay.classList.contains("hidden")) return;
 
+        switch (e.key) {
+            case "ArrowRight":
+                showNextImage();
+                break;
+            case "ArrowLeft":
+                showPrevImage();
+                break;
+            case "Escape":
+                closeLightbox();
+                break;
+        }
+    });
+
+    // Clics en la galería (miniaturas al final del producto)
+    const galleryImages = document.querySelectorAll("#product-gallery img");
+    galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            showLightbox(index);
+        });
+    });
+
+    // Clic en la imagen principal
     const productImage = document.getElementById("product-image");
-    productImage.style.cursor = "zoom-in";
-    productImage.addEventListener("click", () => abrir(0));
-
-    const scrollHandler = () => {
-        cerrar();
-        window.removeEventListener("scroll", scrollHandler);
-    };
-    window.addEventListener("scroll", scrollHandler);
+    productImage.addEventListener("click", () => {
+        const currentSrc = productImage.src;
+        const index = images.findIndex((img) => currentSrc.includes(img.split("/").pop()));
+        showLightbox(index !== -1 ? index : 0);
+    });
 }
