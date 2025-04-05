@@ -1,5 +1,4 @@
 // productdetails.js (actualizado)
-import { activarLightbox } from "./activarlightbox.js";
 
 const categoryMap = {
     productcs: "convertidor smart",
