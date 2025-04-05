@@ -168,7 +168,7 @@ body.lightbox-open {
     transition: opacity 0.5s ease, visibility 0.5s ease;
     visibility: hidden;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 #lightbox-overlay.visible {
