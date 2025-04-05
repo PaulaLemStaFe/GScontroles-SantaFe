@@ -191,11 +191,10 @@ function activarLightbox(imageUrls) {
     prevBtn.addEventListener("click", () => mostrarImagen(currentIndex - 1));
     nextBtn.addEventListener("click", () => mostrarImagen(currentIndex + 1));
 
-    const galleryImages = document.querySelectorAll("#product-gallery img");
-    galleryImages.forEach((img, index) => {
-        img.style.cursor = "zoom-in";
-        img.addEventListener("click", () => abrir(index));
-    });
+    // ✅ Solo activar lightbox en la imagen principal
+    const productImage = document.getElementById("product-image");
+    productImage.style.cursor = "zoom-in";
+    productImage.addEventListener("click", () => abrir(0)); // arranca con la primera
 }
 
 // 3. Función principal
