@@ -50,7 +50,7 @@ function activarLightbox(images) {
 
     // Teclas
     document.addEventListener("keydown", (e) => {
-        if (overlay.classList.contains("visible")) return;
+        if (overlay.classList.contains("hidden")) return;
 
         switch (e.key) {
             case "ArrowRight":

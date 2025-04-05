@@ -77,7 +77,7 @@ class Header extends HTMLElement {
         style.textContent = `
             :root {
                 --color-primary: #FFFFFF;
-                --color-secondary: #F4F4F4;
+                --color-secondary: #B7B9B4;
                 --color-tertiary: #697565;
                 --color-fourth: #3C3D37;
                 --color-fifth: #1E201E;
@@ -87,6 +87,8 @@ class Header extends HTMLElement {
             }
             .navbar {
                 align-items: center;
+                background-blend-mode: lighten;
+                background-color: rgba(255, 255, 255, 0.15);
                 background-image: url(${urlImageFondoHtml});
                 background-position: center;
                 display: flex;
@@ -95,19 +97,20 @@ class Header extends HTMLElement {
                 position: fixed;
                 top: 0;
                 width: 100%;
-                z-index: 1;
+                z-index: 10000;
             }
             .navegacion {
                 align-items: center;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
                 margin: 0 1rem;
                 padding: 0.1rem 0;
                 width: 100%;
             }
             .logo_image {
                 content: url(${urlImageLogoHtml});
-                display: flex;
+                left: 1rem;
+                position: absolute;
                 width: 15%;
             }
             .menu_buscador {
@@ -124,8 +127,6 @@ class Header extends HTMLElement {
             }
             .menu_list {
                 align-items: center;
-                background-color: var(--color-tertiary);
-                border-radius: 15px;
                 display: flex;
                 justify-content: center;
                 list-style: none;
@@ -153,7 +154,7 @@ class Header extends HTMLElement {
                 position: relative;
             }
             .submenu_list {
-                background-color: var(--color-tertiary);
+                background-color: var(--color-fifth);
                 border-bottom-left-radius: 1rem;
                 border-bottom-right-radius: 1rem;
                 box-shadow: 0 8px 16px rgba(0,0,0,0.2);

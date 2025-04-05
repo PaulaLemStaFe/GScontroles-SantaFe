@@ -109,7 +109,7 @@ class Contact extends HTMLElement {
         style.textContent = `
             :root {
                 --color-primary: #FFFFFF;
-                --color-secondary: #F4F4F4;
+                --color-secondary: #B7B9B4;
                 --color-tertiary: #697565;
                 --color-fourth: #3C3D37;
                 --color-fifth: #1E201E;
