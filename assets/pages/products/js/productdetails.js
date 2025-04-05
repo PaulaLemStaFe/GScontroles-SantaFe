@@ -27,7 +27,7 @@ function setupZoomFunctionality(productImage) {
     imageContainer.style.position = "relative";
 
     productImage.addEventListener('mouseenter', () => {
-        productImage.classList.add("disable-transform"); // desactiva efectos
+        productImage.classList.add("disable-transform");
         zoomLens.style.display = 'block';
         zoomResult.style.display = 'block';
         zoomResult.style.backgroundImage = `url(${productImage.src})`;
@@ -43,7 +43,6 @@ function setupZoomFunctionality(productImage) {
     });
 
     function animateZoom() {
-        // Suaviza el movimiento
         currentX += (mouseX - currentX) * 0.2;
         currentY += (mouseY - currentY) * 0.2;
 
@@ -67,17 +66,17 @@ function setupZoomFunctionality(productImage) {
         zoomResult.style.display = 'block';
         zoomResult.style.backgroundImage = `url(${productImage.src})`;
         zoomResult.style.backgroundSize = "300% 300%";
-        requestAnimationFrame(animateZoom); // inicia la animación
+        requestAnimationFrame(animateZoom);
     });
 
     productImage.addEventListener('mouseleave', () => {
+        productImage.classList.remove("disable-transform");
         zoomLens.style.display = 'none';
         zoomResult.style.display = 'none';
     });
 
-
     productImage.addEventListener('mouseleave', () => {
-        productImage.classList.remove("disable-transform"); // vuelve a la normalidad
+        productImage.classList.remove("disable-transform");
         zoomLens.style.display = 'none';
         zoomResult.style.display = 'none';
     });
@@ -159,6 +158,46 @@ function mostrarProductosSimilares(product, similarProducts, productCategory, pr
     }
 }
 
+function activarLightbox(imageUrls) {
+    const overlay = document.getElementById("lightbox-overlay");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const closeBtn = document.querySelector(".lightbox-close");
+    const prevBtn = document.getElementById("lightbox-prev");
+    const nextBtn = document.getElementById("lightbox-next");
+
+    let currentIndex = 0;
+
+    function mostrarImagen(index) {
+        if (index < 0) index = imageUrls.length - 1;
+        if (index >= imageUrls.length) index = 0;
+        currentIndex = index;
+        lightboxImage.src = imageUrls[currentIndex];
+    }
+
+    function abrir(index) {
+        mostrarImagen(index);
+        overlay.classList.remove("hidden");
+    }
+
+    function cerrar() {
+        overlay.classList.add("hidden");
+    }
+
+    closeBtn.addEventListener("click", cerrar);
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) cerrar();
+    });
+
+    prevBtn.addEventListener("click", () => mostrarImagen(currentIndex - 1));
+    nextBtn.addEventListener("click", () => mostrarImagen(currentIndex + 1));
+
+    const galleryImages = document.querySelectorAll("#product-gallery img");
+    galleryImages.forEach((img, index) => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", () => abrir(index));
+    });
+}
+
 // 3. Función principal
 function mostrarDetallesProducto(url, productId) {
     fetch(url)
@@ -192,6 +231,7 @@ function mostrarDetallesProducto(url, productId) {
             setupZoomFunctionality(productImage);
             mostrarMiniaturas(allImages, productImage, thumbnailsContainer);
             mostrarGaleria(product, galleryContainer);
+            activarLightbox(allImages);
             cargarDatosProducto(product);
             mostrarProductosSimilares(product, similarProducts, productCategory, productId);
         })
