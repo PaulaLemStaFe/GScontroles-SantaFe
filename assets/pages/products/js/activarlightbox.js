@@ -1,4 +1,4 @@
-export function activarLightbox(images) {
+function activarLightbox(images) {
     const overlay = document.getElementById("lightbox-overlay");
     const lightboxImage = document.getElementById("lightbox-image");
     const closeBtn = document.querySelector(".lightbox-close");
@@ -9,8 +9,13 @@ export function activarLightbox(images) {
     let currentIndex = 0;
 
     function updateLightboxImage(index) {
-        lightboxImage.src = images[index];
-        imageCounter.textContent = `${index + 1} / ${images.length}`;
+        lightboxImage.classList.add("fade-out");
+    
+        setTimeout(() => {
+            lightboxImage.src = images[index];
+            imageCounter.textContent = `${index + 1} / ${images.length}`;
+            lightboxImage.classList.remove("fade-out");
+        }, 200); // 200 ms tiene que coincidir con la duración del CSS
     }
 
     function showLightbox(index) {
