@@ -21,12 +21,12 @@ function activarLightbox(images) {
     function showLightbox(index) {
         currentIndex = index;
         updateLightboxImage(currentIndex);
-        overlay.classList.remove("hidden");
+        overlay.classList.add("visible");
         document.body.style.overflow = "hidden";
     }
 
     function closeLightbox() {
-        overlay.classList.add("hidden");
+        overlay.classList.remove("visible");
         document.body.style.overflow = "";
     }
 
