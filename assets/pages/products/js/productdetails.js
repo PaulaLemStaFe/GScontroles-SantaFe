@@ -1,16 +1,15 @@
-// productdetails.js
+// productdetails.js (actualizado)
+import { activarLightbox } from "./activarlightbox.js";
 
-// 1. Constantes y configuraciones
 const categoryMap = {
-    'productcs': 'convertidor smart',
-    'producttv': 'televisor',
-    'productac': 'aire acondicionado'
+    productcs: "convertidor smart",
+    producttv: "televisor",
+    productac: "aire acondicionado",
 };
 
-// 2. Funciones auxiliares
 function updateProductDetails(product, categoryKey) {
     const category = categoryMap[categoryKey];
-    document.querySelectorAll('.product-category').forEach(span => {
+    document.querySelectorAll(".product-category").forEach((span) => {
         span.textContent = category;
     });
 }
@@ -21,22 +20,24 @@ function updateImageAttributes(imgElement, product) {
 }
 
 function setupZoomFunctionality(productImage) {
-    const zoomLens = document.querySelector('.zoom-lens');
-    const zoomResult = document.querySelector('.zoom-result');
+    const zoomLens = document.querySelector(".zoom-lens");
+    const zoomResult = document.querySelector(".zoom-result");
     const imageContainer = document.getElementById("product-image-container");
     imageContainer.style.position = "relative";
 
-    productImage.addEventListener('mouseenter', () => {
+    productImage.addEventListener("mouseenter", () => {
         productImage.classList.add("disable-transform");
-        zoomLens.style.display = 'block';
-        zoomResult.style.display = 'block';
+        zoomLens.style.display = "block";
+        zoomResult.style.display = "block";
         zoomResult.style.backgroundImage = `url(${productImage.src})`;
     });
 
-    let mouseX = 0, mouseY = 0;
-    let currentX = 0, currentY = 0;
+    let mouseX = 0,
+        mouseY = 0,
+        currentX = 0,
+        currentY = 0;
 
-    productImage.addEventListener('mousemove', (e) => {
+    productImage.addEventListener("mousemove", (e) => {
         const rect = productImage.getBoundingClientRect();
         mouseX = e.clientX - rect.left;
         mouseY = e.clientY - rect.top;
@@ -61,41 +62,37 @@ function setupZoomFunctionality(productImage) {
         requestAnimationFrame(animateZoom);
     }
 
-    productImage.addEventListener('mouseenter', () => {
-        zoomLens.style.display = 'block';
-        zoomResult.style.display = 'block';
+    productImage.addEventListener("mouseenter", () => {
+        zoomLens.style.display = "block";
+        zoomResult.style.display = "block";
         zoomResult.style.backgroundImage = `url(${productImage.src})`;
         zoomResult.style.backgroundSize = "300% 300%";
         requestAnimationFrame(animateZoom);
     });
 
-    productImage.addEventListener('mouseleave', () => {
+    productImage.addEventListener("mouseleave", () => {
         productImage.classList.remove("disable-transform");
-        zoomLens.style.display = 'none';
-        zoomResult.style.display = 'none';
-    });
-
-    productImage.addEventListener('mouseleave', () => {
-        productImage.classList.remove("disable-transform");
-        zoomLens.style.display = 'none';
-        zoomResult.style.display = 'none';
+        zoomLens.style.display = "none";
+        zoomResult.style.display = "none";
     });
 }
 
 function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
-    thumbnailsContainer.innerHTML = '';
+    thumbnailsContainer.innerHTML = "";
     allImages.forEach((imgSrc, index) => {
         const thumb = document.createElement("img");
         thumb.src = imgSrc;
-        if (index === 0) thumb.classList.add('selected');
+        if (index === 0) thumb.classList.add("selected");
 
-        thumb.addEventListener('click', () => {
-            document.querySelectorAll('.thumbnails img').forEach(img => img.classList.remove('selected'));
-            thumb.classList.add('selected');
+        thumb.addEventListener("click", () => {
+            document.querySelectorAll(".thumbnails img").forEach((img) =>
+                img.classList.remove("selected")
+            );
+            thumb.classList.add("selected");
             productImage.src = imgSrc;
         });
 
-        thumb.addEventListener('mouseenter', () => {
+        thumb.addEventListener("mouseenter", () => {
             productImage.src = imgSrc;
         });
 
@@ -107,9 +104,9 @@ function mostrarGaleria(product, galleryContainer) {
     if (!galleryContainer) return;
 
     galleryContainer.innerHTML = "";
-    const imageKeys = ['img01', 'img02', 'img03', 'img04', 'img05'];
+    const imageKeys = ["img01", "img02", "img03", "img04", "img05"];
 
-    imageKeys.forEach(key => {
+    imageKeys.forEach((key) => {
         if (product[key]) {
             const imgEl = document.createElement("img");
             imgEl.src = product[key];
@@ -120,7 +117,8 @@ function mostrarGaleria(product, galleryContainer) {
     });
 
     const warningImg = document.createElement("img");
-    warningImg.src = "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true";
+    warningImg.src =
+        "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true";
     warningImg.alt = "Advertencia sobre la compatibilidad del control remoto";
     warningImg.title = "Advertencia: Asegúrese de que su control coincida con la imagen";
     warningImg.classList.add("warning-image");
@@ -140,14 +138,20 @@ function cargarDatosProducto(product) {
 
 function mostrarProductosSimilares(product, similarProducts, productCategory, productId) {
     const similares = similarProducts.filter(
-        p => [product.modelosoportado01, product.modelosoportado02, product.modelosoportado03,
-        product.modelosoportado04, product.modelosoportado05].includes(p.modelosoportado01) && p.idProduct != productId
+        (p) =>
+            [
+                product.modelosoportado01,
+                product.modelosoportado02,
+                product.modelosoportado03,
+                product.modelosoportado04,
+                product.modelosoportado05,
+            ].includes(p.modelosoportado01) && p.idProduct != productId
     );
     const mostrar = shuffle(similares).slice(0, 6);
     const container = document.getElementById("similar-products");
 
     if (container) {
-        mostrar.forEach(p => crearProducto(container, p, "img"));
+        mostrar.forEach((p) => crearProducto(container, p, "img"));
 
         const viewAllLink = document.getElementById("view-all-link");
         if (similares.length > 6) {
@@ -158,68 +162,22 @@ function mostrarProductosSimilares(product, similarProducts, productCategory, pr
     }
 }
 
-function activarLightbox(imageUrls) {
-    const overlay = document.getElementById("lightbox-overlay");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const closeBtn = document.querySelector(".lightbox-close");
-    const prevBtn = document.getElementById("lightbox-prev");
-    const nextBtn = document.getElementById("lightbox-next");
-
-    let currentIndex = 0;
-
-    function mostrarImagen(index) {
-        if (index < 0) index = imageUrls.length - 1;
-        if (index >= imageUrls.length) index = 0;
-        currentIndex = index;
-        lightboxImage.src = imageUrls[currentIndex];
-    }
-
-    function abrir(index) {
-        mostrarImagen(index);
-        overlay.classList.remove("hidden");
-    }
-
-    function cerrar() {
-        overlay.classList.add("hidden");
-    }
-
-    closeBtn.addEventListener("click", cerrar);
-    overlay.addEventListener("click", (e) => {
-        if (e.target === overlay) cerrar();
-    });
-
-    prevBtn.addEventListener("click", () => mostrarImagen(currentIndex - 1));
-    nextBtn.addEventListener("click", () => mostrarImagen(currentIndex + 1));
-
-    // ✅ Solo activar lightbox en la imagen principal
-    const productImage = document.getElementById("product-image");
-    productImage.style.cursor = "zoom-in";
-    productImage.addEventListener("click", () => abrir(0)); // arranca con la primera
-
-    // 👉 Cerrar lightbox si se hace scroll
-    const scrollHandler = () => {
-        cerrar();
-        window.removeEventListener("scroll", scrollHandler);
-    };
-    window.addEventListener("scroll", scrollHandler);
-
-}
-
-// 3. Función principal
 function mostrarDetallesProducto(url, productId) {
     fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            let product, similarProducts, productCategory;
-            if (product = data.productscs.find(p => p.idProduct == productId)) {
+        .then((response) => response.json())
+        .then((data) => {
+            let product,
+                similarProducts,
+                productCategory;
+            if ((product = data.productscs.find((p) => p.idProduct == productId))) {
                 similarProducts = data.productscs;
-                productCategory = 'productcs';
-            } else if (product = data.productstv.find(p => p.idProduct == productId)) {
+                productCategory = "productcs";
+            } else if ((product = data.productstv.find((p) => p.idProduct == productId))) {
                 similarProducts = data.productstv;
-                productCategory = 'producttv';
-            } else if (product = data.productsaa.find(p => p.idProduct == productId)) {
+                productCategory = "producttv";
+            } else if ((product = data.productsaa.find((p) => p.idProduct == productId))) {
                 similarProducts = data.productsaa;
-                productCategory = 'productac';
+                productCategory = "productac";
             } else {
                 console.error("Producto no encontrado.");
                 return;
@@ -228,8 +186,17 @@ function mostrarDetallesProducto(url, productId) {
             const productImage = document.getElementById("product-image");
             const thumbnailsContainer = document.getElementById("product-thumbnails");
             const galleryContainer = document.getElementById("product-gallery");
-            const allImages = [product.img01, product.img02, product.img03, product.img04, product.img05].filter(Boolean)
-                .concat("https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true");
+            const allImages = [
+                product.img01,
+                product.img02,
+                product.img03,
+                product.img04,
+                product.img05,
+            ]
+                .filter(Boolean)
+                .concat(
+                    "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true"
+                );
 
             productImage.src = allImages[0];
             updateImageAttributes(productImage, product);
@@ -238,14 +205,13 @@ function mostrarDetallesProducto(url, productId) {
             setupZoomFunctionality(productImage);
             mostrarMiniaturas(allImages, productImage, thumbnailsContainer);
             mostrarGaleria(product, galleryContainer);
-            activarLightbox(allImages);
             cargarDatosProducto(product);
             mostrarProductosSimilares(product, similarProducts, productCategory, productId);
+            activarLightbox(allImages);
         })
-        .catch(error => console.error("Error al leer el archivo db.json:", error));
+        .catch((error) => console.error("Error al leer el archivo db.json:", error));
 }
 
-// 4. Inicialización al cargar
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("idproduct");
@@ -253,5 +219,8 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("No se encontró el ID del producto en la URL.");
         return;
     }
-    mostrarDetallesProducto("https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json", productId);
+    mostrarDetallesProducto(
+        "https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json",
+        productId
+    );
 });
