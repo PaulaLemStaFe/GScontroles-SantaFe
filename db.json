@@ -1,11 +1,4 @@
 {
-    "user": [
-    {
-        "id": 1,
-        "email": "gscontroles@admin.com",
-        "password": "GSControles01Admin"
-    }
-    ],
     "productscs": [
     {
         "idProduct": 1,

@@ -3,7 +3,7 @@
 
 :root {
     --color-primary: #FFFFFF;
-    --color-secondary: #F4F4F4;
+    --color-secondary: #B7B9B4;
     --color-tertiary: #697565;
     --color-fourth: #3C3D37;
     --color-fifth: #1E201E;
@@ -12,7 +12,7 @@
     scroll-behavior: smooth;
 }
 body {
-    background-color: var(--color-primary);
+    background-color: #E0E0E0;
     color: var(--color-fifth);
 }
 #scroll-top {

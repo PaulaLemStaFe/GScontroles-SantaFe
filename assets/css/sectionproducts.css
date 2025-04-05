@@ -9,7 +9,7 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1920px;
-    width: 90%;
+    width: 95%;
 }
 
 .title {
@@ -17,6 +17,7 @@
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
+    padding: 0 1.5rem
 }
 
 .tv__title {

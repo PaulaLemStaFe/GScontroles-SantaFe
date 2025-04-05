@@ -79,10 +79,10 @@ html {
     border: 1px solid var(--color-tertiary);
     cursor: zoom-in;
     display: none;
-    height: 120px;
+    height: 8rem;
     pointer-events: none;
     position: absolute;
-    width: 120px;
+    width: 8rem;
     z-index: 5;
 }
 
@@ -90,12 +90,13 @@ html {
     background-repeat: no-repeat;
     background-size: 300% 300%;
     border: 1px solid var(--color-tertiary);
+    border-radius: 0.5rem;
     display: none;
-    height: 100rem;
+    height: 40rem;
+    left: 120%;
     position: absolute;
-    right: -300px;
     top: 0;
-    width: 100rem;
+    width: 40rem;
     z-index: 10;
 }
 
