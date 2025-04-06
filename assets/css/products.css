@@ -110,6 +110,14 @@
     padding: 0 0.5rem;
 }
 
+.item_title a {
+    text-decoration: none;
+}
+
+.item_title a:hover {
+    text-decoration: underline;
+}
+
 .item_code {
     font-size: 1rem;
     font-weight: 500;
@@ -118,23 +126,6 @@
 
 .code_code {
     font-weight: 700;
-}
-
-.item_footer {
-    display: none;
-}
-
-.item_link {
-    color: var(--color-tertiary);
-    font-weight: 700;
-    padding: 0 0.5rem;
-    text-decoration: none;
-    transition: 1s all;
-}
-
-.item_link:hover {
-    color: var(--color-fourth);
-    text-decoration: underline;
 }
 
 

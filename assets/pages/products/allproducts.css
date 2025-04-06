@@ -24,6 +24,15 @@ html {
     font-size: clamp(1.5rem, 5vw, 2.2rem);
 }
 
+.details_title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-fourth);
+}
+
 .details {
     margin: 5.5rem auto 2rem auto;
 }

@@ -27,24 +27,15 @@
     text-shadow: 1px 1px 2px var(--color-fourth);
 }
 
-.tv__link {
-    color: var(--color-tertiary);
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 1s all;
+.title h2 a {
+    color: inherit; /* Hereda el color del h2 */
+    display: inline-block;
+    font: inherit;  /* Hereda el tamaño y fuente */
+    text-decoration: none; /* Sin subrayado */
 }
 
-.tv__link:hover, .bi:hover {
-    color: var(--color-fourth);
+.title h2 a:hover {
     text-decoration: underline;
-    transform: scale(1.15);
-}
-
-.bi {
-    background-color: transparent;
-    color: var(--color-tertiary);
-    transition: 1s all;
 }
 
 
@@ -59,10 +50,6 @@
         margin-top: 0;
         text-shadow: 1px 1px 2px var(--color-tertiary);
     }
-    .tv__link {
-        font-size: 0.8rem;
-        text-align: right;
-    }
 }
 
 
@@ -74,10 +61,6 @@
         font-size: 1.3rem;
         margin-top: 0;
         text-shadow: 1px 1px 2px var(--color-tertiary);
-    }
-    .tv__link {
-        font-size: 1rem;
-        text-align: right;
     }
 }
 

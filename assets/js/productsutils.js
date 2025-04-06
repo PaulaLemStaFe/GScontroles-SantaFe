@@ -22,21 +22,19 @@ function crearProducto(container, producto, imgClass) {
         <div class="item_img">
             <img class="${imgClass}" src="${producto.img01}" alt="${producto.title}" title="${producto.title}">
         </div>
-        <h5 class="item_title">${producto.title}</h5>
+
+        <h5 class="item_title">
+            <a class="item_link" href="${productLink}" rel="noopener noreferrer" title="Ver Producto">
+                ${producto.title}
+            </a>
+        </h5>
+
         <div class="item_code">
             <span class="code">
                 <span class="code_text">Código:</span>
                 <span class="code_code">${producto.code}</span>
             </span>
         </div>
-        ${showIcons ? `
-        <div class="item_footer">
-            <div class="footer_icons">
-                <i class="bi bi-trash-fill" alt="Eliminar" title="Eliminar" onclick="redirigirPagina()"></i>
-                <i class="bi bi-pencil-fill" alt="Editar" title="Editar" onclick="redirigirPagina()"></i>
-            </div>
-        </div>` : ''}
-        <a class="item_link" href="${productLink}" rel="noopener noreferrer" alt="Ver Producto" title="Ver Producto">Ver Producto</a>
     `;
     container.appendChild(div);
 }
