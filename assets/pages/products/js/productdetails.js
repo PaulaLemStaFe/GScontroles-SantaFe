@@ -161,6 +161,23 @@ function mostrarProductosSimilares(product, similarProducts, productCategory, pr
     }
 }
 
+function actualizarLabelSoportados(product) {
+    const modelos = [
+        product.modelosoportado01,
+        product.modelosoportado02,
+        product.modelosoportado03,
+        product.modelosoportado04,
+        product.modelosoportado05
+    ];
+
+    const marcas = modelos.filter((m) => m && m.trim() !== "");
+    const label = document.getElementById("soportados-label");
+
+    if (label) {
+        label.textContent = marcas.length > 1 ? "Marcas Soportadas:" : "Marca Soportada:";
+    }
+}
+
 function mostrarDetallesProducto(url, productId) {
     fetch(url)
         .then((response) => response.json())
@@ -205,6 +222,7 @@ function mostrarDetallesProducto(url, productId) {
             mostrarMiniaturas(allImages, productImage, thumbnailsContainer);
             mostrarGaleria(product, galleryContainer);
             cargarDatosProducto(product);
+            actualizarLabelSoportados(product);
             mostrarProductosSimilares(product, similarProducts, productCategory, productId);
             activarLightbox(allImages);
         })
