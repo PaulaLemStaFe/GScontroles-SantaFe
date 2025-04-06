@@ -57,42 +57,6 @@ html {
     transform: scale(1.15);
 }
 
-.image-zoom-container {
-    display: inline-block;
-    position: relative;
-}
-
-#product-image {
-    cursor: zoom-in;
-}
-
-.zoom-lens {
-    background-color: rgba(60, 60, 60, 0.4);
-    border: 1px solid var(--color-tertiary);
-    cursor: zoom-in;
-    display: none;
-    height: 8rem;
-    pointer-events: none;
-    position: absolute;
-    width: 8rem;
-    z-index: 5;
-}
-
-.zoom-result {
-    background-repeat: no-repeat;
-    background-size: 200% 200%;
-    border: 1px solid var(--color-tertiary);
-    border-radius: 0.5rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    display: none;
-    height: 35rem;
-    left: 120%;
-    position: absolute;
-    top: -4rem;
-    width: 35rem;
-    z-index: 10;
-}
-
 .product_details_text {
     color: var(--color-fifth);
     display: flex;
@@ -129,15 +93,44 @@ html {
     margin-top: 0.5rem;
 }
 
+/* ========== ZOOM ========== */
+.zoom-lens {
+    background-color: rgba(60, 60, 60, 0.4);
+    border: 1px solid var(--color-tertiary);
+    cursor: zoom-in;
+    display: none;
+    height: 8rem;
+    pointer-events: none;
+    position: absolute;
+    width: 8rem;
+    z-index: 5;
+}
+
+.zoom-result {
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    display: none;
+    height: 35rem;
+    left: 120%;
+    position: absolute;
+    top: -4rem;
+    width: 35rem;
+    z-index: 10;
+}
+
+#product-image {
+    cursor: zoom-in;
+}
+
+.image-zoom-container {
+    display: inline-block;
+    position: relative;
+}
+
 /* ========== LIGHTBOX ========== */
-.lightbox:not(.hidden) {
-    opacity: 1;
-}
-
-body.lightbox-open {
-    overflow: hidden;
-}
-
 .lightbox, #lightbox-overlay {
     align-items: center;
     background-color: rgba(30, 30, 30, 0.8);
@@ -158,6 +151,14 @@ body.lightbox-open {
 #lightbox-overlay.visible {
     opacity: 1;
     visibility: visible;
+}
+
+.lightbox:not(.hidden) {
+    opacity: 1;
+}
+
+body.lightbox-open {
+    overflow: hidden;
 }
 
 .lightbox-image {
