@@ -15,14 +15,14 @@
     padding-top: 32rem;
     position: relative;
 }
+.banner_section {
+    margin: 0 auto;
+    max-width: 1920px;
+}
 .banner_section, .titles, .prom {
     align-items: center;
     display: flex;
     text-shadow: 2px 2px 2px var(--color-tertiary);
-}
-.banner_section {
-    margin: 0 auto;
-    max-width: 1920px;
 }
 .prom {
     color: var(--color-primary);

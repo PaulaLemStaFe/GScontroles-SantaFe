@@ -117,23 +117,34 @@ class Contact extends HTMLElement {
                 line-height: 1rem;
                 scroll-behavior: smooth;
             }
+            h2 {
+                align-items: center;
+                display: flex;
+                flex-flow: column;
+                font-size: 2.5rem;
+                font-variant: small-caps;
+                font-weight: bold; /* Para hacer el texto negrita */
+                justify-content: center;
+                margin-bottom: 1rem;
+                text-align: center;
+                text-shadow: 1px 1px 2px var(--color-secondary);
+            }
+            input {
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+            }
+            .bi {
+                font-size: 1.3rem;
+                font-weight: bold;
+                padding: 0.5rem;
+            }
             .contact {
                 background-image: url(${urlImageFondoHtml});
                 background-position: center center;
                 color: var(--color-primary);
                 opacity: 85%;
                 padding: 2.5rem 0;
-            }
-            h2 {
-                align-items: center;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                font-size: 2.5rem;
-                font-variant: small-caps;
-                font-weight: bold; /* Para hacer el texto negrita */
-                margin-bottom: 1rem;
-                text-align: center;
+                text-shadow: 1px 1px 2px var(--color-secondary);
             }
             .contact_content {
                 align-items: center;
@@ -143,67 +154,9 @@ class Contact extends HTMLElement {
                 margin: 0 auto;
                 width: 80%;
             }
-            .contact_form_form, .contact_form {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            .contact_form__title {
-                font-weight: 700;
-            }
             .contact_form_area {
                 display: flex;
                 flex-direction: column;
-            }
-            input {
-                border-top-left-radius: 0.5rem;
-                border-top-right-radius: 0.5rem;
-            }
-            .contact_form__label {
-                background-color: var(--color-secondary);
-                border-top-left-radius: 0.5rem;
-                border-top-right-radius: 0.5rem;
-                font-size: 0.8rem;
-                font-weight: 300;
-                padding: 0.5rem 0.5rem 0 0.5rem;
-            }
-            .contact_form__input, .menssage {
-                background-color: var(--color-secondary) !important;
-                border: none;
-                border-bottom: 1px solid var(--color-fourth);
-                font-family: "Capriola", serif;
-                font-size: 0.9rem;
-                font-weight: normal;
-                outline: none;
-                padding: 0.5rem;
-                width: 35rem;
-            }
-            .menssage {
-                height: 4rem;
-                resize: none;
-            }
-            .contact_form__input:focus, .menssage:focus, .contact_form__input:valid, .menssage:valid, 
-            .contact_form__input:not, .menssage:not {
-                background-color: var(--color-secondary) !important;
-                border-color: var(--color-fourth) !important;
-            }
-            .mensaje-error {
-                display: none;
-            }
-            .input-container-invalid {
-                margin-bottom: 0.5rem;
-            }
-            .input-container-invalid .input-padron {
-                border-bottom: 2px solid #df2525;
-                border-radius: 7px;
-                margin: 0 0 5px;
-            }
-            .input-container-invalid .input-label {
-                color: #df2525;
-            }
-            .input-container-invalid .mensaje-error {
-                color: #df2525;
-                display: block;
             }
             .contact_form__button {
                 background-color: var(--color-tertiary);
@@ -220,9 +173,39 @@ class Contact extends HTMLElement {
                 background-color: var(--color-fourth);
                 box-shadow: 2px 2px 18px var(--color-tertiary);
             }
-            .send_message__button {
-                color: var(--color-primary);
-                text-decoration: none;
+            .contact_form_form, .contact_form {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                text-shadow: 1px 1px 2px var(--color-fourth);
+            }
+            .contact_form__input, .menssage {
+                background-color: #E0E0E0;
+                border: none;
+                border-bottom: 1px solid var(--color-fourth);
+                font-family: "Capriola", serif;
+                font-size: 0.9rem;
+                font-weight: normal;
+                outline: none;
+                padding: 0.5rem;
+                width: 35rem;
+            }
+            .contact_form__input:focus, .menssage:focus, .contact_form__input:valid, .menssage:valid, 
+            .contact_form__input:not, .menssage:not {
+                background-color: var(--color-secondary) !important;
+                border-color: var(--color-fourth) !important;
+            }
+            .contact_form__label {
+                background-color: var(--color-secondary);
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+                font-size: 0.8rem;
+                font-weight: 300;
+                padding: 0.5rem 0.5rem 0 0.5rem;
+            }
+            .contact_form__title {
+                font-weight: 700;
+                text-shadow: 1px 1px 2px var(--color-secondary);
             }
             .contact_logo_img {
                 display: flex;
@@ -232,10 +215,33 @@ class Contact extends HTMLElement {
                 object-fit: cover;
                 width: 45%;
             }
+            .input-container-invalid {
+                margin-bottom: 0.5rem;
+            }
+            .input-container-invalid .input-padron {
+                border-bottom: 2px solid #df2525;
+                border-radius: 7px;
+                margin: 0 0 5px;
+            }
+            .input-container-invalid .input-label {
+                color: #df2525;
+            }
+            .input-container-invalid .mensaje-error {
+                color: #df2525;
+                display: block;
+            }
+            .menssage {
+                height: 4rem;
+                resize: none;
+            }
+            .mensaje-error {
+                display: none;
+            }
             .menu {
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
+                text-shadow: 1px 1px 2px var(--color-secondary);
             }
             .menu_item {
                 font-size: 1.1rem;
@@ -253,23 +259,22 @@ class Contact extends HTMLElement {
             .menu_link:hover {
                 color: var(--color-primary);
             }
-            .bi {
-                font-size: 1.3rem;
-                font-weight: bold;
-                padding: 0.5rem;
+            .send_message__button {
+                color: var(--color-primary);
+                text-decoration: none;
             }
 
 
 
             /* Media queries para dispositivos medianos y pequeños */
             @media (max-width: 479px) {
+                h2 {
+                    font-size: 1.2rem;
+                }
                 .contact {
                     background-repeat: no-repeat;
                     background-size: cover;
                     padding: 1rem 0;
-                }
-                h2 {
-                    font-size: 1.2rem;
                 }
                 .contact_content {
                     align-items: center;
@@ -277,6 +282,14 @@ class Contact extends HTMLElement {
                     gap: 1.5rem;
                     justify-content: center;
                     width: 90%;
+                }
+                .contact_form__button {
+                    margin: 0;
+                    padding: 0.5rem 1rem;
+                }
+                .contact_form__input, .menssage {
+                    font-size: 0.8rem;
+                    width: 25rem;
                 }
                 .contact_form__title h6 {
                     font-size: 0.8rem;
@@ -288,14 +301,6 @@ class Contact extends HTMLElement {
                     gap: 1rem;
                     justify-content: center;
                 }
-                .contact_form__input, .menssage {
-                    font-size: 0.8rem;
-                    width: 25rem;
-                }
-                .contact_form__button {
-                    margin: 0;
-                    padding: 0.5rem 1rem;
-                }
                 .contact_logo {
                     align-content: center;
                     display: flex;
@@ -305,6 +310,9 @@ class Contact extends HTMLElement {
                 }
                 .contact_logo_img {
                     width: 60%;
+                }
+                .map_iframe {
+                    display: none;
                 }
                 .menu {
                     align-items: center;
@@ -318,20 +326,17 @@ class Contact extends HTMLElement {
                     text-align: center;
                     width: 60%;
                 }
-                .map_iframe {
-                    display: none;
-                }
             }
 
 
             @media (min-width:480px) and (max-width:767px) {
+                h2 {
+                    font-size: 1.3rem;
+                }
                 .contact {
                     background-repeat: no-repeat;
                     background-size: cover;
                     padding: 1rem 0;
-                }
-                h2 {
-                    font-size: 1.3rem;
                 }
                 .contact_content {
                     align-items: center;
@@ -341,18 +346,18 @@ class Contact extends HTMLElement {
                     margin: 0;
                     width: 100%;
                 }
-                .contact_form_form, .contact_form {
-                    align-items: center;
-                    gap: 1rem;
-                    justify-content: center;
+                .contact_form__button {
+                    margin: 0;
+                    padding: 0.5rem 1rem;
                 }
                 .contact_form__title h6 {
                     font-size: 1.1rem;
                     font-weight: normal;
                 }
-                .contact_form__button {
-                    margin: 0;
-                    padding: 0.5rem 1rem;
+                .contact_form_form, .contact_form {
+                    align-items: center;
+                    gap: 1rem;
+                    justify-content: center;
                 }
                 .contact_logo {
                     align-content: center;
@@ -362,6 +367,9 @@ class Contact extends HTMLElement {
                 }
                 .contact_logo_img {
                     width: 30%;
+                }
+                .map_iframe {
+                    display: none;
                 }
                 .menu {
                     align-items: center;
@@ -373,13 +381,13 @@ class Contact extends HTMLElement {
                     font-size: 1.1rem;
                     text-align: center;
                 }
-                .map_iframe {
-                    display: none;
-                }
             }
 
 
             @media (min-width:768px) and (max-width:1023px) {
+                h2 {
+                    font-size: 2rem;
+                }
                 .contact {
                     align-items: center;
                     background-repeat: no-repeat;
@@ -387,18 +395,11 @@ class Contact extends HTMLElement {
                     justify-content: center;
                     padding: 2rem 0;
                 }
-                h2 {
-                    font-size: 2rem;
-                }
                 .contact_content {
                     width: 90%;
                 }
-                .contact_form_form, .contact_form {
-                    align-items: center;
-                    justify-content: center;
-                }
-                .contact_form__title h6 {
-                    font-size: 1.3rem;
+                .contact_form__button {
+                    margin: 0;
                 }
                 .contact_form__input, .menssage {
                     width: 25rem;
@@ -407,8 +408,9 @@ class Contact extends HTMLElement {
                     font-size: 1.3rem;
                     text-align: center;
                 }
-                .contact_form__button {
-                    margin: 0;
+                .contact_form_form, .contact_form {
+                    align-items: center;
+                    justify-content: center;
                 }
                 .contact_logo {
                     align-content: center;
@@ -433,18 +435,18 @@ class Contact extends HTMLElement {
                     gap: 9rem;
                     width: 90%;
                 }
+                .contact_form__button {
+                    margin: 0;
+                }
+                .contact_form__input, .menssage {
+                    width: 30rem;
+                }
                 .contact_form__title h6 {
                     font-size: 1.3rem;
                 }
                 .contact_form_form {
                     align-items: center;
                     justify-content: center;
-                }
-                .contact_form__input, .menssage {
-                    width: 30rem;
-                }
-                .contact_form__button {
-                    margin: 0;
                 }
                 .contact_logo_img {
                     width: 40%;
@@ -457,15 +459,12 @@ class Contact extends HTMLElement {
                     gap: 9rem;
                     width: 90%;
                 }
+                .contact_form__button {
+                    margin: 0;
+                }
                 .contact_form_form {
                     align-items: center;
                     justify-content: center;
-                }
-                .contact_form__input, .menssage {
-                    width: 30rem;
-                }
-                .contact_form__button {
-                    margin: 0;
                 }
             }
         `;

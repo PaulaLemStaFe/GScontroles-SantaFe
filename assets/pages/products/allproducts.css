@@ -6,11 +6,8 @@ html {
     margin: 0;
 }
 
-.page-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    min-height: 100vh;
+footer-component {
+    margin-top: auto;
 }
 
 .all_products_header {
@@ -19,23 +16,78 @@ html {
     padding-top: 5rem;
 }
 
-.all_products_title,
-.details_title {
+.all_products_title {
     font-size: clamp(1.5rem, 5vw, 2.2rem);
 }
 
-.details_title {
-    color: var(--color-fourth);
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    text-shadow: 1px 1px 2px var(--color-fourth);
+.code {
+    margin-bottom: 0.5rem;
 }
 
 .details {
     margin: 5.5rem auto 2rem auto;
+}
+
+.details_code,
+.details_soportados span {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 1px var(--color-fourth);
+}
+
+.details_details {
+    margin-top: 0.5rem;
+}
+
+.details_marca {
+    margin-left: 10rem;
+}
+
+.details_marca,
+.details_text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.3rem;
+    text-align: justify;
+}
+
+.details_title {
+    color: var(--color-fourth);
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px var(--color-fourth);
+}
+
+/* Estilos para los iconos */
+.footer_icons i {
+    color: var(--color-tertiary);
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer_icons i:hover {
+    color: var(--color-fourth);
+}
+
+/* Mostrar item_footer cuando el administrador esté autenticado */
+.item_footer {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh;
 }
 
 .product_details {
@@ -65,35 +117,16 @@ html {
     line-height: 1.5;
 }
 
-.details_code,
-.details_soportados span {
-    font-size: clamp(1rem, 3vw, 1.3rem);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-shadow: 0 1px 1px var(--color-fourth);
-}
-
-.code {
-    margin-bottom: 0.5rem;
-}
-
-.details_marca,
-.details_text {
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.3rem;
-    text-align: justify;
-}
-
-.details_marca {
-    margin-left: 10rem;
-}
-
-.details_details {
-    margin-top: 0.5rem;
-}
-
 /* ========== ZOOM ========== */
+#product-image {
+    cursor: zoom-in;
+}
+
+.image-zoom-container {
+    display: inline-block;
+    position: relative;
+}
+
 .zoom-lens {
     background-color: rgba(60, 60, 60, 0.4);
     border: 1px solid var(--color-tertiary);
@@ -121,16 +154,28 @@ html {
     z-index: 10;
 }
 
-#product-image {
-    cursor: zoom-in;
-}
-
-.image-zoom-container {
-    display: inline-block;
-    position: relative;
-}
-
 /* ========== LIGHTBOX ========== */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+#lightbox-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-counter {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1rem;
+    left: 1.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: 1.5rem;
+    z-index: 1001;
+}
+
 .lightbox, #lightbox-overlay {
     align-items: center;
     background-color: rgba(30, 30, 30, 0.8);
@@ -148,42 +193,20 @@ html {
     z-index: 10000;
 }
 
-#lightbox-overlay.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
 .lightbox:not(.hidden) {
     opacity: 1;
 }
 
-body.lightbox-open {
-    overflow: hidden;
+.lightbox-btn.next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.lightbox-image {
-    border-radius: 0.5rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-    max-width: 90%;
-    max-height: 80%;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.lightbox-image.fade-out {
-    opacity: 0;
-}
-
-.image-counter {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 0.5rem;
-    color: var(--color-primary);
-    font-size: 1rem;
-    left: 1.5rem;
-    padding: 0.5rem;
-    position: absolute;
-    top: 1.5rem;
-    z-index: 1001;
+.lightbox-btn.prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .lightbox-close {
@@ -211,16 +234,17 @@ body.lightbox-open {
     z-index: 1001;
 }
 
-.lightbox-btn.prev {
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+.lightbox-image {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    max-height: 80%;
+    max-width: 90%;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
-.lightbox-btn.next {
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+.lightbox-image.fade-out {
+    opacity: 0;
 }
 
 .lightbox-prev,
@@ -242,31 +266,6 @@ body.lightbox-open {
     transition: transform 0.2s ease;
 }
 
-footer-component {
-    margin-top: auto;
-}
-
-/* Mostrar item_footer cuando el administrador esté autenticado */
-.item_footer {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 0.5rem;
-}
-
-/* Estilos para los iconos */
-.footer_icons i {
-    color: var(--color-tertiary);
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-.footer_icons i:hover {
-    color: var(--color-fourth);
-}
-
 
 
 /* Para pantallas pequeñas, apilamos los elementos */
@@ -279,14 +278,11 @@ footer-component {
         margin: 4rem auto 2rem auto;
     }
 
-    .product_details {
-        align-items: center;
-        flex-direction: column;
-    }
-
     .details_image {
-        max-width: 280px;
-        width: 25%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     .details_marca {
@@ -296,6 +292,21 @@ footer-component {
     .details_title {
         margin: 0.5rem 0;
         text-align: center;
+    }
+
+    .product_details {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .thumbnails {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .thumbnails img {
+        height: 3.75rem;
+        width: 3.75rem;
     }
 }
 
@@ -309,12 +320,11 @@ footer-component {
         margin: 5rem auto 2rem auto;
     }
 
-    .product_details {
-        flex-direction: column;
-    }
-
     .details_image {
-        max-width: 300px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     .details_title {
@@ -322,16 +332,9 @@ footer-component {
         margin: 0.5rem 0;
         text-align: center;
     }
-}
 
-
-/* Para pantallas pequeñas, ajustar mejor el diseño */
-@media (max-width: 768px) {
-    .details_image {
-        align-items: center;
-        display: flex;
+    .product_details {
         flex-direction: column;
-        width: 100%;
     }
 
     .thumbnails {
@@ -347,17 +350,19 @@ footer-component {
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .product_details {
-        justify-content: center;
+    .details_code,
+    .details_soportados span,
+    .code {
+        margin-bottom: 0;
     }
 
     .details_image {
         padding: 0;
     }
 
-    .product_details_text {
-        padding: 0 1rem;
-        width: 85%;
+    .details_marca,
+    .details_text {
+        padding: 0;
     }
 
     .details_title {
@@ -365,15 +370,13 @@ footer-component {
         margin: 0.5rem 0;
     }
 
-    .details_code,
-    .details_soportados span,
-    .code {
-        margin-bottom: 0;
+    .product_details {
+        justify-content: center;
     }
 
-    .details_marca,
-    .details_text {
-        padding: 0;
+    .product_details_text {
+        padding: 0 1rem;
+        width: 85%;
     }
 }
 
@@ -383,28 +386,20 @@ footer-component {
         padding-top: 6rem;
     }
 
-    .details_image {
-        padding: 0;
-    }
-
-    .product_details_text {
-        width: 90%;
-    }
-
-    .details_title {
-        margin: 0.5rem 0;
+    .code {
+        margin-bottom: 0;
     }
 
     .details_code {
         margin-bottom: 0.5rem;
     }
 
-    .code {
-        margin-bottom: 0;
+    .details_details {
+        margin-top: 0;
     }
 
-    .details_soportados span {
-        margin-bottom: 0;
+    .details_image {
+        padding: 0;
     }
 
     .details_marca,
@@ -412,8 +407,16 @@ footer-component {
         padding: 0.2rem;
     }
 
-    .details_details {
-        margin-top: 0;
+    .details_soportados span {
+        margin-bottom: 0;
+    }
+
+    .details_title {
+        margin: 0.5rem 0;
+    }
+
+    .product_details_text {
+        width: 90%;
     }
 }
 
@@ -423,10 +426,6 @@ footer-component {
         margin: 4rem auto 2rem auto;
     }
 
-    .product_details_text {
-        width: 70%;
-    }
-
     .details_code,
     .details_soportados span {
         margin-bottom: 0;
@@ -434,5 +433,9 @@ footer-component {
 
     .details_marca {
         padding: 0.1rem;
+    }
+
+    .product_details_text {
+        width: 70%;
     }
 }

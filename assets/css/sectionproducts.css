@@ -20,13 +20,6 @@
     padding: 0 1.5rem
 }
 
-.tv__title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-top: 0.6rem;
-    text-shadow: 1px 1px 2px var(--color-fourth);
-}
-
 .title h2 a {
     color: inherit; /* Hereda el color del h2 */
     display: inline-block;
@@ -36,6 +29,13 @@
 
 .title h2 a:hover {
     text-decoration: underline;
+}
+
+.tv__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.6rem;
+    text-shadow: 1px 1px 2px var(--color-fourth);
 }
 
 

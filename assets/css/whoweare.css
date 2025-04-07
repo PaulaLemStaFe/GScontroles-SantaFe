@@ -20,17 +20,17 @@
     width: 90%;
 }
 
+.woweare_text {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    width: 94%;
+}
+
 .woweare_title {
     font-size: 2.5rem;
     font-weight: bold;
     margin: 0.5rem 0 0.75rem;
     text-decoration: underline;
-}
-
-.woweare_text {
-    font-size: 1.5rem;
-    line-height: 1.3;
-    width: 94%;
 }
 
 strong {
@@ -61,11 +61,11 @@ strong {
         gap: 0.8rem;
         margin: 1.1rem auto;
     }
-    .woweare_title {
-        font-size: 1.3rem;
-    }
     .woweare_text {
         font-size: 1.1rem;
+    }
+    .woweare_title {
+        font-size: 1.3rem;
     }
 }
 
@@ -74,11 +74,11 @@ strong {
     .woweare {
         margin: 1.3rem auto;
     }
-    .woweare_title {
-        font-size: 1.7rem;
-    }
     .woweare_text {
         font-size: 1.3rem;
+    }
+    .woweare_title {
+        font-size: 1.7rem;
     }
 }
 

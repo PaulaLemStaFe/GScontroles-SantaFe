@@ -105,73 +105,13 @@ class Footer extends HTMLElement {
                 line-height: 1rem;
                 scroll-behavior: smooth;
             }
-            .montserrat-alternates-regular {
-                font-family: "Montserrat Alternates", serif;
-                font-weight: 400;
-                font-style: normal;
-            }
-            .footer {
-                background-color: rgba(105, 117, 101, 0.9);
-                border-top: 0.15rem solid var(--color-fifth);
+            p {
                 font-family: "Montserrat Alternates", sans-serif;
             }
-            .footer_menu {
-                align-items: center;
-                border-top: 5rem var(--color-fifth);
-                display: flex;
-                gap: 5rem;
-                justify-content: space-around;
-                margin: 0;
-                padding: 0.8rem 0;
-            }
-            .navegacion {
-                align-items: center;
-                display: flex;
-                justify-content: space-around;
-                margin: 0 1rem;
-                padding: 0.1rem 0;
-            }
-            .logo_image {
-                border-radius: 1rem;
-                content: url(${urlImageLogoHtml});
-                display: flex;
-                width: 15%;
-            }
-            .menu_buscador {
-                display: flex;
-                gap: 0.4rem;
-            }
-            .menu_list {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                justify-content: center;
-                list-style: none;
-            }
-            .menu_list li {
-                margin: 0 0.5rem;
-            }
-            .menu_list a {
-                color: var(--color-primary);
-                cursor: pointer;
-                display: block;
-                font-size: 1.1rem;
-                padding: 0.4rem 1rem;
-                text-decoration: none;
-                transition: all 1s;
-            }
-            .menu_list a:hover {
-                color: var(--color-fifth);
-                transform: scale(1.1);
-                transition: all 1.2s;
-            }
-            /* search */
-            .buscador_menu {
-                align-items: center;
-                border-radius: 1rem;
-                display: flex;
-                padding-right: 1rem;
-                position: relative;
+            .bi {
+                font-size: 1.3rem;
+                font-weight: bold;
+                padding: 0.5rem;
             }
             .bi_menu, .bi_modal {
                 cursor: pointer;
@@ -186,10 +126,53 @@ class Footer extends HTMLElement {
                 stroke-width: 4;
                 width: 1.2rem;
             }
+            /* search */
+            .buscador_menu {
+                align-items: center;
+                border-radius: 1rem;
+                display: flex;
+                padding-right: 1rem;
+                position: relative;
+            }
+            .derechos {
+                background-color: var(--color-secondary);
+                border-top: 0.15rem solid var(--color-fourth);
+                bottom: 0;
+                font-family: "Montserrat Alternates", sans-serif;
+                font-size: 0.9em;
+                font-weight: 500;
+                padding: 10px;
+                text-align: center;
+            }
+            .footer {
+                background-color: rgb(94 104 90 / 90%);
+                border-top: 0.15rem solid var(--color-fifth);
+                font-family: "Montserrat Alternates", sans-serif;
+            }
+            .footer_menu {
+                align-items: center;
+                border-top: 5rem var(--color-fifth);
+                display: flex;
+                gap: 5rem;
+                justify-content: space-around;
+                margin: 0;
+                padding: 0.8rem 0;
+                text-shadow: 1px 1px 2px var(--color-fourth);
+            }
+            .logo_image {
+                border-radius: 1rem;
+                content: url(${urlImageLogoHtml});
+                display: flex;
+                width: 15%;
+            }
             .menu {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
+            }
+            .menu_buscador {
+                display: flex;
+                gap: 0.4rem;
             }
             .menu_item {
                 font-size: 1.1rem;
@@ -208,35 +191,53 @@ class Footer extends HTMLElement {
                 transform: scale(1.1); /* Aumenta el tamaño del texto */
                 transition: all 1.2s;
             }
-            .bi {
-                font-size: 1.3rem;
-                font-weight: bold;
-                padding: 0.5rem;
+            .menu_list {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+                list-style: none;
             }
-            .derechos {
-                background-color: var(--color-secondary);
-                border-top: 0.15rem solid var(--color-fourth);
-                bottom: 0;
-                font-family: "Montserrat Alternates", sans-serif;
-                font-size: 0.9em;
-                font-weight: 500;
-                padding: 10px;
-                text-align: center;
+            .menu_list a {
+                color: var(--color-primary);
+                cursor: pointer;
+                display: block;
+                font-size: 1.1rem;
+                padding: 0.4rem 1rem;
+                text-decoration: none;
+                transition: all 1s;
             }
-            p {
-                font-family: "Montserrat Alternates", sans-serif;
+            .menu_list a:hover {
+                color: var(--color-fifth);
+                transform: scale(1.1);
+                transition: all 1.2s;
+            }
+            .menu_list li {
+                margin: 0 0.5rem;
+            }
+            .montserrat-alternates-regular {
+                font-family: "Montserrat Alternates", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .navegacion {
+                align-items: center;
+                display: flex;
+                justify-content: space-around;
+                margin: 0 1rem;
+                padding: 0.1rem 0;
             }
 
 
 
             /* Media queries para dispositivos medianos y pequeños */
             @media (max-width: 479px) {
-                .footer_menu {
-                    display: none;
-                }
                 .derechos {
                     font-size: 0.75em;
                     padding: 0.4rem;
+                }
+                .footer_menu {
+                    display: none;
                 }
             }
 

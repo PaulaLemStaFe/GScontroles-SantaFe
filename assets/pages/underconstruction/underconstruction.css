@@ -1,9 +1,18 @@
 @import url('../../css/style.css');
 /* Estilos base (Desktop First) */
 html, body {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
+}
+img {
+    border-radius: 2rem;
+    box-shadow: 3rem 3rem 3rem var(--color-fourth);
+    margin-top: 3rem;
+    width: 85%;
+}
+p {
+    font-family: "Montserrat Alternates", sans-serif;
 }
 .banner {
     align-items: center;
@@ -18,12 +27,6 @@ html, body {
     padding: 5rem 4rem 3.95rem 4rem;
     width: 50%;
 }
-img {
-    border-radius: 2rem;
-    box-shadow: 3rem 3rem 3rem var(--color-fourth);
-    margin-top: 3rem;
-    width: 85%;
-}
 .banner_section {
     align-items: center;
     display: flex;
@@ -32,9 +35,15 @@ img {
     margin-top: 2rem;
     text-shadow: 2px 2px 2px var(--color-tertiary);
 }
-.titles {
-    display: flex;
-    flex-direction: column;
+.derechos {
+    background-color: var(--color-secondary);
+    border-top: 0.15rem solid var(--color-fourth);
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
 }
 .prom, .description {
     color: var(--color-fifth);
@@ -64,18 +73,9 @@ img {
 .see_link {
     text-decoration: none;
 }
-.derechos {
-    background-color: var(--color-secondary);
-    border-top: 0.15rem solid var(--color-fourth);
-    font-family: "Montserrat Alternates", sans-serif;
-    font-size: 0.9em;
-    font-weight: 500;
-    margin-top: auto;
-    padding: 10px;
-    text-align: center;
-}
-p {
-    font-family: "Montserrat Alternates", sans-serif;
+.titles {
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===================== MEDIA QUERIES ===================== */
@@ -98,25 +98,25 @@ p {
         justify-content: center;
         width: 100%;
     }
-    .titles {
-        margin: auto;
-        width: 100%;
-    }
-    .prom {
-        font-size: 2rem;
-        text-align: center;
+    .derechos {
+        font-size: 0.7em;
     }
     .description {
         font-size: 2rem;
         text-align: center;
     }
+    .prom {
+        font-size: 2rem;
+        text-align: center;
+    }
     .see_button {
         font-size: 0.9rem;
-        padding: 0.8rem 2rem;
         margin: 0 auto;
+        padding: 0.8rem 2rem;
     }
-    .derechos {
-        font-size: 0.7em;
+    .titles {
+        margin: auto;
+        width: 100%;
     }
 }
 
@@ -131,22 +131,22 @@ p {
     .banner_image {
         width: 80%;
     }
-    .titles {
-        margin: auto;
-        width: 100%;
+    .description {
+        font-size: 2rem;
+        text-align: center;
     }
     .prom {
         font-size: 2.5rem;
         text-align: center;
     }
-    .description {
-        font-size: 2rem;
-        text-align: center;
-    }
     .see_button {
         font-size: 1rem;
-        padding: 0.8rem 2rem;
         margin: 0 auto;
+        padding: 0.8rem 2rem;
+    }
+    .titles {
+        margin: auto;
+        width: 100%;
     }
 }
 
@@ -162,16 +162,16 @@ p {
     .banner_section {
         margin-top: 3rem;
     }
-    .titles {
-        margin: auto;
+    .description {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
     }
     .prom {
         font-size: 3rem;
         margin-bottom: 2rem;
     }
-    .description {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
+    .titles {
+        margin: auto;
     }
 }
 

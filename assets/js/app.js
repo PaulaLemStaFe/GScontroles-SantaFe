@@ -1,31 +1,6 @@
 //app.js
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Lógica de autenticación del administrador
-    const loginForm = document.getElementById("login-form");
-
-    if (loginForm) {
-        loginForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-
-            fetch('https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json')
-                .then(response => response.json())
-                .then(data => {
-                    const user = data.user.find(user => user.email === email && user.password === password);
-                    if (user) {
-                        localStorage.setItem('isAdmin', 'true');
-                        window.location.href = "https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/editionproducts/editionproducts.html";
-                    } else {
-                        alert('Credenciales incorrectas');
-                    }
-                })
-                .catch(error => console.error('Error al leer el archivo db.json:', error));
-        });
-    }
-
     const inputs = document.querySelectorAll(".input-padron");
     const contact = document.querySelector('contact-component');
     
