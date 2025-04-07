@@ -21,11 +21,11 @@ contactTemplate.innerHTML = `
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
                     <div class="contact_form_area input-container">
-                        <input name="email" type="email" class="contact_form__input input-padron" id="email" required minlength="4" maxlength="40" data-tipo="name" placeholder="Correo Electrónico">
+                        <input name="email" type="email" class="contact_form__input input-padron" id="email" required minlength="4" maxlength="40" data-tipo="email" placeholder="Correo Electrónico">
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
                     <div class="contact_form_area input-container">
-                        <input name="asunt" type="text" class="contact_form__input input-padron" id="asunt" required minlength="10" maxlength="40" data-tipo="name" placeholder="Asunto">
+                        <input name="asunt" type="text" class="contact_form__input input-padron" id="asunt" required minlength="10" maxlength="40" data-tipo="asunt" placeholder="Asunto">
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
     
@@ -269,7 +269,7 @@ class Contact extends HTMLElement {
             /* Media queries para dispositivos medianos y pequeños */
             @media (max-width: 479px) {
                 h2 {
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                 }
                 .contact {
                     background-repeat: no-repeat;
@@ -281,7 +281,7 @@ class Contact extends HTMLElement {
                     flex-direction: column;
                     gap: 1.5rem;
                     justify-content: center;
-                    width: 90%;
+                    width: 80%;
                 }
                 .contact_form__button {
                     margin: 0;
@@ -292,7 +292,7 @@ class Contact extends HTMLElement {
                     width: 25rem;
                 }
                 .contact_form__title h6 {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                     font-weight: normal;
                     text-align: center;
                 }
@@ -311,20 +311,22 @@ class Contact extends HTMLElement {
                 .contact_logo_img {
                     width: 60%;
                 }
+                .input-container-invalid .mensaje-error {
+                    font-size: 0.8rem;
+                }
                 .map_iframe {
                     display: none;
                 }
                 .menu {
                     align-items: center;
-                    gap: 1rem;
+                    gap: 0.8rem;
                     justify-content: center;
                     text-align: center;
                 }
                 .menu_item {
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                     line-height: 1.3rem;
                     text-align: center;
-                    width: 60%;
                 }
             }
 

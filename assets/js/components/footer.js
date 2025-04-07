@@ -233,7 +233,7 @@ class Footer extends HTMLElement {
             /* Media queries para dispositivos medianos y pequeños */
             @media (max-width: 479px) {
                 .derechos {
-                    font-size: 0.75em;
+                    font-size: 0.7em;
                     padding: 0.4rem;
                 }
                 .footer_menu {

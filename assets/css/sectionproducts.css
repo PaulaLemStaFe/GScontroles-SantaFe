@@ -42,13 +42,22 @@
 
 /* Media queries para dispositivos medianos y pequeños */
 @media (max-width: 479px) {
+    .productos {
+        gap: 0;
+    }
     .title {
         gap: 0.2rem;
+        padding: 0 1rem;
     }
     .tv__title {
         font-size: 1.2rem;
         margin-top: 0;
         text-shadow: 1px 1px 2px var(--color-tertiary);
+    }
+
+    #cs__title {
+        margin-top: -2.5rem;
+        z-index: 1;
     }
 }
 

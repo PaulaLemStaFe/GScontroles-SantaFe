@@ -36,7 +36,6 @@
 strong {
     font-size: 1.55rem;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 
@@ -52,6 +51,9 @@ strong {
     }
     .woweare_text {
         font-size: 1rem;
+    }
+    strong {
+        font-size: 1.3rem;
     }
 }
 

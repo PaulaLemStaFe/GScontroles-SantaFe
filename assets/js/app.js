@@ -62,43 +62,6 @@ const mensajesDeError = {
     message: {
         valueMissing: "Debes completar el campo Mensaje para poder continuar"
     },
-    // login form validation
-    password: {
-        valueMissing: "El campo Contraseña no puede estar vacío",
-        patternMismatch: "Al menos 6 caracteres, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.",
-    },
-    // add products validation
-    img: {
-        valueMissing: "Debes seleccionar al menos una imagen",
-    },
-    product_category: {
-        valueMissing: "El campo Categoría del Producto no puede estar vacío",
-        tooShort: "Debe tener al menos 4 caracteres"
-    },
-    product_code: {
-        valueMissing: "El campo Código del Producto no puede estar vacío",
-        tooShort: "Debe tener al menos 6 caracteres"
-    },
-    product_color: {
-        valueMissing: "El campo Color del Producto no puede estar vacío",
-        tooShort: "Debe tener al menos 4 caracteres"
-    },
-    product_soported_01: {
-        valueMissing: "El campo Marca Soportada no puede estar vacío",
-        tooShort: "Debe tener al menos 3 caracteres"
-    },
-    product_soported_02: {
-        valueMissing: "El campo Marca Soportada no puede estar vacío",
-        tooShort: "Debe tener al menos 3 caracteres"
-    },
-    product_soported_03: {
-        valueMissing: "El campo Marca Soportada no puede estar vacío",
-        tooShort: "Debe tener al menos 3 caracteres"
-    },
-    product_soported_04: {
-        valueMissing: "El campo Marca Soportada no puede estar vacío",
-        tooShort: "Debe tener al menos 3 caracteres"
-    }
 };
 
 function valida(input) {

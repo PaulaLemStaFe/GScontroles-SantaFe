@@ -174,15 +174,9 @@ class Header extends HTMLElement {
                 padding: 0.1rem 0;
                 width: 100%;
             }
-            /* Estilo para el submenú */
             .submenu {
                 position: relative;
             }
-            /* Mostrar el submenú al pasar el mouse */
-            .submenu:hover .submenu_list {
-                display: block;
-            }
-            /* Aplicar la animación al pasar el mouse */
             .submenu:hover .submenu_list {
                 animation: delayShow 0s 0.5s forwards;
                 display: block;
@@ -233,13 +227,15 @@ class Header extends HTMLElement {
                 }
                 /* Botón de cerrar menú */
                 .close_menu {
-                    background: none;
-                    border: none;
-                    cursor: pointer;
                     font-size: 1.5rem;
                     position: absolute;
                     right: 20px;
                     top: 15px;
+                }
+                .close_menu, .menu_toggle {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
                 }
                 .logo_image {
                     padding: 0 1rem;
@@ -268,10 +264,7 @@ class Header extends HTMLElement {
                 }
                 /* Estilos para el botón del menú hamburguesa */
                 .menu_toggle {
-                    background: none;
-                    border: none;
                     color: var(--color-primary);
-                    cursor: pointer;
                     display: block;
                     font-size: 2rem;
                     padding: 0.5rem;
