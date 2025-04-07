@@ -259,7 +259,8 @@ class Header extends HTMLElement {
                     text-align: left;
                 }
                 .menu_list li {
-                    border_bottom: 1px solid var(--color-secondary);
+                    border-bottom: 1px solid var(--color-secondary);
+                    margin: 0;
                     width: 100%;
                 }
                 .menu_list li:last-child a {
@@ -297,7 +298,7 @@ class Header extends HTMLElement {
                 .submenu_list {
                     background-color: rgba(30, 32, 30, 0.8);
                     border-top-right-radius: 1rem;
-                    left: 104%;
+                    left: 103.5%;
                     top: 0;
                 }
                 .submenu_list li a {
