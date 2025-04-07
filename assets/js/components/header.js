@@ -219,6 +219,10 @@ class Header extends HTMLElement {
                 transform: scale(1.1);
                 transition: all 1.1s;
             }
+            .submenu_list li:last-child a {
+                border-bottom: none;
+            }
+
 
 
             /* Media queries para dispositivos medianos y pequeños */
@@ -238,21 +242,28 @@ class Header extends HTMLElement {
                     top: 15px;
                 }
                 .logo_image {
+                    padding: 0 1rem;
+                    position: static;
                     width: 33%;
                 }
                 .menu_list {
+                    align-items: flex-start;
                     flex-direction: column;
-                    margin: 0;
-                    text-align: center;
-                }
-                .menu_list li {
-                    margin: 0.5rem 0;
+                    margin: 0.3rem;
+                    text-align: left;
                 }
                 .menu_list a {
                     display: block;
                     font-size: 1rem;
-                    padding: 0.3rem;
-                    text-align: center;
+                    padding: 0.5rem;
+                    text-align: left;
+                }
+                .menu_list li {
+                    border_bottom: 1px solid var(--color-secondary);
+                    width: 100%;
+                }
+                .menu_list li:last-child a {
+                    border-bottom: none;
                 }
                 /* Estilos para el botón del menú hamburguesa */
                 .menu_toggle {
@@ -266,6 +277,8 @@ class Header extends HTMLElement {
                 }
                 /* Estilos para el menú hamburguesa flotante */
                 .nav_menu {
+                    background-color: rgba(30, 32, 30, 0.8);
+                    border-bottom-right-radius: 1rem;
                     display: none;
                     flex-direction: column;
                     position: fixed; /* Lo hace flotante */
@@ -275,13 +288,20 @@ class Header extends HTMLElement {
                     position: absolute;
                 }
                 .navegacion {
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
                     margin: 0;
                     padding: 0;
+                    position: relative;
                 }
                 .submenu_list {
-                    background-color: var(--color-fourth);
-                    border-left: 1px solid var(--color-secondary);
-                    border-right: 1px solid var(--color-secondary);
+                    background-color: rgba(30, 32, 30, 0.8);
+                    border-top-right-radius: 1rem;
+                    left: 104%;
+                    top: 0;
+                }
+                .submenu_list li a {
+                    padding: 0.5rem;
                 }
             }
 
