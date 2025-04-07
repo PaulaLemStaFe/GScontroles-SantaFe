@@ -77,27 +77,89 @@ function setupZoomFunctionality(productImage) {
 }
 
 function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
+    const indicator = document.getElementById("carousel-indicator");
+    let currentIndex = 0;
+
+    // Crear flechas de navegación
+    const prevArrow = document.createElement("div");
+    const nextArrow = document.createElement("div");
+
+    prevArrow.className = "carousel-arrow prev";
+    nextArrow.className = "carousel-arrow next";
+
+    prevArrow.innerHTML = "&#10094;"; // ←
+    nextArrow.innerHTML = "&#10095;"; // →
+
+    productImage.parentElement.style.position = "relative"; // asegura posición relativa
+
+    productImage.parentElement.appendChild(prevArrow);
+    productImage.parentElement.appendChild(nextArrow);
+
+    function updateImage(index) {
+        currentIndex = index;
+        productImage.src = allImages[currentIndex];
+        productImage.setAttribute("data-index", currentIndex);
+
+        if (indicator) {
+            indicator.textContent = `${currentIndex + 1} / ${allImages.length}`;
+        }
+
+        if (window.innerWidth > 479) {
+            document.querySelectorAll(".thumbnails img").forEach((img, idx) => {
+                img.classList.toggle("selected", idx === currentIndex);
+            });
+        }
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+        updateImage(currentIndex);
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % allImages.length;
+        updateImage(currentIndex);
+    }
+
+    prevArrow.addEventListener("click", showPrevImage);
+    nextArrow.addEventListener("click", showNextImage);
+
+    // Miniaturas solo en desktop
     thumbnailsContainer.innerHTML = "";
-    allImages.forEach((imgSrc, index) => {
-        const thumb = document.createElement("img");
-        thumb.src = imgSrc;
-        if (index === 0) thumb.classList.add("selected");
+    if (window.innerWidth > 479) {
+        allImages.forEach((imgSrc, index) => {
+            const thumb = document.createElement("img");
+            thumb.src = imgSrc;
+            if (index === 0) thumb.classList.add("selected");
 
-        thumb.addEventListener("click", () => {
-            document.querySelectorAll(".thumbnails img").forEach((img) =>
-                img.classList.remove("selected")
-            );
-            thumb.classList.add("selected");
-            productImage.src = imgSrc;
+            thumb.addEventListener("click", () => updateImage(index));
+            thumb.addEventListener("mouseenter", () => updateImage(index));
+
+            thumbnailsContainer.appendChild(thumb);
+        });
+    }
+
+    // Swipe en mobile
+    if (window.innerWidth <= 479) {
+        let startX = 0;
+
+        productImage.addEventListener("touchstart", e => {
+            startX = e.touches[0].clientX;
         });
 
-        thumb.addEventListener("mouseenter", () => {
-            productImage.src = imgSrc;
+        productImage.addEventListener("touchend", e => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) {
+                showNextImage();
+            } else if (endX - startX > 50) {
+                showPrevImage();
+            }
         });
+    }
 
-        thumbnailsContainer.appendChild(thumb);
-    });
+    updateImage(0); // mostrar primera imagen
 }
+
 
 function mostrarGaleria(product, galleryContainer) {
     if (!galleryContainer) return;

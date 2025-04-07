@@ -21,6 +21,11 @@ footer-component {
     color: var(--color-primary);
     transition: 0.8s all;
 }
+.autocomplete-item.autocomplete-active {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    transition: 0.8s all;
+}
 .autocomplete-results {
     background-color: var(--color-secondary);
     border: 1px solid var(--color-tertiary);
@@ -127,6 +132,11 @@ footer-component {
         font-size: 1rem;
         height: 2rem;
         width: 90%;
+    }
+    .no-results-container {
+        gap: 2rem;
+        margin-top: 3rem;
+        width: 90%
     }
     .search-section {
         padding-top: 4rem;

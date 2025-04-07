@@ -278,13 +278,6 @@ body.lightbox-open {
         margin: 4rem auto 2rem auto;
     }
 
-    .details_image {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
     .details_marca {
         margin-left: 4rem;
     }
@@ -297,11 +290,7 @@ body.lightbox-open {
     .product_details {
         align-items: center;
         flex-direction: column;
-    }
-
-    .thumbnails {
-        flex-direction: row;
-        justify-content: center;
+        gap: 0;
     }
 
     .thumbnails img {

@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const autocompleteResults = document.getElementById("autocomplete-results");
     const noResultsContainer = document.getElementById("no-results-container");
 
-    // Cargar productos desde JSON
     let productos = [];
+    let currentFocus = -1; // Se mantiene global dentro del DOMContentLoaded
+
     fetch('https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json')
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -18,10 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error('Error fetching products:', error));
 
-    /**
-     * Event listener para el input de búsqueda
-     * Detecta cambios y actualiza los resultados de autocompletado
-     */
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         if (query) {
@@ -33,34 +30,62 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    /**
-     * Event listener para el input de búsqueda
-     * Muestra los resultados de autocompletado al hacer clic
-     */
     searchInput.addEventListener("click", () => {
-        const marcas = obtenerMarcasDisponibles('');
+        const query = searchInput.value.trim().toLowerCase();
+        const marcas = obtenerMarcasDisponibles(query);
         mostrarResultadosAutocompletado(marcas);
     });
 
-    /**
-     * Obtiene una lista de marcas disponibles que coinciden con la consulta
-     * @param {string} query - La consulta de búsqueda
-     * @returns {Array} - Lista de marcas disponibles
-     */
-    function obtenerMarcasDisponibles(query) {
-        return productos.flatMap(producto => [
-            producto.modelosoportado01, producto.modelosoportado02, 
-            producto.modelosoportado03, producto.modelosoportado04, producto.modelosoportado05])
-            .filter((marca, index, self) => marca && marca.toLowerCase().includes(query) && self.indexOf(marca) === index)
-            .sort((a, b) => a.localeCompare(b)); // Ordenar alfabéticamente
+    document.addEventListener("click", (e) => {
+        if (!autocompleteResults.contains(e.target) && e.target !== searchInput) {
+            autocompleteResults.style.display = 'none';
+        }
+    });
+
+    searchInput.addEventListener("keydown", (e) => {
+        const items = autocompleteResults.querySelectorAll(".autocomplete-item");
+        if (items.length === 0) return;
+
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            currentFocus++;
+            marcarElementoActivo(items);
+        } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            currentFocus--;
+            marcarElementoActivo(items);
+        } else if (e.key === "Enter") {
+            e.preventDefault();
+            if (currentFocus > -1 && items[currentFocus]) {
+                items[currentFocus].click();
+            }
+        }
+    });
+
+    function marcarElementoActivo(items) {
+        quitarClaseActiva(items);
+        if (currentFocus >= items.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = items.length - 1;
+        items[currentFocus].classList.add("autocomplete-active");
+        items[currentFocus].scrollIntoView({ block: 'nearest' });
     }
 
-    /**
-     * Muestra los resultados de autocompletado
-     * @param {Array} marcas - Lista de marcas a mostrar
-     */
+    function quitarClaseActiva(items) {
+        items.forEach(item => item.classList.remove("autocomplete-active"));
+    }
+
+    function obtenerMarcasDisponibles(query) {
+        return productos.flatMap(producto => [
+            producto.modelosoportado01, producto.modelosoportado02,
+            producto.modelosoportado03, producto.modelosoportado04, producto.modelosoportado05])
+            .filter((marca, index, self) => marca && marca.toLowerCase().includes(query) && self.indexOf(marca) === index)
+            .sort((a, b) => a.localeCompare(b));
+    }
+
     function mostrarResultadosAutocompletado(marcas) {
         autocompleteResults.innerHTML = '';
+        currentFocus = -1;
+
         if (marcas.length > 0) {
             marcas.forEach(marca => {
                 const item = document.createElement("div");
@@ -80,19 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /**
-     * Event listener para el ícono de búsqueda
-     * Realiza la búsqueda al hacer clic en el ícono
-     */
     searchButton.addEventListener("click", () => {
         const query = searchInput.value.trim();
         if (query) realizarBusqueda(query);
     });
 
-    /**
-     * Event listener para el input de búsqueda
-     * Realiza la búsqueda al presionar "Enter"
-     */
     searchInput.addEventListener("keypress", event => {
         if (event.key === "Enter") {
             const query = searchInput.value.trim();
@@ -100,42 +117,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    /**
-     * Realiza la búsqueda de productos por marca
-     * @param {string} query - La consulta de búsqueda
-     */
     function realizarBusqueda(query) {
         if (!Array.isArray(productos)) {
             console.error("Productos is not an array:", productos);
             return;
         }
 
-        // Buscar todos los productos que coincidan con la marca
         const resultadosFiltrados = productos.filter(producto =>
-            [producto.modelosoportado01, 
-            producto.modelosoportado02, 
-            producto.modelosoportado03, 
-            producto.modelosoportado04, 
-            producto.modelosoportado05].some(marca => 
+            [producto.modelosoportado01, producto.modelosoportado02, producto.modelosoportado03,
+            producto.modelosoportado04, producto.modelosoportado05].some(marca =>
                 marca && marca.toLowerCase() === query.toLowerCase()
             )
         );
 
         mostrarResultados(resultadosFiltrados);
-
-        // Limpiar el contenido del input
         searchInput.value = '';
         autocompleteResults.innerHTML = '';
         autocompleteResults.style.display = 'none';
     }
 
-    /**
-     * Muestra los resultados de la búsqueda en el DOM
-     * @param {Array} resultados - Lista de productos encontrados
-     */
     function mostrarResultados(resultados) {
         searchResults.innerHTML = "";
         noResultsContainer.innerHTML = "";
+
         if (resultados.length === 0) {
             noResultsContainer.innerHTML = `
                 <div class="no-results-container">
@@ -148,11 +152,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 searchResults.classList.add('centrado');
             } else {
                 searchResults.classList.remove('centrado');
-                searchResults.style.gridTemplateColumns = 'repeat(6, 1fr)'; // Asegura que haya 6 columnas
+                searchResults.style.gridTemplateColumns = 'repeat(6, 1fr)';
             }
 
             resultados.forEach(producto => {
-                // Usar la función crearProducto del archivo productsutils.js
                 crearProducto(searchResults, producto, "img");
             });
         }
