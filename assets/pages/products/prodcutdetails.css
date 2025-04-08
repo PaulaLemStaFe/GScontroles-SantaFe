@@ -336,7 +336,6 @@ body.lightbox-open {
     #product-image {
         cursor: default;
         pointer-events: auto;
-        /* Asegura que pueda tocarse sin activar el zoom */
     }
 
     .carousel-indicator-top-left {
@@ -411,7 +410,6 @@ body.lightbox-open {
 
     .main-image {
         flex-direction: column;
-        /* Cambiado de row a column */
     }
 
     .main-image img {
@@ -442,21 +440,87 @@ body.lightbox-open {
 
 
 @media (min-width:480px) and (max-width:767px) {
+    #product-image {
+        cursor: default;
+        pointer-events: auto;
+    }
+
+    .carousel-indicator-top-left {
+        display: block;
+    }
+
+    .carousel-indicators {
+        display: flex;
+        gap: 0.5rem;
+    }
+
     .details {
-        margin: 5rem auto 2rem auto;
+        margin: 4rem auto 2rem auto;
     }
 
     .details_image {
         align-items: center;
+        border-radius: 2rem;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+
+    .details_marca {
+        margin-left: 13rem;;
     }
 
     .details_title {
         font-size: 1.7rem;
-        margin: 0.5rem 0;
+        margin: 0.5rem;
         text-align: center;
+    }
+
+    .image-counter {
+        font-size: 1rem;
+        left: 1rem;
+        top: 1rem;
+    }
+
+    .image-zoom-container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .lightbox-controls {
+        width: 93%;
+    }
+
+    .lightbox-close {
+        font-size: 2rem;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .lightbox-image {
+        max-height: 95%;
+        max-width: 95%;
+    }
+
+    .lightbox-indicators {
+        background-color: var(--color-fifth);
+        border-radius: 0.5rem;
+        display: flex;
+        gap: 0.7rem;
+        padding: 0.5rem 0.8rem;
+        position: absolute;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        display: none;
+    }
+
+    .main-image {
+        flex-direction: column;
     }
 
     .main-image img {
@@ -465,19 +529,23 @@ body.lightbox-open {
     }
 
     .product_details {
+        align-items: center;
         flex-direction: column;
+        gap: 0;
     }
 
     .thumbnails {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-height: none;
+        display: none !important;
     }
 
     .thumbnails img {
         height: 3.75rem;
         width: 3.75rem;
+    }
+
+    .zoom-lens,
+    .zoom-result {
+        display: none !important;
     }
 }
 

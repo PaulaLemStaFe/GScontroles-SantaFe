@@ -39,7 +39,7 @@ footer-component {
 
 @media (min-width: 480px) and (max-width: 767px) {
     .all_products_header {
-        padding-top: 6rem;
+        padding-top: 5rem;
     }
 }
 

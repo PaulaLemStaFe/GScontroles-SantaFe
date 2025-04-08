@@ -111,7 +111,8 @@
     .all_products_items {
         gap: 0.9rem;
         grid-template-columns: repeat(3, 1fr);
-        padding: 0.5rem 0.2rem;
+        margin: 0.5rem auto;
+        padding: 0 1rem 1.9rem 1rem;
     }
 
     .img, .img_aa {

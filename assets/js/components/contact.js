@@ -333,7 +333,7 @@ class Contact extends HTMLElement {
 
             @media (min-width:480px) and (max-width:767px) {
                 h2 {
-                    font-size: 1.3rem;
+                    font-size: 1.5rem;
                 }
                 .contact {
                     background-repeat: no-repeat;
@@ -349,6 +349,7 @@ class Contact extends HTMLElement {
                     width: 100%;
                 }
                 .contact_form__button {
+                    font-size: 1rem;
                     margin: 0;
                     padding: 0.5rem 1rem;
                 }

@@ -61,13 +61,14 @@ strong {
 @media (min-width:480px) and (max-width:767px) {
     .woweare {
         gap: 0.8rem;
-        margin: 1.1rem auto;
+        margin: 0 auto;
     }
     .woweare_text {
         font-size: 1.1rem;
     }
     .woweare_title {
         font-size: 1.3rem;
+        margin: 0 0 0.5rem 0;
     }
 }
 

@@ -129,6 +129,7 @@ p {
         width: 100%;
     }
     .banner_image {
+        padding: 2rem 1rem;
         width: 80%;
     }
     .description {
@@ -141,7 +142,7 @@ p {
     }
     .see_button {
         font-size: 1rem;
-        margin: 0 auto;
+        margin: 0 auto 2rem auto;
         padding: 0.8rem 2rem;
     }
     .titles {
