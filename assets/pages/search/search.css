@@ -204,12 +204,22 @@ footer-component {
 
 
 @media (min-width: 1024px) and (max-width: 1279px) {
+    .additional-message {
+        font-size: 1.3rem;
+    }
     .autocomplete-results {
         left: 5%;
         width: 90%;
     }
+    .no-results-container {
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    .no-results-message {
+        font-size: 1.6rem;
+    }
     .search-section_content {
-        margin-top: 1.2rem;
+        margin: 1.5rem 0;
     }
 }
 

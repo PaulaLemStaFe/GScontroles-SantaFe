@@ -434,7 +434,7 @@ class Contact extends HTMLElement {
 
             @media (min-width:1024px) and (max-width:1279px) {
                 .contact_content {
-                    gap: 9rem;
+                    gap: 7rem;
                     width: 90%;
                 }
                 .contact_form__button {
@@ -443,8 +443,12 @@ class Contact extends HTMLElement {
                 .contact_form__input, .menssage {
                     width: 30rem;
                 }
+                .contact_form__title {
+                    text-shadow: none;
+                }
                 .contact_form__title h6 {
                     font-size: 1.3rem;
+                    text-align: center;
                 }
                 .contact_form_form {
                     align-items: center;
@@ -452,6 +456,9 @@ class Contact extends HTMLElement {
                 }
                 .contact_logo_img {
                     width: 40%;
+                }
+                .contact_menu {
+                    padding-left: 3rem;
                 }
             }
 

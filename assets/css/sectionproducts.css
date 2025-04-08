@@ -96,3 +96,22 @@
         z-index: 1;
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .cs {
+        gap: 0.3rem;
+    }
+    #cs__title {
+        margin-top: -5rem;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1280px) {
+    .productos {
+        gap: 1.5rem;
+    }
+    .tv__title {
+        font-size: 2.2rem;
+    }
+}

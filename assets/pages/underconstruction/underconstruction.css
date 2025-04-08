@@ -179,11 +179,18 @@ p {
 
 /* Laptops (1024px - 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
+    img {
+        margin-top: 0;
+        width: 90%;
+    }
     .banner_image {
-        width: 60%;
+        width: 75%;
     }
     .banner_section {
         margin-top: 3rem;
+    }
+    .description {
+        font-size: 3.2rem;
     }
 }
 

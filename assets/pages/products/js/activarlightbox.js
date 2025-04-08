@@ -5,17 +5,40 @@ function activarLightbox(images) {
     const prevBtn = document.getElementById("lightbox-prev");
     const nextBtn = document.getElementById("lightbox-next");
     const imageCounter = document.getElementById("image-counter");
+    const dotsContainer = document.getElementById("lightboxIndicators");
 
     let currentIndex = 0;
+    const hasMouse = window.matchMedia('(pointer: fine)').matches;
 
     function updateLightboxImage(index) {
         lightboxImage.classList.add("fade-out");
-    
+        currentIndex = index;
+
         setTimeout(() => {
-            lightboxImage.src = images[index];
-            imageCounter.textContent = `${index + 1} / ${images.length}`;
+            lightboxImage.src = images[currentIndex];
+            imageCounter.textContent = `${currentIndex + 1} / ${images.length}`;
             lightboxImage.classList.remove("fade-out");
-        }, 200); // 200 ms tiene que coincidir con la duración del CSS
+            if (!hasMouse) updateDots();
+        }, 200);
+    }
+
+    function createDots() {
+        if (!dotsContainer || hasMouse) return;
+        dotsContainer.innerHTML = "";
+        images.forEach((_, index) => {
+            const dot = document.createElement("span");
+            if (index === currentIndex) dot.classList.add("active");
+            dot.addEventListener("click", () => updateLightboxImage(index));
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    function updateDots() {
+        if (!dotsContainer || hasMouse) return;
+        const dots = dotsContainer.querySelectorAll("span");
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle("active", idx === currentIndex);
+        });
     }
 
     function showLightbox(index) {
@@ -40,6 +63,32 @@ function activarLightbox(images) {
         updateLightboxImage(currentIndex);
     }
 
+    // Flechas visibles solo si hay mouse
+    if (hasMouse) {
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+    } else {
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+    }
+
+    // Swipe solo si NO hay mouse
+    if (!hasMouse) {
+        let startX = 0;
+        lightboxImage.addEventListener("touchstart", e => {
+            startX = e.touches[0].clientX;
+        });
+
+        lightboxImage.addEventListener("touchend", e => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) {
+                showNextImage();
+            } else if (endX - startX > 50) {
+                showPrevImage();
+            }
+        });
+    }
+
     // Clicks
     nextBtn.addEventListener("click", showNextImage);
     prevBtn.addEventListener("click", showPrevImage);
@@ -51,7 +100,6 @@ function activarLightbox(images) {
     // Teclas
     document.addEventListener("keydown", (e) => {
         if (!overlay.classList.contains("visible")) return;
-    
         switch (e.key) {
             case "ArrowRight":
                 showNextImage();
@@ -80,4 +128,6 @@ function activarLightbox(images) {
         const index = images.findIndex((img) => currentSrc.includes(img.split("/").pop()));
         showLightbox(index !== -1 ? index : 0);
     });
+
+    createDots();
 }

@@ -79,8 +79,7 @@
     color: var(--color-fourth);
     font-size: clamp(1.5rem, 5vw, 2.2rem);
     font-weight: bold;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 2rem auto;
     text-align: center;
     text-shadow: 1px 1px 2px var(--color-fourth);
 }
@@ -676,7 +675,6 @@ body.lightbox-open {
 
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-
     .details_code {
         margin-bottom: 0.5rem;
     }
@@ -687,6 +685,7 @@ body.lightbox-open {
 
     .details_image {
         padding: 0;
+        width: 60%;
     }
 
     .details_marca,
@@ -694,16 +693,24 @@ body.lightbox-open {
         padding: 0.2rem;
     }
 
-    .details_soportados span {
-        margin-bottom: 0;
+    .details_title {
+        margin: 1rem 0;
     }
 
-    .details_title {
-        margin: 0.5rem 0;
+    .main-image img {
+        width: auto;
+    }
+
+    .product_details {
+        padding: 2%;
     }
 
     .product_details_text {
-        width: 90%;
+        width: 80%;
+    }
+
+    .thumbnails {
+        padding: 1.2rem;
     }
 }
 

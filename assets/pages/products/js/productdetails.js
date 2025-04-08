@@ -19,27 +19,41 @@ function updateImageAttributes(imgElement, product) {
 }
 
 function setupZoomFunctionality(productImage) {
+    const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+    if (!supportsHover) {
+        return; // Si el dispositivo NO tiene mouse, no activamos el zoom
+    }
+
     const zoomLens = document.querySelector(".zoom-lens");
     const zoomResult = document.querySelector(".zoom-result");
     const imageContainer = document.getElementById("product-image-container");
     imageContainer.style.position = "relative";
-
-    productImage.addEventListener("mouseenter", () => {
-        productImage.classList.add("disable-transform");
-        zoomLens.style.display = "block";
-        zoomResult.style.display = "block";
-        zoomResult.style.backgroundImage = `url(${productImage.src})`;
-    });
 
     let mouseX = 0,
         mouseY = 0,
         currentX = 0,
         currentY = 0;
 
+    productImage.addEventListener("mouseenter", () => {
+        productImage.classList.add("disable-transform");
+        zoomLens.style.display = "block";
+        zoomResult.style.display = "block";
+        zoomResult.style.backgroundImage = `url(${productImage.src})`;
+        zoomResult.style.backgroundSize = "300% 300%";
+        requestAnimationFrame(animateZoom);
+    });
+
     productImage.addEventListener("mousemove", (e) => {
         const rect = productImage.getBoundingClientRect();
         mouseX = e.clientX - rect.left;
         mouseY = e.clientY - rect.top;
+    });
+
+    productImage.addEventListener("mouseleave", () => {
+        productImage.classList.remove("disable-transform");
+        zoomLens.style.display = "none";
+        zoomResult.style.display = "none";
     });
 
     function animateZoom() {
@@ -60,20 +74,6 @@ function setupZoomFunctionality(productImage) {
 
         requestAnimationFrame(animateZoom);
     }
-
-    productImage.addEventListener("mouseenter", () => {
-        zoomLens.style.display = "block";
-        zoomResult.style.display = "block";
-        zoomResult.style.backgroundImage = `url(${productImage.src})`;
-        zoomResult.style.backgroundSize = "300% 300%";
-        requestAnimationFrame(animateZoom);
-    });
-
-    productImage.addEventListener("mouseleave", () => {
-        productImage.classList.remove("disable-transform");
-        zoomLens.style.display = "none";
-        zoomResult.style.display = "none";
-    });
 }
 
 function mostrarLightbox(allImages, startIndex = 0) {
@@ -81,28 +81,34 @@ function mostrarLightbox(allImages, startIndex = 0) {
     const lightboxImage = document.getElementById("lightbox-image");
     const counter = document.getElementById("image-counter");
     const dotsContainer = document.getElementById("lightboxIndicators");
+    const prevBtn = document.getElementById("lightbox-prev");
+    const nextBtn = document.getElementById("lightbox-next");
+    const closeBtn = document.querySelector(".lightbox-close");
+
     let currentIndex = startIndex;
+    const hasMouse = window.matchMedia('(pointer: fine)').matches;
 
     function updateLightboxImage(index) {
         currentIndex = index;
         lightboxImage.src = allImages[currentIndex];
         counter.textContent = `${currentIndex + 1} / ${allImages.length}`;
-        updateDots();
+        if (!hasMouse) updateDots();
     }
 
     function createDots() {
-        if (!dotsContainer) return;
+        if (!dotsContainer || hasMouse) return; // Solo si no tiene mouse
         dotsContainer.innerHTML = "";
 
         allImages.forEach((_, index) => {
             const dot = document.createElement("span");
             if (index === currentIndex) dot.classList.add("active");
+            dot.addEventListener("click", () => updateLightboxImage(index));
             dotsContainer.appendChild(dot);
         });
     }
 
     function updateDots() {
-        if (!dotsContainer) return;
+        if (!dotsContainer || hasMouse) return;
         const dots = dotsContainer.querySelectorAll("span");
         dots.forEach((dot, idx) => {
             dot.classList.toggle("active", idx === currentIndex);
@@ -119,10 +125,9 @@ function mostrarLightbox(allImages, startIndex = 0) {
         updateLightboxImage(currentIndex);
     }
 
-    // Swipe (solo mobile)
-    if (window.innerWidth <= 479) {
+    // Swipe (solo si NO tiene mouse)
+    if (!hasMouse) {
         let startX = 0;
-
         lightboxImage.addEventListener("touchstart", e => {
             startX = e.touches[0].clientX;
         });
@@ -137,12 +142,19 @@ function mostrarLightbox(allImages, startIndex = 0) {
         });
     }
 
-    // Flechas (desktop)
-    document.getElementById("lightbox-prev").onclick = showPrev;
-    document.getElementById("lightbox-next").onclick = showNext;
+    // Flechas (solo si tiene mouse)
+    if (hasMouse) {
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+        prevBtn.onclick = showPrev;
+        nextBtn.onclick = showNext;
+    } else {
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+    }
 
     // Cerrar lightbox
-    document.querySelector(".lightbox-close").onclick = () => {
+    closeBtn.onclick = () => {
         lightbox.classList.remove("visible");
         document.body.classList.remove("lightbox-open");
     };
