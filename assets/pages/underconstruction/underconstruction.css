@@ -82,10 +82,6 @@ p {
 
 /* Smartphones (hasta 479px) */
 @media (max-width: 479px) {
-    img {
-        margin-top: 0;
-        width: 70%;
-    }
     .banner {
         flex-direction: column;
         justify-content: space-evenly;
@@ -93,33 +89,30 @@ p {
         width: 100%;
     }
     .banner_image {
-        margin: 3rem auto 1rem auto;
-        padding: 1rem;
+        margin: 3rem auto;
+        padding: 2rem 1rem;
         width: 90%;
     }
     .banner_section {
         align-items: center;
         justify-content: center;
-        margin-top: 0;
         width: 100%;
     }
     .derechos {
         font-size: 0.7em;
     }
     .description {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
+        font-size: 2rem;
         text-align: center;
     }
     .prom {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        font-size: 2rem;
         text-align: center;
     }
     .see_button {
-        font-size: 0.85rem;
-        margin: 0 auto;
-        padding: 0.7rem 2rem;
+        font-size: 0.9rem;
+        margin: 2rem auto;
+        padding: 0.8rem 2rem;
     }
     .titles {
         margin: auto;
