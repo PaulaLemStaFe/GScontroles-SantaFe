@@ -76,24 +76,128 @@ function setupZoomFunctionality(productImage) {
     });
 }
 
+function mostrarLightbox(allImages, startIndex = 0) {
+    const lightbox = document.getElementById("lightbox-overlay");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const counter = document.getElementById("image-counter");
+    const dotsContainer = document.getElementById("lightboxIndicators");
+    let currentIndex = startIndex;
+
+    function updateLightboxImage(index) {
+        currentIndex = index;
+        lightboxImage.src = allImages[currentIndex];
+        counter.textContent = `${currentIndex + 1} / ${allImages.length}`;
+        updateDots();
+    }
+
+    function createDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = "";
+
+        allImages.forEach((_, index) => {
+            const dot = document.createElement("span");
+            if (index === currentIndex) dot.classList.add("active");
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    function updateDots() {
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll("span");
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle("active", idx === currentIndex);
+        });
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % allImages.length;
+        updateLightboxImage(currentIndex);
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+        updateLightboxImage(currentIndex);
+    }
+
+    // Swipe (solo mobile)
+    if (window.innerWidth <= 479) {
+        let startX = 0;
+
+        lightboxImage.addEventListener("touchstart", e => {
+            startX = e.touches[0].clientX;
+        });
+
+        lightboxImage.addEventListener("touchend", e => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) {
+                showNext();
+            } else if (endX - startX > 50) {
+                showPrev();
+            }
+        });
+    }
+
+    // Flechas (desktop)
+    document.getElementById("lightbox-prev").onclick = showPrev;
+    document.getElementById("lightbox-next").onclick = showNext;
+
+    // Cerrar lightbox
+    document.querySelector(".lightbox-close").onclick = () => {
+        lightbox.classList.remove("visible");
+        document.body.classList.remove("lightbox-open");
+    };
+
+    createDots();
+    updateLightboxImage(currentIndex);
+    lightbox.classList.add("visible");
+    document.body.classList.add("lightbox-open");
+}
+
 function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
     const indicator = document.getElementById("carousel-indicator");
+    const indicatorsContainer = document.getElementById("carouselIndicators");
+    const lightboxDotsContainer = document.getElementById("lightboxIndicators");
     let currentIndex = 0;
 
-    // Crear flechas de navegación
-    const prevArrow = document.createElement("div");
-    const nextArrow = document.createElement("div");
+    // Función genérica para crear indicadores en un contenedor
+    function crearIndicadoresEn(container, cantidad, activeIndex = 0) {
+        if (!container) return;
 
-    prevArrow.className = "carousel-arrow prev";
-    nextArrow.className = "carousel-arrow next";
+        container.innerHTML = "";
+        for (let i = 0; i < cantidad; i++) {
+            const dot = document.createElement("span");
+            if (i === activeIndex) dot.classList.add("active");
 
-    prevArrow.innerHTML = "&#10094;"; // ←
-    nextArrow.innerHTML = "&#10095;"; // →
+            // En mobile, los puntitos del lightbox serán clicables
+            if (container === lightboxDotsContainer && window.innerWidth <= 479) {
+                dot.addEventListener("click", () => {
+                    updateImage(i);
+                });
+            }
 
-    productImage.parentElement.style.position = "relative"; // asegura posición relativa
+            container.appendChild(dot);
+        }
+    }
 
-    productImage.parentElement.appendChild(prevArrow);
-    productImage.parentElement.appendChild(nextArrow);
+    // Función genérica para actualizar el punto activo en un contenedor
+    function actualizarIndicadoresEn(container, activeIndex) {
+        if (!container) return;
+
+        const dots = container.querySelectorAll("span");
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle("active", idx === activeIndex);
+        });
+    }
+
+    function crearIndicadores() {
+        crearIndicadoresEn(indicatorsContainer, allImages.length, 0);
+        crearIndicadoresEn(lightboxDotsContainer, allImages.length, 0);
+    }
+
+    function actualizarIndicadores() {
+        actualizarIndicadoresEn(indicatorsContainer, currentIndex);
+        actualizarIndicadoresEn(lightboxDotsContainer, currentIndex);
+    }
 
     function updateImage(index) {
         currentIndex = index;
@@ -109,6 +213,8 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
                 img.classList.toggle("selected", idx === currentIndex);
             });
         }
+
+        actualizarIndicadores();
     }
 
     function showPrevImage() {
@@ -121,10 +227,7 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
         updateImage(currentIndex);
     }
 
-    prevArrow.addEventListener("click", showPrevImage);
-    nextArrow.addEventListener("click", showNextImage);
-
-    // Miniaturas solo en desktop
+    // Miniaturas (solo en desktop)
     thumbnailsContainer.innerHTML = "";
     if (window.innerWidth > 479) {
         allImages.forEach((imgSrc, index) => {
@@ -139,7 +242,7 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
         });
     }
 
-    // Swipe en mobile
+    // Swipe (mobile)
     if (window.innerWidth <= 479) {
         let startX = 0;
 
@@ -155,11 +258,16 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
                 showPrevImage();
             }
         });
+
+        // Abrir lightbox al hacer clic en imagen principal
+        productImage.addEventListener("click", () => {
+            mostrarLightbox(allImages, currentIndex);
+        });
     }
 
-    updateImage(0); // mostrar primera imagen
+    crearIndicadores();
+    updateImage(0);
 }
-
 
 function mostrarGaleria(product, galleryContainer) {
     if (!galleryContainer) return;

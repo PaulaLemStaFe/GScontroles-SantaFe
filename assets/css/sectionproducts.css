@@ -46,8 +46,7 @@
         gap: 0;
     }
     .title {
-        gap: 0.2rem;
-        padding: 0 1rem;
+        padding: 1rem;
     }
     .tv__title {
         font-size: 1.2rem;
