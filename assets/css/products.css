@@ -128,9 +128,9 @@
 
 @media (min-width:768px) and (max-width:1023px) {
     .all_products_items {
-        gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
-        padding: 0.7rem 0.4rem;
+        margin: 0.5rem auto;
+        padding: 0 1rem 1.9rem 1rem;
     }
 
     .img, .img_aa {

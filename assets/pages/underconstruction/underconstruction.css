@@ -158,7 +158,8 @@ p {
         text-align: left;
     }
     .banner_image {
-        width: 75%;
+        padding: 2rem 1rem;
+        width: 80%;
     }
     .banner_section {
         margin-top: 3rem;

@@ -80,6 +80,9 @@
 
 
 @media (min-width:768px) and (max-width:1023px) {
+    .productos {
+        gap: 1rem;
+    }
     .title {
         gap: 0.5rem;
     }
@@ -88,7 +91,8 @@
         margin-top: 0;
         text-shadow: 1px 1px 2px var(--color-tertiary);
     }
-    #aa__title {
-        margin: 3rem 0 0.5rem 0;
+    #cs__title {
+        margin-top: -2.5rem;
+        z-index: 1;
     }
 }

@@ -388,9 +388,6 @@ class Contact extends HTMLElement {
 
 
             @media (min-width:768px) and (max-width:1023px) {
-                h2 {
-                    font-size: 2rem;
-                }
                 .contact {
                     align-items: center;
                     background-repeat: no-repeat;
@@ -399,16 +396,18 @@ class Contact extends HTMLElement {
                     padding: 2rem 0;
                 }
                 .contact_content {
-                    width: 90%;
+                    gap: 4rem;
+                    width: 95%;
                 }
                 .contact_form__button {
+                    font-size: 1rem;
                     margin: 0;
                 }
                 .contact_form__input, .menssage {
                     width: 25rem;
                 }
                 .contact_form__title h6 {
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
                     text-align: center;
                 }
                 .contact_form_form, .contact_form {
@@ -427,7 +426,7 @@ class Contact extends HTMLElement {
                     text-align: center;
                 }
                 .menu_item {
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     text-align: center;
                 }
             }

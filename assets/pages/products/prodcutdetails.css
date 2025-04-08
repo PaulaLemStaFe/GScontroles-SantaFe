@@ -551,34 +551,126 @@ body.lightbox-open {
 
 
 @media (min-width:768px) and (max-width:1023px) {
+    #product-image {
+        cursor: default;
+        padding: 1rem 2rem;
+        pointer-events: auto;
+    }
 
-    .details_code,
-    .details_soportados span,
-    .code {
-        margin-bottom: 0;
+    .carousel-indicator-top-left {
+        display: block;
+        font-size: 1rem;
+    }
+
+    .carousel-indicators {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: auto;
+    }
+
+    .details {
+        margin: 4rem auto 2rem auto;
     }
 
     .details_image {
-        padding: 0;
+        align-items: center;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        width: 40%;
     }
 
-    .details_marca,
-    .details_text {
+    .details_marca {
+        margin-left: 13rem;;
+    }
+
+    .details_marca {
         padding: 0;
     }
 
     .details_title {
         font-size: 1.8rem;
-        margin: 0.5rem 0;
+        margin: 1.5rem;
+        text-align: center;
+    }
+
+    .image-counter {
+        font-size: 1.2rem;
+        left: 1.5rem;
+        top: 1.5rem;
+    }
+
+    .image-zoom-container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .lightbox-controls {
+        width: 93%;
+    }
+
+    .lightbox-close {
+        font-size: 2.2rem;
+        right: 1.5rem;
+        top: 1.5rem;
+    }
+
+    .lightbox-image {
+        max-height: 95%;
+        max-width: 95%;
+    }
+
+    .lightbox-indicators {
+        background-color: var(--color-fifth);
+        border-radius: 0.5rem;
+        display: flex;
+        gap: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        position: absolute;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        display: none;
+    }
+
+    .main-image {
+        flex-direction: column;
+    }
+
+    .main-image img {
+        max-width: 100%;
+        max-height: 21.875rem;
     }
 
     .product_details {
+        align-items: center;
+        gap: 1rem;
         justify-content: center;
     }
 
     .product_details_text {
         padding: 0 1rem;
-        width: 85%;
+        width: 90%;
+    }
+
+    .thumbnails {
+        display: none !important;
+    }
+
+    .thumbnails img {
+        height: 3.75rem;
+        width: 3.75rem;
+    }
+
+    .zoom-lens,
+    .zoom-result {
+        display: none !important;
     }
 }
 

@@ -385,7 +385,7 @@ class Header extends HTMLElement {
 
             @media (min-width:768px) and (max-width:1023px) {
                 .logo_image {
-                    width: 20%;
+                    width: 17%;
                 }
                 .menu_list li {
                     margin: 0;
