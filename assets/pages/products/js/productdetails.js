@@ -1,4 +1,4 @@
-// productdetails.js (actualizado)
+// productdetails.js
 
 const categoryMap = {
     productcs: "convertidor smart",
@@ -89,9 +89,10 @@ function mostrarLightbox(allImages, startIndex = 0) {
     const hasMouse = window.matchMedia('(pointer: fine)').matches;
 
     function updateLightboxImage(index) {
-        currentIndex = index;
+        const totalImages = allImages.length - 1; // Excluye la última imagen
+        currentIndex = Math.min(index, totalImages - 1); // Asegura que no exceda el límite ajustado
         lightboxImage.src = allImages[currentIndex];
-        counter.textContent = `${currentIndex + 1} / ${allImages.length}`;
+        counter.textContent = `${currentIndex + 1} / ${totalImages}`;
         if (!hasMouse) updateDots();
     }
 
@@ -116,12 +117,14 @@ function mostrarLightbox(allImages, startIndex = 0) {
     }
 
     function showNext() {
-        currentIndex = (currentIndex + 1) % allImages.length;
+        const totalImages = allImages.length - 1; // Excluye la última imagen
+        currentIndex = (currentIndex + 1) % totalImages; // Asegura que no incluya la última
         updateLightboxImage(currentIndex);
     }
-
+    
     function showPrev() {
-        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+        const totalImages = allImages.length - 1; // Excluye la última imagen
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Asegura que no incluya la última
         updateLightboxImage(currentIndex);
     }
 
@@ -202,8 +205,9 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
     }
 
     function crearIndicadores() {
-        crearIndicadoresEn(indicatorsContainer, allImages.length, 0);
-        crearIndicadoresEn(lightboxDotsContainer, allImages.length, 0);
+        const totalImages = allImages.length - 1;
+        crearIndicadoresEn(indicatorsContainer, totalImages, 0);
+        crearIndicadoresEn(lightboxDotsContainer, totalImages, 0);
     }
 
     function actualizarIndicadores() {
@@ -217,12 +221,21 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
         productImage.setAttribute("data-index", currentIndex);
 
         if (indicator) {
-            indicator.textContent = `${currentIndex + 1} / ${allImages.length}`;
+            const totalImages = allImages.length - 1;
+            indicator.textContent = `${currentIndex + 1} / ${totalImages}`;
         }
 
         if (window.innerWidth > 479) {
-            document.querySelectorAll(".thumbnails img").forEach((img, idx) => {
-                img.classList.toggle("selected", idx === currentIndex);
+            const totalImages = allImages.length - 1;
+            allImages.slice(0, totalImages).forEach((imgSrc, index) => {
+                const thumb = document.createElement("img");
+                thumb.src = imgSrc;
+                if (index === 0) thumb.classList.add("selected");
+        
+                thumb.addEventListener("click", () => updateImage(index));
+                thumb.addEventListener("mouseenter", () => updateImage(index));
+        
+                thumbnailsContainer.appendChild(thumb);
             });
         }
 
@@ -230,12 +243,14 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
     }
 
     function showPrevImage() {
-        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+        const totalImages = allImages.length - 1;
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
         updateImage(currentIndex);
     }
-
+    
     function showNextImage() {
-        currentIndex = (currentIndex + 1) % allImages.length;
+        const totalImages = allImages.length - 1;
+        currentIndex = (currentIndex + 1) % totalImages;
         updateImage(currentIndex);
     }
 
@@ -285,12 +300,17 @@ function mostrarGaleria(product, galleryContainer) {
     if (!galleryContainer) return;
 
     galleryContainer.innerHTML = "";
-    const imageKeys = ["img01", "img02", "img03", "img04", "img05"];
+
+    // Obtener todas las claves de imagen y excluir la última
+    const imageKeys = Object.keys(product)
+        .filter((key) => key.startsWith("img"))
+        .slice(0, -1); // Excluye la última imagen
 
     imageKeys.forEach((key) => {
-        if (product[key]) {
+        const imgSrc = product[key];
+        if (imgSrc) {
             const imgEl = document.createElement("img");
-            imgEl.src = product[key];
+            imgEl.src = imgSrc;
             imgEl.alt = product.title;
             imgEl.title = product.title;
             galleryContainer.appendChild(imgEl);
@@ -315,6 +335,13 @@ function cargarDatosProducto(product) {
     document.getElementById("product-soportado3").textContent = product.modelosoportado03;
     document.getElementById("product-soportado4").textContent = product.modelosoportado04;
     document.getElementById("product-soportado5").textContent = product.modelosoportado05;
+
+    // Asegurar que "product-details-img" sea un elemento <img>
+    const productImg = document.getElementById("product-details-img");
+    if (productImg) {
+        productImg.src = product.img06; // Asigna la imagen del producto
+        productImg.alt = `Imagen de ${product.title}`; // Agrega el texto alternativo por accesibilidad
+    }
 }
 
 function mostrarProductosSimilares(product, similarProducts, productCategory, productId) {
