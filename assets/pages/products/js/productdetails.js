@@ -226,16 +226,8 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
         }
 
         if (window.innerWidth > 479) {
-            const totalImages = allImages.length - 1;
-            allImages.slice(0, totalImages).forEach((imgSrc, index) => {
-                const thumb = document.createElement("img");
-                thumb.src = imgSrc;
-                if (index === 0) thumb.classList.add("selected");
-        
-                thumb.addEventListener("click", () => updateImage(index));
-                thumb.addEventListener("mouseenter", () => updateImage(index));
-        
-                thumbnailsContainer.appendChild(thumb);
+            document.querySelectorAll(".thumbnails img").forEach((img, idx) => {
+                img.classList.toggle("selected", idx === currentIndex);
             });
         }
 
@@ -243,14 +235,12 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
     }
 
     function showPrevImage() {
-        const totalImages = allImages.length - 1;
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
         updateImage(currentIndex);
     }
-    
+
     function showNextImage() {
-        const totalImages = allImages.length - 1;
-        currentIndex = (currentIndex + 1) % totalImages;
+        currentIndex = (currentIndex + 1) % allImages.length;
         updateImage(currentIndex);
     }
 
@@ -300,17 +290,12 @@ function mostrarGaleria(product, galleryContainer) {
     if (!galleryContainer) return;
 
     galleryContainer.innerHTML = "";
-
-    // Obtener todas las claves de imagen y excluir la última
-    const imageKeys = Object.keys(product)
-        .filter((key) => key.startsWith("img"))
-        .slice(0, -1); // Excluye la última imagen
+    const imageKeys = ["img01", "img02", "img03", "img04", "img05"];
 
     imageKeys.forEach((key) => {
-        const imgSrc = product[key];
-        if (imgSrc) {
+        if (product[key]) {
             const imgEl = document.createElement("img");
-            imgEl.src = imgSrc;
+            imgEl.src = product[key];
             imgEl.alt = product.title;
             imgEl.title = product.title;
             galleryContainer.appendChild(imgEl);
