@@ -386,6 +386,10 @@ body.lightbox-open {
         padding-left: auto;
     }
 
+    .details_code p {
+        padding-left: 0;
+    }
+
     .details_image {
         align-items: center;
         border-radius: 2rem;
@@ -398,6 +402,10 @@ body.lightbox-open {
     .details_image,
     .product_details_text {
         flex: 1 1 100%;
+    }
+
+    .details_marca {
+        margin-left: 10rem;
     }
 
     .details_title {
@@ -461,6 +469,10 @@ body.lightbox-open {
         align-items: center;
         flex-direction: column;
         gap: 0;
+    }
+
+    .product_details_text {
+        width: auto;
     }
 
     .thumbnails {
