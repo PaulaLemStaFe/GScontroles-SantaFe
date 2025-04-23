@@ -88,16 +88,12 @@
         padding: 0 1rem 1.9rem 1rem;
     }
 
-    .img, .img_aa {
-        width: 60%;
-    }
-
     .item_code {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .item_title {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .product_item {

@@ -369,6 +369,7 @@ body.lightbox-open {
 
     .carousel-indicator-top-left {
         display: block;
+        font-size: 1.1rem;
     }
 
     .carousel-indicators {
@@ -380,6 +381,11 @@ body.lightbox-open {
         margin: 4rem auto 2rem auto;
     }
 
+    .details_code {
+        font-size: 1.3rem;
+        padding-left: auto;
+    }
+
     .details_image {
         align-items: center;
         border-radius: 2rem;
@@ -387,7 +393,6 @@ body.lightbox-open {
         flex-direction: column;
         margin-bottom: 1rem;
         margin-top: 0;
-        width: 65%
     }
 
     .details_image,
@@ -444,6 +449,7 @@ body.lightbox-open {
 
     .main-image {
         flex-direction: column;
+        width: auto;
     }
 
     .main-image img {
@@ -512,7 +518,7 @@ body.lightbox-open {
     }
 
     .image-counter {
-        font-size: 1rem;
+        font-size: 1.2rem;
         left: 1rem;
         top: 1rem;
     }
@@ -555,6 +561,7 @@ body.lightbox-open {
 
     .main-image {
         flex-direction: column;
+        width: auto;
     }
 
     .main-image img {
@@ -632,7 +639,7 @@ body.lightbox-open {
     }
 
     .image-counter {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         left: 1.5rem;
         top: 1.5rem;
     }
@@ -663,7 +670,7 @@ body.lightbox-open {
         background-color: var(--color-fifth);
         border-radius: 0.5rem;
         display: flex;
-        gap: 0.9rem;
+        gap: 0.7rem;
         padding: 0.5rem 0.8rem;
         position: absolute;
     }
