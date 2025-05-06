@@ -1,12 +1,12 @@
 const headerTemplate = document.createElement('template');
 
-var urlConstructionHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/underconstruction/underconstruction.html';
-var urlImageFondoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/fondos/fondo-de-logo.jpg';
-var urlImageLogoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/logo-solo/logo-nombre.png';
-var urlIndexHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/index.html';
-var urlLoginHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/login/login.html';
-var urlProductsHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html';
-var urlSearchHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/search/search.html';
+var urlConstructionHtml = '../assets/pages/underconstruction/underconstruction.html';
+var urlImageFondoHtml = '../assets/images/fondos/fondo-de-logo.jpg';
+var urlImageLogoHtml = '../assets/images/logo-solo/logo-nombre.png';
+var urlIndexHtml = '../index.html';
+var urlLoginHtml = '../assets/pages/login/login.html';
+var urlProductsHtml = '../assets/pages/products/allproducts.html';
+var urlSearchHtml = '../assets/pages/search/search.html';
 
 headerTemplate.innerHTML = `
         <header class="navbar">
@@ -15,7 +15,7 @@ headerTemplate.innerHTML = `
                 <div class="menu_buscador">
                     <div class="menu">
                         <button class="menu_toggle" aria-label="Abrir menú">
-                            &#9776; <!-- Código Unicode para el ícono de tres líneas -->
+                            &#9776;
                         </button>
                         <nav class="nav_menu">
                             <ul class="menu_list">

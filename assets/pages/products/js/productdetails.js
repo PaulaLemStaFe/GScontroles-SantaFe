@@ -304,7 +304,7 @@ function mostrarGaleria(product, galleryContainer) {
 
     const warningImg = document.createElement("img");
     warningImg.src =
-        "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true";
+        "../assets/images/control-warning/CartelAdvertencia.png";
     warningImg.alt = "Advertencia sobre la compatibilidad del control remoto";
     warningImg.title = "Advertencia: Asegúrese de que su control coincida con la imagen";
     warningImg.classList.add("warning-image");
@@ -348,7 +348,7 @@ function mostrarProductosSimilares(product, similarProducts, productCategory, pr
 
         const viewAllLink = document.getElementById("view-all-link");
         if (similares.length > 6) {
-            viewAllLink.href = `https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html?category=${productCategory}&title=Controles Remotos de ${categoryMap[productCategory]}&idproduct=${productId}`;
+            viewAllLink.href = `../assets/pages/products/allproducts.html?category=${productCategory}&title=Controles Remotos de ${categoryMap[productCategory]}&idproduct=${productId}`;
         } else {
             viewAllLink.style.display = "none";
         }
@@ -405,7 +405,7 @@ function mostrarDetallesProducto(url, productId) {
             ]
                 .filter(Boolean)
                 .concat(
-                    "https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/control-warning/CartelAdvertencia.png?raw=true"
+                    "../assets/images/control-warning/CartelAdvertencia.png"
                 );
 
             productImage.src = allImages[0];
@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
     mostrarDetallesProducto(
-        "https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json",
+        "../../../../db.json",
         productId
     );
 });

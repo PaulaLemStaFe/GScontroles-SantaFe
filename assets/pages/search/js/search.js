@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let productos = [];
     let currentFocus = -1; // Se mantiene global dentro del DOMContentLoaded
 
-    fetch('https://PaulaLemStaFe.github.io/GScontroles-SantaFe/db.json')
+    fetch('../../../../db.json')
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
