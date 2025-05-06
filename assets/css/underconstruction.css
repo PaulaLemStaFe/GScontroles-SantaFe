@@ -1,5 +1,5 @@
-@import url('../../css/style.css');
-/* Estilos base (Desktop First) */
+@import url('style.css');
+
 html, body {
     display: flex;
     flex-direction: column;

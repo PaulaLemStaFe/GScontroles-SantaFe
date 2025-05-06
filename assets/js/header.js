@@ -1,12 +1,11 @@
 const headerTemplate = document.createElement('template');
 
-var urlConstructionHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/underconstruction/underconstruction.html';
-var urlImageFondoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/fondos/fondo-de-logo.jpg';
-var urlImageLogoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/logo-solo/logo-nombre.png';
-var urlIndexHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/index.html';
-var urlLoginHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/login/login.html';
-var urlProductsHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html';
-var urlSearchHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/search/search.html';
+var urlConstructionHtml = 'underconstruction.html';
+var urlImageFondoHtml = '../images/fondos/fondo-de-logo.jpg';
+var urlImageLogoHtml = '../images/logo-solo/logo-nombre.png';
+var urlIndexHtml = 'index.html';
+var urlProductsHtml = 'allproducts.html';
+var urlSearchHtml = 'search.html';
 
 headerTemplate.innerHTML = `
         <header class="navbar">

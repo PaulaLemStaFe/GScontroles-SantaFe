@@ -1,10 +1,10 @@
 const footerTemplate = document.createElement('template');
 
-var urlIndexHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/index.html';
-var urlImageLogoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg';
-var urlSearchHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/search/search.html';
-var urlConstructionHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/underconstruction/underconstruction.html';
-var urlProductsHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/products/allproducts.html';
+var urlIndexHtml = 'index.html';
+var urlImageLogoHtml = './images/logo-con-fondo/foto-perfil-gs_controles.jpg';
+var urlSearchHtml = 'search.html';
+var urlConstructionHtml = 'underconstruction.html';
+var urlProductsHtml = 'allproducts.html';
 
 footerTemplate.innerHTML = `
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">

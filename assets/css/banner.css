@@ -1,9 +1,9 @@
 /* Importar variables desde style.css */
-@import url('https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/css/style.css');
+@import url('style.css');
 
 .banner {
     align-items: center;
-    background-image: url(https://github.com/PaulaLemStaFe/GScontroles-SantaFe/blob/master/assets/images/banner/banner-gs_controles.png?raw=true);
+    background-image: url(./assets/images/banner/banner-gs_controles.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;

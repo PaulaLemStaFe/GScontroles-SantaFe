@@ -1,8 +1,8 @@
 const contactTemplate = document.createElement('template');
 
-var urlImageLogoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/logo-solo/logo-nombre.png';
-var urlImageFondoHtml = 'https://raw.githubusercontent.com/PaulaLemStaFe/GScontroles-SantaFe/refs/heads/master/assets/images/fondos/fondo-de-logo.jpg';
-var urlConstructionHtml = 'https://PaulaLemStaFe.github.io/GScontroles-SantaFe/assets/pages/underconstruction/underconstruction.html';
+var urlImageLogoHtml = '../images/logo-solo/logo-nombre.png';
+var urlImageFondoHtml = '../images/fondos/fondo-de-logo.jpg';
+var urlConstructionHtml = 'underconstruction.html';
 
 contactTemplate.innerHTML = `
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -123,7 +123,7 @@ class Contact extends HTMLElement {
                 flex-flow: column;
                 font-size: 2.5rem;
                 font-variant: small-caps;
-                font-weight: bold; /* Para hacer el texto negrita */
+                font-weight: bold;
                 justify-content: center;
                 margin-bottom: 1rem;
                 text-align: center;
