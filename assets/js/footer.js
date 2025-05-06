@@ -1,7 +1,7 @@
 const footerTemplate = document.createElement('template');
 
 var urlIndexHtml = 'index.html';
-var urlImageLogoHtml = './images/logo-con-fondo/foto-perfil-gs_controles.jpg';
+var urlImageLogoHtml = 'assets/images/logo-con-fondo/foto-perfil-gs_controles.jpg';
 var urlSearchHtml = 'search.html';
 var urlConstructionHtml = 'underconstruction.html';
 var urlProductsHtml = 'allproducts.html';

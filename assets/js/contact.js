@@ -1,7 +1,7 @@
 const contactTemplate = document.createElement('template');
 
-var urlImageLogoHtml = '../images/logo-solo/logo-nombre.png';
-var urlImageFondoHtml = '../images/fondos/fondo-de-logo.jpg';
+var urlImageLogoHtml = 'assets/images/logo-solo/logo-nombre.png';
+var urlImageFondoHtml = 'assets/images/fondos/fondo-de-logo.jpg';
 var urlConstructionHtml = 'underconstruction.html';
 
 contactTemplate.innerHTML = `

@@ -1,8 +1,8 @@
 const headerTemplate = document.createElement('template');
 
 var urlConstructionHtml = 'underconstruction.html';
-var urlImageFondoHtml = '../images/fondos/fondo-de-logo.jpg';
-var urlImageLogoHtml = '../images/logo-solo/logo-nombre.png';
+var urlImageFondoHtml = 'assets/images/fondos/fondo-de-logo.jpg';
+var urlImageLogoHtml = 'assets/images/logo-solo/logo-nombre.png';
 var urlIndexHtml = 'index.html';
 var urlProductsHtml = 'allproducts.html';
 var urlSearchHtml = 'search.html';

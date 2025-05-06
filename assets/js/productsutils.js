@@ -11,7 +11,7 @@ function crearProducto(container, producto, imgClass) {
 
     // Detectar la URL actual
     const currentUrl = window.location.pathname;
-    const productLink = `./assets/pages/products/productdetails.html?idproduct=${producto.idProduct}`;
+    const productLink = `productdetails.html?idproduct=${producto.idProduct}`;
 
 
     const div = document.createElement('div');
@@ -35,13 +35,6 @@ function crearProducto(container, producto, imgClass) {
         </div>
     `;
     container.appendChild(div);
-}
-
-/**
- * Redirige a la página underconstruction.html cuando se hace clic en los iconos.
- */
-function redirigirPagina() {
-    window.location.href = "./assets/pages/underconstruction.html";
 }
 
 /**
