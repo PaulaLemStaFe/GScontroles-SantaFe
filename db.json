@@ -2,12 +2,12 @@
     "productscs": [
     {
         "idProduct": 1,
-        "img01": "./assets/images/control-cs/GS931/GS931-00.jpg",
-        "img02": "./assets/images/control-cs/GS931/GS931-01.jpg",
-        "img03": "./assets/images/control-cs/GS931/GS931-02.jpg",
-        "img04": "./assets/images/control-cs/GS931/GS931-03.jpg",
-        "img05": "./assets/images/control-cs/GS931/GS931-04.jpg",
-        "img06": "./assets/images/control-cs/GS931/GS931-05.png",
+        "img01": "assets/images/control-cs/GS931/GS931-00.jpg",
+        "img02": "assets/images/control-cs/GS931/GS931-01.jpg",
+        "img03": "assets/images/control-cs/GS931/GS931-02.jpg",
+        "img04": "assets/images/control-cs/GS931/GS931-03.jpg",
+        "img05": "assets/images/control-cs/GS931/GS931-04.jpg",
+        "img06": "assets/images/control-cs/GS931/GS931-05.png",
         "title": "Control Remoto Para Convertidores Smart",
         "code": "GS 931",
         "color": "Negro",
