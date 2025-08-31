@@ -19,6 +19,23 @@
     },
     {
         "idProduct": 2,
+        "img01": "./assets/images/control-cs/GS931A/GS931A-00.jpg",
+        "img02": "./assets/images/control-cs/GS931A/GS931A-01.jpg",
+        "img03": "./assets/images/control-cs/GS931A/GS931A-02.jpg",
+        "img04": "./assets/images/control-cs/GS931A/GS931A-03.jpg",
+        "img05": "./assets/images/control-cs/GS931A/GS931A-04.jpg",
+        "img06": "./assets/images/control-cs/GS931A/GS931A-05.png",
+        "title": "Control Remoto Para Convertidores Smart",
+        "code": "GS 931A",
+        "color": "Negro",
+        "modelosoportado01": "Smart Box",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
+    },
+    {
+        "idProduct": 3,
         "img01": "./assets/images/control-cs/GSRK/GSRK-00.jpg",
         "img02": "./assets/images/control-cs/GSRK/GSRK-01.jpg",
         "img03": "./assets/images/control-cs/GSRK/GSRK-02.jpg",
@@ -33,11 +50,28 @@
         "modelosoportado03": "",
         "modelosoportado04": "",
         "modelosoportado05": ""
+    },
+    {
+        "idProduct": 4,
+        "img01": "./assets/images/control-cs/",
+        "img02": "./assets/images/control-cs/",
+        "img03": "./assets/images/control-cs/",
+        "img04": "./assets/images/control-cs/",
+        "img05": "./assets/images/control-cs/",
+        "img06": "./assets/images/control-cs/",
+        "title": "Control Remoto Para Convertidores Smart Marca GOOGLE CHROME",
+        "code": "GS GO",
+        "color": "Negro",
+        "modelosoportado01": "Google Chrome",
+        "modelosoportado02": "",
+        "modelosoportado03": "",
+        "modelosoportado04": "",
+        "modelosoportado05": ""
     }
     ],
     "productstv": [
     {
-        "idProduct": 3,
+        "idProduct": 5,
         "img01": "./assets/images/control-tv/GS1/GS1-00.jpg",
         "img02": "./assets/images/control-tv/GS1/GS1-01.jpg",
         "img03": "./assets/images/control-tv/GS1/GS1-02.jpg",
@@ -54,7 +88,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 4,
+        "idProduct": 6,
         "img01": "./assets/images/control-tv/GS406/GS406-00.jpg",
         "img02": "./assets/images/control-tv/GS406/GS406-01.jpg",
         "img03": "./assets/images/control-tv/GS406/GS406-02.jpg",
@@ -71,7 +105,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 5,
+        "idProduct": 7,
         "img01": "./assets/images/control-tv/GS410/GS410-00.jpg",
         "img02": "./assets/images/control-tv/GS410/GS410-01.jpg",
         "img03": "./assets/images/control-tv/GS410/GS410-02.jpg",
@@ -88,7 +122,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 6,
+        "idProduct": 8,
         "img01": "./assets/images/control-tv/GS424/GS424-00.jpg",
         "img02": "./assets/images/control-tv/GS424/GS424-01.jpg",
         "img03": "./assets/images/control-tv/GS424/GS424-02.jpg",
@@ -105,7 +139,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 7,
+        "idProduct": 9,
         "img01": "./assets/images/control-tv/GS425/GS425-00.jpg",
         "img02": "./assets/images/control-tv/GS425/GS425-01.jpg",
         "img03": "./assets/images/control-tv/GS425/GS425-02.jpg",
@@ -122,7 +156,7 @@
         "modelosoportado05": "Noblex"
     },
     {
-        "idProduct": 8,
+        "idProduct": 10,
         "img01": "./assets/images/control-tv/GS430/GS430-00.jpg",
         "img02": "./assets/images/control-tv/GS430/GS430-01.jpg",
         "img03": "./assets/images/control-tv/GS430/GS430-02.jpg",
@@ -139,7 +173,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 9,
+        "idProduct": 11,
         "img01": "./assets/images/control-tv/GS433/GS433-00.jpg",
         "img02": "./assets/images/control-tv/GS433/GS433-01.jpg",
         "img03": "./assets/images/control-tv/GS433/GS433-02.jpg",
@@ -156,7 +190,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 10,
+        "idProduct": 12,
         "img01": "./assets/images/control-tv/GS434/GS434-00.jpg",
         "img02": "./assets/images/control-tv/GS434/GS434-01.jpg",
         "img03": "./assets/images/control-tv/GS434/GS434-02.jpg",
@@ -173,7 +207,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 11,
+        "idProduct": 13,
         "img01": "./assets/images/control-tv/GS436/GS436-00.jpg",
         "img02": "./assets/images/control-tv/GS436/GS436-01.jpg",
         "img03": "./assets/images/control-tv/GS436/GS436-02.jpg",
@@ -190,7 +224,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 12,
+        "idProduct": 14,
         "img01": "./assets/images/control-tv/GS440/GS440-00.jpg",
         "img02": "./assets/images/control-tv/GS440/GS440-01.jpg",
         "img03": "./assets/images/control-tv/GS440/GS440-02.jpg",
@@ -207,7 +241,7 @@
         "modelosoportado05": "JVC"
     },
     {
-        "idProduct": 13,
+        "idProduct": 15,
         "img01": "./assets/images/control-tv/GS442/GS442-00.jpg",
         "img02": "./assets/images/control-tv/GS442/GS442-01.jpg",
         "img03": "./assets/images/control-tv/GS442/GS442-02.jpg",
@@ -224,7 +258,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 14,
+        "idProduct": 16,
         "img01": "./assets/images/control-tv/GS443/GS443-00.jpg",
         "img02": "./assets/images/control-tv/GS443/GS443-01.jpg",
         "img03": "./assets/images/control-tv/GS443/GS443-02.jpg",
@@ -241,7 +275,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 15,
+        "idProduct": 17,
         "img01": "./assets/images/control-tv/GS444/GS444-00.jpg",
         "img02": "./assets/images/control-tv/GS444/GS444-01.jpg",
         "img03": "./assets/images/control-tv/GS444/GS444-02.jpg",
@@ -258,7 +292,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 16,
+        "idProduct": 18,
         "img01": "./assets/images/control-tv/GS445/GS445-00.jpg",
         "img02": "./assets/images/control-tv/GS445/GS445-01.jpg",
         "img03": "./assets/images/control-tv/GS445/GS445-02.jpg",
@@ -275,7 +309,7 @@
         "modelosoportado05": "Telefunken"
     },
     {
-        "idProduct": 17,
+        "idProduct": 19,
         "img01": "./assets/images/control-tv/GS446/GS446-00.jpg",
         "img02": "./assets/images/control-tv/GS446/GS446-01.jpg",
         "img03": "./assets/images/control-tv/GS446/GS446-02.jpg",
@@ -292,7 +326,7 @@
         "modelosoportado05": "Philco"
     },
     {
-        "idProduct": 18,
+        "idProduct": 20,
         "img01": "./assets/images/control-tv/GS447/GS447-00.jpg",
         "img02": "./assets/images/control-tv/GS447/GS447-01.jpg",
         "img03": "./assets/images/control-tv/GS447/GS447-02.jpg",
@@ -309,7 +343,7 @@
         "modelosoportado05": "Hisense"
     },
     {
-        "idProduct": 19,
+        "idProduct": 21,
         "img01": "./assets/images/control-tv/GS448TH/GS448TH-00.jpg",
         "img02": "./assets/images/control-tv/GS448TH/GS448TH-01.jpg",
         "img03": "./assets/images/control-tv/GS448TH/GS448TH-02.jpg",
@@ -326,7 +360,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 20,
+        "idProduct": 22,
         "img01": "./assets/images/control-tv/GS451/GS451-00.jpg",
         "img02": "./assets/images/control-tv/GS451/GS451-01.jpg",
         "img03": "./assets/images/control-tv/GS451/GS451-02.jpg",
@@ -343,7 +377,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 21,
+        "idProduct": 23,
         "img01": "./assets/images/control-tv/GS452/GS452-00.jpg",
         "img02": "./assets/images/control-tv/GS452/GS452-01.jpg",
         "img03": "./assets/images/control-tv/GS452/GS452-02.jpg",
@@ -360,7 +394,7 @@
         "modelosoportado05": "JVC"
     },
     {
-        "idProduct": 22,
+        "idProduct": 24,
         "img01": "./assets/images/control-tv/GS458/GS458-00.jpg",
         "img02": "./assets/images/control-tv/GS458/GS458-01.jpg",
         "img03": "./assets/images/control-tv/GS458/GS458-02.jpg",
@@ -377,7 +411,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 23,
+        "idProduct": 25,
         "img01": "./assets/images/control-tv/GS461/GS461-00.jpg",
         "img02": "./assets/images/control-tv/GS461/GS461-01.jpg",
         "img03": "./assets/images/control-tv/GS461/GS461-02.jpg",
@@ -394,7 +428,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 24,
+        "idProduct": 26,
         "img01": "./assets/images/control-tv/GS470/GS470-00.jpg",
         "img02": "./assets/images/control-tv/GS470/GS470-01.jpg",
         "img03": "./assets/images/control-tv/GS470/GS470-02.jpg",
@@ -411,7 +445,7 @@
         "modelosoportado05": "Telefunken"
     },
     {
-        "idProduct": 25,
+        "idProduct": 27,
         "img01": "./assets/images/control-tv/GS474/GS474-00.jpg",
         "img02": "./assets/images/control-tv/GS474/GS474-01.jpg",
         "img03": "./assets/images/control-tv/GS474/GS474-02.jpg",
@@ -428,7 +462,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 26,
+        "idProduct": 28,
         "img01": "./assets/images/control-tv/GS475/GS475-00.jpg",
         "img02": "./assets/images/control-tv/GS475/GS475-01.jpg",
         "img03": "./assets/images/control-tv/GS475/GS475-02.jpg",
@@ -445,7 +479,7 @@
         "modelosoportado05": "Daewoo"
     },
     {
-        "idProduct": 27,
+        "idProduct": 29,
         "img01": "./assets/images/control-tv/GS477/GS477-00.jpg",
         "img02": "./assets/images/control-tv/GS477/GS477-01.jpg",
         "img03": "./assets/images/control-tv/GS477/GS477-02.jpg",
@@ -462,7 +496,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 28,
+        "idProduct": 30,
         "img01": "./assets/images/control-tv/GS478/GS478-00.jpg",
         "img02": "./assets/images/control-tv/GS478/GS478-01.jpg",
         "img03": "./assets/images/control-tv/GS478/GS478-02.jpg",
@@ -479,7 +513,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 29,
+        "idProduct": 31,
         "img01": "./assets/images/control-tv/GS479/GS479-00.jpg",
         "img02": "./assets/images/control-tv/GS479/GS479-01.jpg",
         "img03": "./assets/images/control-tv/GS479/GS479-02.jpg",
@@ -496,7 +530,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 30,
+        "idProduct": 32,
         "img01": "./assets/images/control-tv/GS480/GS480-00.jpg",
         "img02": "./assets/images/control-tv/GS480/GS480-01.jpg",
         "img03": "./assets/images/control-tv/GS480/GS480-02.jpg",
@@ -513,7 +547,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 31,
+        "idProduct": 33,
         "img01": "./assets/images/control-tv/GS481/GS481-00.jpg",
         "img02": "./assets/images/control-tv/GS481/GS481-01.jpg",
         "img03": "./assets/images/control-tv/GS481/GS481-02.jpg",
@@ -530,7 +564,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 32,
+        "idProduct": 34,
         "img01": "./assets/images/control-tv/GS486/GS486-00.jpg",
         "img02": "./assets/images/control-tv/GS486/GS486-01.jpg",
         "img03": "./assets/images/control-tv/GS486/GS486-02.jpg",
@@ -547,7 +581,7 @@
         "modelosoportado05": "Philco"
     },
     {
-        "idProduct": 33,
+        "idProduct": 35,
         "img01": "./assets/images/control-tv/GS488/GS488-00.jpg",
         "img02": "./assets/images/control-tv/GS488/GS488-01.jpg",
         "img03": "./assets/images/control-tv/GS488/GS488-02.jpg",
@@ -564,7 +598,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 34,
+        "idProduct": 36,
         "img01": "./assets/images/control-tv/GS491/GS491-00.jpg",
         "img02": "./assets/images/control-tv/GS491/GS491-01.jpg",
         "img03": "./assets/images/control-tv/GS491/GS491-02.jpg",
@@ -581,7 +615,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 35,
+        "idProduct": 37,
         "img01": "./assets/images/control-tv/GS494/GS494-00.jpg",
         "img02": "./assets/images/control-tv/GS494/GS494-01.jpg",
         "img03": "./assets/images/control-tv/GS494/GS494-02.jpg",
@@ -598,7 +632,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 36,
+        "idProduct": 38,
         "img01": "./assets/images/control-tv/GS498/GS498-00.jpg",
         "img02": "./assets/images/control-tv/GS498/GS498-01.jpg",
         "img03": "./assets/images/control-tv/GS498/GS498-02.jpg",
@@ -615,7 +649,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 37,
+        "idProduct": 39,
         "img01": "./assets/images/control-tv/GS498TH/GS498TH-00.jpg",
         "img02": "./assets/images/control-tv/GS498TH/GS498TH-01.jpg",
         "img03": "./assets/images/control-tv/GS498TH/GS498TH-02.jpg",
@@ -632,7 +666,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 38,
+        "idProduct": 40,
         "img01": "./assets/images/control-tv/GS500/GS500-00.jpg",
         "img02": "./assets/images/control-tv/GS500/GS500-01.jpg",
         "img03": "./assets/images/control-tv/GS500/GS500-02.jpg",
@@ -649,7 +683,7 @@
         "modelosoportado05": "Philco"
     },
     {
-        "idProduct": 39,
+        "idProduct": 41,
         "img01": "./assets/images/control-tv/GS504/GS504-00.jpg",
         "img02": "./assets/images/control-tv/GS504/GS504-01.jpg",
         "img03": "./assets/images/control-tv/GS504/GS504-02.jpg",
@@ -666,7 +700,7 @@
         "modelosoportado05": "Hitachi"
     },
     {
-        "idProduct": 40,
+        "idProduct": 42,
         "img01": "./assets/images/control-tv/GS506/GS506-00.jpg",
         "img02": "./assets/images/control-tv/GS506/GS506-01.jpg",
         "img03": "./assets/images/control-tv/GS506/GS506-02.jpg",
@@ -683,7 +717,7 @@
         "modelosoportado05": "TCL"
     },
     {
-        "idProduct": 41,
+        "idProduct": 43,
         "img01": "./assets/images/control-tv/GS508/GS508-00.jpg",
         "img02": "./assets/images/control-tv/GS508/GS508-01.jpg",
         "img03": "./assets/images/control-tv/GS508/GS508-02.jpg",
@@ -700,7 +734,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 42,
+        "idProduct": 44,
         "img01": "./assets/images/control-tv/GS509/GS509-00.jpg",
         "img02": "./assets/images/control-tv/GS509/GS509-01.jpg",
         "img03": "./assets/images/control-tv/GS509/GS509-02.jpg",
@@ -717,7 +751,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 43,
+        "idProduct": 45,
         "img01": "./assets/images/control-tv/GS511/GS511-00.jpg",
         "img02": "./assets/images/control-tv/GS511/GS511-01.jpg",
         "img03": "./assets/images/control-tv/GS511/GS511-02.jpg",
@@ -734,7 +768,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 44,
+        "idProduct": 46,
         "img01": "./assets/images/control-tv/GS517/GS517-00.jpg",
         "img02": "./assets/images/control-tv/GS517/GS517-01.jpg",
         "img03": "./assets/images/control-tv/GS517/GS517-02.jpg",
@@ -751,7 +785,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 45,
+        "idProduct": 47,
         "img01": "./assets/images/control-tv/GS518/GS518-00.jpg",
         "img02": "./assets/images/control-tv/GS518/GS518-01.jpg",
         "img03": "./assets/images/control-tv/GS518/GS518-02.jpg",
@@ -768,7 +802,7 @@
         "modelosoportado05": "JVC"
     },
     {
-        "idProduct": 46,
+        "idProduct": 48,
         "img01": "./assets/images/control-tv/GS520/GS520-00.jpg",
         "img02": "./assets/images/control-tv/GS520/GS520-01.jpg",
         "img03": "./assets/images/control-tv/GS520/GS520-02.jpg",
@@ -785,7 +819,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 47,
+        "idProduct": 49,
         "img01": "./assets/images/control-tv/GS522/GS522-00.jpg",
         "img02": "./assets/images/control-tv/GS522/GS522-01.jpg",
         "img03": "./assets/images/control-tv/GS522/GS522-02.jpg",
@@ -802,7 +836,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 48,
+        "idProduct": 50,
         "img01": "./assets/images/control-tv/GS523/GS523-00.jpg",
         "img02": "./assets/images/control-tv/GS523/GS523-01.jpg",
         "img03": "./assets/images/control-tv/GS523/GS523-02.jpg",
@@ -819,7 +853,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 49,
+        "idProduct": 51,
         "img01": "./assets/images/control-tv/GS525/GS525-00.jpg",
         "img02": "./assets/images/control-tv/GS525/GS525-01.jpg",
         "img03": "./assets/images/control-tv/GS525/GS525-02.jpg",
@@ -836,7 +870,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 50,
+        "idProduct": 52,
         "img01": "./assets/images/control-tv/GS527/GS527-00.jpg",
         "img02": "./assets/images/control-tv/GS527/GS527-01.jpg",
         "img03": "./assets/images/control-tv/GS527/GS527-02.jpg",
@@ -853,7 +887,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 51,
+        "idProduct": 53,
         "img01": "./assets/images/control-tv/GS529/GS529-00.jpg",
         "img02": "./assets/images/control-tv/GS529/GS529-01.jpg",
         "img03": "./assets/images/control-tv/GS529/GS529-02.jpg",
@@ -870,7 +904,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 52,
+        "idProduct": 54,
         "img01": "./assets/images/control-tv/GS530/GS530-00.jpg",
         "img02": "./assets/images/control-tv/GS530/GS530-01.jpg",
         "img03": "./assets/images/control-tv/GS530/GS530-02.jpg",
@@ -887,7 +921,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 53,
+        "idProduct": 55,
         "img01": "./assets/images/control-tv/GS531/GS531-00.jpg",
         "img02": "./assets/images/control-tv/GS531/GS531-01.jpg",
         "img03": "./assets/images/control-tv/GS531/GS531-02.jpg",
@@ -904,7 +938,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 54,
+        "idProduct": 56,
         "img01": "./assets/images/control-tv/GS532/GS532-00.jpg",
         "img02": "./assets/images/control-tv/GS532/GS532-01.jpg",
         "img03": "./assets/images/control-tv/GS532/GS532-02.jpg",
@@ -921,7 +955,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 55,
+        "idProduct": 57,
         "img01": "./assets/images/control-tv/GS533/GS533-00.jpg",
         "img02": "./assets/images/control-tv/GS533/GS533-01.jpg",
         "img03": "./assets/images/control-tv/GS533/GS533-02.jpg",
@@ -938,7 +972,7 @@
         "modelosoportado05": "Quantic"
     },
     {
-        "idProduct": 56,
+        "idProduct": 58,
         "img01": "./assets/images/control-tv/GS534/GS534-00.jpg",
         "img02": "./assets/images/control-tv/GS534/GS534-01.jpg",
         "img03": "./assets/images/control-tv/GS534/GS534-02.jpg",
@@ -955,7 +989,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 57,
+        "idProduct": 59,
         "img01": "./assets/images/control-tv/GS537/GS537-00.jpg",
         "img02": "./assets/images/control-tv/GS537/GS537-01.jpg",
         "img03": "./assets/images/control-tv/GS537/GS537-02.jpg",
@@ -972,7 +1006,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 58,
+        "idProduct": 60,
         "img01": "./assets/images/control-tv/GS538/GS538-00.jpg",
         "img02": "./assets/images/control-tv/GS538/GS538-01.jpg",
         "img03": "./assets/images/control-tv/GS538/GS538-02.jpg",
@@ -989,7 +1023,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 59,
+        "idProduct": 61,
         "img01": "./assets/images/control-tv/GS539/GS539-00.jpg",
         "img02": "./assets/images/control-tv/GS539/GS539-01.jpg",
         "img03": "./assets/images/control-tv/GS539/GS539-02.jpg",
@@ -1006,7 +1040,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 60,
+        "idProduct": 62,
         "img01": "./assets/images/control-tv/GS542/GS542-00.jpg",
         "img02": "./assets/images/control-tv/GS542/GS542-01.jpg",
         "img03": "./assets/images/control-tv/GS542/GS542-02.jpg",
@@ -1023,7 +1057,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 61,
+        "idProduct": 63,
         "img01": "./assets/images/control-tv/GS543/GS543-00.jpg",
         "img02": "./assets/images/control-tv/GS543/GS543-01.jpg",
         "img03": "./assets/images/control-tv/GS543/GS543-02.jpg",
@@ -1040,7 +1074,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 62,
+        "idProduct": 64,
         "img01": "./assets/images/control-tv/GS544/GS544-00.jpg",
         "img02": "./assets/images/control-tv/GS544/GS544-01.jpg",
         "img03": "./assets/images/control-tv/GS544/GS544-02.jpg",
@@ -1057,7 +1091,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 63,
+        "idProduct": 65,
         "img01": "./assets/images/control-tv/GS545/GS545-00.jpg",
         "img02": "./assets/images/control-tv/GS545/GS545-01.jpg",
         "img03": "./assets/images/control-tv/GS545/GS545-02.jpg",
@@ -1074,7 +1108,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 64,
+        "idProduct": 66,
         "img01": "./assets/images/control-tv/GS546/GS546-00.jpg",
         "img02": "./assets/images/control-tv/GS546/GS546-01.jpg",
         "img03": "./assets/images/control-tv/GS546/GS546-02.jpg",
@@ -1091,7 +1125,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 65,
+        "idProduct": 67,
         "img01": "./assets/images/control-tv/GS548/GS548-00.jpg",
         "img02": "./assets/images/control-tv/GS548/GS548-01.jpg",
         "img03": "./assets/images/control-tv/GS548/GS548-02.jpg",
@@ -1108,7 +1142,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 66,
+        "idProduct": 68,
         "img01": "./assets/images/control-tv/GS549/GS549-00.jpg",
         "img02": "./assets/images/control-tv/GS549/GS549-01.jpg",
         "img03": "./assets/images/control-tv/GS549/GS549-02.jpg",
@@ -1125,7 +1159,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 67,
+        "idProduct": 69,
         "img01": "./assets/images/control-tv/GS550/GS550-00.jpg",
         "img02": "./assets/images/control-tv/GS550/GS550-01.jpg",
         "img03": "./assets/images/control-tv/GS550/GS550-02.jpg",
@@ -1142,7 +1176,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 68,
+        "idProduct": 70,
         "img01": "./assets/images/control-tv/GS552/GS552-00.jpg",
         "img02": "./assets/images/control-tv/GS552/GS552-01.jpg",
         "img03": "./assets/images/control-tv/GS552/GS552-02.jpg",
@@ -1159,7 +1193,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 69,
+        "idProduct": 71,
         "img01": "./assets/images/control-tv/GS553/GS553-00.jpg",
         "img02": "./assets/images/control-tv/GS553/GS553-01.jpg",
         "img03": "./assets/images/control-tv/GS553/GS553-02.jpg",
@@ -1176,7 +1210,7 @@
         "modelosoportado05": "BGH"
     },
     {
-        "idProduct": 70,
+        "idProduct": 72,
         "img01": "./assets/images/control-tv/GS553P/GS553P-00.jpg",
         "img02": "./assets/images/control-tv/GS553P/GS553P-01.jpg",
         "img03": "./assets/images/control-tv/GS553P/GS553P-02.jpg",
@@ -1193,7 +1227,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 71,
+        "idProduct": 73,
         "img01": "./assets/images/control-tv/GS557/GS557-00.jpg",
         "img02": "./assets/images/control-tv/GS557/GS557-01.jpg",
         "img03": "./assets/images/control-tv/GS557/GS557-02.jpg",
@@ -1210,7 +1244,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 72,
+        "idProduct": 74,
         "img01": "./assets/images/control-tv/GS560/GS560-00.jpg",
         "img02": "./assets/images/control-tv/GS560/GS560-01.jpg",
         "img03": "./assets/images/control-tv/GS560/GS560-02.jpg",
@@ -1227,7 +1261,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 73,
+        "idProduct": 75,
         "img01": "./assets/images/control-tv/GS561/GS561-00.jpg",
         "img02": "./assets/images/control-tv/GS561/GS561-01.jpg",
         "img03": "./assets/images/control-tv/GS561/GS561-02.jpg",
@@ -1244,7 +1278,7 @@
         "modelosoportado05": "Crown Mustang"
     },
     {
-        "idProduct": 74,
+        "idProduct": 76,
         "img01": "./assets/images/control-tv/GS562/GS562-00.jpg",
         "img02": "./assets/images/control-tv/GS562/GS562-01.jpg",
         "img03": "./assets/images/control-tv/GS562/GS562-02.jpg",
@@ -1261,7 +1295,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 75,
+        "idProduct": 77,
         "img01": "./assets/images/control-tv/GS564/GS564-00.jpg",
         "img02": "./assets/images/control-tv/GS564/GS564-01.jpg",
         "img03": "./assets/images/control-tv/GS564/GS564-02.jpg",
@@ -1278,7 +1312,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 76,
+        "idProduct": 78,
         "img01": "./assets/images/control-tv/GS567/GS567-00.jpg",
         "img02": "./assets/images/control-tv/GS567/GS567-01.jpg",
         "img03": "./assets/images/control-tv/GS567/GS567-02.jpg",
@@ -1295,7 +1329,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 77,
+        "idProduct": 79,
         "img01": "./assets/images/control-tv/GS568/GS568-00.jpg",
         "img02": "./assets/images/control-tv/GS568/GS568-01.jpg",
         "img03": "./assets/images/control-tv/GS568/GS568-02.jpg",
@@ -1312,7 +1346,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 78,
+        "idProduct": 80,
         "img01": "./assets/images/control-tv/GS569/GS569-00.jpg",
         "img02": "./assets/images/control-tv/GS569/GS569-01.jpg",
         "img03": "./assets/images/control-tv/GS569/GS569-02.jpg",
@@ -1329,7 +1363,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 79,
+        "idProduct": 81,
         "img01": "./assets/images/control-tv/GS570/GS570-00.jpg",
         "img02": "./assets/images/control-tv/GS570/GS570-01.jpg",
         "img03": "./assets/images/control-tv/GS570/GS570-02.jpg",
@@ -1346,7 +1380,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 80,
+        "idProduct": 82,
         "img01": "./assets/images/control-tv/GS572/GS572-00.jpg",
         "img02": "./assets/images/control-tv/GS572/GS572-01.jpg",
         "img03": "./assets/images/control-tv/GS572/GS572-02.jpg",
@@ -1363,7 +1397,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 81,
+        "idProduct": 83,
         "img01": "./assets/images/control-tv/GS573/GS573-00.jpg",
         "img02": "./assets/images/control-tv/GS573/GS573-01.jpg",
         "img03": "./assets/images/control-tv/GS573/GS573-02.jpg",
@@ -1380,7 +1414,7 @@
         "modelosoportado05": "Hisense"
     },
     {
-        "idProduct": 82,
+        "idProduct": 84,
         "img01": "./assets/images/control-tv/GS574/GS574-00.jpg",
         "img02": "./assets/images/control-tv/GS574/GS574-01.jpg",
         "img03": "./assets/images/control-tv/GS574/GS574-02.jpg",
@@ -1397,7 +1431,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 83,
+        "idProduct": 85,
         "img01": "./assets/images/control-tv/GS575/GS575-00.jpg",
         "img02": "./assets/images/control-tv/GS575/GS575-01.jpg",
         "img03": "./assets/images/control-tv/GS575/GS575-02.jpg",
@@ -1414,7 +1448,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 84,
+        "idProduct": 86,
         "img01": "./assets/images/control-tv/GS576/GS576-00.jpg",
         "img02": "./assets/images/control-tv/GS576/GS576-01.jpg",
         "img03": "./assets/images/control-tv/GS576/GS576-02.jpg",
@@ -1431,7 +1465,7 @@
         "modelosoportado05": "Top House"
     },
     {
-        "idProduct": 85,
+        "idProduct": 87,
         "img01": "./assets/images/control-tv/GS577/GS577-00.jpg",
         "img02": "./assets/images/control-tv/GS577/GS577-01.jpg",
         "img03": "./assets/images/control-tv/GS577/GS577-02.jpg",
@@ -1448,7 +1482,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 86,
+        "idProduct": 88,
         "img01": "./assets/images/control-tv/GS578/GS578-00.jpg",
         "img02": "./assets/images/control-tv/GS578/GS578-01.jpg",
         "img03": "./assets/images/control-tv/GS578/GS578-02.jpg",
@@ -1465,7 +1499,7 @@
         "modelosoportado05": "Crown Mustang"
     },
     {
-        "idProduct": 87,
+        "idProduct": 89,
         "img01": "./assets/images/control-tv/GS579/GS579-00.jpg",
         "img02": "./assets/images/control-tv/GS579/GS579-01.jpg",
         "img03": "./assets/images/control-tv/GS579/GS579-02.jpg",
@@ -1482,7 +1516,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 88,
+        "idProduct": 90,
         "img01": "./assets/images/control-tv/GS580/GS580-00.jpg",
         "img02": "./assets/images/control-tv/GS580/GS580-01.jpg",
         "img03": "./assets/images/control-tv/GS580/GS580-02.jpg",
@@ -1499,7 +1533,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 89,
+        "idProduct": 81,
         "img01": "./assets/images/control-tv/GS581/GS581-00.jpg",
         "img02": "./assets/images/control-tv/GS581/GS581-01.jpg",
         "img03": "./assets/images/control-tv/GS581/GS581-02.jpg",
@@ -1516,7 +1550,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 90,
+        "idProduct": 92,
         "img01": "./assets/images/control-tv/GS582/GS582-00.jpg",
         "img02": "./assets/images/control-tv/GS582/GS582-01.jpg",
         "img03": "./assets/images/control-tv/GS582/GS582-02.jpg",
@@ -1533,7 +1567,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 91,
+        "idProduct": 93,
         "img01": "./assets/images/control-tv/GS584/GS584-00.jpg",
         "img02": "./assets/images/control-tv/GS584/GS584-01.jpg",
         "img03": "./assets/images/control-tv/GS584/GS584-02.jpg",
@@ -1550,7 +1584,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 92,
+        "idProduct": 94,
         "img01": "./assets/images/control-tv/GS585/GS585-00.jpg",
         "img02": "./assets/images/control-tv/GS585/GS585-01.jpg",
         "img03": "./assets/images/control-tv/GS585/GS585-02.jpg",
@@ -1567,7 +1601,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 93,
+        "idProduct": 95,
         "img01": "./assets/images/control-tv/GS586/GS586-00.jpg",
         "img02": "./assets/images/control-tv/GS586/GS586-01.jpg",
         "img03": "./assets/images/control-tv/GS586/GS586-02.jpg",
@@ -1584,7 +1618,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 94,
+        "idProduct": 96,
         "img01": "./assets/images/control-tv/GS587/GS587-00.jpg",
         "img02": "./assets/images/control-tv/GS587/GS587-01.jpg",
         "img03": "./assets/images/control-tv/GS587/GS587-02.jpg",
@@ -1601,7 +1635,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 95,
+        "idProduct": 97,
         "img01": "./assets/images/control-tv/GS588/GS588-00.jpg",
         "img02": "./assets/images/control-tv/GS588/GS588-01.jpg",
         "img03": "./assets/images/control-tv/GS588/GS588-02.jpg",
@@ -1618,7 +1652,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 96,
+        "idProduct": 98,
         "img01": "./assets/images/control-tv/GS589/GS589-00.jpg",
         "img02": "./assets/images/control-tv/GS589/GS589-01.jpg",
         "img03": "./assets/images/control-tv/GS589/GS589-02.jpg",
@@ -1635,7 +1669,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 97,
+        "idProduct": 99,
         "img01": "./assets/images/control-tv/GS591/GS591-00.jpg",
         "img02": "./assets/images/control-tv/GS591/GS591-01.jpg",
         "img03": "./assets/images/control-tv/GS591/GS591-02.jpg",
@@ -1652,7 +1686,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 98,
+        "idProduct": 100,
         "img01": "./assets/images/control-tv/GS594/GS594-00.jpg",
         "img02": "./assets/images/control-tv/GS594/GS594-01.jpg",
         "img03": "./assets/images/control-tv/GS594/GS594-02.jpg",
@@ -1669,7 +1703,7 @@
         "modelosoportado05": "Admiral"
     },
     {
-        "idProduct": 99,
+        "idProduct": 101,
         "img01": "./assets/images/control-tv/GS595/GS595-00.jpg",
         "img02": "./assets/images/control-tv/GS595/GS595-01.jpg",
         "img03": "./assets/images/control-tv/GS595/GS595-02.jpg",
@@ -1686,7 +1720,7 @@
         "modelosoportado05": "Hisense"
     },
     {
-        "idProduct": 100,
+        "idProduct": 102,
         "img01": "./assets/images/control-tv/GS596/GS596-00.jpg",
         "img02": "./assets/images/control-tv/GS596/GS596-01.jpg",
         "img03": "./assets/images/control-tv/GS596/GS596-02.jpg",
@@ -1703,7 +1737,7 @@
         "modelosoportado05": "Philco"
     },
     {
-        "idProduct": 101,
+        "idProduct": 103,
         "img01": "./assets/images/control-tv/GS597/GS597-00.jpg",
         "img02": "./assets/images/control-tv/GS597/GS597-01.jpg",
         "img03": "./assets/images/control-tv/GS597/GS597-02.jpg",
@@ -1720,7 +1754,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 102,
+        "idProduct": 104,
         "img01": "./assets/images/control-tv/GS598/GS598-00.jpg",
         "img02": "./assets/images/control-tv/GS598/GS598-01.jpg",
         "img03": "./assets/images/control-tv/GS598/GS598-02.jpg",
@@ -1737,7 +1771,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 103,
+        "idProduct": 105,
         "img01": "./assets/images/control-tv/GS599/GS599-00.jpg",
         "img02": "./assets/images/control-tv/GS599/GS599-01.jpg",
         "img03": "./assets/images/control-tv/GS599/GS599-02.jpg",
@@ -1754,7 +1788,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 104,
+        "idProduct": 106,
         "img01": "./assets/images/control-tv/GS600/GS600-00.jpg",
         "img02": "./assets/images/control-tv/GS600/GS600-01.jpg",
         "img03": "./assets/images/control-tv/GS600/GS600-02.jpg",
@@ -1771,7 +1805,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 105,
+        "idProduct": 107,
         "img01": "./assets/images/control-tv/GS612/GS612-00.jpg",
         "img02": "./assets/images/control-tv/GS612/GS612-01.jpg",
         "img03": "./assets/images/control-tv/GS612/GS612-02.jpg",
@@ -1788,7 +1822,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 106,
+        "idProduct": 108,
         "img01": "./assets/images/control-tv/GS613/GS613-00.jpg",
         "img02": "./assets/images/control-tv/GS613/GS613-01.jpg",
         "img03": "./assets/images/control-tv/GS613/GS613-02.jpg",
@@ -1805,7 +1839,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 107,
+        "idProduct": 109,
         "img01": "./assets/images/control-tv/GS614/GS614-00.jpg",
         "img02": "./assets/images/control-tv/GS614/GS614-01.jpg",
         "img03": "./assets/images/control-tv/GS614/GS614-02.jpg",
@@ -1822,7 +1856,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 108,
+        "idProduct": 110,
         "img01": "./assets/images/control-tv/GS615/GS615-00.jpg",
         "img02": "./assets/images/control-tv/GS615/GS615-01.jpg",
         "img03": "./assets/images/control-tv/GS615/GS615-02.jpg",
@@ -1839,7 +1873,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 109,
+        "idProduct": 111,
         "img01": "./assets/images/control-tv/GS616/GS616-00.jpg",
         "img02": "./assets/images/control-tv/GS616/GS616-01.jpg",
         "img03": "./assets/images/control-tv/GS616/GS616-02.jpg",
@@ -1856,7 +1890,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 110,
+        "idProduct": 112,
         "img01": "./assets/images/control-tv/GS617/GS617-00.jpg",
         "img02": "./assets/images/control-tv/GS617/GS617-01.jpg",
         "img03": "./assets/images/control-tv/GS617/GS617-02.jpg",
@@ -1873,7 +1907,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 111,
+        "idProduct": 113,
         "img01": "./assets/images/control-tv/GS618/GS618-00.jpg",
         "img02": "./assets/images/control-tv/GS618/GS618-01.jpg",
         "img03": "./assets/images/control-tv/GS618/GS618-02.jpg",
@@ -1890,7 +1924,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 112,
+        "idProduct": 114,
         "img01": "./assets/images/control-tv/GS620/GS620-00.jpg",
         "img02": "./assets/images/control-tv/GS620/GS620-01.jpg",
         "img03": "./assets/images/control-tv/GS620/GS620-02.jpg",
@@ -1907,7 +1941,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 113,
+        "idProduct": 115,
         "img01": "./assets/images/control-tv/GS621/GS621-00.jpg",
         "img02": "./assets/images/control-tv/GS621/GS621-01.jpg",
         "img03": "./assets/images/control-tv/GS621/GS621-02.jpg",
@@ -1924,7 +1958,7 @@
         "modelosoportado05": "Crown Mustang"
     },
     {
-        "idProduct": 114,
+        "idProduct": 116,
         "img01": "./assets/images/control-tv/GS623/GS623-00.jpg",
         "img02": "./assets/images/control-tv/GS623/GS623-01.jpg",
         "img03": "./assets/images/control-tv/GS623/GS623-02.jpg",
@@ -1941,7 +1975,7 @@
         "modelosoportado05": "Philco"
     },
     {
-        "idProduct": 115,
+        "idProduct": 117,
         "img01": "./assets/images/control-tv/GS627/GS627-00.jpg",
         "img02": "./assets/images/control-tv/GS627/GS627-01.jpg",
         "img03": "./assets/images/control-tv/GS627/GS627-02.jpg",
@@ -1958,7 +1992,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 116,
+        "idProduct": 118,
         "img01": "./assets/images/control-tv/GS629/GS629-00.jpg",
         "img02": "./assets/images/control-tv/GS629/GS629-01.jpg",
         "img03": "./assets/images/control-tv/GS629/GS629-02.jpg",
@@ -1975,7 +2009,7 @@
         "modelosoportado05": "Kodak"
     },
     {
-        "idProduct": 117,
+        "idProduct": 119,
         "img01": "./assets/images/control-tv/GS631/GS631-00.jpg",
         "img02": "./assets/images/control-tv/GS631/GS631-01.jpg",
         "img03": "./assets/images/control-tv/GS631/GS631-02.jpg",
@@ -1992,7 +2026,7 @@
         "modelosoportado05": "Philips"
     },
     {
-        "idProduct": 118,
+        "idProduct": 120,
         "img01": "./assets/images/control-tv/GS636/GS636-00.jpg",
         "img02": "./assets/images/control-tv/GS636/GS636-01.jpg",
         "img03": "./assets/images/control-tv/GS636/GS636-02.jpg",
@@ -2009,7 +2043,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 119,
+        "idProduct": 121,
         "img01": "./assets/images/control-tv/GS-CAND/GS-CAND-00.jpg",
         "img02": "./assets/images/control-tv/GS-CAND/GS-CAND-01.jpg",
         "img03": "./assets/images/control-tv/GS-CAND/GS-CAND-02.jpg",
@@ -2026,7 +2060,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 120,
+        "idProduct": 122,
         "img01": "./assets/images/control-tv/GS-KAN(632)/GS-KAN(632)-00.jpg",
         "img02": "./assets/images/control-tv/GS-KAN(632)/GS-KAN(632)-01.jpg",
         "img03": "./assets/images/control-tv/GS-KAN(632)/GS-KAN(632)-02.jpg",
@@ -2043,7 +2077,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 121,
+        "idProduct": 123,
         "img01": "./assets/images/control-tv/GS-SIE(634)/GS-SIE(634)-00.jpg",
         "img02": "./assets/images/control-tv/GS-SIE(634)/GS-SIE(634)-01.jpg",
         "img03": "./assets/images/control-tv/GS-SIE(634)/GS-SIE(634)-02.jpg",
@@ -2062,7 +2096,7 @@
     ],
     "productsaa": [
     {
-        "idProduct": 122,
+        "idProduct": 124,
         "img01": "./assets/images/control-aa/AR799/AR799-00.jpg",
         "img02": "./assets/images/control-aa/AR799/AR799-01.jpg",
         "img03": "./assets/images/control-aa/AR799/AR799-02.jpg",
@@ -2079,7 +2113,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 123,
+        "idProduct": 125,
         "img01": "./assets/images/control-aa/AR800/AR800-00.jpg",
         "img02": "./assets/images/control-aa/AR800/AR800-01.jpg",
         "img03": "./assets/images/control-aa/AR800/AR800-02.jpg",
@@ -2096,7 +2130,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 124,
+        "idProduct": 126,
         "img01": "./assets/images/control-aa/AR801/AR801-00.jpg",
         "img02": "./assets/images/control-aa/AR801/AR801-01.jpg",
         "img03": "./assets/images/control-aa/AR801/AR801-02.jpg",
@@ -2113,7 +2147,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 125,
+        "idProduct": 127,
         "img01": "./assets/images/control-aa/GS802/GS802-00.jpg",
         "img02": "./assets/images/control-aa/GS802/GS802-01.jpg",
         "img03": "./assets/images/control-aa/GS802/GS802-02.jpg",
@@ -2130,7 +2164,7 @@
         "modelosoportado05": "Sanyo"
     },
     {
-        "idProduct": 126,
+        "idProduct": 128,
         "img01": "./assets/images/control-aa/GS803/GS803-00.jpg",
         "img02": "./assets/images/control-aa/GS803/GS803-01.jpg",
         "img03": "./assets/images/control-aa/GS803/GS803-02.jpg",
@@ -2147,7 +2181,7 @@
         "modelosoportado05": "Electra"
     },
     {
-        "idProduct": 127,
+        "idProduct": 129,
         "img01": "./assets/images/control-aa/GS805/GS805-00.jpg",
         "img02": "./assets/images/control-aa/GS805/GS805-01.jpg",
         "img03": "./assets/images/control-aa/GS805/GS805-02.jpg",
@@ -2164,7 +2198,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 128,
+        "idProduct": 130,
         "img01": "./assets/images/control-aa/GS806/GS806-00.jpg",
         "img02": "./assets/images/control-aa/GS806/GS806-01.jpg",
         "img03": "./assets/images/control-aa/GS806/GS806-02.jpg",
@@ -2181,7 +2215,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 129,
+        "idProduct": 131,
         "img01": "./assets/images/control-aa/GS807/GS807-00.jpg",
         "img02": "./assets/images/control-aa/GS807/GS807-01.jpg",
         "img03": "./assets/images/control-aa/GS807/GS807-02.jpg",
@@ -2198,7 +2232,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 130,
+        "idProduct": 132,
         "img01": "./assets/images/control-aa/GS808/GS808-00.jpg",
         "img02": "./assets/images/control-aa/GS808/GS808-01.jpg",
         "img03": "./assets/images/control-aa/GS808/GS808-02.jpg",
@@ -2215,7 +2249,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 131,
+        "idProduct": 133,
         "img01": "./assets/images/control-aa/GS809/GS809-00.jpg",
         "img02": "./assets/images/control-aa/GS809/GS809-01.jpg",
         "img03": "./assets/images/control-aa/GS809/GS809-02.jpg",
@@ -2232,7 +2266,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 132,
+        "idProduct": 134,
         "img01": "./assets/images/control-aa/GS810/GS810-00.jpg",
         "img02": "./assets/images/control-aa/GS810/GS810-01.jpg",
         "img03": "./assets/images/control-aa/GS810/GS810-02.jpg",
@@ -2249,7 +2283,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 133,
+        "idProduct": 135,
         "img01": "./assets/images/control-aa/GS811/GS811-00.jpg",
         "img02": "./assets/images/control-aa/GS811/GS811-01.jpg",
         "img03": "./assets/images/control-aa/GS811/GS811-02.jpg",
@@ -2266,7 +2300,7 @@
         "modelosoportado05": "Coventry"
     },
     {
-        "idProduct": 134,
+        "idProduct": 136,
         "img01": "./assets/images/control-aa/GS812/GS812-00.jpg",
         "img02": "./assets/images/control-aa/GS812/GS812-01.jpg",
         "img03": "./assets/images/control-aa/GS812/GS812-02.jpg",
@@ -2283,7 +2317,7 @@
         "modelosoportado05": "Peabody"
     },
     {
-        "idProduct": 135,
+        "idProduct": 137,
         "img01": "./assets/images/control-aa/GS815/GS815-00.jpg",
         "img02": "./assets/images/control-aa/GS815/GS815-01.jpg",
         "img03": "./assets/images/control-aa/GS815/GS815-02.jpg",
@@ -2300,7 +2334,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 136,
+        "idProduct": 138,
         "img01": "./assets/images/control-aa/GS816/GS816-00.jpg",
         "img02": "./assets/images/control-aa/GS816/GS816-01.jpg",
         "img03": "./assets/images/control-aa/GS816/GS816-02.jpg",
@@ -2317,7 +2351,7 @@
         "modelosoportado05": "Hyundai"
     },
     {
-        "idProduct": 137,
+        "idProduct": 139,
         "img01": "./assets/images/control-aa/GS817/GS817-00.jpg",
         "img02": "./assets/images/control-aa/GS817/GS817-01.jpg",
         "img03": "./assets/images/control-aa/GS817/GS817-02.jpg",
@@ -2334,7 +2368,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 138,
+        "idProduct": 140,
         "img01": "./assets/images/control-aa/GS819/GS819-00.jpg",
         "img02": "./assets/images/control-aa/GS819/GS819-01.jpg",
         "img03": "./assets/images/control-aa/GS819/GS819-02.jpg",
@@ -2351,7 +2385,7 @@
         "modelosoportado05": "Kelvinator"
     },
     {
-        "idProduct": 139,
+        "idProduct": 141,
         "img01": "./assets/images/control-aa/GS821/GS821-00.jpg",
         "img02": "./assets/images/control-aa/GS821/GS821-01.jpg",
         "img03": "./assets/images/control-aa/GS821/GS821-02.jpg",
@@ -2368,7 +2402,7 @@
         "modelosoportado05": "Top House"
     },
     {
-        "idProduct": 140,
+        "idProduct": 142,
         "img01": "./assets/images/control-aa/GS824/GS824-00.jpg",
         "img02": "./assets/images/control-aa/GS824/GS824-01.jpg",
         "img03": "./assets/images/control-aa/GS824/GS824-02.jpg",
@@ -2385,7 +2419,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 141,
+        "idProduct": 143,
         "img01": "./assets/images/control-aa/GS825/GS825-00.jpg",
         "img02": "./assets/images/control-aa/GS825/GS825-01.jpg",
         "img03": "./assets/images/control-aa/GS825/GS825-02.jpg",
@@ -2402,7 +2436,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 142,
+        "idProduct": 144,
         "img01": "./assets/images/control-aa/GS827/GS827-00.jpg",
         "img02": "./assets/images/control-aa/GS827/GS827-01.jpg",
         "img03": "./assets/images/control-aa/GS827/GS827-02.jpg",
@@ -2419,7 +2453,7 @@
         "modelosoportado05": "Zenith"
     },
     {
-        "idProduct": 143,
+        "idProduct": 145,
         "img01": "./assets/images/control-aa/GS833/GS833-00.jpg",
         "img02": "./assets/images/control-aa/GS833/GS833-01.jpg",
         "img03": "./assets/images/control-aa/GS833/GS833-02.jpg",
@@ -2436,7 +2470,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 144,
+        "idProduct": 146,
         "img01": "./assets/images/control-aa/GS851/GS851-00.jpg",
         "img02": "./assets/images/control-aa/GS851/GS851-01.jpg",
         "img03": "./assets/images/control-aa/GS851/GS851-02.jpg",
@@ -2453,7 +2487,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 145,
+        "idProduct": 147,
         "img01": "./assets/images/control-aa/GS853/GS853-00.jpg",
         "img02": "./assets/images/control-aa/GS853/GS853-01.jpg",
         "img03": "./assets/images/control-aa/GS853/GS853-02.jpg",
@@ -2470,7 +2504,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 146,
+        "idProduct": 148,
         "img01": "./assets/images/control-aa/GS856/GS856-00.jpg",
         "img02": "./assets/images/control-aa/GS856/GS856-01.jpg",
         "img03": "./assets/images/control-aa/GS856/GS856-02.jpg",
@@ -2487,7 +2521,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 147,
+        "idProduct": 149,
         "img01": "./assets/images/control-aa/GS863/GS863-00.jpg",
         "img02": "./assets/images/control-aa/GS863/GS863-01.jpg",
         "img03": "./assets/images/control-aa/GS863/GS863-02.jpg",
@@ -2504,7 +2538,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 148,
+        "idProduct": 150,
         "img01": "./assets/images/control-aa/GS864/GS864-00.jpg",
         "img02": "./assets/images/control-aa/GS864/GS864-01.jpg",
         "img03": "./assets/images/control-aa/GS864/GS864-02.jpg",
@@ -2521,7 +2555,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 149,
+        "idProduct": 151,
         "img01": "./assets/images/control-aa/GS867/GS867-00.jpg",
         "img02": "./assets/images/control-aa/GS867/GS867-01.jpg",
         "img03": "./assets/images/control-aa/GS867/GS867-02.jpg",
@@ -2538,7 +2572,7 @@
         "modelosoportado05": "RCA"
     },
     {
-        "idProduct": 150,
+        "idProduct": 152,
         "img01": "./assets/images/control-aa/GS869/GS869-00.jpg",
         "img02": "./assets/images/control-aa/GS869/GS869-01.jpg",
         "img03": "./assets/images/control-aa/GS869/GS869-02.jpg",
@@ -2555,7 +2589,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 151,
+        "idProduct": 153,
         "img01": "./assets/images/control-aa/GS871/GS871-00.jpg",
         "img02": "./assets/images/control-aa/GS871/GS871-01.jpg",
         "img03": "./assets/images/control-aa/GS871/GS871-02.jpg",
@@ -2572,7 +2606,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 152,
+        "idProduct": 154,
         "img01": "./assets/images/control-aa/GS872/GS872-00.jpg",
         "img02": "./assets/images/control-aa/GS872/GS872-01.jpg",
         "img03": "./assets/images/control-aa/GS872/GS872-02.jpg",
@@ -2589,7 +2623,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 153,
+        "idProduct": 155,
         "img01": "./assets/images/control-aa/GS879/GS879-00.jpg",
         "img02": "./assets/images/control-aa/GS879/GS879-01.jpg",
         "img03": "./assets/images/control-aa/GS879/GS879-02.jpg",
@@ -2606,7 +2640,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 154,
+        "idProduct": 156,
         "img01": "./assets/images/control-aa/GS885/GS885-00.jpg",
         "img02": "./assets/images/control-aa/GS885/GS885-01.jpg",
         "img03": "./assets/images/control-aa/GS885/GS885-02.jpg",
@@ -2623,7 +2657,7 @@
         "modelosoportado05": ""
     },
     {
-        "idProduct": 155,
+        "idProduct": 157,
         "img01": "./assets/images/control-aa/GS900/GS900-00.jpg",
         "img02": "./assets/images/control-aa/GS900/GS900-01.jpg",
         "img03": "./assets/images/control-aa/GS900/GS900-02.jpg",
