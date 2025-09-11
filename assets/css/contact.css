@@ -187,6 +187,30 @@ input {
     text-decoration: none;
 }
 
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #28a745;    /* verde éxito */
+    color: var(--color-secondary);
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
 /* Media queries para dispositivos medianos y pequeños */
 @media (max-width: 479px) {
     h2 {

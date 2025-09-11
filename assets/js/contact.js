@@ -3,17 +3,35 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact_form_form");
+    const toast = document.getElementById("toast");
 
     if (form) {
         form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Bloqueamos envío normal
+
             // Verificar que todos los inputs con la clase .input-padron sean válidos
             const inputsValidos = [...form.querySelectorAll(".input-padron")].every(input => input.checkValidity());
 
             if (!inputsValidos) {
-                event.preventDefault(); // Bloquear el envío
                 mostrarErrores(form);
+                return; // Si hay errores, no enviamos el formulario
             }
             // Si todo es válido, Netlify recibe el formulario automáticamente
+
+            // Crear objeto FormData para enviar a Netlify
+            const formData = new FormData(form);
+
+            fetch("/", {
+                method: "POST",
+                body: formData
+            })
+            .then(() => {
+                form.reset(); // limpiar formulario
+                mostrarToast(toast, "✅ Tu mensaje fue enviado con éxito");
+            })
+            .catch(() => {
+                mostrarToast(toast, "❌ Hubo un error. Inténtalo de nuevo.");
+            });
         });
 
         // Validar cada campo al perder el foco
@@ -23,6 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// Mostrar toast flotante
+function mostrarToast(toast, mensaje) {
+    toast.textContent = mensaje;
+    toast.classList.add("show");
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 4000);
+}
 
 // Lista de errores que queremos capturar
 const tipoDeErrores = [
