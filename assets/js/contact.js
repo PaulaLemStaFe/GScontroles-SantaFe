@@ -6,59 +6,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal-message");
     const modalText = document.getElementById("modal-text");
 
-    if (form && modal && modalText) {
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Bloqueamos envío normal
+    if (!form || !modal || !modalText) return; // Si no se encuentran los elementos, salir
 
-            // Verificar que todos los inputs con la clase .input-padron sean válidos
-            const inputsValidos = [...form.querySelectorAll(".input-padron")].every(input => input.checkValidity());
+    // Listener para cerrar el modal al hacer clic fuera
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 
-            if (!inputsValidos) {
-                mostrarErrores(form);
-                return; // Si hay errores, no enviamos el formulario
-            }
-            // Si todo es válido, Netlify recibe el formulario automáticamente
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-            // Crear objeto FormData para enviar a Netlify
-            const formData = new FormData(form);
+        const inputsValidos = [...form.querySelectorAll(".input-padron")].every(input => input.checkValidity());
 
-            fetch("/", {
-                method: "POST",
-                body: formData
+        if (!inputsValidos) {
+            mostrarErrores(form);
+            return;
+        }
+
+        const formData = new FormData(form);
+
+        fetch("/", { method: "POST", body: formData })
+            .then(() => {
+                form.reset();
+                mostrarModal("✅ Tu mensaje fue enviado con éxito");
             })
-                .then(() => {
-                    form.reset(); // limpiar formulario
-                    mostrarModal("✅ Tu mensaje fue enviado con éxito");
-                })
-                .catch(() => {
-                    mostrarModal("❌ Hubo un error. Inténtalo de nuevo.");
-                });
-        });
+            .catch(() => {
+                mostrarModal("❌ Hubo un error. Inténtalo de nuevo.");
+            });
+    });
 
-        // Validar cada campo al perder el foco
-        const inputs = form.querySelectorAll(".input-padron");
-        inputs.forEach(input => {
-            input.addEventListener("blur", () => valida(input));
-        });
-    }
+    // Validación en blur
+    const inputs = form.querySelectorAll(".input-padron");
+    inputs.forEach(input => input.addEventListener("blur", () => valida(input)));
 
     // Función para mostrar el modal
     function mostrarModal(mensaje) {
         modalText.textContent = mensaje;
         modal.style.display = "flex";
 
-        // Cerrar automáticamente después de 4 segundos
-        const timeout = setTimeout(() => {
+        setTimeout(() => {
             modal.style.display = "none";
-        }, 5000);
-
-        // Permitir cerrar haciendo clic fuera del contenido
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modal.style.display = "none";
-                clearTimeout(timeout); // evitar que se cierre otra vez
-            }
-        }, { once: true }); // solo se ejecuta una vez
+        }, 4000);
     }
 });
 
