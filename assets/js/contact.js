@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
             modal.style.display = "none";
-        }, 10000); // se cierra solo a los 10s
+        }, 5000); // se cierra solo a los 5s
     }
 });
 
