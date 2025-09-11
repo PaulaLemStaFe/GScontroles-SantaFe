@@ -319,11 +319,11 @@ function cargarDatosProducto(product) {
     document.getElementById("product-soportado3").textContent = product.modelosoportado03;
     document.getElementById("product-soportado4").textContent = product.modelosoportado04;
     document.getElementById("product-soportado5").textContent = product.modelosoportado05;
-    document.getElementById("product-soportado1").textContent = product.modelosoportado06;
-    document.getElementById("product-soportado2").textContent = product.modelosoportado07;
-    document.getElementById("product-soportado3").textContent = product.modelosoportado08;
-    document.getElementById("product-soportado4").textContent = product.modelosoportado09;
-    document.getElementById("product-soportado5").textContent = product.modelosoportado10;
+    document.getElementById("product-soportado6").textContent = product.modelosoportado06;
+    document.getElementById("product-soportado7").textContent = product.modelosoportado07;
+    document.getElementById("product-soportado8").textContent = product.modelosoportado08;
+    document.getElementById("product-soportado9").textContent = product.modelosoportado09;
+    document.getElementById("product-soportado10").textContent = product.modelosoportado10;
 
     // Asegurar que "product-details-img" sea un elemento <img>
     const productImg = document.getElementById("product-details-img");
