@@ -12,7 +12,6 @@
 h2 {
     align-items: center;
     display: flex;
-    flex-flow: column;
     font-size: 2.5rem;
     font-variant: small-caps;
     font-weight: bold;
@@ -183,33 +182,29 @@ input {
 }
 
 .modal-content {
+    animation: fadeIn 0.3s ease-in-out;
     background: var(--color-primary);
-    color: var(--color-fourth);
-    padding: 2rem;
     border-radius: 1rem;
-    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    color: var(--color-fourth);
     font-size: 2rem;
     max-width: 40rem;
+    padding: 2rem;
+    text-align: center;
     width: 90%;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
 }
 
 .modal-message {
-    display: none;
-    /* oculto por defecto */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);    /* fondo oscuro translúcido */
+    display: none;    /* oculto por defecto */
+    height: 100%;
+    justify-content: center;    /* centrar contenido */
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* fondo oscuro translúcido */
     z-index: 2000;
-
-    /* centrar contenido */
-    justify-content: center;
-    align-items: center;
 }
 
 @keyframes fadeIn {
@@ -223,7 +218,6 @@ input {
         transform: scale(1);
     }
 }
-
 
 .send_message__button {
     color: var(--color-primary);
