@@ -15,15 +15,19 @@ contactTemplate.innerHTML = `
                     <h6 class="title">Escribinos mediante este formulario</h6>
                 </div>
 
-                <form class="contact_form_form" id="contact_form_form">
+                <form class="contact_form_form" id="contact_form_form" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+
                     <div class="contact_form_area input-container">
                         <input name="name" type="text" class="contact_form__input input-padron" id="name" required minlength="10" maxlength="40" data-tipo="name" placeholder="Nombre Y Apellido">
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
+
                     <div class="contact_form_area input-container">
                         <input name="email" type="email" class="contact_form__input input-padron" id="email" required minlength="4" maxlength="40" data-tipo="email" placeholder="Correo Electrónico">
                         <span class="mensaje-error">Este campo no es válido</span>
                     </div>
+                    
                     <div class="contact_form_area input-container">
                         <input name="asunt" type="text" class="contact_form__input input-padron" id="asunt" required minlength="10" maxlength="40" data-tipo="asunt" placeholder="Asunto">
                         <span class="mensaje-error">Este campo no es válido</span>
@@ -482,8 +486,12 @@ class Contact extends HTMLElement {
         const form = shadowRoot.querySelector('#contact_form_form');
         if (form) {
             form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Evitar que el formulario se envíe
-                window.location.href = urlConstructionHtml; // Redirigir a la página "En Construcción"
+                // Validación JS
+                const inputsValidos = [...shadowRoot.querySelectorAll(".input-padron")].every(input => input.checkValidity());
+                if (!inputsValidos) {
+                    event.preventDefault(); // Bloquear envío si hay errores
+                }
+                // Si todo es válido, el formulario se envía automáticamente a Netlify
             });
         }
     }

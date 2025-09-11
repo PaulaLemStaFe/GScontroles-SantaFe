@@ -1,43 +1,57 @@
 //app.js
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Validación de inputs en el DOM principal
     const inputs = document.querySelectorAll(".input-padron");
-    const contact = document.querySelector('contact-component');
-    
-    if (contact) {
-        const shadowRoot = contact.shadowRoot;
-        
-        if (shadowRoot) {
-            const inputsContact = shadowRoot.querySelectorAll(".input-padron");
-            
-            inputsContact.forEach(input => {
-                input.addEventListener('blur', event => valida(event.target));
-            });
-        }
-    }
     
     inputs.forEach(input => {
         input.addEventListener('blur', event => valida(event.target));
     });
 
+    // Validación de inputs dentro del Shadow DOM del contact-component
+    const contact = document.querySelector('contact-component');
+    if (contact) {
+        const shadowRoot = contact.shadowRoot;
+        if (shadowRoot) {
+            const inputsContact = shadowRoot.querySelectorAll(".input-padron");
+            inputsContact.forEach(input => {
+                input.addEventListener('blur', event => valida(event.target));
+            });
+
+            // Formulario dentro del Shadow DOM
+            const form = shadowRoot.querySelector('#contact_form_form');
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    // Validar todos los inputs del formulario
+                    const inputsValidos = [...shadowRoot.querySelectorAll(".input-padron")].every(input => input.checkValidity());
+                    if (!inputsValidos) {
+                        event.preventDefault(); // Bloquear envío si hay errores
+                        // Mostrar mensajes de error
+                        shadowRoot.querySelectorAll(".input-padron").forEach(input => valida(input));
+                    }
+                    // Si todo es válido, el formulario se envía automáticamente a Netlify Forms
+                });
+            }
+        }
+    }
+
     // Código para mostrar/ocultar el botón de scroll-top
     const scrollTopBtn = document.getElementById('scroll-top');
 
     function toggleScrollTopButton() {
+        if (!scrollTopBtn) return;
         if (window.scrollY === 0) {
-            scrollTopBtn.style.display = 'none';  // Ocultar el botón si estamos al principio
+            scrollTopBtn.style.display = 'none';
         } else {
-            scrollTopBtn.style.display = 'block'; // Mostrar el botón si no estamos al principio
+            scrollTopBtn.style.display = 'block';
         }
     }
 
-    // Llamamos a la función al cargar la página
     window.addEventListener('load', toggleScrollTopButton);
-
-    // Llamamos a la función cada vez que se hace scroll
     window.addEventListener('scroll', toggleScrollTopButton);
 });
 
+// Tipos de errores
 const tipoDeErrores = [
     'patternMismatch',
     'valueMissing',
@@ -45,11 +59,11 @@ const tipoDeErrores = [
     'typeMismatch'
 ];
 
+// Mensajes de error
 const mensajesDeError = {
-    // contact form validation
     name: {
         valueMissing: "Debes completar el campo Nombre para poder continuar",
-        tooShort: "Debe tener al menos 4 caracteres"
+        tooShort: "Debe tener al menos 10 caracteres"
     },
     email: {
         valueMissing: "El campo E-mail no puede estar vacío",
@@ -64,9 +78,9 @@ const mensajesDeError = {
     },
 };
 
+// Función de validación de un input
 function valida(input) {
     const tipoDeInput = input.dataset.tipo;
-    
     if (input.validity.valid && input.checkValidity()) {
         input.parentElement.classList.remove("input-container-invalid");
         input.parentElement.querySelector(".mensaje-error").innerHTML = "";
@@ -76,12 +90,12 @@ function valida(input) {
     }
 }
 
+// Función que retorna el mensaje de error correspondiente
 function mostrarMensajeDeError(tipoDeInput, input) {
     let mensaje = "";
-    
     tipoDeErrores.forEach(error => {
         if (input.validity[error]) {
-            mensaje = mensajesDeError[tipoDeInput][error];
+            mensaje = mensajesDeError[tipoDeInput][error] || "Este campo no es válido";
         }
     });
     return mensaje;
