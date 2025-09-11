@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal-message");
     const modalText = document.getElementById("modal-text");
 
-    if (form) {
+    if (form && modal && modalText) {
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Bloqueamos envío normal
 
@@ -47,9 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
         modalText.textContent = mensaje;
         modal.style.display = "flex";
 
-        setTimeout(() => {
+        // Cerrar automáticamente después de 4 segundos
+        const timeout = setTimeout(() => {
             modal.style.display = "none";
-        }, 5000); // se cierra solo a los 5s
+        }, 5000);
+
+        // Permitir cerrar haciendo clic fuera del contenido
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                clearTimeout(timeout); // evitar que se cierre otra vez
+            }
+        }, { once: true }); // solo se ejecuta una vez
     }
 });
 
