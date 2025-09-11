@@ -6,19 +6,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const noResultsContainer = document.getElementById("no-results-container");
 
     let productos = [];
-    let currentFocus = -1; // Se mantiene global dentro del DOMContentLoaded
+    let currentFocus = -1;
 
+    // Función para leer parámetros de URL
+    function obtenerParametroURL(nombre) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(nombre) || "";
+    }
+
+    // Cargar productos
     fetch('db.json')
-        .then(response => {
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             productos = [...(data.productscs || []), ...(data.productstv || []), ...(data.productsaa || [])];
-            console.log("Productos cargados:", productos);
+
+            // Buscar automáticamente si hay parámetro "brand"
+            const brandURL = obtenerParametroURL("brand");
+            if (brandURL) {
+                searchInput.value = brandURL;
+                realizarBusqueda(brandURL);
+            }
         })
         .catch(error => console.error('Error fetching products:', error));
 
+    // AUTOCOMPLETADO
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         if (query) {
@@ -58,6 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             if (currentFocus > -1 && items[currentFocus]) {
                 items[currentFocus].click();
+            } else {
+                const query = searchInput.value.trim();
+                if (query) {
+                    window.location.href = `search.html?brand=${encodeURIComponent(query)}`;
+                }
             }
         }
     });
@@ -77,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function obtenerMarcasDisponibles(query) {
         return productos.flatMap(producto => [
             producto.modelosoportado01, producto.modelosoportado02,
-            producto.modelosoportado03, producto.modelosoportado04, producto.modelosoportado05])
-            .filter((marca, index, self) => marca && marca.toLowerCase().includes(query) && self.indexOf(marca) === index)
+            producto.modelosoportado03, producto.modelosoportado04, producto.modelosoportado05
+        ]).filter((marca, index, self) => marca && marca.toLowerCase().includes(query) && self.indexOf(marca) === index)
             .sort((a, b) => a.localeCompare(b));
     }
 
@@ -95,7 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     searchInput.value = marca;
                     autocompleteResults.innerHTML = '';
                     autocompleteResults.style.display = 'none';
-                    realizarBusqueda(marca);
+                    // Redirigir vía URL para shareable link
+                    window.location.href = `search.html?brand=${encodeURIComponent(marca)}`;
                 });
                 autocompleteResults.appendChild(item);
             });
@@ -105,23 +122,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // BÚSQUEDA al hacer clic o presionar Enter
     searchButton.addEventListener("click", () => {
         const query = searchInput.value.trim();
-        if (query) realizarBusqueda(query);
+        if (query) window.location.href = `search.html?brand=${encodeURIComponent(query)}`;
     });
 
     searchInput.addEventListener("keypress", event => {
         if (event.key === "Enter") {
             const query = searchInput.value.trim();
-            if (query) realizarBusqueda(query);
+            if (query) window.location.href = `search.html?brand=${encodeURIComponent(query)}`;
         }
     });
 
+    // FUNCIONES DE RESULTADOS
     function realizarBusqueda(query) {
-        if (!Array.isArray(productos)) {
-            console.error("Productos is not an array:", productos);
-            return;
-        }
+        if (!Array.isArray(productos)) return;
 
         const resultadosFiltrados = productos.filter(producto =>
             [producto.modelosoportado01, producto.modelosoportado02, producto.modelosoportado03,
@@ -131,9 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         mostrarResultados(resultadosFiltrados);
-        searchInput.value = '';
-        autocompleteResults.innerHTML = '';
-        autocompleteResults.style.display = 'none';
     }
 
     function mostrarResultados(resultados) {
