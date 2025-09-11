@@ -70,7 +70,12 @@ function mostrarCategoria(categoria, titulo, productId, data) {
                 product.modelosoportado02,
                 product.modelosoportado03,
                 product.modelosoportado04,
-                product.modelosoportado05
+                product.modelosoportado05,
+                product.modelosoportado06,
+                product.modelosoportado07,
+                product.modelosoportado08,
+                product.modelosoportado09,
+                product.modelosoportado10
             ].filter(Boolean);
 
             productosCategoria = productosCategoria.filter(p => {
@@ -79,7 +84,12 @@ function mostrarCategoria(categoria, titulo, productId, data) {
                     p.modelosoportado02,
                     p.modelosoportado03,
                     p.modelosoportado04,
-                    p.modelosoportado05
+                    p.modelosoportado05,
+                    p.modelosoportado06,
+                    p.modelosoportado07,
+                    p.modelosoportado08,
+                    p.modelosoportado09,
+                    p.modelosoportado10
                 ].filter(Boolean);
 
                 return modelosProducto.some(modelo => modelosComparar.includes(modelo));

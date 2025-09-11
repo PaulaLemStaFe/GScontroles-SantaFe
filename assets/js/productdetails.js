@@ -319,6 +319,11 @@ function cargarDatosProducto(product) {
     document.getElementById("product-soportado3").textContent = product.modelosoportado03;
     document.getElementById("product-soportado4").textContent = product.modelosoportado04;
     document.getElementById("product-soportado5").textContent = product.modelosoportado05;
+    document.getElementById("product-soportado1").textContent = product.modelosoportado06;
+    document.getElementById("product-soportado2").textContent = product.modelosoportado07;
+    document.getElementById("product-soportado3").textContent = product.modelosoportado08;
+    document.getElementById("product-soportado4").textContent = product.modelosoportado09;
+    document.getElementById("product-soportado5").textContent = product.modelosoportado10;
 
     // Asegurar que "product-details-img" sea un elemento <img>
     const productImg = document.getElementById("product-details-img");
@@ -337,6 +342,11 @@ function mostrarProductosSimilares(product, similarProducts, productCategory, pr
                 product.modelosoportado03,
                 product.modelosoportado04,
                 product.modelosoportado05,
+                product.modelosoportado06,
+                product.modelosoportado07,
+                product.modelosoportado08,
+                product.modelosoportado09,
+                product.modelosoportado10,
             ].includes(p.modelosoportado01) && p.idProduct != productId
     );
     const mostrar = shuffle(similares).slice(0, 6);
@@ -360,7 +370,12 @@ function actualizarLabelSoportados(product) {
         product.modelosoportado02,
         product.modelosoportado03,
         product.modelosoportado04,
-        product.modelosoportado05
+        product.modelosoportado05,
+        product.modelosoportado06,
+        product.modelosoportado07,
+        product.modelosoportado08,
+        product.modelosoportado09,
+        product.modelosoportado10
     ];
 
     const marcas = modelos.filter((m) => m && m.trim() !== "");

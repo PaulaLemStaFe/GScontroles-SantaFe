@@ -92,8 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function obtenerMarcasDisponibles(query) {
         return productos.flatMap(producto => [
-            producto.modelosoportado01, producto.modelosoportado02,
-            producto.modelosoportado03, producto.modelosoportado04, producto.modelosoportado05
+            producto.modelosoportado01, producto.modelosoportado02, producto.modelosoportado03, producto.modelosoportado04,
+            producto.modelosoportado05, producto.modelosoportado06, producto.modelosoportado07, producto.modelosoportado08, 
+            producto.modelosoportado09, producto.modelosoportado10
         ]).filter((marca, index, self) => marca && marca.toLowerCase().includes(query) && self.indexOf(marca) === index)
             .sort((a, b) => a.localeCompare(b));
     }
@@ -140,8 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!Array.isArray(productos)) return;
 
         const resultadosFiltrados = productos.filter(producto =>
-            [producto.modelosoportado01, producto.modelosoportado02, producto.modelosoportado03,
-            producto.modelosoportado04, producto.modelosoportado05].some(marca =>
+            [producto.modelosoportado01, producto.modelosoportado02, producto.modelosoportado03, producto.modelosoportado04,
+            producto.modelosoportado05, producto.modelosoportado06, producto.modelosoportado07, producto.modelosoportado08, 
+            producto.modelosoportado09, producto.modelosoportado10].some(marca =>
                 marca && marca.toLowerCase() === query.toLowerCase()
             )
         );
