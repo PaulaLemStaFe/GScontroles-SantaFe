@@ -3,10 +3,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact_form_form");
-    const toast = document.getElementById("toast");
+    const modal = document.getElementById("modal-message");
+    const modalText = document.getElementById("modal-text");
 
     if (form) {
-        form.addEventListener("submit", function(event) {
+        form.addEventListener("submit", function (event) {
             event.preventDefault(); // Bloqueamos envío normal
 
             // Verificar que todos los inputs con la clase .input-padron sean válidos
@@ -25,13 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 method: "POST",
                 body: formData
             })
-            .then(() => {
-                form.reset(); // limpiar formulario
-                mostrarToast(toast, "✅ Tu mensaje fue enviado con éxito");
-            })
-            .catch(() => {
-                mostrarToast(toast, "❌ Hubo un error. Inténtalo de nuevo.");
-            });
+                .then(() => {
+                    form.reset(); // limpiar formulario
+                    mostrarModal("✅ Tu mensaje fue enviado con éxito");
+                })
+                .catch(() => {
+                    mostrarModal("❌ Hubo un error. Inténtalo de nuevo.");
+                });
         });
 
         // Validar cada campo al perder el foco
@@ -40,16 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
             input.addEventListener("blur", () => valida(input));
         });
     }
-});
 
-// Mostrar toast flotante
-function mostrarToast(toast, mensaje) {
-    toast.textContent = mensaje;
-    toast.classList.add("show");
-    setTimeout(() => {
-        toast.classList.remove("show");
-    }, 4000);
-}
+    // Función para mostrar el modal
+    function mostrarModal(mensaje) {
+        modalText.textContent = mensaje;
+        modal.style.display = "flex";
+
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 10000); // se cierra solo a los 10s
+    }
+});
 
 // Lista de errores que queremos capturar
 const tipoDeErrores = [
