@@ -113,7 +113,7 @@ class Header extends HTMLElement {
                 content: url(${urlImageLogoHtml});
                 left: 1rem;
                 position: absolute;
-                width: 15%;
+                width: 14%;
             }
             .menu_buscador {
                 display: flex;
