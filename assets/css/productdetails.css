@@ -86,10 +86,8 @@
 
 .details_soportados {
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* 2 columnas */
-    gap: 0.5rem 1rem;                 /* espacio entre filas/columnas */
+    grid-template-columns: repeat(3, 1fr);   /* 3 columnas */
     padding: 1rem 0;
-    margin: 1rem 0;
 }
 
 .details_soportados #soportados-label {
@@ -110,8 +108,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: #333;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .details_title {
