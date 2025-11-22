@@ -38,10 +38,15 @@
     margin: 5.5rem auto 2rem auto;
 }
 
-.details_code,
+.details_code {
+    flex: 0 0 30%;      /* columna más chica */
+    min-width: 180px;   /* ajustable */
+    padding-left: 2rem;
+}
+
 .details_soportados {
-    flex: 1 1 45%;
-    min-width: 200px;
+    flex: 1;            /* ocupa todo el espacio restante */
+    min-width: 260px;   /* opcional, ajustable */
     padding-left: 2rem;
 }
 
@@ -54,7 +59,7 @@
 }
 
 .details_code p {
-    padding-left: 6rem;
+    padding-left: 2rem;
 }
 
 .details_details {
@@ -179,9 +184,8 @@ strong {
 
 .text-info-wrapper {
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap; /* por si en pantallas chicas se tienen que acomodar en columna */
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* ========== ZOOM ========== */
