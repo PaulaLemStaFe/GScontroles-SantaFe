@@ -10,13 +10,13 @@
     box-shadow: 0.3rem 0.3rem 0.8rem var(--color-fourth);
     display: flex;
     flex-flow: row wrap;
+    font-weight: 600;
     gap: 1rem;
     justify-content: center;
     margin: 4rem auto;
     max-width: 1920px;
     padding: 1rem 0;
     text-align: center;
-    text-shadow: 1px 1px 2px var(--color-fourth);
     width: 90%;
 }
 
@@ -34,8 +34,13 @@
 }
 
 strong {
-    font-size: 1.55rem;
-    font-weight: bold;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #F8F5EC;
+    text-shadow:
+        1px 1px 5px rgba(0,0,0,1),  /* halo más marcado */
+        2px 2px 3px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
 }
 
 
