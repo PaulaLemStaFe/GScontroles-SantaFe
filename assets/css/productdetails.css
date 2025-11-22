@@ -75,10 +75,6 @@
     width: 50%;
 }
 
-.details_marca {
-    margin-left: 14rem;
-}
-
 .details_marca,
 .details_text {
     font-size: 1.2rem;
@@ -86,6 +82,36 @@
     line-height: 1.5;
     padding: 0.5rem;
     text-align: justify;
+}
+
+.details_soportados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 columnas */
+    gap: 0.5rem 1rem;                 /* espacio entre filas/columnas */
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.details_soportados #soportados-label {
+    grid-column: 1 / -1;              /* Que el título ocupe el ancho completo */
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.details_soportados .details_marca {
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+/* Ícono tipo bullet */
+.details_soportados .details_marca::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #333;
+    font-size: 1.2rem;
 }
 
 .details_title {
@@ -147,6 +173,11 @@
     border-radius: 1rem;
     box-shadow: 0px 1px 5px 0px rgb(28 29 4 / 50%);
     width: 100%;
+}
+
+strong {
+    font-size: 1.55rem;
+    font-weight: bold;
 }
 
 .text-info-wrapper {
@@ -366,30 +397,24 @@ body.lightbox-open {
         cursor: default;
         pointer-events: auto;
     }
-
     .carousel-indicator-top-left {
         display: block;
         font-size: 1.1rem;
     }
-
     .carousel-indicators {
         display: flex;
         gap: 0.5rem;
     }
-
     .details {
         margin: 4rem auto 2rem auto;
     }
-
     .details_code {
         font-size: 1.3rem;
         padding-left: auto;
     }
-
     .details_code p {
         padding-left: 0;
     }
-
     .details_image {
         align-items: center;
         border-radius: 2rem;
@@ -398,49 +423,40 @@ body.lightbox-open {
         margin-bottom: 1rem;
         margin-top: 0;
     }
-
     .details_image,
     .product_details_text {
         flex: 1 1 100%;
     }
-
     .details_marca {
         margin-left: 10rem;
     }
-
     .details_title {
         margin: 0.5rem;
         text-align: center;
     }
-
     .image-counter {
         font-size: 1.3rem;
         left: 1rem;
         top: 1rem;
     }
-
     .image-zoom-container {
         align-items: center;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-
     .lightbox-controls {
         width: 93%;
     }
-
     .lightbox-close {
         font-size: 1.5rem;
         right: 1rem;
         top: 1rem;
     }
-
     .lightbox-image {
         max-height: 95%;
         max-width: 95%;
     }
-
     .lightbox-indicators {
         background-color: var(--color-fifth);
         border-radius: 0.5rem;
@@ -449,41 +465,36 @@ body.lightbox-open {
         padding: 0.3rem 0.5rem;
         position: absolute;
     }
-
     .lightbox-prev,
     .lightbox-next {
         display: none;
     }
-
     .main-image {
         flex-direction: column;
         width: auto;
     }
-
     .main-image img {
         max-width: 100%;
         max-height: 21.875rem;
     }
-
     .product_details {
         align-items: center;
         flex-direction: column;
         gap: 0;
     }
-
     .product_details_text {
         width: auto;
     }
-
+    strong {
+        font-size: 1.3rem;
+    }
     .thumbnails {
         display: none !important;
     }
-
     .thumbnails img {
         height: 3.75rem;
         width: 3.75rem;
     }
-
     .zoom-lens,
     .zoom-result {
         display: none !important;
@@ -496,20 +507,16 @@ body.lightbox-open {
         cursor: default;
         pointer-events: auto;
     }
-
     .carousel-indicator-top-left {
         display: block;
     }
-
     .carousel-indicators {
         display: flex;
         gap: 0.5rem;
     }
-
     .details {
         margin: 4rem auto 2rem auto;
     }
-
     .details_image {
         align-items: center;
         border-radius: 2rem;
@@ -518,45 +525,37 @@ body.lightbox-open {
         margin-bottom: 1rem;
         margin-top: 0;
     }
-
     .details_marca {
         margin-left: 13rem;;
     }
-
     .details_title {
         font-size: 1.7rem;
         margin: 0.5rem;
         text-align: center;
     }
-
     .image-counter {
         font-size: 1.2rem;
         left: 1rem;
         top: 1rem;
     }
-
     .image-zoom-container {
         align-items: center;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-
     .lightbox-controls {
         width: 93%;
     }
-
     .lightbox-close {
         font-size: 2rem;
         right: 1rem;
         top: 1rem;
     }
-
     .lightbox-image {
         max-height: 95%;
         max-width: 95%;
     }
-
     .lightbox-indicators {
         background-color: var(--color-fifth);
         border-radius: 0.5rem;
@@ -565,37 +564,30 @@ body.lightbox-open {
         padding: 0.5rem 0.8rem;
         position: absolute;
     }
-
     .lightbox-prev,
     .lightbox-next {
         display: none;
     }
-
     .main-image {
         flex-direction: column;
         width: auto;
     }
-
     .main-image img {
         max-width: 100%;
         max-height: 21.875rem;
     }
-
     .product_details {
         align-items: center;
         flex-direction: column;
         gap: 0;
     }
-
     .thumbnails {
         display: none !important;
     }
-
     .thumbnails img {
         height: 3.75rem;
         width: 3.75rem;
     }
-
     .zoom-lens,
     .zoom-result {
         display: none !important;
@@ -609,22 +601,18 @@ body.lightbox-open {
         padding: 1rem 2rem;
         pointer-events: auto;
     }
-
     .carousel-indicator-top-left {
         display: block;
         font-size: 1rem;
     }
-
     .carousel-indicators {
         display: flex;
         gap: 0.5rem;
         margin-top: auto;
     }
-
     .details {
         margin: 4rem auto 2rem auto;
     }
-
     .details_image {
         align-items: center;
         border-radius: 2rem;
@@ -635,49 +623,40 @@ body.lightbox-open {
         margin-top: 0;
         width: 40%;
     }
-
     .details_marca {
         margin-left: 13rem;;
     }
-
     .details_marca {
         padding: 0;
     }
-
     .details_title {
         font-size: 1.8rem;
         margin: 1.5rem;
         text-align: center;
     }
-
     .image-counter {
         font-size: 1.1rem;
         left: 1.5rem;
         top: 1.5rem;
     }
-
     .image-zoom-container {
         align-items: center;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-
     .lightbox-controls {
         width: 93%;
     }
-
     .lightbox-close {
         font-size: 2.2rem;
         right: 1.5rem;
         top: 1.5rem;
     }
-
     .lightbox-image {
         max-height: 95%;
         max-width: 95%;
     }
-
     .lightbox-indicators {
         background-color: var(--color-fifth);
         border-radius: 0.5rem;
@@ -686,41 +665,33 @@ body.lightbox-open {
         padding: 0.5rem 0.8rem;
         position: absolute;
     }
-
     .lightbox-prev,
     .lightbox-next {
         display: none;
     }
-
     .main-image {
         flex-direction: column;
     }
-
     .main-image img {
         max-width: 100%;
         max-height: 21.875rem;
     }
-
     .product_details {
         align-items: center;
         gap: 1rem;
         justify-content: center;
     }
-
     .product_details_text {
         padding: 0 1rem;
         width: 90%;
     }
-
     .thumbnails {
         display: none !important;
     }
-
     .thumbnails img {
         height: 3.75rem;
         width: 3.75rem;
     }
-
     .zoom-lens,
     .zoom-result {
         display: none !important;
@@ -732,37 +703,29 @@ body.lightbox-open {
     .details_code {
         margin-bottom: 0.5rem;
     }
-
     .details_details {
         margin-top: 0;
     }
-
     .details_image {
         padding: 0;
         width: 60%;
     }
-
     .details_marca,
     .details_text {
         padding: 0.2rem;
     }
-
     .details_title {
         margin: 1rem 0;
     }
-
     .main-image img {
         width: auto;
     }
-
     .product_details {
         padding: 2%;
     }
-
     .product_details_text {
         width: 80%;
     }
-
     .thumbnails {
         padding: 1.2rem;
     }
@@ -773,16 +736,13 @@ body.lightbox-open {
     .details {
         margin: 4rem auto 2rem auto;
     }
-
     .details_code,
     .details_soportados span {
         margin-bottom: 0;
     }
-
     .details_marca {
         padding: 0.1rem;
     }
-
     .product_details_text {
         width: 70%;
     }
