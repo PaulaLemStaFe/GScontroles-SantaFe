@@ -386,11 +386,26 @@ class Header extends HTMLElement {
                 .logo_image {
                     width: 17%;
                 }
+                .menu_buscador {
+                    align-items: center;
+                }
                 .menu_list li {
                     margin: 0;
                 }
                 .menu_toggle {
                     display: none;
+                }
+                /* Volver al orden normal */
+                .navegacion {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                /* Empujar el buscador hacia la derecha */
+                .menu_buscador {
+                    margin-left: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
                 }
             }
 

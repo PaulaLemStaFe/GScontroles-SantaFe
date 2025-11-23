@@ -12,7 +12,7 @@
     font-weight: 700;
     justify-content: center;
     opacity: 0.925;
-    padding-top: 32rem;
+    padding-top: 34rem;
     position: relative;
 }
 .banner_section {
@@ -30,7 +30,7 @@
     font-weight: 1000;
     justify-content: center;
     left: 32%;
-    padding: 0.5rem 2rem;
+    padding-top: 0.5rem;
     position: absolute;
     top: 45%;
     text-shadow: 0 0 0.5rem var(--color-tertiary);
@@ -47,11 +47,11 @@
 
 @media (max-width: 479px) {
     .banner {
-        background-size: 120%;
-        padding-top: 16rem;
+        background-size: 150%;
+        padding-top: 19rem;
     }
     .prom {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         left: 50%;
         transform: translateX(-50%);
         -webkit-text-stroke: transparent;
@@ -65,8 +65,8 @@
 
 @media (min-width:480px) and (max-width:767px) {
     .banner {
-        background-size: 110%;
-        padding-top: 20rem;
+        background-size: 125%;
+        padding-top: 18rem;
     }
     .prom {
         font-size: 1.3rem;
@@ -83,7 +83,7 @@
 
 @media (min-width:768px) and (max-width:1023px) {
     .banner {
-        padding-top: 25rem;
+        padding-top: 21rem;
     }
     .prom {
         font-size: 1.7rem;
@@ -112,9 +112,6 @@
 
 
 @media (min-width:1280px) {
-    .banner {
-        padding-top: 30rem;
-    }
     .prom {
         font-size: 3rem;
         left: 50%;

@@ -5,7 +5,6 @@
     align-items: center;
     display: flex;
     flex-flow: row wrap;
-    gap: 0.6rem;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1920px;
@@ -42,11 +41,14 @@
 
 /* Media queries para dispositivos medianos y pequeños */
 @media (max-width: 479px) {
+    .cs__link {
+        margin-top: 2rem;
+    }
     .productos {
         gap: 0;
     }
     .title {
-        padding: 1rem;
+        padding: 0 1rem;
     }
     .tv__title {
         font-size: 1.6rem;
@@ -55,6 +57,10 @@
     }
     #cs__title {
         margin-top: -2.5rem;
+        z-index: 1;
+    }
+    #tv__title {
+        margin-top: -1.5rem;
         z-index: 1;
     }
 }
@@ -72,8 +78,8 @@
         margin-top: 0;
         text-shadow: 1px 1px 2px var(--color-tertiary);
     }
-    #cs__title {
-        margin-top: -2.5rem;
+    #tv__title {
+        margin-top: -1.5rem;
         z-index: 1;
     }
 }
@@ -91,8 +97,8 @@
         margin-top: 0;
         text-shadow: 1px 1px 2px var(--color-tertiary);
     }
-    #cs__title {
-        margin-top: -2.5rem;
+    #tv__title {
+        margin-top: -2rem;
         z-index: 1;
     }
 }
@@ -108,10 +114,11 @@
 }
 
 @media (min-width: 1280px) {
-    .productos {
-        gap: 1.5rem;
-    }
     .tv__title {
         font-size: 2.2rem;
+    }
+    #tv__title {
+        margin-top: -2rem;
+        z-index: 1;
     }
 }

@@ -313,7 +313,7 @@ function mostrarGaleria(product, galleryContainer) {
 function cargarDatosProducto(product) {
     document.getElementById("product-title").textContent = product.title;
     document.getElementById("product-code").textContent = `Código: ${product.code}`;
-    document.getElementById("product-color").textContent = `Color: ${product.color}`;
+    document.getElementById("product-color").innerHTML = `Color:<br><span class="color-value">${product.color}</span>`;
     document.getElementById("product-soportado1").textContent = product.modelosoportado01;
     document.getElementById("product-soportado2").textContent = product.modelosoportado02;
     document.getElementById("product-soportado3").textContent = product.modelosoportado03;
@@ -448,4 +448,31 @@ document.addEventListener("DOMContentLoaded", function () {
         "db.json",
         productId
     );
+});
+
+let currentIndex = 0;
+let imagesArray = [];
+
+function setupCarousel(images) {
+    imagesArray = images;
+    currentIndex = 0;
+    updateMainImage();
+}
+
+function updateMainImage() {
+    const img = document.getElementById("product-image");
+    const counter = document.getElementById("carousel-indicator");
+
+    img.src = imagesArray[currentIndex];
+    counter.textContent = `${currentIndex + 1}/${imagesArray.length}`;
+}
+
+document.querySelector(".arrow-prev")?.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+    updateMainImage();
+});
+
+document.querySelector(".arrow-next")?.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % imagesArray.length;
+    updateMainImage();
 });

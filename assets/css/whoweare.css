@@ -47,9 +47,12 @@ strong {
 
 /* Media queries para dispositivos medianos y pequeños */
 @media (max-width: 479px) {
+    #woweare {
+        margin-top: 2rem;
+    }
     .woweare {
         gap: 0.5rem;
-        margin: 1rem auto;
+        margin: auto;
     }
     .woweare_title {
         font-size: 1.2rem;
