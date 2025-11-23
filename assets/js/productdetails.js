@@ -244,6 +244,20 @@ function mostrarMiniaturas(allImages, productImage, thumbnailsContainer) {
         updateImage(currentIndex);
     }
 
+        // --- ACTIVAR FLECHAS DEL CARRUSEL --- //
+    const arrowPrev = document.querySelector(".arrow-prev");
+    const arrowNext = document.querySelector(".arrow-next");
+
+    if (arrowPrev && arrowNext) {
+        arrowPrev.addEventListener("click", () => {
+            showPrevImage();
+        });
+
+        arrowNext.addEventListener("click", () => {
+            showNextImage();
+        });
+    }
+
     // Miniaturas (solo en desktop)
     thumbnailsContainer.innerHTML = "";
     if (window.innerWidth > 479) {
@@ -448,31 +462,4 @@ document.addEventListener("DOMContentLoaded", function () {
         "db.json",
         productId
     );
-});
-
-let currentIndex = 0;
-let imagesArray = [];
-
-function setupCarousel(images) {
-    imagesArray = images;
-    currentIndex = 0;
-    updateMainImage();
-}
-
-function updateMainImage() {
-    const img = document.getElementById("product-image");
-    const counter = document.getElementById("carousel-indicator");
-
-    img.src = imagesArray[currentIndex];
-    counter.textContent = `${currentIndex + 1}/${imagesArray.length}`;
-}
-
-document.querySelector(".arrow-prev")?.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
-    updateMainImage();
-});
-
-document.querySelector(".arrow-next")?.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % imagesArray.length;
-    updateMainImage();
 });
