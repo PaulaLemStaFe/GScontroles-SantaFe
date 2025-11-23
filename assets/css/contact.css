@@ -231,13 +231,11 @@ input {
     h2 {
         font-size: 1.4rem;
     }
-
     .contact {
         background-repeat: no-repeat;
         background-size: cover;
         padding: 1rem 0;
     }
-
     .contact_content {
         align-items: center;
         flex-direction: column;
@@ -245,31 +243,26 @@ input {
         justify-content: center;
         width: 80%;
     }
-
     .contact_form__button {
         margin: 0;
         padding: 0.5rem 1rem;
     }
-
     .contact_form__input,
     .menssage {
         font-size: 0.8rem;
         width: 25rem;
     }
-
     .contact_form__title h6 {
         font-size: 1rem;
         font-weight: normal;
         text-align: center;
     }
-
     .contact_form_form,
     .contact_form {
         align-items: center;
         gap: 1rem;
         justify-content: center;
     }
-
     .contact_logo {
         align-content: center;
         display: flex;
@@ -277,26 +270,21 @@ input {
         margin: auto;
         width: 55%;
     }
-
     .contact_logo_img {
         width: 60%;
     }
-
     .input-container-invalid .mensaje-error {
         font-size: 0.8rem;
     }
-
     .map_iframe {
         display: none;
     }
-
     .menu {
         align-items: center;
         gap: 0.8rem;
         justify-content: center;
         text-align: center;
     }
-
     .menu_item {
         font-size: 0.8rem;
         line-height: 1.3rem;
@@ -308,13 +296,11 @@ input {
     h2 {
         font-size: 1.5rem;
     }
-
     .contact {
         background-repeat: no-repeat;
         background-size: cover;
         padding: 1rem 0;
     }
-
     .contact_content {
         align-items: center;
         flex-direction: column;
@@ -323,47 +309,39 @@ input {
         margin: 0;
         width: 100%;
     }
-
     .contact_form__button {
         font-size: 1rem;
         margin: 0;
         padding: 0.5rem 1rem;
     }
-
     .contact_form__title h6 {
         font-size: 1.1rem;
         font-weight: normal;
     }
-
     .contact_form_form,
     .contact_form {
         align-items: center;
         gap: 1rem;
         justify-content: center;
     }
-
     .contact_logo {
         align-content: center;
         display: flex;
         justify-content: center;
         margin: auto;
     }
-
     .contact_logo_img {
         width: 30%;
     }
-
     .map_iframe {
         display: none;
     }
-
     .menu {
         align-items: center;
         gap: 1.3rem;
         justify-content: center;
         text-align: center;
     }
-
     .menu_item {
         font-size: 1.1rem;
         text-align: center;
@@ -378,46 +356,38 @@ input {
         justify-content: center;
         padding: 2rem 0;
     }
-
     .contact_content {
         gap: 4rem;
         width: 95%;
     }
-
     .contact_form__button {
         font-size: 1rem;
         margin: 0;
     }
-
     .contact_form__input,
     .menssage {
         width: 25rem;
     }
-
     .contact_form__title h6 {
         font-size: 1.2rem;
         text-align: center;
     }
-
     .contact_form_form,
     .contact_form {
         align-items: center;
         justify-content: center;
     }
-
     .contact_logo {
         align-content: center;
         display: flex;
         justify-content: center;
         margin: auto;
     }
-
     .menu {
         align-items: center;
         justify-content: center;
         text-align: center;
     }
-
     .menu_item {
         font-size: 1rem;
         text-align: center;
@@ -429,34 +399,27 @@ input {
         gap: 7rem;
         width: 90%;
     }
-
     .contact_form__button {
         margin: 0;
     }
-
     .contact_form__input,
     .menssage {
         width: 30rem;
     }
-
     .contact_form__title {
         text-shadow: none;
     }
-
     .contact_form__title h6 {
         font-size: 1.3rem;
         text-align: center;
     }
-
     .contact_form_form {
         align-items: center;
         justify-content: center;
     }
-
     .contact_logo_img {
         width: 40%;
     }
-
     .contact_menu {
         padding-left: 3rem;
     }
@@ -467,11 +430,9 @@ input {
         gap: 9rem;
         width: 90%;
     }
-
     .contact_form__button {
         margin: 0;
     }
-
     .contact_form_form {
         align-items: center;
         justify-content: center;

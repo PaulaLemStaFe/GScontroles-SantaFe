@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>GS Controles - Buscando Productos</title>
@@ -23,16 +24,20 @@
 
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="GS Controles - Productos Buscados">
-    <meta property="og:description" content="Venta de controles remotos para televisores, convertidores smart y aires acondicionados en Santa Fe. Consultanos si tenemos el modelo que necesitas.">
-    <meta property="og:image" content="https://gscontroles-santafe.netlify.app/assets/images/logo-con-fondo/imagen_miniatura_logoynum.png">
+    <meta property="og:description"
+        content="Venta de controles remotos para televisores, convertidores smart y aires acondicionados en Santa Fe. Consultanos si tenemos el modelo que necesitas.">
+    <meta property="og:image"
+        content="https://gscontroles-santafe.netlify.app/assets/images/logo-con-fondo/imagen_miniatura_logoynum.png">
     <meta property="og:url" content="https://gscontroles-santafe.netlify.app/search.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GS Controles - Productos Buscados">
-    <meta name="twitter:description" content="Venta de controles remotos para televisores, convertidores smart y aires acondicionados en Santa Fe. Consultanos si tenemos el modelo que necesitas.">
-    <meta name="twitter:image" content="https://gscontroles-santafe.netlify.app/assets/images/logo-con-fondo/imagen_miniatura_logoynum.png">
+    <meta name="twitter:description"
+        content="Venta de controles remotos para televisores, convertidores smart y aires acondicionados en Santa Fe. Consultanos si tenemos el modelo que necesitas.">
+    <meta name="twitter:image"
+        content="https://gscontroles-santafe.netlify.app/assets/images/logo-con-fondo/imagen_miniatura_logoynum.png">
 
     <!-- Script para actualizar dinámicamente la URL de OG según la búsqueda -->
     <script>
@@ -50,6 +55,7 @@
         });
     </script>
 </head>
+
 <body>
     <div class="page-container">
         <header-component></header-component>
@@ -59,20 +65,38 @@
                 <div class="search-section_content-title">
                     <h1 class="title tv__title">Buscar Productos</h1>
                 </div>
+                <div class="custom-select-container">
+                    <div class="custom-select" id="category-select">
+                        <span class="custom-select-text">Seleccione una categoría</span>
+                        <span class="custom-select-arrow">▼</span>
+                    </div>
+                    <div class="custom-options" id="category-options">
+                        <div class="custom-option" data-value="productstv">Para televisores</div>
+                        <div class="custom-option" data-value="productscs">Para convertidores smart</div>
+                        <div class="custom-option" data-value="productsaa">Para aire acondicionado</div>
+                    </div>
+                </div>
                 <div class="buscador">
-                    <input id="search-input" class="input__buscador" type="text" placeholder="Digite la marca del electrodoméstico...">
+                    <input id="search-input" class="input__buscador" type="text"
+                        placeholder="Digite la marca del electrodoméstico...">
                     <i id="search-button" class="bi bi-search"></i>
                     <div id="autocomplete-results" class="autocomplete-results"></div>
                 </div>
             </div>
             <div id="no-results-container"></div>
+            <h2 id="search-title" class="search-title"></h2>
             <div class="all_products_items" id="search-results"></div>
+            <button id="reset-search" class="reset-search-btn" style="display:none;">
+                Nueva búsqueda
+            </button>
+
         </section>
 
         <footer-component></footer-component>
     </div>
 
-    <a aria-label="Hacer scroll a la parte superior de la página" href="#" id="scroll-top" class="scroll-top-left" style="opacity: 1; display: block;">
+    <a aria-label="Hacer scroll a la parte superior de la página" href="#" id="scroll-top" class="scroll-top-left"
+        style="opacity: 1; display: block;">
         <i class="fa fa-angle-up" aria-hidden="true" role="img"></i>
     </a>
 
@@ -83,4 +107,5 @@
     <script src="assets/js/productsutils.js" type="text/javascript"></script>
     <script src="assets/js/search.js" type="text/javascript"></script>
 </body>
+
 </html>

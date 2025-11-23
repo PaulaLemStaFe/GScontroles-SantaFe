@@ -1,6 +1,16 @@
 /* Importar variables desde style.css */
 @import url('style.css');
 
+strong {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #F8F5EC;
+    text-shadow:
+        1px 1px 5px rgba(0,0,0,1),  /* halo más marcado */
+        2px 2px 3px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
 .woweare {
     align-items: center;
     background-color: var(--color-secondary);
@@ -31,16 +41,6 @@
     font-weight: bold;
     margin: 0.5rem 0 0.75rem;
     text-decoration: underline;
-}
-
-strong {
-    font-size: 1.7rem;
-    font-weight: 900;
-    color: #F8F5EC;
-    text-shadow:
-        1px 1px 5px rgba(0,0,0,1),  /* halo más marcado */
-        2px 2px 3px rgba(0,0,0,0.5);
-    letter-spacing: 1px;
 }
 
 
